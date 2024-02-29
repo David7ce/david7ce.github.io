@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://david7ce.github.io/sitemap.xml

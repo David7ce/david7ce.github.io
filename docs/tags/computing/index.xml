@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Computing on David7ce</title>
+    <link>https://david7ce.github.io/tags/computing/</link>
+    <description>Recent content in Computing on David7ce</description>
+    <image>
+      <title>David7ce</title>
+      <url>https://david7ce.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://david7ce.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://david7ce.github.io/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Good software</title>
+      <link>https://david7ce.github.io/blog/good-software/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/blog/good-software/</guid>
+      <description>Defining what is good software</description>
+    </item>
+    <item>
+      <title>My Story with OS&#39;s</title>
+      <link>https://david7ce.github.io/blog/my-story-with-oss/</link>
+      <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/blog/my-story-with-oss/</guid>
+      <description>This my story with OS&amp;#39;s</description>
+    </item>
+    <item>
+      <title>Easy encryption</title>
+      <link>https://david7ce.github.io/blog/easy-encryption/</link>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/blog/easy-encryption/</guid>
+      <description>Encrypt your files in an easy way</description>
+    </item>
+    <item>
+      <title>Linux recommendation</title>
+      <link>https://david7ce.github.io/blog/linux-recommendation/</link>
+      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/blog/linux-recommendation/</guid>
+      <description>My Linux recommendation</description>
+    </item>
+    <item>
+      <title>Encode / Decode</title>
+      <link>https://david7ce.github.io/blog/encode-decode/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/blog/encode-decode/</guid>
+      <description>The base of computing is encoding/decoding</description>
+    </item>
+  </channel>
+</rss>
