@@ -10,38 +10,61 @@
     <atom:link href="https://david7ce.github.io/tags/computing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Good software</title>
-      <link>https://david7ce.github.io/blog/good-software/</link>
+      <link>https://david7ce.github.io/post/good-software/</link>
       <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/blog/good-software/</guid>
+      <guid>https://david7ce.github.io/post/good-software/</guid>
       <description>Defining what is good software</description>
     </item>
     <item>
       <title>My Story with OS&#39;s</title>
-      <link>https://david7ce.github.io/blog/my-story-with-oss/</link>
+      <link>https://david7ce.github.io/post/my-os-story/</link>
       <pubDate>Sun, 21 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/blog/my-story-with-oss/</guid>
+      <guid>https://david7ce.github.io/post/my-os-story/</guid>
       <description>This my story with OS&amp;#39;s</description>
     </item>
     <item>
       <title>Easy encryption</title>
-      <link>https://david7ce.github.io/blog/easy-encryption/</link>
+      <link>https://david7ce.github.io/post/easy-encryption/</link>
       <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/blog/easy-encryption/</guid>
+      <guid>https://david7ce.github.io/post/easy-encryption/</guid>
       <description>Encrypt your files in an easy way</description>
     </item>
     <item>
       <title>Linux recommendation</title>
-      <link>https://david7ce.github.io/blog/linux-recommendation/</link>
+      <link>https://david7ce.github.io/post/linux-recommendation/</link>
       <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/blog/linux-recommendation/</guid>
+      <guid>https://david7ce.github.io/post/linux-recommendation/</guid>
       <description>My Linux recommendation</description>
     </item>
     <item>
       <title>Encode / Decode</title>
-      <link>https://david7ce.github.io/blog/encode-decode/</link>
+      <link>https://david7ce.github.io/post/encode-decode/</link>
       <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/blog/encode-decode/</guid>
+      <guid>https://david7ce.github.io/post/encode-decode/</guid>
       <description>The base of computing is encoding/decoding</description>
+    </item>
+    <item>
+      <title>Setup password manager</title>
+      <link>https://david7ce.github.io/post/setup-password-manager/</link>
+      <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/setup-password-manager/</guid>
+      <description>Setting up a password manager This is an article that explains how to set up a password manager in a secure and private way.
+I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data and a cracker can use JS malfunctions.
+These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use Bitwarden or Vaultwarden (self-hosted Bitwarden).</description>
+    </item>
+    <item>
+      <title>Linux distros with/out desktops</title>
+      <link>https://david7ce.github.io/post/linux-desktop/</link>
+      <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/linux-desktop/</guid>
+      <description>The most important Linux distributions and desktop environments</description>
+    </item>
+    <item>
+      <title>Linux introduction</title>
+      <link>https://david7ce.github.io/post/linux-intro/</link>
+      <pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/linux-intro/</guid>
+      <description>Linux for noobs</description>
     </item>
   </channel>
 </rss>

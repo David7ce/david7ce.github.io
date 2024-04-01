@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>David7ce</title>
-    <link>https://david7ce.github.io/</link>
-    <description>Recent content on David7ce</description>
+    <title>Posts on David7ce</title>
+    <link>https://david7ce.github.io/post/</link>
+    <description>Recent content in Posts on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://david7ce.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://david7ce.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Good software</title>
       <link>https://david7ce.github.io/post/good-software/</link>
@@ -80,34 +80,6 @@ These methods use local apps with an encrypted file, no data is shared over the 
       <guid>https://david7ce.github.io/post/0-markdown-guide/</guid>
       <description>This blog is writing using the web static generator framewrok HUGO. It converts the articles writted in markdown format to an HTML web page. The markdown format is simple, here is a test:
 To add metadata we have to use YAML that refers to te config file. --- author: &amp;#34;Hugo Authors&amp;#34; title: &amp;#34;Markdown Syntax Guide&amp;#34; date: &amp;#34;2021-01-01&amp;#34; description: &amp;#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.&amp;#34; tags: [&amp;#34;markdown&amp;#34;, &amp;#34;css&amp;#34;, &amp;#34;html&amp;#34;, &amp;#34;themes&amp;#34;] categories: [&amp;#34;themes&amp;#34;, &amp;#34;syntax&amp;#34;] comments: false ShowToc: true TocOpen: true lang: en series: [&amp;#34;Themes Guide&amp;#34;] aliases: [&amp;#34;migrate-from-jekyl&amp;#34;] cover: image: images/msg.</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://david7ce.github.io/table-basic-software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/table-basic-software/</guid>
-      <description> Icon Component Icon Name Author - Kernel (Linux) - - Default Bootloader (GRUB) GRUB Default Default Init System (systemd) systemd Default Default Display Server Wayland Default KDE Logo Desktop Environment KDE Logo KDE KDE Logo Window Manager KWin KDE KDE Logo File Manager Dolphin KDE KDE Logo Display Manager SDDM KDE KDE Logo Panel or Dock Plasma Panel KDE KDE Logo System Settings System Settings KDE KDE Logo Terminal Emulator Konsole KDE Default Software Package Management Package Icon Default Default Archiso Archiso Icon Default Default Shell (bash) Bash Default </description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://david7ce.github.io/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/about/</guid>
-      <description>about</description>
-    </item>
-    <item>
-      <title>My Software 🔧</title>
-      <link>https://david7ce.github.io/software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/software/</guid>
-      <description>The software I use, the majority is Free and Open Source Software (FOSS)</description>
-    </item>
-    <item>
-      <title>Projects</title>
-      <link>https://david7ce.github.io/projects/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/projects/</guid>
-      <description>projects</description>
     </item>
   </channel>
 </rss>
