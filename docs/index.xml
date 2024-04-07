@@ -82,13 +82,6 @@ These methods use local apps with an encrypted file, no data is shared over the 
 To add metadata we have to use YAML that refers to te config file. --- author: &amp;#34;Hugo Authors&amp;#34; title: &amp;#34;Markdown Syntax Guide&amp;#34; date: &amp;#34;2021-01-01&amp;#34; description: &amp;#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.&amp;#34; tags: [&amp;#34;markdown&amp;#34;, &amp;#34;css&amp;#34;, &amp;#34;html&amp;#34;, &amp;#34;themes&amp;#34;] categories: [&amp;#34;themes&amp;#34;, &amp;#34;syntax&amp;#34;] comments: false ShowToc: true TocOpen: true lang: en series: [&amp;#34;Themes Guide&amp;#34;] aliases: [&amp;#34;migrate-from-jekyl&amp;#34;] cover: image: images/msg.</description>
     </item>
     <item>
-      <title></title>
-      <link>https://david7ce.github.io/table-basic-software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/table-basic-software/</guid>
-      <description> Icon Component Icon Name Author - Kernel (Linux) - - Default Bootloader (GRUB) GRUB Default Default Init System (systemd) systemd Default Default Display Server Wayland Default KDE Logo Desktop Environment KDE Logo KDE KDE Logo Window Manager KWin KDE KDE Logo File Manager Dolphin KDE KDE Logo Display Manager SDDM KDE KDE Logo Panel or Dock Plasma Panel KDE KDE Logo System Settings System Settings KDE KDE Logo Terminal Emulator Konsole KDE Default Software Package Management Package Icon Default Default Archiso Archiso Icon Default Default Shell (bash) Bash Default </description>
-    </item>
-    <item>
       <title>About</title>
       <link>https://david7ce.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -96,11 +89,11 @@ To add metadata we have to use YAML that refers to te config file. --- author: &
       <description>about</description>
     </item>
     <item>
-      <title>My Software 🔧</title>
+      <title>My software/ 🔧</title>
       <link>https://david7ce.github.io/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/software/</guid>
-      <description>The software I use, the majority is Free and Open Source Software (FOSS)</description>
+      <description>The software I use is Free and Open Source software (FOSS) except apps from Affinity, Arobas-music, Autodesk, Microsoft.</description>
     </item>
     <item>
       <title>Projects</title>
