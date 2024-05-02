@@ -93,7 +93,7 @@ To add metadata we have to use YAML that refers to te config file. --- author: &
       <link>https://david7ce.github.io/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/software/</guid>
-      <description>The software I use is Free and Open Source software (FOSS) except apps from Affinity, Arobas-music, Autodesk, Microsoft.</description>
+      <description>The majority of software I use is Free and Open Source software (FOSS)</description>
     </item>
     <item>
       <title>Projects</title>
