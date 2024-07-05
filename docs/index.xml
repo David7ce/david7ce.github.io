@@ -89,18 +89,18 @@ To add metadata we have to use YAML that refers to te config file. --- author: &
       <description>about</description>
     </item>
     <item>
-      <title>Fav software 🔧</title>
-      <link>https://david7ce.github.io/software/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/software/</guid>
-      <description>his is my favorite software, I try to look for open-source and if it possible cross-platform applications.</description>
-    </item>
-    <item>
       <title>Projects</title>
       <link>https://david7ce.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/projects/</guid>
       <description>projects</description>
+    </item>
+    <item>
+      <title>Software / Tools 🔧</title>
+      <link>https://david7ce.github.io/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/software/</guid>
+      <description>This is my favourite software for working with hardware devices. I tend to look for apps that are useful, simple and well designed, as well as open-source and cross-platform apps.</description>
     </item>
   </channel>
 </rss>
