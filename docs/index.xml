@@ -89,11 +89,11 @@ To add metadata we have to use YAML that refers to te config file. --- author: &
       <description>about</description>
     </item>
     <item>
-      <title>My software/ 🔧</title>
+      <title>Fav software 🔧</title>
       <link>https://david7ce.github.io/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/software/</guid>
-      <description>The majority of software I use is Free and Open Source software (FOSS)</description>
+      <description>his is my favorite software, I try to look for open-source and if it possible cross-platform applications.</description>
     </item>
     <item>
       <title>Projects</title>
