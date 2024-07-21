@@ -6,20 +6,13 @@
     <description>Recent content in Linux on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jul 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux recommendation</title>
-      <link>https://david7ce.github.io/post/linux-recommendation/</link>
-      <pubDate>Fri, 03 Nov 2023 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/post/linux-recommendation/</guid>
-      <description>My Linux recommendation</description>
-    </item>
-    <item>
-      <title>Linux distros with/out desktops</title>
-      <link>https://david7ce.github.io/post/linux-desktop/</link>
+      <title>Linux distros</title>
+      <link>https://david7ce.github.io/post/linux-distros/</link>
       <pubDate>Wed, 13 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/post/linux-desktop/</guid>
+      <guid>https://david7ce.github.io/post/linux-distros/</guid>
       <description>The most important Linux distributions and desktop environments</description>
     </item>
     <item>

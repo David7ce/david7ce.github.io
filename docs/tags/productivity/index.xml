@@ -13,9 +13,7 @@
       <link>https://david7ce.github.io/post/setup-password-manager/</link>
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/post/setup-password-manager/</guid>
-      <description>Setting up a password manager This is an article that explains how to set up a password manager in a secure and private way.
-I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data and a cracker can use JS malfunctions.
-These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use Bitwarden or Vaultwarden (self-hosted Bitwarden).</description>
+      <description>Setting up a password manager This is an article that explains how to set up a password manager in a secure and private way. I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use Bitwarden.</description>
     </item>
   </channel>
 </rss>
