@@ -6,8 +6,22 @@
     <description>Recent content in Software on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/tags/software/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Good software</title>
+      <link>https://david7ce.github.io/post/good-software/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/good-software/</guid>
+      <description>Defining what is good software</description>
+    </item>
+    <item>
+      <title>Easy encryption</title>
+      <link>https://david7ce.github.io/post/easy-encryption/</link>
+      <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/easy-encryption/</guid>
+      <description>Encrypt your files in an easy way</description>
+    </item>
     <item>
       <title>The best apps for manage content</title>
       <link>https://david7ce.github.io/post/file-manager-systems/</link>

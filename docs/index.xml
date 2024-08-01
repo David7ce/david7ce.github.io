@@ -65,14 +65,6 @@
       <description>Intro As living beings to obtain information, we make use of data and we store them in our mind, that is to say, we organize the data in our database (the mind) and we mold them internally, that is to say, we shape the interior or in other words, we in-form ourselves to learn and obtain knowledge. When it comes to classifying information we do the same whether in a physical environment with a folio or a digital one with an electronic device.</description>
     </item>
     <item>
-      <title>Markdown Syntax Guide</title>
-      <link>https://david7ce.github.io/post/0-markdown-guide/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://david7ce.github.io/post/0-markdown-guide/</guid>
-      <description>This blog is writing using the web static generator framewrok HUGO. It converts the articles writted in markdown format to an HTML web page. The markdown format is simple, here is a test:
-To add metadata we have to use YAML that refers to te config file. --- author: &amp;#34;Hugo Authors&amp;#34; title: &amp;#34;Markdown Syntax Guide&amp;#34; date: &amp;#34;2021-01-01&amp;#34; description: &amp;#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.&amp;#34; tags: [&amp;#34;markdown&amp;#34;, &amp;#34;css&amp;#34;, &amp;#34;html&amp;#34;, &amp;#34;themes&amp;#34;] categories: [&amp;#34;themes&amp;#34;, &amp;#34;syntax&amp;#34;] comments: false ShowToc: true TocOpen: true lang: en series: [&amp;#34;Themes Guide&amp;#34;] aliases: [&amp;#34;migrate-from-jekyl&amp;#34;] cover: image: images/msg.</description>
-    </item>
-    <item>
       <title>About</title>
       <link>https://david7ce.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
