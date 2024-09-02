@@ -6,8 +6,16 @@
     <description>Recent content in Computing on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/tags/computing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding Package Management Across Distros</title>
+      <link>https://david7ce.github.io/post/package-managent/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/package-managent/</guid>
+      <description>In the world of software development and system administration, managing software efficiently is crucial. Package managers and packaging systems play a central role in this process, providing a structured way to install, update, and manage software applications on different operating systems. This article delves into the concept of package managers, explores how software is packaged and built across various distributions, and provides a comprehensive overview of different packaging systems.
+What is a Package Manager?</description>
+    </item>
     <item>
       <title>Good software</title>
       <link>https://david7ce.github.io/post/good-software/</link>
