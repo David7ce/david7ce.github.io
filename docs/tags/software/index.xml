@@ -16,6 +16,13 @@
       <description>Defining what is good software</description>
     </item>
     <item>
+      <title>KDE distro comparison</title>
+      <link>https://david7ce.github.io/post/kde-distros-comparison/</link>
+      <pubDate>Sat, 10 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/kde-distros-comparison/</guid>
+      <description>In search of the best distro with KDE integrated</description>
+    </item>
+    <item>
       <title>Easy encryption</title>
       <link>https://david7ce.github.io/post/easy-encryption/</link>
       <pubDate>Wed, 15 Nov 2023 00:00:00 +0000</pubDate>
@@ -27,7 +34,9 @@
       <link>https://david7ce.github.io/post/file-manager-systems/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/post/file-manager-systems/</guid>
-      <description>Intro As living beings to obtain information, we make use of data and we store them in our mind, that is to say, we organize the data in our database (the mind) and we mold them internally, that is to say, we shape the interior or in other words, we in-form ourselves to learn and obtain knowledge. When it comes to classifying information we do the same whether in a physical environment with a folio or a digital one with an electronic device.</description>
+      <description>&lt;h1 id=&#34;intro&#34;&gt;Intro&lt;/h1&gt;
+&lt;p&gt;As living beings to obtain information, we make use of data and we store them in our mind, that is to say, we organize the data in our database (the mind) and we mold them internally, that is to say, we shape the interior or in other words, we in-form ourselves to learn and obtain knowledge.
+When it comes to classifying information we do the same whether in a physical environment with a folio or a digital one with an electronic device. In a physical environment to classify information we write in notebooks, notepads, blackboards; while in a digital environment we need tools that adapt.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
