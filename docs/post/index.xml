@@ -6,8 +6,15 @@
     <description>Recent content in Posts on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Linux dilemma</title>
+      <link>https://david7ce.github.io/post/linux-dilemma/</link>
+      <pubDate>Thu, 05 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/linux-dilemma/</guid>
+      <description>The Linux vs. Windows Dilemma: What I Miss and What I Love About Linux</description>
+    </item>
     <item>
       <title>Understanding Package Management Across Distros</title>
       <link>https://david7ce.github.io/post/package-managent/</link>
