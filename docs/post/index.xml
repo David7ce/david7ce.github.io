@@ -6,8 +6,17 @@
     <description>Recent content in Posts on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ways to Run Multiple Operating Systems (Windows and Linux)</title>
+      <link>https://david7ce.github.io/post/ways-to-run-multiple-os/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/ways-to-run-multiple-os/</guid>
+      <description>&lt;p&gt;In today&amp;rsquo;s world, where development and IT environments are constantly evolving, running multiple operating systems (OS) on a single machine is a common practice. Whether you need Windows for productivity applications or Linux for development and server management, there are several methods to have both operating systems co-exist on the same machine. Let’s explore some popular ways to run both Windows and Linux:&lt;/p&gt;
+&lt;h2 id=&#34;1-dual-boot-using-grub&#34;&gt;1. Dual Boot Using GRUB&lt;/h2&gt;
+&lt;p&gt;Dual booting allows you to install both Windows and Linux on the same physical machine. When you start the computer, you’ll be able to choose which OS to boot into using a boot manager like GRUB.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Linux dilemma</title>
       <link>https://david7ce.github.io/post/linux-dilemma/</link>
@@ -65,7 +74,8 @@
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/post/setup-password-manager/</guid>
       <description>&lt;h1 id=&#34;setting-up-a-password-manager&#34;&gt;Setting up a password manager&lt;/h1&gt;
-&lt;p&gt;This is an article that explains how to set up a password manager in a secure and private way. I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use &lt;a href=&#34;https://bitwarden.com/&#34;&gt;Bitwarden&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;This is an article that explains how to set up a password manager in a secure and private way. I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use &lt;a href=&#34;https://bitwarden.com/&#34;&gt;Bitwarden&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are two main options to encrypt and organize your passwords in a single file:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Linux distros</title>

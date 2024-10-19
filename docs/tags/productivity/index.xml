@@ -14,7 +14,8 @@
       <pubDate>Sun, 11 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://david7ce.github.io/post/setup-password-manager/</guid>
       <description>&lt;h1 id=&#34;setting-up-a-password-manager&#34;&gt;Setting up a password manager&lt;/h1&gt;
-&lt;p&gt;This is an article that explains how to set up a password manager in a secure and private way. I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use &lt;a href=&#34;https://bitwarden.com/&#34;&gt;Bitwarden&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;This is an article that explains how to set up a password manager in a secure and private way. I don&amp;rsquo;t recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use &lt;a href=&#34;https://bitwarden.com/&#34;&gt;Bitwarden&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;There are two main options to encrypt and organize your passwords in a single file:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

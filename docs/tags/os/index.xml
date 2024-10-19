@@ -6,8 +6,17 @@
     <description>Recent content in OS on David7ce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 05 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://david7ce.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ways to Run Multiple Operating Systems (Windows and Linux)</title>
+      <link>https://david7ce.github.io/post/ways-to-run-multiple-os/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://david7ce.github.io/post/ways-to-run-multiple-os/</guid>
+      <description>&lt;p&gt;In today&amp;rsquo;s world, where development and IT environments are constantly evolving, running multiple operating systems (OS) on a single machine is a common practice. Whether you need Windows for productivity applications or Linux for development and server management, there are several methods to have both operating systems co-exist on the same machine. Let’s explore some popular ways to run both Windows and Linux:&lt;/p&gt;
+&lt;h2 id=&#34;1-dual-boot-using-grub&#34;&gt;1. Dual Boot Using GRUB&lt;/h2&gt;
+&lt;p&gt;Dual booting allows you to install both Windows and Linux on the same physical machine. When you start the computer, you’ll be able to choose which OS to boot into using a boot manager like GRUB.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>The Linux dilemma</title>
       <link>https://david7ce.github.io/post/linux-dilemma/</link>
