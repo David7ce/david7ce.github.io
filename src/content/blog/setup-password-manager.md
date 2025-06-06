@@ -1,0 +1,92 @@
+---
+title: Setup password manager
+publishDate: 2023-06-11
+updatedDate: '2025-06-03'
+description: 'Setting up a password manager in a secure and private way'
+tags:
+  - 'Computing'
+  - 'Productivity'
+# heroImage: { src: './blog-thumbnails/setup-password-manager-thumbnail.jpg', color: '#4891B2' }
+language: 'English'
+---
+
+## Setting up a password manager
+
+This is an article that explains how to set up a password manager in a secure and private way. I don't recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use [Bitwarden](https://bitwarden.com/).
+
+There are two main options to encrypt and organize your passwords in a single file:
+
+### 1. An encrypted spreadsheet file
+
+Use a spreadsheet with these file formats:
+
+- ODS (Open Document Spreadsheet), compatible with Libre Office, Collabora Office, Only Office, Open Office
+- XLS (Microsoft Excel Spreadsheet), compatible with Microsoft Office Excel, WPS Spreadsheet
+
+XLS or ODS allows you to save your password and accounts as a spreadsheet in an encrypted file with a chosen password.
+
+To do this, you need to install an Office suite, open the spreadsheet application and "Save as" with password.
+
+> In Libre Office Calc: "File -> Save As (Ctrl+Shift+S) and select "Save with password".
+> For Microsoft Excel, it is very similar to XLS, but safer.
+
+I recommend using Libre Office Calc, which is part of the Libre Office suite, because it is FOSS (free open source) and works on Windows, MacOS, Linux; and to open the file on the phone, just use Collabora Office. You can also use XLS, with MS Excel or the free alternatives such as WPS.
+
+#### Advantages
+
+- An encrypted file in the local drive
+- You can only enter the beginning and end of the password, it is in clear text.
+- You can organize it in your own way.
+   	- Columns: email, category, company, username, password, notes
+   	- Rows: like the values.
+
+#### Disadvantages
+
+- There is no option to generate the password automatically
+- The file can be cracked with several attempts and depends on the strength of the password.
+- No option to hide the password
+- No auto synchronisation
+
+### 2. A KeePass file (kdbx)
+
+[KeePass](https://keepass.info/) or the fork [KeePassXC](https://keepassxc.org/) are free open source password manager cross-platform (Windows, macOS, Linux), where you can store usernames, passwords, other fields, free-form notes and file attachments in an encrypted file with kdbx format.
+
+Here the software is designed to encrypt and classify password information instead of saving your info encrypting an xsl file.
+
+Due to the great boom of KeePass there are many compatible KeePass clients apps, where you can directly open the kdbx file generated.
+
+- For the web: [KeeWeb](https://github.com/keeweb/keeweb/releases/)
+- For macOS: [MacPAss](https://github.com/MacPass/MacPass/releases)
+- For Android: [KeePassDX](https://www.keepassdx.com/), [KeePass2Android](https://github.com/PhilippC/keepass2android/releases)
+- For iOS: [KeePassium](https://keepassium.com/), [StrongBox](https://strongboxsafe.com/)
+
+#### Pros
+
+- Local only, don't stored on a remote server
+- Encrypted file
+- Classification system by (folders, tags) with associated (username, password, mail, etc)
+- Option to hide passwords
+- Integrated on web-browser
+- Generate random password
+- Auto type passwrod
+
+#### Cons
+
+- Data is stored in one file that can be cracked
+- No autosync method
+
+### Conclusion
+
+These are the simple methods I have found to manage secret passwords in a secure and private way. I used an ODS encrypted file, but now I'm using KeePassXC on desktop and KeePassDX on Android.
+
+### Do not forget your master password
+
+Lastly one important thing is that you need to create a strong master password to enter to the *password manager*, so a good idea is to develop a method to don't forget your password. You can develop a skill to don't forget your password but my recommendation is to write the encrypted password in some place in case you forget it and better digitally next to your kdbx file.
+
+Some ideas to encrypt you master password in a *traditional way* are  storing on a file that you only understand and you can translate to a password, like in a drawing or any other thing that refresh your memory. In my case I use an image with symbols that I understand, others use a meme, parts of a book, an encoded text. The idea is store your password in a way that no-one understand but is very accesible to you.
+
+And here some types of password that you can generate:
+
+1. A long password, phrase or various words. Example: "perro mesa suelo cielo sobre mente alto año dos".
+2. An imaginable action combining letters, numbers and symbols. Example: "12_PájaroAzulVuelaAlto_21!!"
+3. A password generated by a program with special chars, also you need to copy-paste with a plugin of the password manager. Example: "dòÏ¡EÑt½·¶ÃÖÔ`Aq0²V½éK&m_¤Ã·"

@@ -1,0 +1,83 @@
+{
+  "name": "astro-pure",
+  "version": "1.2.7",
+  "description": "A simple, clean but powerful blog theme build by astro.",
+  "type": "module",
+  "author": "CWorld",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cworld1/astro-theme-pure.git",
+    "directory": "packages/pure"
+  },
+  "bugs": "https://github.com/cworld1/astro-theme-pure",
+  "homepage": "https://astro-pure.js.org/",
+  "keywords": [
+    "Astro",
+    "Theme",
+    "Blog"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "astro-pure": "scripts/index.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.ts",
+      "default": "./index.ts"
+    },
+    "./user": {
+      "types": "./components/user/index.ts",
+      "default": "./components/user/index.ts"
+    },
+    "./components/user": {
+      "types": "./components/user/index.ts",
+      "default": "./components/user/index.ts"
+    },
+    "./advanced": {
+      "types": "./components/advanced/index.ts",
+      "default": "./components/advanced/index.ts"
+    },
+    "./components/advanced": {
+      "types": "./components/advanced/index.ts",
+      "default": "./components/advanced/index.ts"
+    },
+    "./components/pages": {
+      "types": "./components/pages/index.ts",
+      "default": "./components/pages/index.ts"
+    },
+    "./components/basic": {
+      "types": "./components/basic/index.ts",
+      "default": "./components/basic/index.ts"
+    },
+    "./utils": {
+      "types": "./utils/index.ts",
+      "default": "./utils/index.ts"
+    },
+    "./server": {
+      "types": "./utils/server.ts",
+      "default": "./utils/server.ts"
+    },
+    "./types": {
+      "types": "./types/index.ts",
+      "default": "./types/index.ts"
+    },
+    "./libs": {
+      "types": "./libs/index.ts",
+      "default": "./libs/index.ts"
+    }
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/sitemap": "^3.4.0",
+    "@pagefind/default-ui": "^1.3.0",
+    "astro": "^5.8.1",
+    "hast-util-select": "^6.0.4",
+    "node-html-parser": "^7.0.1",
+    "pagefind": "^1.3.0",
+    "rehype-external-links": "^3.0.0",
+    "unocss": "^66.1.3"
+  }
+}

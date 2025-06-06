@@ -1,0 +1,18 @@
+export const socialLinks = [
+  'github',
+  'gitlab',
+  'discord',
+  'youtube',
+  'instagram',
+  'linkedin',
+  'facebook',
+  'x',
+  'telegram',
+  'mastodon',
+  'rss',
+  'email',
+  'reddit',
+  'bluesky',
+  'tiktok',
+  'steam',
+] as const

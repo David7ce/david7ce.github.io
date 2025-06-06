@@ -1,0 +1,146 @@
+---
+import { Comment } from 'astro-pure/advanced'
+import PageLayout from '@/layouts/CommonPage.astro'
+
+const headings = [
+  { depth: 2, slug: 'who-am-i', text: 'Who am I' },
+  { depth: 2, slug: 'swot-analysis', text: 'SWOT Analysis' },
+  { depth: 2, slug: 'skills', text: 'Skills' },
+  { depth: 2, slug: 'tools', text: 'Tools' },
+  { depth: 2, slug: 'interests', text: 'Interests' },
+  { depth: 2, slug: 'public-profile', text: 'Public Profile' },
+  { depth: 2, slug: 'about-blog', text: 'About Blog' }
+]
+---
+
+<PageLayout title='About' {headings} info='/about'>
+  <h2 id='who-am-i'>Who am I 😎</h2>
+  <p>I am David Alonso alias "David7ce" (for GitHub).</p>
+  <p>
+    I'm currently studying for a degree in web development. My goal is to create useful applications
+    with a beautiful and simple design.
+  </p>
+  <p>I'm an energetic, versatile, analytical, and ambitious person with a responsible outlook.</p>
+  <p>I'm passionate about data analysis, IT processes and science projects.</p>
+  <p>I'm a free and open-source enthusiast, but I can understand closed-source.</p>
+  <!-- <p>Link to my <a href="../CV-David7ce.pdf" target="_blank">Curriculum Vitae</a>.</p> -->
+
+  <h2 id='swot-analysis'>SWOT Analysis</h2>
+
+  <h3>Strengths 💪</h3>
+  <ul>
+    <li><strong>Big Picture Thinking</strong>: Excellent at planning and strategic thinking.</li>
+    <li><strong>Problem Solver</strong>: Great at finding solutions to complex problems.</li>
+    <li>
+      <strong>Independent-shared</strong>: Works well on my own but also thrives in cohesive groups.
+    </li>
+  </ul>
+
+  <h3>Weaknesses ⚠️</h3>
+  <ul>
+    <li><strong>Critical</strong>: Can be hard on myself and others.</li>
+    <li><strong>Perfectionist</strong>: May feel dissatisfied if things aren't "perfect."</li>
+    <li><strong>Dislike Rules</strong>: Gets frustrated with inefficient or rigid systems.</li>
+  </ul>
+
+  <h3>Opportunities 🌟</h3>
+  <ul>
+    <li><strong>Leadership</strong>: My strategic thinking can shine in leadership roles.</li>
+    <li><strong>Technology</strong>: Interested in exploring new tools and methods.</li>
+    <li>
+      <strong>Learning</strong>: Passionate about learning, with new skills always on the horizon.
+    </li>
+  </ul>
+
+  <h3>Threats ⚠️</h3>
+  <ul>
+    <li><strong>Burnout</strong>: Perfectionism might lead to overworking and burnout.</li>
+    <li><strong>Isolation</strong>: Too much independence make me feel isolated.</li>
+  </ul>
+
+  <h2 id='skills'>Skills 🤹</h2>
+
+  <h3>Hard skills</h3>
+  <ul>
+    <li>Computer systems administration</li>
+    <li>Knowledge of physics and mathematics</li>
+    <li>Web Design and Development</li>
+  </ul>
+
+  <h3>Soft skills</h3>
+  <ul>
+    <li>Good analytical and problem solving skills</li>
+    <li>Leadership capacity</li>
+    <li>Open mind and multi-field vision</li>
+  </ul>
+
+  {/* tools */}
+  <h2 id='tools'>🔧 Tools</h2>
+
+  <h3>Languages used</h3>
+  <ul>
+    <li><strong>Human</strong>: 🇪🇸 (Español nativo) & 🇬🇧 (English B2)</li>
+    <li><strong>Programming</strong>: Bash, C#, JavaScript, PHP, Python</li>
+    <li><strong>Markup</strong>: HTML, Markdown, XML</li>
+    <li><strong>Styling</strong>: CSS</li>
+    <li><strong>Search Query (SQL)</strong>: MySQL, PostgresSQL, TSQL</li>
+    <li>
+      <strong>Web library/framework</strong>: CSS (Bootstrap), full-stack with PHP (Laravel), Static
+      Site Generator (HUGO)
+    </li>
+  </ul>
+
+
+  {/* interests */}
+  <h2 id='interests'>👀 Interests</h2>
+  <p>I'm interested in many things.</p>
+  <ul>
+    <li>
+      <strong>Cosmology 🌌</strong>. I like to read and understand the functioning of our world
+      (Sun, Moon, stars, etc).
+    </li>
+    <li>
+      <strong>Computing (software) 🖥️💿</strong>. I like to understand operating systems and create
+      useful apps. That's why I started using Linux, specially Arch Linux. "I use Arch btw".
+    </li>
+    <li>
+      <strong>Electronics (hardware) ⚡🔌</strong>. I like electronic tech, and building electronic
+      hardware is something I would like to learn in the future.
+    </li>
+    <li>
+      <strong>Photography 📷</strong>. I like to capture landscapes including astrophotography. And
+      discover new places, streets and people.
+    </li>
+    <li>
+      <strong>Languages 🗣️💬</strong>. I like languages, I mostly consume English or Spanish
+      (native). But I'm interested in more.
+    </li>
+    <li>
+      <strong>Physical activity 🏊‍♂️💪</strong>. I like to do physical activities to keep myself
+      healthy and strong. I prefer exercising with my own body, such as gymnastics, climbing,
+      hiking, and some team sports like basketball.
+    </li>
+    <li>
+      <strong>Playing & Listening Music 🎧🎸🎶</strong>. I like listening to good music, depending
+      on my mood, one genre or another, and sometimes I play guitar. In the future I would like to
+      learn to play the piano.
+    </li>
+    <li><strong>Travel 🗺️⁀જ✈︎</strong>. I like to discover new places and cultures.</li>
+    <li><strong>Writing ✍️</strong>. I like writing things to bloom my ideas.</li>
+  </ul>
+
+  {/* public-profile */}
+  <h2 id='public-profile'>🔗 Public Profile</h2>
+  <ul>
+    <li><a href='https://alternativeto.net/user/d7' target='_blank'>D7 - AlternativeTo</a></li>
+    <li><a href='https://github.com/david7ce' target='_blank'>David7ce - GitHub</a></li>
+    <li>
+      <a href='https://www.linkedin.com/in/david-alonsodd' target='_blank'
+        >David Alonso - LinkedIn</a
+      >
+    </li>
+    <li><a href='https://www.youtube.com/@CompuB1t' target='_blank'>Compub1t - YouTube</a></li>
+  </ul>
+
+  <Comment slot='bottom' />
+</PageLayout>
