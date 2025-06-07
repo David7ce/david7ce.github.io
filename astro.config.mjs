@@ -21,6 +21,7 @@ import config from './src/site.config.ts'
 export default defineConfig({
   site: 'https://david7ce.github.io/',
   outDir: './dist',
+  // base: 'name-repository', // Don’t set a base parameter if: pagee on root folder / repository is <USERNAME>.github.io.
   trailingSlash: 'never',
   adapter: staticAdapter(),
   output: 'static',
