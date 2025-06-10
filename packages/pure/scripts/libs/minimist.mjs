@@ -24,7 +24,7 @@ function isConstructorOrProto(obj, key) {
   return (key === 'constructor' && typeof obj[key] === 'function') || key === '__proto__'
 }
 
-module.exports = function (args, opts) {
+export default function (args, opts) {
   if (!opts) {
     opts = {}
   }

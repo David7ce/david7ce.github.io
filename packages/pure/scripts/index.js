@@ -4,22 +4,26 @@
 import { readFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
+import process from 'process'
+import { console } from 'console'
 
 import checkFunc from './check.mjs'
-import minimist from './libs/minimist.cjs'
+import minimist from './libs/minimist.mjs'
 import newFunc from './new.mjs'
 
 const args = minimist(process.argv.slice(2))
 
 switch (args._[0]) {
-  case 'check':
+  case 'check': {
     await checkFunc()
     break
-  case 'new':
+  }
+  case 'new': {
     const newArgs = process.argv.slice(3)
     newFunc(newArgs)
     break
-  case 'info':
+  }
+  case 'info': {
     const __dirname = dirname(fileURLToPath(import.meta.url))
     const packageJson = JSON.parse(readFileSync(join(__dirname, '../package.json'), 'utf8'))
     console.log()
@@ -29,14 +33,17 @@ switch (args._[0]) {
     console.log(`- Node.js:\t${process.version}`)
     console.log(`- Platform:\t${process.platform}`)
     break
-  case 'help':
+  }
+  case 'help': {
     console.log('Usage:')
-    console.log('  check - Check envirionment and run corresponding adaption code')
+    console.log('  check - Check environment and run corresponding adaption code')
     console.log('  new [args] - Create new post on blog collection')
     console.log('  info - Show this info message')
     console.log('  help - Show this help message')
     break
-  default:
+  }
+  default: {
     console.log('Unknown command. Use "help" to see the available commands.')
     break
+  }
 }
