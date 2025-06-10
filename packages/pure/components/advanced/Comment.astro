@@ -47,6 +47,47 @@ const { class: className } = Astro.props
         serverURL: walineConfig.server || '',
         emoji,
         reaction: ['/icons/heart-item.svg'],
+        // Configuration of comments
+        login: 'enable',
+        wordLimit: [0, 1000],
+        requiredMeta: ['nick', 'mail'],
+        pageSize: 10,
+        lang: 'es-ES',
+        locale: {
+          placeholder: 'Write your comment...',
+          sofa: 'Be the first to comment',
+          submit: 'Submit',
+          like: 'Like',
+          cancelLike: 'Remove like',
+          reply: 'Reply',
+          cancelReply: 'Cancel reply',
+          comment: 'Comment',
+          refresh: 'Refresh',
+          more: 'Upload more. ..',
+          preview: 'Preview',
+          emoji: 'Emoji',
+          uploadImage: 'Upload image',
+          seconds: 'seconds ago',
+          minutes: 'minutes ago',
+          hours: 'hours ago',
+          days: 'days ago',
+          now: 'right now',
+          uploading: 'Uploading. ..',
+          login: 'Login',
+          logout: 'Log out',
+          admin: 'Admin',
+          sticky: 'Highlight',
+          unsticky: 'Remove sticky',
+          approved: 'Approved',
+          waiting: 'Waiting for moderation',
+          spam: 'Spam',
+          nick: 'Name',
+          mail: 'Mail',
+          link: 'Website',
+          nickError: 'Name is required',
+          mailError: 'Please enter a valid email',
+          wordHint: 'You can type $0 words, you have typed $1 words',
+        },
         ...walineConfig.additionalConfigs
       })
     }
@@ -144,5 +185,152 @@ const { class: className } = Astro.props
   }
   :global(.dark) #waline :global(.wl-reaction img) {
     filter: invert(75%);
+  }
+
+  /* Estilos para botones de edición y eliminación */
+  #waline :global(.wl-operation) {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+
+  #waline :global(.wl-edit, .wl-delete, .wl-sticky, .wl-approve) {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    border: 1px solid var(--waline-border-color);
+    background: var(--waline-bg-color);
+    color: var(--waline-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+  }
+
+  #waline :global(.wl-edit:hover) {
+    background: var(--waline-theme-color);
+    color: var(--waline-white);
+    border-color: var(--waline-theme-color);
+  }
+
+  #waline :global(.wl-delete:hover) {
+    background: #ef4444;
+    color: white;
+    border-color: #ef4444;
+  }
+
+  #waline :global(.wl-sticky:hover, .wl-approve:hover) {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+  }
+
+  /* Formulario de edición */
+  #waline :global(.wl-edit-form) {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--waline-border-color);
+    border-radius: 8px;
+    background: var(--waline-bg-color-light);
+  }
+
+  #waline :global(.wl-edit-form textarea) {
+    width: 100%;
+    min-height: 100px;
+    padding: 0.5rem;
+    border: 1px solid var(--waline-border-color);
+    border-radius: 4px;
+    background: var(--waline-white);
+    color: var(--waline-color);
+    font-family: inherit;
+    resize: vertical;
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-actions) {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: flex-end;
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-cancel, .wl-edit-form .wl-edit-submit) {
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    border: 1px solid var(--waline-border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-cancel) {
+    background: var(--waline-bg-color);
+    color: var(--waline-color);
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-cancel:hover) {
+    background: var(--waline-bg-color-hover);
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-submit) {
+    background: var(--waline-theme-color);
+    color: var(--waline-white);
+    border-color: var(--waline-theme-color);
+  }
+
+  #waline :global(.wl-edit-form .wl-edit-submit:hover) {
+    background: var(--waline-active-color);
+    border-color: var(--waline-active-color);
+  }
+
+  /* Badge de administrador */
+  #waline :global(.wl-badge) {
+    font-size: var(--waline-badge-font-size);
+    padding: 0.125rem 0.375rem;
+    border-radius: 3px;
+    background: var(--waline-badge-color);
+    color: var(--waline-white);
+    margin-left: 0.5rem;
+  }
+
+  #waline :global(.wl-badge.admin) {
+    background: #f59e0b;
+  }
+
+  #waline :global(.wl-badge.moderator) {
+    background: #8b5cf6;
+  }
+
+  /* Estado de comentarios */
+  #waline :global(.wl-comment.wl-waiting) {
+    opacity: 0.6;
+    border-left: 3px solid #f59e0b;
+    padding-left: 0.75rem;
+  }
+
+  #waline :global(.wl-comment.wl-spam) {
+    opacity: 0.4;
+    border-left: 3px solid #ef4444;
+    padding-left: 0.75rem;
+  }
+
+  /* Confirmación de eliminación */
+  #waline :global(.wl-delete-confirm) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--waline-white);
+    border: 1px solid var(--waline-border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  #waline :global(.wl-delete-confirm .wl-delete-actions) {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: flex-end;
   }
 </style>

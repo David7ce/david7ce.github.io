@@ -79,3 +79,4 @@ bunfig.toml
 /src/content/blog/test.*
 /test/
 TODO.md
+WALINE_SETUP.md

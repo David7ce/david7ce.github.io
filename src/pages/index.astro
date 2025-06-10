@@ -13,10 +13,11 @@ import SkillLayout from '../components/home/SkillLayout.astro'
 import avatar from '@/assets/avatar.png'
 import config from '../site.config'
 
-const markup_styling = ['Markdown', 'HTML', 'CSS',]
-const programming = ['JavaScript / TypeScript', 'C#']
-const web_library = ['Astro', 'Angular', 'React', 'ASP.NET Core']
-const backend = ['GitHub', 'Vercel', 'Supabase']
+const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
+const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
+const programming = ['C#', 'JavaScript / TypeScript']
+const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
+const platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -168,10 +169,11 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
       </Section> -->
 
       <Section title='Skills'>
-        <SkillLayout title='Markup & Styling' skills={markup_styling} />
+        <SkillLayout title='Markup' skills={markup} />
+        <SkillLayout title='Styling' skills={styling} />
         <SkillLayout title='Programming' skills={programming} />
         <SkillLayout title='Web Library' skills={web_library} />
-        <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='Platforms' skills={platforms} />
       </Section>
     </div>
     <Quote class='mt-12' />

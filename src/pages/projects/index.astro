@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets'
+// import { Image } from 'astro:assets'
 
 // import type { iconsType } from 'astro-pure/types'
 // import { Button, Icon } from 'astro-pure/user'
@@ -8,12 +8,13 @@ import ProjectSection from '@/components/projects/ProjectSection.astro'
 import config from '@/site-config'
 
 const headings = [
+  { depth: 2, slug: 'websites', text: 'Created Websites' },
   { depth: 2, slug: 'projects', text: 'Involved Projects' },
-  { depth: 2, slug: 'websites', text: 'Websites' },
 ]
 ---
 
 <PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+  <!--
   <p>Github Activities:</p>
   <p>
     <Image
@@ -23,6 +24,7 @@ const headings = [
       loading='lazy'
     />
   </p>
+  -->
 
   <h2 id='websites'>Created Websites</h2>
   <ProjectSection
