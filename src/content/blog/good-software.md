@@ -5,7 +5,7 @@ description: 'Defining what is good software'
 tags:
   - 'Computing'
   - 'Software'
-# heroImage: { src: './blog-thumbnails/good-software-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/good-software.jpg', color: '#4891B2' }
 language: 'English'
 ---
 

@@ -5,7 +5,7 @@ description: 'Methods to have both Windows and Linux operating systems co-exist'
 tags:
   - 'Computing'
   - 'OS'
-# heroImage: { src: './blog-thumbnails/ways-to-run-multiple-os-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/multiple-os.jpg', color: '#4891B2' }
 language: 'English'
 ---
 

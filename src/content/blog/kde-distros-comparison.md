@@ -5,7 +5,7 @@ description: 'In search of the best distro with KDE integrated'
 tags:
   - 'Computing'
   - 'Software'
-# heroImage: { src: './blog-thumbnails/kde-distros-comparison-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/kde-distros-comparison.jpg', color: '#4891B2' }
 language: 'English'
 ---
 

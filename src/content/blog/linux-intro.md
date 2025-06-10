@@ -5,7 +5,7 @@ description: 'Linux for noobs'
 tags:
   - 'Computing'
   - 'Linux'
-# heroImage: { src: './blog-thumbnails/linux-intro-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/linux-intro.webp', color: '#4891B2' }
 language: 'English'
 ---
 

@@ -4,7 +4,7 @@ publishDate: 2023-10-26
 description: 'The base of computing is encoding/decoding'
 tags:
   - 'Computing'
-# heroImage: { src: './blog-thumbnails/encode-decode-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/encode-decode.jpeg', color: '#4891B2' }
 language: 'English'
 ---
 

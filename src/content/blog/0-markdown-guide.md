@@ -1,35 +1,33 @@
 ---
 title: "Markdown Syntax Guide"
-publishDate: '2021-01-01'
-updatedDate: '2025-06-03'
+publishDate: '2100-01-01'
+updatedDate: '2500-06-03'
 description: 'Test page for any purpose'
 tags:
   - Test
+heroImage: { src: './thumbnails/0-markdown-guide.jpg', color: '#4891B2' }
 language: 'English'
 draft: true
 ---
 
-This blog is writing using the web static generator framewrok HUGO. It converts the articles writted in markdown format to an HTML web page. The markdown format is simple, here is a test:
+This blog is built using the web static generator framework **Astro.js**. It converts articles written in markdown format to HTML web pages. The markdown format is simple, here is a test view in [raw here](https://raw.githubusercontent.com/David7ce/david7ce.github.io/refs/heads/main/src/content/blog/0-markdown-guide.md):
 
-- To configure HUGO Papermod article display we have to add [variables on the front-matter](https://github.com/adityatelange/hugo-PaperMod/wiki/Variables) on top of the markdown note.
+- To configure Astro article display we add variables in the front-matter at the top of the markdown file.
 
 ```yaml
 ---
-author: "Hugo Authors"
 title: "Markdown Syntax Guide"
-date: "2021-01-01"
-description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags: ["markdown", "css", "html", "themes"]
-categories: ["themes", "syntax"]
-comments: false
-lang: en
-series: ["Themes Guide"]
-aliases: ["migrate-from-jekyl"]
-cover:
-  image: images/msg.png
-  caption: "Generated using [OG Image Playground by Vercel](https://og-playground.vercel.app/)"
-ShowToc: true
-TocOpen: true
+publishDate: '2021-01-01'
+updatedDate: '2025-06-03'
+description: 'Sample article showcasing basic Markdown syntax and formatting for HTML elements.'
+tags:
+  - markdown
+  - css
+  - html
+  - astro
+heroImage: { src: './blog-thumbnails/markdown-guide.jpg', color: '#4891B2' }
+language: 'English'
+draft: false
 ---
 ```
 
@@ -50,196 +48,102 @@ TocOpen: true
 
 ### Inline formatting
 
-```md
-*Italicized text*, **bold text**, ***italicized and bold***.
-_Italicized text_, __bold text__, ___italicized and bold___.  
-~~Strike-through text~~
-```
-
 *Italicized text*, **bold text**, ***italicized and bold***.
 *Italicized text*, **bold text**, ***italicized and bold***.
 ~~Strike-through text~~.
 
 ### Lists
 
-- Ordered list:
-
-```md
-1. First ordered list item 
-	1. First ordered list sub-item
-		1. First ordered list sub-sub-item
-	2. Second ordered list sub-item
-```
+#### Ordered list
 
 1. First ordered list item
 	1. First ordered list sub-item
 		1. First ordered list sub-sub-item
-	2. Second ordered list sub-item
 
-```md
-- Item 1
-	+ Item 1.1
-		* Item 1.1.1
-		- Item 1.1.2
-- Item 2
-- Item 3
-```
+#### Unordered list (*, -)
 
-- Unordered list (*, -):
 - Item 1
    	- Item 1.1
-      		- Item 1.1.1
-      		- Item 1.1.2
-- Item 2
-- Item 3
+       	- Item 1.1.1
 
 ### Checkbox list
 
-```md
 - [x] Checked
-    - [ ] Unchecked
-```
-
-- [x] Checked
-    - [ ] Unchecked
+- [ ] Unchecked
 
 ### Code block
 
-- `Inline code`
-
-```md
-`Inline code`
-```
-
+- Inline code: `console.log("Hello World");`
 - Fenced code block
 
-```md
-With three tildes (~~~) or back quotes (```md),
-it must be the "three tildes together" to render the block
-`` `js
-var s = "JavaScript syntax highlighting";
-alert(s);
-`` `
-```
-
-```mdjs
+```js
 var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
 ### Blockquote
 
-```md
-> Blockquote.
-> Important message!
-```md
-
-> Blockquote.
-> Important message!
+> “To be, or not to be, that is the question”
 
 ### Comments
 
-```md
-<!-- This is a comment in Hugo Markdown -->
-```
-<!-- This is a comment in Hugo Markdown -->
+<!-- This is a comment -->
 
-### Math Formulas with Katex
+### Math Formulas with KaTeX
 
-- The obsidian.md format does not work
-
-```md
 $$P(A \vert B) = \frac{P(B \vert A)\cdot P(A)}{P(B)}$$
-```
 
-- You need to install Katex globally and use the [Katex syntax](https://katex.org/docs/supported.html)
+The golden ratio $\varphi = \frac{1+\sqrt{5}}{2} = 1.6180339887…$
 
-```md
-{\{< math.inline >}}
-<p>
-Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-</p>
-{\{</ math.inline >}}
-```
+## Media and Resources
 
-{{< math.inline >}}
-Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
-{{</ math.inline >}}
+### Images
 
-## Link resources
+Add images from the "public/" directory in Astro:
 
-### Link internal resources
+- Add images using markdown format:
 
-Add images from the root directory "static/" created by HUGO (img, jpg, gif)
+![Test](/img/test/sample.jpg)
 
-- Add images using markdown format, you cannot resize the image
+- Add images with custom styling using HTML:
 
-```md
-![Test](/img/sample.jpg#center)
-```
+<img src="/img/test/sample.jpg" alt="Sample" width="200" height="120" />
 
-![Test](/img/sample.jpg#center)
+### Videos
 
-- Add images using HUGO syntax
+- Add local videos using HTML5 video element:
 
-```md
-{\{< figure src="/img/sample.jpg#center" alt="text" height="120px" width="200px" >}}
-```
-
-{{< figure src="/img/sample.jpg#center" alt="text" height="120px" width="200px" >}}
-
-- Add images using HUGO syntax with RAW HTML
-
-```md
-{\{< rawhtml >}}
-	<img src="/img/sample.jpg" alt="Sample" height="120px" width="200px">
-{\{< /rawhtml >}}
-```
-
-{{< figure src="/img/sample.jpg#center" alt="Sample" height="120px" width="200px" >}}
-
-- Add videos using HUGO syntax (mp4, webp, ogg) with RAW HTML
-
-```md
-{\{< rawhtml >}}
-<video width=100% controls autoplay>
-    <source src="/img/sample.mp4" type="video/mp4">
-    Your browser does not support the video tag.  
+<video width="100%" controls>
+    <source src="/img/test/sample.mp4" type="video/mp4">
+    <source src="/img/test/sample.webm" type="video/webm">
+    Your browser does not support the video tag.
 </video>
-{\{< /rawhtml >}}
-```
 
-{{< video src="/img/sample.mp4" width="100%" >}}
+- Embed YouTube videos using iframe:
 
-### Link external resources
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/vQYiGRConFU"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
 
-- [Iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) doesn't work with HUGO ``<iframe src="https://www.youtube.com/embed/vQYiGRConFU"></iframe>``
+### Links
 
-- Instead you need to use ``{/{< youtube vQYiGRConFU >}/}``
-{{< youtube vQYiGRConFU >}}
+- Internal links using relative paths:
+   	- [About](/about)
+   	- [Another Blog Post](/blog/another-post)
 
-### Link urls
-
-- Internal link using HUGO syntax: [About]({{< ref "/about" >}} "About")
-
-```md
-[About]({\{< ref "/about" >}} "About")
-```
-
-- Internal link using markdown syntax: [About](about.md)
-
-```md
-[About](about.md)
-```
-
-- External link: [example web](https://example.com) or <https://example.com> or <https://example.com>
-
-```md
-[example web](https://example.com) or https://example.com or <https://example.com>
-```
+- External links:
+   	- [Astro Documentation](https://docs.astro.build) or <https://docs.astro.build>
 
 ## References
 
-- [Add a Video to Your Hugo Website](https://dev.to/hi_artem/add-a-video-to-your-hugo-website-104)
-- [How to add a video to a Hugo post](https://iamsorush.com/posts/add-video-to-hugo-post/)
-- [GoHugo - Getting Started](https://gohugo.io/getting-started/)
+- [Astro Documentation](https://docs.astro.build/)
+- [Astro Markdown Guide](https://docs.astro.build/en/guides/markdown-content/)
+- [Astro Content Collections](https://docs.astro.build/en/guides/content-collections/)
+- [MDX in Astro](https://docs.astro.build/en/guides/integrations-guide/mdx/)
+- [Markdown Syntax Guide](https://www.markdownguide.org/basic-syntax/)

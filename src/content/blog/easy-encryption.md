@@ -1,11 +1,11 @@
 ---
-title: Easy encryption
+title: Encrypt easy with Password Manager
 publishDate: 2023-11-15
 description: 'Encrypt your files in an easy way'
 tags:
   - 'Computing'
   - 'Software'
-# heroImage: { src: './blog-thumbnails/easy-encryption-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/password-manager.jpg', color: '#4891B2' }
 language: 'English'
 ---
 

@@ -5,11 +5,11 @@ description: 'This my story with OS''s'
 tags:
   - 'Computing'
   - 'OS'
-# heroImage: { src: './blog-thumbnails/my-os-story-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
 language: 'English'
 ---
 
-![OS timeline](/img/software/os/os-timeline.png)
+![OS timeline](/img/my-os-story/os-timeline.png)
 
 ## My journey with desktop OS
 

@@ -6,7 +6,7 @@ description: 'Setting up a password manager in a secure and private way'
 tags:
   - 'Computing'
   - 'Productivity'
-# heroImage: { src: './blog-thumbnails/setup-password-manager-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/password-manager.jpg', color: '#4891B2' }
 language: 'English'
 ---
 

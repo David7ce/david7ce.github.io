@@ -5,7 +5,7 @@ description: 'Types and ways to install a distro of Linux'
 tags:
   - 'Computing'
   - 'Linux'
-# heroImage: { src: './blog-thumbnails/linux-distros-thumbnail.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/linux-distros.jpg', color: '#4891B2' }
 language: 'English'
 ---
 
@@ -49,18 +49,18 @@ When a distribution provides the core components such as the Linux kernel, a pac
 
 While there are hundreds of Linux distributions, the majority are based on these ten foundational Linux base distros.
 
-| Linux distro                                                                        | Mantainer | Release model | Package manager                 | Source repository                                                             |
-| ----------------------------------------------------------------------------------- | --------- | ------------- | ------------------------------- | ----------------------------------------------------------------------------- |
-| [![ArchLinux](/img/software/os/linux/base/archlinux.webp)](https://archlinux.org/)  | Community | Rolling       | Pacman (pkg.tar.zst + PKGBUILD) | [Arch pkgs](https://archlinux.org/packages)+[AUR](https://aur.archlinux.org/) |
-| [![Debian](/img/software/os/linux/base/debian.webp)](https://www.debian.org/)       | Community | Fixed         | APT (deb)                       | [Debian pkgs](https://packages.debian.org/stable/)                            |
-| [![Fedora](/img/software/os/linux/base/fedora.webp)](https://fedoraproject.org/)    | Red Hat   | Fixed         | DNF (rpm)                       | [Fedora pkgs](https://packages.fedoraproject.org/)                            |
-| [![OpenSUSE](/img/software/os/linux/base/opensuse.webp)](https://www.opensuse.org/) | SUSE      | Mixed         | Zypper (rpm)                    | [OpenSUSE pkgs](https://software.opensuse.org/)                               |
-| [![NixOS](/img/software/os/linux/base/nixos.webp)](https://nixos.org/)              | Community | Rolling       | Nix (nar or .nar.xz)            | [NixOS pkgs](https://search.nixos.org/packages)                               |
-| [![Gentoo](/img/software/os/linux/base/gentoo.webp)](https://www.gentoo.org/)       | Community | Rolling       | Portage (tar.xz + ebuild)       | [Gentoo pkgs](https://packages.gentoo.org/)                                   |
-| [![Void](/img/software/os/linux/base/void.webp)](https://voidlinux.org/)            | Community | Rolling       | XBPS (xbps.tar.xz)              | [Void pkgs](https://voidlinux.org/packages/)                                  |
-| [![Slackware](/img/software/os/linux/base/slackware.webp)](https://slackware.org/)  | Community | LTS           | Slackpkg (tar)                  | [Slackware pkgs](https://packages.slackware.com/)                             |
-| [![Solus](/img/software/os/linux/base/solus.webp)](https://getsol.us/)              | Community | Rolling       | eopkg (eopkg)                   | [Solus pkgs](https://dev.getsol.us/source/)                                   |
-| [![Alpine](/img/software/os/linux/base/alpine.webp)](https://alpinelinux.org/)      | Community | Rolling       | APK (apk)                       | [Alpine pkgs](https://pkgs.alpinelinux.org/)                                  |
+| Linux distro                                                                | Mantainer | Release model | Package manager                 | Source repository                                                             |
+| --------------------------------------------------------------------------- | --------- | ------------- | ------------------------------- | ----------------------------------------------------------------------------- |
+| [![ArchLinux](/img/linux-distros/base/archlinux.webp)](https://archlinux.org/)  | Community | Rolling       | Pacman (pkg.tar.zst + PKGBUILD) | [Arch pkgs](https://archlinux.org/packages)+[AUR](https://aur.archlinux.org/) |
+| [![Debian](/img/linux-distros/base/debian.webp)](https://www.debian.org/)       | Community | Fixed         | APT (deb)                       | [Debian pkgs](https://packages.debian.org/stable/)                            |
+| [![Fedora](/img/linux-distros/base/fedora.webp)](https://fedoraproject.org/)    | Red Hat   | Fixed         | DNF (rpm)                       | [Fedora pkgs](https://packages.fedoraproject.org/)                            |
+| [![OpenSUSE](/img/linux-distros/base/opensuse.webp)](https://www.opensuse.org/) | SUSE      | Mixed         | Zypper (rpm)                    | [OpenSUSE pkgs](https://software.opensuse.org/)                               |
+| [![NixOS](/img/linux-distros/base/nixos.webp)](https://nixos.org/)              | Community | Rolling       | Nix (nar or .nar.xz)            | [NixOS pkgs](https://search.nixos.org/packages)                               |
+| [![Gentoo](/img/linux-distros/base/gentoo.webp)](https://www.gentoo.org/)       | Community | Rolling       | Portage (tar.xz + ebuild)       | [Gentoo pkgs](https://packages.gentoo.org/)                                   |
+| [![Void](/img/linux-distros/base/void.webp)](https://voidlinux.org/)            | Community | Rolling       | XBPS (xbps.tar.xz)              | [Void pkgs](https://voidlinux.org/packages/)                                  |
+| [![Slackware](/img/linux-distros/base/slackware.webp)](https://slackware.org/)  | Community | LTS           | Slackpkg (tar)                  | [Slackware pkgs](https://packages.slackware.com/)                             |
+| [![Solus](/img/linux-distros/base/solus.webp)](https://getsol.us/)              | Community | Rolling       | eopkg (eopkg)                   | [Solus pkgs](https://dev.getsol.us/source/)                                   |
+| [![Alpine](/img/linux-distros/base/alpine.webp)](https://alpinelinux.org/)      | Community | Rolling       | APK (apk)                       | [Alpine pkgs](https://pkgs.alpinelinux.org/)                                  |
 
 ## What I Recommend
 
@@ -74,9 +74,9 @@ If you're looking for a family-friendly Linux option, consider using a major dis
 
 | Distro base  | Derivative distro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Arch-based   | [![EndeavourOS](/img/software/os/linux/based/endeavouros.webp)](https://endeavouros.com/) [![Garuda Linux](/img/software/os/linux/based/garuda-linux.webp)](https://garudalinux.com/) [![CachyOS](/img/software/os/linux/based/cachyos.webp)](https://cachyos.org/) [![Manjaro](/img/software/os/linux/based/manjaro.webp)](https://manjaro.org/products/download/x86)                                           |
-| Debian-based | [![Linux Mint](/img/software/os/linux/based/linux-mint.webp)](https://www.linuxmint.com/) [![Ubuntu](/img/software/os/linux/based/ubuntu.webp)](https://ubuntu.com/download) [![Kubuntu](/img/software/os/linux/based/kubuntu.webp)](https://kubuntu.org/) [![KDE neon](/img/software/os/linux/based/kde-neon.webp)](https://neon.kde.org/) [![Kali Linux](/img/software/os/linux/based/kali-linux.webp)](https://www.kali.org/) [![Pop OS](/img/software/os/linux/based/pop-os.webp)](https://pop.system76.com/) [![Proxmox](/img/software/os/linux/based/proxmox.webp)](https://www.proxmox.com/en/) |
-| Fedora-based | [![Fedora Spins](/img/software/os/linux/based/fedora-spins.webp)](https://fedoraproject.org/spins/) [![Nobara](/img/software/os/linux/based/nobara.webp)](https://nobaraproject.org/download-nobara/)                                                                                                                                                                                                                                                                                                                 |
+| Arch-based   | [![EndeavourOS](/img/linux-distros/based/endeavouros.webp)](https://endeavouros.com/) [![Garuda Linux](/img/linux-distros/based/garuda-linux.webp)](https://garudalinux.com/) [![CachyOS](/img/linux-distros/based/cachyos.webp)](https://cachyos.org/) [![Manjaro](/img/linux-distros/based/manjaro.webp)](https://manjaro.org/products/download/x86)                                           |
+| Debian-based | [![Linux Mint](/img/linux-distros/based/linux-mint.webp)](https://www.linuxmint.com/) [![Ubuntu](/img/linux-distros/based/ubuntu.webp)](https://ubuntu.com/download) [![Kubuntu](/img/linux-distros/based/kubuntu.webp)](https://kubuntu.org/) [![KDE neon](/img/linux-distros/based/kde-neon.webp)](https://neon.kde.org/) [![Kali Linux](/img/linux-distros/based/kali-linux.webp)](https://www.kali.org/) [![Pop OS](/img/linux-distros/based/pop-os.webp)](https://pop.system76.com/) [![Proxmox](/img/linux-distros/based/proxmox.webp)](https://www.proxmox.com/en/) |
+| Fedora-based | [![Fedora Spins](/img/linux-distros/based/fedora-spins.webp)](https://fedoraproject.org/spins/) [![Nobara](/img/linux-distros/based/nobara.webp)](https://nobaraproject.org/download-nobara/)                                                                                                                                                                                                                                                                                                                 |
 
 ### Advanced installation: Minimal distros
 
@@ -108,7 +108,7 @@ Alternatively, if you’re up for a more hands-on and educational experience, yo
 - [Linux Distribution - Wikipedia](https://en.wikipedia.org/wiki/Linux_distribution)
 - [Linux Distribution Timeline - Wikipedia](https://upload.wikimedia.org/wikipedia/commons/b/b5/Linux_Distribution_Timeline_21_10_2021.svg)
 - [Linux Distros - ArchiveOS](https://archiveos.org/linux/)
-- [Linux Distros - Interneto](https://raindrop.io/Interneto/linux-distros-19045213)
+- [Linux Distros - Interneto](https://raindrop.io/Interneto/img/linux-distros-19045213)
 - [Desktop Environment - Wikipedia](https://en.wikipedia.org/wiki/Desktop_environment)
 - [Desktop Environment - ArchLinux](https://wiki.archlinux.org/title/Desktop_environment)
 - [Desktop Environment - Interneto](https://raindrop.io/Interneto/de-21145177)
