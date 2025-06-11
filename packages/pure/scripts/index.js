@@ -5,7 +5,7 @@ import { readFileSync } from 'fs'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import process from 'process'
-import { console } from 'console'
+import console from 'node:console'
 
 import checkFunc from './check.mjs'
 import minimist from './libs/minimist.mjs'

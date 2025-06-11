@@ -17,7 +17,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
-import { console } from 'node:console'
+import console from 'node:console'
 
 import minimist from './libs/minimist.mjs'
 import slugify from './libs/slugify.mjs'
