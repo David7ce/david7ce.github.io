@@ -24,50 +24,15 @@
     "astro-pure": "scripts/index.js"
   },
   "exports": {
-    ".": {
-      "types": "./index.ts",
-      "default": "./index.ts"
-    },
-    "./user": {
-      "types": "./components/user/index.ts",
-      "default": "./components/user/index.ts"
-    },
-    "./components/user": {
-      "types": "./components/user/index.ts",
-      "default": "./components/user/index.ts"
-    },
-    "./advanced": {
-      "types": "./components/advanced/index.ts",
-      "default": "./components/advanced/index.ts"
-    },
-    "./components/advanced": {
-      "types": "./components/advanced/index.ts",
-      "default": "./components/advanced/index.ts"
-    },
-    "./components/pages": {
-      "types": "./components/pages/index.ts",
-      "default": "./components/pages/index.ts"
-    },
-    "./components/basic": {
-      "types": "./components/basic/index.ts",
-      "default": "./components/basic/index.ts"
-    },
-    "./utils": {
-      "types": "./utils/index.ts",
-      "default": "./utils/index.ts"
-    },
-    "./server": {
-      "types": "./utils/server.ts",
-      "default": "./utils/server.ts"
-    },
-    "./types": {
-      "types": "./types/index.ts",
-      "default": "./types/index.ts"
-    },
-    "./libs": {
-      "types": "./libs/index.ts",
-      "default": "./libs/index.ts"
-    }
+    ".": "./index.ts",
+    "./user": "./components/user/index.ts",
+    "./advanced": "./components/advanced/index.ts",
+    "./components/pages": "./components/pages/index.ts",
+    "./components/basic": "./components/basic/index.ts",
+    "./utils": "./utils/index.ts",
+    "./server": "./utils/server.ts",
+    "./types": "./types/index.ts",
+    "./libs": "./libs/index.ts"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.0",

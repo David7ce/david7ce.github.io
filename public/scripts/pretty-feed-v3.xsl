@@ -14,7 +14,7 @@ to aboutfeeds.com for new user onboarding. See it in action:
 1. Download this XML stylesheet from the following URL and host it on your own
    domain (this is a limitation of XSL in browsers):
 
-   https://github.com/genmon/aboutfeeds/blob/main/software/pretty-feed-v3.xsl
+   https://github.com/genmon/aboutfeeds/blob/main/tools/pretty-feed-v3.xsl
 
 2. Include the XSL at the top of the RSS/Atom feed, like:
 
@@ -65,7 +65,7 @@ This file is in BETA. Please test and contribute to the discussion:
      https://github.com/genmon/aboutfeeds/issues/8
 
 -->
-<xsl:stylesheet version="3.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"
                 xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <xsl:output method="html" version="1.0" encoding="UTF-8" indent="yes"/>

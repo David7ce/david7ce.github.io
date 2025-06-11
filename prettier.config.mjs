@@ -45,7 +45,7 @@ export default {
     '',
     '^[./]'
   ],
-  importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
+  importOrderParserPlugins: ['astro', 'typescript', 'jsx', 'decorators-legacy'],
   overrides: [
     {
       files: '*.astro',
