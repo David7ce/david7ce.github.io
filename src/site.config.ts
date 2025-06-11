@@ -138,8 +138,8 @@ export const integ: IntegrationUserConfig = {
   // Comment system
   waline: {
     enable: true,
-    // Server service link
-    server: 'https://astro-theme-pure-waline.arthals.ink/',
+    // Server service link, others: https://astro-theme-pure-waline.arthals.ink/
+    server: 'https://waline-three-azure.vercel.app/',
     // Refer https://waline.js.org/en/guide/features/emoji.html
     emoji: ['bmoji', 'weibo'],
     // Configuration for Waline comment system
