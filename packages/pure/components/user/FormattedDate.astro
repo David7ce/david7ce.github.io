@@ -11,11 +11,13 @@ type Props = HTMLAttributes<'time'> & {
 
 const { date, dateTimeOptions, class: className, ...attrs } = Astro.props
 
-const postDate = getFormattedDate(date, dateTimeOptions)
+const isValidDate = date && date instanceof Date && !isNaN(date.getTime());
+const postDate = isValidDate ? getFormattedDate(date, dateTimeOptions) : '';
+const isoString = isValidDate ? date.toISOString() : '';
 ---
 
 <span class={cn('text-muted-foreground font-mono', className)} {...attrs}>
-  <time datetime={date.toISOString()}>
+  <time datetime={isoString}>
     {postDate}
   </time>
 </span>

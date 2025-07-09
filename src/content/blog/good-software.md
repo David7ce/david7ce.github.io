@@ -1,6 +1,6 @@
 ---
 title: Good software
-publishDate: 2024-02-10
+publishDate: '2024-02-10'
 description: 'Defining what is good software'
 tags:
   - 'Computing'

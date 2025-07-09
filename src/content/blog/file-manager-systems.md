@@ -1,6 +1,6 @@
 ---
 title: The best apps for manage content
-publishDate: 2022-04-12
+publishDate: '2022-04-12'
 description: 'File manager systems for organizing and managing digital content'
 tags:
   - 'Software'

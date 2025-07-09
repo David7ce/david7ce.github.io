@@ -1,6 +1,6 @@
 ---
 title: The Linux dilemma
-publishDate: 2024-09-05
+publishDate: '2024-09-05'
 description: 'The Linux vs. Windows Dilemma: What I Miss and What I Love About Linux'
 tags:
   - 'Computing'

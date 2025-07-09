@@ -1,6 +1,6 @@
 ---
 title: Linux introduction
-publishDate: 2022-06-18
+publishDate: '2022-06-18'
 description: 'Linux for noobs'
 tags:
   - 'Computing'

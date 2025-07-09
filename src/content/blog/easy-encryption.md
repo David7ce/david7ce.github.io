@@ -1,6 +1,6 @@
 ---
 title: Encrypt easy with Password Manager
-publishDate: 2023-11-15
+publishDate: '2023-11-15'
 description: 'Encrypt your files in an easy way'
 tags:
   - 'Computing'

@@ -135,15 +135,11 @@ export const integ: IntegrationUserConfig = {
       className: 'zoomable'
     }
   },
-  // Comment system
+  // Comment system: https://waline.js.org/en/reference/client/props.html
   waline: {
     enable: true,
-    // Server service link, others: https://astro-theme-pure-waline.arthals.ink/
-    server: 'https://waline-three-azure.vercel.app/',
-    // Refer https://waline.js.org/en/guide/features/emoji.html
+    server: 'https://wailine-git-main-david7ces-projects.vercel.app/',
     emoji: ['bmoji', 'weibo'],
-    // Configuration for Waline comment system
-    // Refer https://waline.js.org/en/reference/client/props.html
     additionalConfigs: {
       // search: false,
       pageview: true,

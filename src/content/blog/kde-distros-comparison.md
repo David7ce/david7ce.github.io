@@ -1,6 +1,6 @@
 ---
 title: KDE distro comparison
-publishDate: 2024-02-10
+publishDate: '2024-02-10'
 description: 'In search of the best distro with KDE integrated'
 tags:
   - 'Computing'

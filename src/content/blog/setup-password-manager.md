@@ -1,6 +1,6 @@
 ---
 title: Setup password manager
-publishDate: 2023-06-11
+publishDate: '2023-06-11'
 updatedDate: '2025-06-03'
 description: 'Setting up a password manager in a secure and private way'
 tags:

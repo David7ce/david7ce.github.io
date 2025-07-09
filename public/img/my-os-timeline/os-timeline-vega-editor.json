@@ -1,0 +1,199 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json",
+  "description": "Timeline of my OS in Computers",
+  "width": 900,
+  "height": 320,
+  "data": {
+    "values": [
+      {
+        "pc": "Desktop PC (family)",
+        "os": "Windows XP",
+        "start": "2004-01-01",
+        "end": "2009-01-01"
+      },
+      {
+        "pc": "Desktop PC (family)",
+        "os": "Windows 7",
+        "start": "2009-01-01",
+        "end": "2012-01-01"
+      },
+      {
+        "pc": "Desktop PC (family)",
+        "os": "Windows 8",
+        "start": "2012-01-01",
+        "end": "2015-01-01"
+      },
+      {
+        "pc": "Desktop PC (family)",
+        "os": "Windows 10",
+        "start": "2015-01-01",
+        "end": "2025-12-31"
+      },
+      {
+        "pc": "Laptop 1",
+        "os": "Windows 7",
+        "start": "2011-01-01",
+        "end": "2012-07-01"
+      },
+      {
+        "pc": "Laptop 1",
+        "os": "Windows 10",
+        "start": "2012-07-01",
+        "end": "2022-01-01"
+      },
+      {
+        "pc": "Laptop 1",
+        "os": "Garuda",
+        "start": "2022-01-01",
+        "end": "2025-12-31"
+      },
+      {
+        "pc": "Laptop 2",
+        "os": "Windows 10",
+        "start": "2015-01-01",
+        "end": "2017-01-01"
+      },
+      {
+        "pc": "Laptop 2",
+        "os": "Ubuntu",
+        "start": "2017-01-01",
+        "end": "2019-01-01"
+      },
+      {
+        "pc": "Laptop 2",
+        "os": "Windows 10",
+        "start": "2019-01-01",
+        "end": "2024-12-31"
+      },
+      {
+        "pc": "Laptop 2",
+        "os": "Fedora",
+        "start": "2025-01-01",
+        "end": "2025-12-31"
+      },
+      {
+        "pc": "Desktop PC (my)",
+        "os": "Windows 10",
+        "start": "2019-01-01",
+        "end": "2021-05-01"
+      },
+      {
+        "pc": "Desktop PC (my)",
+        "os": "Arch-based",
+        "start": "2021-05-01",
+        "end": "2025-12-31"
+      },
+      {
+        "pc": "Laptop 3",
+        "os": "Windows 11",
+        "start": "2023-01-01",
+        "end": "2025-12-31"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {"type": "bar", "size": 24},
+      "encoding": {
+        "y": {
+          "field": "pc",
+          "type": "nominal",
+          "title": "Computer",
+          "sort": [
+            "Desktop PC (family)",
+            "Laptop 1",
+            "Laptop 2",
+            "Desktop PC (my)",
+            "Laptop 3"
+          ]
+        },
+        "x": {"field": "start", "type": "temporal", "title": "Year"},
+        "x2": {"field": "end"},
+        "color": {
+          "field": "os",
+          "type": "nominal",
+          "title": "Operating System",
+          "scale": {
+            "domain": [
+              "Windows XP",
+              "Windows 7",
+              "Windows 8",
+              "Windows 10",
+              "Windows 11",
+              "Ubuntu",
+              "Fedora",
+              "Garuda",
+              "Arch-based"
+            ],
+            "range": [
+              "#A6C8FF",
+              "#78A9FF",
+              "#4589FF",
+              "#0F62FE",
+              "#0043CE",
+              "#e95420",
+              "#56a4db",
+              "#7f67e7",
+              "#1e93d2"
+            ]
+          }
+        },
+        "tooltip": [
+          {"field": "pc", "title": "Computer"},
+          {"field": "os", "title": "Operating System"},
+          {"field": "start", "title": "From"},
+          {"field": "end", "title": "To"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 5,
+        "fontSize": 10,
+        "fill": "white"
+      },
+      "encoding": {
+        "x": {"field": "start", "type": "temporal"},
+        "x2": {"field": "end"},
+        "y": {"field": "pc", "type": "nominal"},
+        "text": {"field": "os", "type": "nominal"},
+        "color": {
+          "field": "os",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Windows XP",
+              "Windows 7",
+              "Windows 8",
+              "Windows 10",
+              "Windows 11",
+              "Ubuntu",
+              "Fedora",
+              "Garuda",
+              "Arch-based"
+            ],
+            "range": [
+              "#A6C8FF",
+              "#78A9FF",
+              "#4589FF",
+              "#0F62FE",
+              "#0043CE",
+              "#e95420",
+              "#56a4db",
+              "#7f67e7",
+              "#1e93d2"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "scale": {"bandPaddingInner": 0.1, "bandPaddingOuter": 0.05},
+    "axis": {"labelFontSize": 12, "titleFontSize": 14}
+  }
+}

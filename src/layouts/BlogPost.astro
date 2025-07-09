@@ -39,7 +39,9 @@ const socialImage = heroImage
     ? heroImage.src
     : heroImage.src.src
   : '/images/social-card.png'
-const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString()
+const pubDate = publishDate instanceof Date ? publishDate : new Date(publishDate);
+const updDate = updatedDate instanceof Date ? updatedDate : (updatedDate ? new Date(updatedDate) : null);
+const articleDate = updDate?.toISOString() ?? pubDate.toISOString()
 const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-text-opacity))'
 ---
 
@@ -50,7 +52,7 @@ const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-tex
 >
   {!!headings.length && <TOC {headings} slot='sidebar' />}
 
-  <Hero data={Astro.props.post} {remarkPluginFrontmatter} slot='header' />
+  <Hero data={Astro.props.post.data} {remarkPluginFrontmatter} slot='header' />
 
   <slot />
 

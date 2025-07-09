@@ -1,6 +1,6 @@
 ---
 title: Linux distros
-publishDate: 2022-07-13
+publishDate: '2022-07-13'
 description: 'Types and ways to install a distro of Linux'
 tags:
   - 'Computing'

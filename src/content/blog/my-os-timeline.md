@@ -1,6 +1,6 @@
 ---
 title: My Story with OS's
-publishDate: 2024-01-21
+publishDate: '2024-01-21'
 description: 'This my story with OS''s'
 tags:
   - 'Computing'
@@ -9,7 +9,7 @@ heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
 language: 'English'
 ---
 
-![OS timeline](/img/my-os-story/os-timeline.png)
+![OS timeline](/img/my-os-timeline/os-timeline.png)
 
 ## My journey with desktop OS
 

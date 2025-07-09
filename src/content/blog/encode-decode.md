@@ -1,6 +1,6 @@
 ---
 title: Encode / Decode
-publishDate: 2023-10-26
+publishDate: '2023-10-26'
 description: 'The base of computing is encoding/decoding'
 tags:
   - 'Computing'
