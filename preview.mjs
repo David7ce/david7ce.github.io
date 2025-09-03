@@ -4,6 +4,9 @@
 // This script temporarily modifies astro.config.ts to use 'static' output
 // for preview purposes, then restores it after
 
+/* eslint-env node */
+/* global console, process */
+
 import fs from 'fs';
 import { spawn } from 'child_process';
 
@@ -43,7 +46,7 @@ if (hasVercelAdapter) {
     console.log('🚀 Starting preview server...');
     
     // Now run preview
-    const preview = spawn('bun', ['run', 'astro', 'preview'], { stdio: 'inherit' });
+    spawn('bun', ['run', 'astro', 'preview'], { stdio: 'inherit' });
     
     // Handle Ctrl+C to restore config
     process.on('SIGINT', () => {
