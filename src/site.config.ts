@@ -79,7 +79,7 @@ export const theme: ThemeUserConfig = {
     credits: true,
     /** Optional details about the social media accounts for this site. */
     social: { github: 'https://github.com/david7ce' },
-    year: 'numeric'
+    year: '2025'
   },
 
   content: {
