@@ -1,0 +1,31 @@
+---
+import { integ } from '../site.config'
+
+// This is a wrapper for the Waline comment system
+// Since the Comment component was removed from astro-pure/advanced
+---
+
+{
+  integ.waline?.enable && (
+    <div class="waline-container">
+      <div id="waline"></div>
+      <script define:vars={{ serverURL: integ.waline.server }} is:inline>
+        import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.mjs';
+        
+        init({
+          el: '#waline',
+          serverURL,
+          ...Object.assign(
+            {},
+            {
+              lang: 'en',
+              dark: 'html.dark',
+              emoji: ['https://unpkg.com/@waline/emojis@1.1.0/weibo']
+            },
+            {/* Additional configs from site config */},
+          ),
+        });
+      </script>
+    </div>
+  )
+}

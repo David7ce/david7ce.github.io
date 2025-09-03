@@ -1,0 +1,14 @@
+---
+interface Props {
+  path: string
+  hideComment?: boolean
+  class?: string
+}
+
+const { path, hideComment = false, class: className = "" } = Astro.props
+---
+
+<div class={className}>
+  <span>Path: {path}</span>
+  {!hideComment && <span> • Comments enabled</span>}
+</div>

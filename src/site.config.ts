@@ -78,14 +78,17 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/david7ce' }
+    social: { github: 'https://github.com/david7ce' },
+    year: 'numeric'
   },
 
   content: {
-    externalLinksContent: ' ↗',
+    externalLinks: {
+      content: ' ↗',
+      properties: {}
+    },
     /** Blog page size for pagination (optional) */
-    blogPageSize: 8,
-    externalLinkArrow: true, // show external link arrow
+    blogPageSize: 8
     // Currently support weibo, x, bluesky
     // share: ['weibo', 'x', 'bluesky']
   }

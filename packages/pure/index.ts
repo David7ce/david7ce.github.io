@@ -10,20 +10,20 @@ import rehypeExternalLinks from 'rehype-external-links'
 import UnoCSS from 'unocss/astro'
 
 import { remarkAddZoomable, remarkReadingTime } from './plugins/remark-plugins'
+import type { Plugin } from 'vite'
 import { vitePluginUserConfig } from './plugins/virtual-user-config'
 import { UserConfigSchema, type UserInputConfig } from './types/user-config'
 import { parseWithFriendlyErrors } from './utils/error-map'
 
-export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegration {
-  let integrations: AstroIntegration[] = []
-  let remarkPlugins: RemarkPlugins = []
-  let rehypePlugins: RehypePlugins = []
+export default function AstroPureIntegration(opts: UserInputConfig = {} as UserInputConfig): AstroIntegration {
+  const integrations: AstroIntegration[] = []
+  const remarkPlugins: RemarkPlugins = []
+  const rehypePlugins: RehypePlugins = []
   return {
     name: 'astro-pure',
     hooks: {
       'astro:config:setup': async ({ config, updateConfig }) => {
-        let userConfig = parseWithFriendlyErrors(
-          // @ts-ignore
+  const userConfig = parseWithFriendlyErrors(
           UserConfigSchema,
           opts,
           'Invalid config passed to astro-pure integration'
@@ -31,7 +31,7 @@ export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegr
 
         // Add built-in integrations only if they are not already added by the user through the
         // config or by a plugin.
-        const allIntegrations = [...config.integrations, ...integrations]
+  const allIntegrations = [...(config.integrations ?? []), ...integrations]
         if (!allIntegrations.find(({ name }) => name === '@astrojs/sitemap')) {
           integrations.push(sitemap())
         }
@@ -43,7 +43,7 @@ export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegr
         }
 
         // Add supported remark plugins based on user config.
-        if (userConfig.integ.mediumZoom.enable)
+        if (userConfig.integ?.mediumZoom?.enable)
           remarkPlugins.push([remarkAddZoomable, userConfig.integ.mediumZoom.options])
         remarkPlugins.push(remarkReadingTime)
 
@@ -51,7 +51,7 @@ export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegr
         rehypePlugins.push([
           rehypeExternalLinks,
           {
-            content: { type: 'text', value: userConfig.content.externalLinksContent },
+            content: { type: 'text', value: userConfig.content?.externalLinksContent ?? '' },
             target: '_blank',
             rel: ['nofollow', 'noopener', 'noreferrer']
           }
@@ -63,13 +63,17 @@ export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegr
 
         // Add integrations immediately after Starlight in the config array.
         // This ensures users can add integrations before/after Starlight and we respect that order.
-        const selfIndex = config.integrations.findIndex((i) => i.name === 'astro-pure')
-        config.integrations.splice(selfIndex + 1, 0, ...integrations)
+        const selfIndex = (config.integrations ?? []).findIndex((i) => i.name === 'astro-pure')
+        if (selfIndex === -1) {
+          // If astro-pure isn't present in the integrations array, append integrations
+          config.integrations = [...(config.integrations ?? []), ...integrations]
+        } else {
+          config.integrations.splice(selfIndex + 1, 0, ...integrations)
+        }
 
         updateConfig({
           vite: {
-            // @ts-ignore
-            plugins: [vitePluginUserConfig(userConfig, config)]
+            plugins: [vitePluginUserConfig(userConfig, config) as unknown as Plugin]
           },
           markdown: {
             remarkPlugins,
@@ -86,7 +90,7 @@ export default function AstroPureIntegration(opts: UserInputConfig): AstroIntegr
       },
 
       'astro:build:done': ({ dir }) => {
-        if (!opts.integ.pagefind) return
+        if (!opts?.integ?.pagefind) return
         const targetDir = fileURLToPath(dir)
         const cwd = dirname(fileURLToPath(import.meta.url))
         const relativeDir = relative(cwd, targetDir)
