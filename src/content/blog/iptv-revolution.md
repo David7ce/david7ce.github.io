@@ -8,41 +8,36 @@ heroImage: { src: './thumbnails/iptv-revolution.jpg', color: '#4891B2' }
 language: 'English'
 ---
 
-Few inventions have changed the way we perceive the world as much as television. Since its conception in the 19th century, the idea of **transmitting images at a distance** was as magical as any "tele" superpower: telecommunication, telepathy, teleportation. Television was our first "real television": a distant window for sight and hearing.
+Few inventions have changed the way we perceive the world as much as television. Since its conception in the 19th century, the idea of **transmitting images at a distance** was as magical as any "tele" superpower: telecommunication, telepathy, teleportation. Television was our first "real television": a distant window for sight and sound.
 
 ## 🕰️ From Cathode Tubes to Bits
 
-Television was born in the electrical and analog era. First in black and white, then in color, later by satellite, cable, DTT... and today, **over the Internet**. Each leap has been another layer of digitization: moving from electrons and waves to data and protocols.
+Television was born in the electrical, analog era—first in black and white, then in color, gradually improving in resolution and signal quality. Transmission evolved from antennas and cable to digital terrestrial TV (DTT), and today reaches us over the Internet. Each leap represents a new layer of digitization: a shift from electrons and radio waves to data packets and streaming protocols, making content more flexible, higher quality, and accessible anywhere.
 
 For decades, television was a linear ritual: a fixed schedule, one channel, one remote control. But with the arrival of the Internet and video on demand, the logic changed. **Netflix, YouTube or Twitch** didn't invent digital television; they just made it inevitable.
 
 ## 🌐 The Convergence of Video Platforms
 
-Today the boundaries between television, social media and streaming are increasingly blurred. News, entertainment, video podcasts, vlogs or online tutorials share the same audiovisual language. However, not everything mixes: cinema, series or adult content remain anchored in **closed platforms**, governed by copyright, subscriptions or specific regulations.
+Today the boundaries between television, social media and streaming are increasingly blurred. News, entertainment, video podcasts, vlogs or online tutorials share the same audiovisual language. However, not everything blends together: cinema, series or adult content remain anchored in **closed platforms**, governed by copyright, subscriptions or specific regulations.
 
 Video dominates in all its forms, but its distribution has fragmented between open ecosystems and closed systems controlled by licensing. Television, in this context, has become **a decentralized network of screens and formats**, more diverse than ever.
 
-YouTube/Twitch, Instagram/TikTok, Netflix/Disney+/HBO/Prime and XXX platforms are the major poles of digital video: centralized, corporate and cloud-dependent. In parallel, a contrary current emerges that of **self-hosting and federated networks**— that seeks to regain control over distribution and data.
+YouTube, Twitch, TikTok, Netflix and XXX platforms are one of the major poles of digital video: centralized, corporate and cloud-dependent. In parallel, a contrary current emerges: that of **self-hosting and federated networks**— that seeks to regain control over distribution and data.
 
-Projects like **PeerTube, Jellyfin or self-managed IPTV servers** demonstrate that modern television can also exist outside of large infrastructures, maintaining the same audiovisual language but in a proprietary and decentralized environment.
+Projects like **PeerTube, Jellyfin or self-managed IPTV servers** demonstrate that modern television can also exist outside of large infrastructures in a private and distributed environment.
 
 ## ⚡ The Final Step: IPTV
 
 This decentralization brings us back to the starting point: **television as a universal video network**. In that sense, **IPTV (Internet Protocol Television)** is not just another technology, but **the synthesis between classic television and the current digital ecosystem**. This represents the final step of an evolution that has taken analog signal broadcasting to become a **distributed computer system**.
 
-IPTV replaces the antenna and satellite with an IP connection. The television stops being a closed device and becomes a **network client**: it can be a computer, a smartphone or a smartTV.
+IPTV replaces the antenna and satellite with an IP connection. The television stops being a closed device and becomes a network client — whether a computer, smartphone, or smart TV. All you need is an IPTV client and a channel database, which can come from public or private servers.
 
-Its advantages are clear:
-
-- It doesn't need proprietary hardware.
-- It unifies services and lists.
-- Allows viewing channels and VOD^[1] from anywhere.
-
-Its only limit is also its strength: **it works on the open Internet**, which generates both innovation and legal gray areas.
+Its advantages are clear: it unifies services and content from different proprietary sources into a single app — often at a reasonable price, or even free if self-hosted.
+The main drawback: it depends entirely on an Internet connection, and it operates in certain gray legal zones.
 
 ### 🧩 How It Works (Without Getting Into Engineering)
 
-Behind each M3U^[2] list or IPTV app there is an architecture very similar to that of any major streaming platform:
+Behind each M3U list or IPTV app there is an architecture very similar to that of any major streaming platform:
 
 | Component          | Function                                                 | OTT Equivalent                      |
 | ------------------ | -------------------------------------------------------- | ----------------------------------- |
@@ -51,7 +46,7 @@ Behind each M3U^[2] list or IPTV app there is an architecture very similar to th
 | CDN                | Distributes content in segmented form (HLS / DASH)       | AWS, Akamai, CloudFront             |
 | IPTV Client        | App, TV Box or browser that interprets the list          | Official app or web player          |
 
-In summary: an IPTV system is like a **decentralized mini Netflix**^[3], with the same technical foundation but on a different scale.
+In summary: an IPTV system is like a **decentralized mini Netflix**, with the same technical foundation but on a different scale and without DRM protection.
 
 ### 🧭 Current IPTV Ecosystem
 
@@ -66,22 +61,20 @@ Across all these layers, a large community of developers, stream collectors, and
 #### 📺 Public IPTV Resources
 
 - **IPTV Listings:** [iptv-org](https://iptv-org.github.io/), [Free-TV/IPTV](https://github.com/Free-TV/IPTV)
-- **EPG (Electronic Programming Guides):** [globetvapp/epg · GitHub](https://github.com/globetvapp/epg), [IPTV-EPG.org](https://iptv-epg.org/), [David Muma EPG · GitHub](https://davidmuma.github.io/EPG/), [Open EPG](https://www.open-epg.com/app/index.php)
-- **Web Portals / Players in the Browser:** [TV Garden](https://tv.garden/), [TDTChannels](https://www.tdtchannels.com/), [TDT Spain](https://play.google.com/store/apps/details?id=com.tv.tdtspain), [WatchIPTV.xyz](https://watchiptv.xyz)
+- **EPG (Electronic Programming Guides):** [globetvapp/epg](https://github.com/globetvapp/epg), [IPTV-EPG.org](https://iptv-epg.org/), [David Muma EPG](https://davidmuma.github.io/EPG/), [Open EPG](https://www.open-epg.com/app/index.php)
+- **Web Portals / Players in the Browser:** [WatchIPTV.xyz](https://watchiptv.xyz), [Worlds TV](https://worldstvmobile.com/category/sports), [TV Garden](https://tv.garden/), [TDTChannels](https://www.tdtchannels.com/), [TDT Spain](https://play.google.com/store/apps/details?id=com.tv.tdtspain)
 
-#### 📱 Recommended IPTV Clients
+#### 📱 IPTV Clients
 
-Because IPTV exists partly in a **legal gray area**, there are no major corporations backing clients. This has led to **many similar apps, some with ads, some fake**, and a scattered ecosystem. The most reliable are:
+IPTV clients are apps that gather video playlists and allow users to play them. Because there are no major corporations supporting these clients, the ecosystem is fragmented, with many similar apps—some full of ads, others fake. Still, there are a few reliable and widely used apps, including:
 
-| Platform               | Apps / Players                                                                                                                                                                 |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Android TV**         | [TiviMate](https://tivimate.com/), [Televizo](https://televizo.net/)                                                                                                           |
-| **Android / iOS**      | [MYTVOnline+](https://www.formuler.tv/mytvonline-plus) ✨                                                                                                                      |
-| **macOS / iOS / tvOS** | [UHF IPTV](https://www.uhfapp.com/)                                                                                                                                            |
-| **PC (Multiplatform)** | [IPTVnator](https://github.com/4gray/iptvnator) ✨, [OpenTV](https://github.com/Fredolx/open-tv)                                                                              |
-| **All Platforms**      | [Zen Player](https://zeniptv.app/) ✨, [Smarters IPTV Expert](https://www.iptv-smarters-expert.app/), [Kodi](https://kodi.tv/), [VLC](https://www.videolan.org/vlc/)          |
-| **Web / Browser**      | [IPTVnator Web](https://iptvnator.vercel.app/), [IPTV Smarters Web](http://webtv-new.iptvsmarters.com/)                                                                        |
-| **Browser Extensions** | [MPD-M·3U8 - Chrome](https://github.com/sharkiller/Reproductor-MPD-M3U8), [m3u8-hls - Firefox](https://addons.mozilla.org/en-US/firefox/addon/m3u8-hls-player-with-shortcuts/) |
+| Platform               | Apps / Players                                                                                                                                                       |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Android TV**         | [TiviMate](https://tivimate.com/), [Televizo](https://televizo.net/)                                                                                                 |
+| **Android / iOS**      | [MYTVOnline+](https://www.formuler.tv/mytvonline-plus) ✨                                                                                                            |
+| **macOS / iOS / tvOS** | [UHF IPTV](https://www.uhfapp.com/)                                                                                                                                  |
+| **PC (Multiplatform)** | [IPTVnator](https://github.com/4gray/iptvnator) ✨, [OpenTV](https://github.com/Fredolx/open-tv)                                                                     |
+| **All Platforms**      | [Zen Player](https://zeniptv.app/) ✨, [Smarters IPTV Expert](https://www.iptv-smarters-expert.app/), [Kodi](https://kodi.tv/), [VLC](https://www.videolan.org/vlc/) |
 
 ## 💡 The Future: Unified TV
 
@@ -89,10 +82,4 @@ The future of television is likely to be **fully digital and decentralized**, wh
 
 Cinema, premium streaming platforms, and major TV channels will continue to exist, but IPTV and self-hosted servers will allow users to integrate multiple sources into a single interface, giving more control and flexibility over what, when, and how they watch.
 
-**IPTV represents this evolution**: technical, decentralized, and global. While not all uses are strictly legal, its architecture mirrors the future of audiovisual distribution, where the boundaries between traditional TV, streaming, and digital platforms are increasingly blurred.
-
----
-
-^[1]: **VOD (Video on Demand)**: Audiovisual content distribution system that allows users to access videos when they want, without being subject to a fixed time schedule. It includes services like Netflix, Amazon Prime Video, or on-demand movie libraries.
-^[2]: **M3U**: Playlist file format that contains references to multimedia files or streams. In the IPTV context, M3U files include the URLs of television channels and their associated metadata.
-^[3]: **Decentralized mini Netflix**: Comparison that illustrates how IPTV systems replicate the basic functionality of large streaming platforms (catalog, distribution, user interface) but operating independently and distributed, without depending on centralized corporate infrastructure. Netflix comes from the union of "Net" network and "Flix" movies, which literally means "movie network".
+**IPTV embodies this evolution**: technical, distributed, and global. While not all uses are strictly legal, its architecture mirrors the future of audiovisual distribution, where the lines between traditional TV, streaming, and digital platforms are increasingly blurred.
