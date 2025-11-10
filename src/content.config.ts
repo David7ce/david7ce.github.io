@@ -19,6 +19,8 @@ const blog = defineCollection({
       description: z.string().max(160),
       publishDate: z.coerce.date(),
       // Optional
+      slug: z.string().optional(),
+      translationKey: z.string().optional(), // Links translations of the same post
       updatedDate: z.coerce.date().optional(),
       heroImage: z
         .object({

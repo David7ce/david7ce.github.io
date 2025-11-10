@@ -1,4 +1,6 @@
 ---
+slug: file-manager-systems-en
+translationKey: file-manager-systems
 title: The best apps for manage content
 publishDate: '2022-04-12'
 description: 'File manager systems for organizing and managing digital content'

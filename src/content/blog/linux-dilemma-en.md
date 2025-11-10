@@ -1,4 +1,6 @@
 ---
+slug: linux-dilemma-en
+translationKey: linux-dilemma
 title: The Linux dilemma
 publishDate: '2024-09-05'
 description: 'The Linux vs. Windows Dilemma: What I Miss and What I Love About Linux'

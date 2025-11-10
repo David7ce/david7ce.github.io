@@ -1,0 +1,77 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { getBlogCollection } from '../../packages/pure/utils/server'
+import { languages } from '../i18n/ui'
+import { getLangFromUrl } from '../i18n/utils'
+
+interface Props {
+  post: CollectionEntry<'blog'>
+}
+
+const { post } = Astro.props
+const currentLang = getLangFromUrl(Astro.url)
+const translationKey = 'translationKey' in post.data ? post.data.translationKey : undefined
+
+// Find translations of this post
+const allPosts = await getBlogCollection()
+const translations = new Map<string, string>()
+
+if (translationKey) {
+  allPosts
+    .filter(
+      (p): p is CollectionEntry<'blog'> =>
+        p.collection === 'blog' &&
+        'translationKey' in p.data &&
+        p.data.translationKey === translationKey
+    )
+    .forEach((p) => {
+      const lang = 'language' in p.data ? p.data.language : 'en'
+      const slug = 'slug' in p.data ? p.data.slug : p.id
+      translations.set(lang, slug || p.id)
+    })
+}
+
+// If no translationKey, fall back to simple language prefix switching
+const currentSlug = 'slug' in post.data ? post.data.slug : post.id
+---
+
+<div class='language-switcher flex gap-1'>
+  {
+    Object.entries(languages).map(([langCode, label]) => {
+      let href: string
+      
+      if (translations.has(langCode)) {
+        // Translation exists, use its slug
+        href = `/${langCode}/blog/${translations.get(langCode)}`
+      } else if (langCode === currentLang) {
+        // Current language
+        href = `/${langCode}/blog/${currentSlug}`
+      } else {
+        // No translation, redirect to blog home
+        href = `/${langCode}/blog`
+      }
+      
+      const isActive = currentLang === langCode
+      const hasTranslation = translations.has(langCode)
+      
+      return (
+        <a
+          href={href}
+          class:list={[
+            'px-2 py-1 rounded-md text-xs font-medium transition-colors',
+            {
+              'bg-primary text-primary-foreground': isActive,
+              'hover:bg-muted text-muted-foreground': !isActive,
+              'opacity-50': !hasTranslation && !isActive
+            }
+          ]}
+          aria-label={`Switch to ${label}`}
+          aria-current={isActive ? 'page' : undefined}
+          title={!hasTranslation && !isActive ? `No translation available in ${label}` : undefined}
+        >
+          {langCode.toUpperCase()}
+        </a>
+      )
+    })
+  }
+</div>

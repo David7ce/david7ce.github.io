@@ -1,5 +1,7 @@
 ---
 title: My Story with OS's
+slug: my-os-timeline-en
+translationKey: my-os-timeline
 publishDate: '2024-01-21'
 description: 'This my story with OS''s'
 tags:

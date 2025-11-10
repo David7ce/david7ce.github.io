@@ -1,4 +1,6 @@
 ---
+slug: linux-distros-en
+translationKey: linux-distros
 title: Linux distros
 publishDate: '2022-07-13'
 description: 'Types and ways to install a distro of Linux'

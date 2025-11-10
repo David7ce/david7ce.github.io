@@ -8,12 +8,12 @@ import ProjectSection from '@/components/projects/ProjectSection.astro'
 import config from '@/site-config'
 
 const headings = [
-  { depth: 2, slug: 'websites', text: 'Created Websites' },
-  { depth: 2, slug: 'projects', text: 'Involved Projects' },
+  { depth: 2, slug: 'websites', text: 'Sitios Web Creados' },
+  { depth: 2, slug: 'projects', text: 'Proyectos Involucrados' },
 ]
 ---
 
-<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+<PageLayout title='Proyectos' {headings} info={{ slug: '/projects', hideComment: true }}>
   <!--
   <p>Github Activities:</p>
   <p>
@@ -31,21 +31,21 @@ const headings = [
     project={[
       {
         name: '🛒 E-commerce front-end',
-        description: 'An e-commerce front-end website using only vanill HTML, CSS, JS, no frameworks.',
+        description: 'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JS básicos, sin marcos de trabajo..',
         links: [
           { type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }
         ]
       },
       {
-        name: '📍 Improve GeoImputation app',
-        description: 'Refactor and add functionality to a web app for tracking workers\' time and location built with Angular, Firebase and Ionic UI.',
+        name: '📍 Mejorar la aplicación GeoImputation',
+        description: 'Refactorizar y añadir funcionalidades a una aplicación web para el seguimiento del tiempo y la ubicación de los trabajadores, creada con Angular, Firebase e Ionic UI..',
         links: [
           { type: 'site', href: 'https://app.limpiezaspaula.com/home' }
         ]
       },
       {
-        name: '🌐 Professional websites with WP',
-        description: 'Professional websites built with WordPress and Elementor.',
+        name: '🌐 Sitios web profesionales con WP',
+        description: 'Sitios web profesionales construidos con WordPress y Elementor.',
         links: [
           { type: 'site', href: 'https://alpayoga.com/' },
           { type: 'site', href: 'https://candlemoments.live-website.com/' },
@@ -55,23 +55,23 @@ const headings = [
         ]
       },
       {
-        name: '🧰 Toolbox installer',
+        name: '🧰 Herramienta de instalación',
         description: 'A tool for generating scripts for installing packages on multiple OS.',
         links: [
           { type: 'site', href: 'https://david7ce.github.io/toolbox-installer/' }
         ]
       },
       {
-        name: '📚 Wiki of Computing',
-        description: 'A documentation wiki made with Obsidian + Quartz.',
+        name: '📚 Wiki de Computación',
+        description: 'Una wiki de documentación hecha con Obsidian + Quartz.',
         links: [
           { type: 'site', href: 'https://compuwiki.github.io/' },
           { type: 'doc', href: 'https://quartz.jzhao.xyz/' }
         ]
       },
       {
-        name: '🌱 Wiki of Cosmos',
-        description: 'A cosmological wiki using Obsidian.md with <a href="https://dg-docs.ole.dev/" target="_blank" rel="noopener">DG Docs</a>.',
+        name: '🌱 Wiki de Cosmos',
+        description: 'Una wiki cosmológica hecha con Obsidian.md y <a href="https://dg-docs.ole.dev/" target="_blank" rel="noopener">DG Docs</a>.',
         links: [
           { type: 'site', href: 'https://wikiterra.github.io/' }
         ]
@@ -79,26 +79,26 @@ const headings = [
     ]}
   />
 
-  <h2 id='projects'>Involved Projects</h2>
+  <h2 id='projects'>Proyectos Involucrados</h2>
   <ProjectSection
     project={[
       {
-        name: '🔗 Interneto Project',
-        description: 'Big collection of internet links and a self-hosted bookmark manager to categorize links.',
+        name: '🔗 Proyecto Interneto',
+        description: 'Gran colección de enlaces de internet y un gestor de marcadores autoalojado para categorizar enlaces.',
         links: [
           { type: 'github', href: 'https://github.com/interneto' }
         ]
       },
       {
         name: '🏛️ Arksys OS',
-        description: 'Arksys an Arch Linux with K Desktop Environment as a System.',
+        description: 'Arksys un Arch Linux con K Desktop Environment como sistema operativo.',
         links: [
           { type: 'github', href: 'https://github.com/arksys-os' }
         ]
       },
       {
-        name: '🧠 Obsidian PKM Vault',
-        description: 'A comprehensive Personal Knowledge Management system using Obsidian with organized vault structures, templates, and workflows for effective note-taking and knowledge organization.',
+        name: '🧠 Vault de conocimiento de Obsidian',
+        description: 'Un sistema integral de Gestión del Conocimiento Personal utilizando Obsidian con estructuras de bóveda organizadas, plantillas y flujos de trabajo para una toma de notas y organización del conocimiento efectiva.',
         links: [
           { type: 'github', href: 'https://github.com/obsidian-pkm-vault' }
         ]
@@ -111,13 +111,13 @@ const headings = [
     class='my-2'
     project={[
       {
-        name: 'Rust Learning',
-        description: 'Some notes and code about CWorld learning Rust',
+        name: 'Aprendizaje de Rust',
+        description: 'Algunas notas y código sobre el aprendizaje de Rust por CWorld',
         links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
       },
       {
-        name: 'CS 213 Learning',
-        description: 'Notes, code and experiences for Introduction to Computer Systems course',
+        name: 'Aprendizaje CS 213',
+        description: 'Notas, código y experiencias para el curso Introducción a los Sistemas Informáticos',
         links: [
           {
             type: 'github',
@@ -126,8 +126,8 @@ const headings = [
         ]
       },
       {
-        name: "Astro JS Learning",
-        description: 'Notes and code about Astro JS learning',
+        name: "Aprendizaje de Astro JS",
+        description: 'Notas y código sobre el aprendizaje de Astro JS',
         links: [
           {
             type: 'github',
@@ -136,8 +136,8 @@ const headings = [
         ]
       },
       {
-        name: 'Web Development Learning',
-        description: 'Notes and code about Web Development learning',
+        name: 'Aprendizaje de Desarrollo Web',
+        description: 'Notas y código sobre el aprendizaje de Desarrollo Web',
         links: [
           {
           type: 'github',

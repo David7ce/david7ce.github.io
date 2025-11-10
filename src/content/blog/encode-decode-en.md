@@ -1,11 +1,14 @@
 ---
-title: 'Encode-Decode'
-description: 'Online tools to encode/decode text or files.'
-publishDate: 2024-10-29
-updatedDate: 2024-11-04
-tags: ['tools']
-draft: false
+title: 'Encode / Decode'
+slug: encode-decode-en
+translationKey: encode-decode
+description: 'The base of computing is encoding/decoding.'
+publishDate: 2023-10-26
+updatedDate: 2023-10-26
+tags: ['Computing']
+heroImage: { src: './thumbnails/encode-decode.jpg', color: '#4891B2' }
 language: en
+
 ---
 
 ## The Significance of Encoding/Decoding

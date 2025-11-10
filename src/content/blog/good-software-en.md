@@ -1,5 +1,7 @@
 ---
 title: Good software
+slug: good-software-en
+translationKey: good-software
 publishDate: '2024-02-10'
 description: 'Defining what is good software'
 tags:

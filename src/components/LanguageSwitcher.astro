@@ -1,30 +1,93 @@
 ---
+import type { CollectionEntry } from 'astro:content'
+import { getBlogCollection } from '../../packages/pure/utils/server'
 import { languages } from '../i18n/ui'
 import { getLangFromUrl } from '../i18n/utils'
 
 const lang = getLangFromUrl(Astro.url)
+const currentPath = Astro.url.pathname
 
-// Remove language prefix from current path
-const currentPath = Astro.url.pathname.replace(/^\/(en|es)/, '') || '/'
+// Check if we're on a blog post page
+const isBlogPost = /^\/(en|es)\/blog\/[^/]+$/.test(currentPath)
+
+let translations = new Map<string, string>()
+
+if (isBlogPost) {
+  // Extract the slug from the current path
+  const match = currentPath.match(/^\/(en|es)\/blog\/(.+)$/)
+  const currentSlug = match ? match[2] : null
+
+  if (currentSlug) {
+    // Find the current post
+    const allPosts = await getBlogCollection()
+    const currentPost = allPosts.find(
+      (p): p is CollectionEntry<'blog'> =>
+        p.collection === 'blog' &&
+        ('slug' in p.data ? p.data.slug === currentSlug : p.id === currentSlug)
+    )
+
+    if (currentPost && 'translationKey' in currentPost.data && currentPost.data.translationKey) {
+      // Find all translations with the same translationKey
+      const translationKey = currentPost.data.translationKey
+      allPosts
+        .filter(
+          (p): p is CollectionEntry<'blog'> =>
+            p.collection === 'blog' &&
+            'translationKey' in p.data &&
+            p.data.translationKey === translationKey
+        )
+        .forEach((p) => {
+          const pLang = 'language' in p.data ? p.data.language : 'en'
+          const pSlug = 'slug' in p.data ? p.data.slug : p.id
+          translations.set(pLang, pSlug || p.id)
+        })
+    }
+  }
+}
+
+// Remove language prefix from current path for non-blog pages
+const basePath = currentPath.replace(/^\/(en|es)/, '') || '/'
 ---
 
 <div class='language-switcher flex gap-1'>
   {
-    Object.entries(languages).map(([langCode, label]) => (
-      <a
-        href={`/${langCode}${currentPath}`}
-        class:list={[
-          'px-2 py-1 rounded-md text-xs font-medium transition-colors',
-          {
-            'bg-primary text-primary-foreground': lang === langCode,
-            'hover:bg-muted text-muted-foreground': lang !== langCode
-          }
-        ]}
-        aria-label={`Switch to ${label}`}
-        aria-current={lang === langCode ? 'page' : undefined}
-      >
-        {langCode.toUpperCase()}
-      </a>
-    ))
+    Object.entries(languages).map(([langCode, label]) => {
+      let href: string
+
+      if (isBlogPost && translations.size > 0) {
+        // Blog post with translations
+        if (translations.has(langCode)) {
+          href = `/${langCode}/blog/${translations.get(langCode)}`
+        } else {
+          // No translation, redirect to blog home
+          href = `/${langCode}/blog`
+        }
+      } else {
+        // Regular page or blog post without translations
+        href = `/${langCode}${basePath}`
+      }
+
+      const isActive = lang === langCode
+      const hasTranslation = !isBlogPost || translations.size === 0 || translations.has(langCode)
+
+      return (
+        <a
+          href={href}
+          class:list={[
+            'px-2 py-1 rounded-md text-xs font-medium transition-colors',
+            {
+              'bg-primary text-primary-foreground': isActive,
+              'hover:bg-muted text-muted-foreground': !isActive,
+              'opacity-50': !hasTranslation
+            }
+          ]}
+          aria-label={`Switch to ${label}`}
+          aria-current={isActive ? 'page' : undefined}
+          title={!hasTranslation ? `No translation available in ${label}` : undefined}
+        >
+          {langCode.toUpperCase()}
+        </a>
+      )
+    })
   }
 </div>

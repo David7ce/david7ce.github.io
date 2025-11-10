@@ -1,0 +1,57 @@
+---
+import { getBlogCollection, getUniqueTagsWithCount } from 'astro-pure/server'
+import { Button } from 'astro-pure/user'
+import { cn } from 'astro-pure/utils'
+import PageLayout from '@/layouts/BaseLayout.astro'
+
+const allPosts = await getBlogCollection()
+// Filter only Spanish posts
+const spanishPosts = allPosts.filter((post) => {
+  if ('language' in post.data) {
+    return post.data.language === 'es'
+  }
+  return false
+})
+
+const allTags = getUniqueTagsWithCount(spanishPosts)
+
+const meta = {
+  description: 'Una lista de todos los temas sobre los que he escrito en mis publicaciones',
+  title: 'Todas las Etiquetas'
+}
+---
+
+<PageLayout {meta}>
+  <Button title='Atrás' href='/es/blog' style='back' />
+  <main class='mt-6 lg:mt-10'>
+    <div id='content-header' class='animate'>
+      <h1 class='mb-6 text-3xl font-medium'>Etiquetas</h1>
+    </div>
+
+    <div id='content' class='animate'>
+      {
+        allTags.length > 0 ? (
+          <ul class='flex flex-wrap gap-4'>
+            {allTags.map(([tag, val]) => (
+              <li>
+                <Button
+                  href={`/es/tags/${tag}`}
+                  style='pill'
+                  class={cn(
+                    'items-start gap-x-1',
+                    val > 2 ? 'rounded-xl px-3 py-1 text-xl' : val > 1 && 'text-lg'
+                  )}
+                >
+                  {tag}
+                  <span class={val > 2 ? 'text-base' : 'text-xs'}>{val}</span>
+                </Button>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No hay etiquetas todavía.</p>
+        )
+      }
+    </div>
+  </main>
+</PageLayout>

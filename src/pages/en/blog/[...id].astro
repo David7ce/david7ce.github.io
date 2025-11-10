@@ -7,11 +7,22 @@ import PostLayout from '@/layouts/BlogPost.astro'
 export const prerender = true
 
 export async function getStaticPaths() {
-  const posts = sortMDByDate(await getBlogCollection())
-  return posts.map((post) => ({
-    params: { id: post.id },
-    props: { post, posts }
-  }))
+  const allPosts = await getBlogCollection()
+  // Filter only English blog posts
+  const posts = sortMDByDate(
+    allPosts.filter(
+      (post): post is CollectionEntry<'blog'> =>
+        post.collection === 'blog' && post.data.language === 'en'
+    )
+  )
+  return posts.map((post) => {
+    // Since we filtered for blog collection, we can safely access slug
+    const slug = 'slug' in post.data ? post.data.slug : undefined
+    return {
+      params: { id: slug || post.id },
+      props: { post, posts }
+    }
+  })
 }
 
 type Props = {

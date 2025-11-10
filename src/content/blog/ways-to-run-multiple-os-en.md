@@ -1,5 +1,7 @@
 ---
-title: Ways to Run Multiple Operating Systems (Windows and Linux)
+title: Ways to Run Multiple Operating Systems
+slug: ways-to-run-multiple-os-en
+translationKey: ways-to-run-multiple-os
 publishDate: '2024-09-25'
 description: 'Methods to have both Windows and Linux operating systems co-exist'
 tags:

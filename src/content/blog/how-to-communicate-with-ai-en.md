@@ -1,12 +1,13 @@
 ---
 title: How to communicate with AI
+slug: how-to-communicate-with-ai-en
+translationKey: how-to-communicate-with-ai
 publishDate: '2025-07-09'
 description: 'A comprehensive guide on effectively communicating with AI models, optimizing prompts, and understanding machine-friendly communication methods'
 tags:
   - 'Computing'
   - 'OS'
   - 'AI'
-  - 'NLP'
 heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
 language: en
 ---
