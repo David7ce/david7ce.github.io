@@ -5,7 +5,7 @@ description: 'File manager systems for organizing and managing digital content'
 tags:
   - 'Software'
 heroImage: { src: './thumbnails/file-managers.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ## Intro

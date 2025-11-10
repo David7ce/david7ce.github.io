@@ -1,0 +1,30 @@
+---
+import { languages } from '../i18n/ui'
+import { getLangFromUrl } from '../i18n/utils'
+
+const lang = getLangFromUrl(Astro.url)
+
+// Remove language prefix from current path
+const currentPath = Astro.url.pathname.replace(/^\/(en|es)/, '') || '/'
+---
+
+<div class='language-switcher flex gap-1'>
+  {
+    Object.entries(languages).map(([langCode, label]) => (
+      <a
+        href={`/${langCode}${currentPath}`}
+        class:list={[
+          'px-2 py-1 rounded-md text-xs font-medium transition-colors',
+          {
+            'bg-primary text-primary-foreground': lang === langCode,
+            'hover:bg-muted text-muted-foreground': lang !== langCode
+          }
+        ]}
+        aria-label={`Switch to ${label}`}
+        aria-current={lang === langCode ? 'page' : undefined}
+      >
+        {langCode.toUpperCase()}
+      </a>
+    ))
+  }
+</div>

@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'OS'
 heroImage: { src: './thumbnails/linux-dilemma.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 

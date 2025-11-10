@@ -1,229 +1,337 @@
-# README
+# David7ce's Personal Website
 
-Website created using the framework Astro JS with the template [astro-theme-pure](https://github.com/cworld1/astro-theme-pure).
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?style=flat&logo=astro&logoColor=white)](https://astro.build)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License](https://img.shields.io/github/license/David7ce/david7ce.github.io)](LICENSE)
 
-## Local development
+A multilingual personal website built with [Astro](https://astro.build) using the [astro-theme-pure](https://github.com/cworld1/astro-theme-pure) template, featuring English and Spanish versions.
 
-Environment requirements:
+## ✨ Features
 
-- [Nodejs](https://nodejs.org/): 18.0.0+
+- 🌐 **Internationalization (i18n)**: Full support for English (`/en`) and Spanish (`/es`) with language switcher
+- 📝 **Blog System**: Markdown-based blog with syntax highlighting and math support (KaTeX)
+- 🎨 **Modern Design**: Clean, responsive UI with dark mode support
+- 🔍 **Search Functionality**: Integrated Pagefind search
+- 📊 **Project Showcase**: Display your work and contributions
+- 💬 **Comments**: Waline comment system integration
+- ⚡ **Performance**: Optimized static site generation
+- 🎯 **SEO Friendly**: Sitemap, RSS feed, and meta tags
 
-Clone the repository:
+## 🚀 Quick Start
 
-```shell
-git clone https://github.com/cworld1/astro-theme-pure.git
-cd astro-theme-pure
+### Prerequisites
+
+- [Node.js](https://nodejs.org/): 18.0.0 or higher
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/David7ce/david7ce.github.io.git
+cd david7ce.github.io
 ```
 
-Useful commands:
+2. **Install dependencies:**
 
-```shell
-# install dependencies
+```bash
+npm install
+# or
 bun install
+```
 
-# start the dev server
+3. **Start development server:**
+
+```bash
+npm run dev
+# or
 bun dev
-
-# build the project
-bun run build
-
-# preview (after the build)
-bun preview
-
-# create a new post
-bun new
 ```
 
-## Tree of files
+Visit `http://localhost:4321` (redirects to `/en` by default)
 
-```md
-├── package.json
-├── packages
-│   └── pure
-│       ├── LICENSE
-│       ├── README.md
-│       ├── bun.lock
-│       ├── components
-│       │   ├── advanced
-│       │   │   ├── Comment.astro
-│       │   │   ├── GithubCard.astro
-│       │   │   ├── LinkPreview.astro
-│       │   │   ├── MediumZoom.astro
-│       │   │   ├── QRCode.astro
-│       │   │   ├── Quote.astro
-│       │   │   └── index.ts
-│       │   ├── basic
-│       │   │   ├── Footer.astro
-│       │   │   ├── Header.astro
-│       │   │   ├── ThemeProvider.astro
-│       │   │   └── index.ts
-│       │   ├── pages
-│       │   │   ├── ArticleBottom.astro
-│       │   │   ├── BackToTop.astro
-│       │   │   ├── Copyright.astro
-│       │   │   ├── Hero.astro
-│       │   │   ├── PFSearch.astro
-│       │   │   ├── PageInfo.astro
-│       │   │   ├── Paginator.astro
-│       │   │   ├── PostPreview.astro
-│       │   │   ├── TOC.astro
-│       │   │   ├── TOCHeading.astro
-│       │   │   └── index.ts
-│       │   └── user
-│       │       ├── Aside.astro
-│       │       ├── Button.astro
-│       │       ├── Card.astro
-│       │       ├── CardList.astro
-│       │       ├── CardListChildren.astro
-│       │       ├── Collapse.astro
-│       │       ├── FormattedDate.astro
-│       │       ├── Icon.astro
-│       │       ├── Label.astro
-│       │       ├── MdxRepl.astro
-│       │       ├── Spoiler.astro
-│       │       ├── Steps.astro
-│       │       ├── Svg.astro
-│       │       ├── TabItem.astro
-│       │       ├── Tabs.astro
-│       │       ├── Timeline.astro
-│       │       └── index.ts
-│       ├── index.ts
-│       ├── libs
-│       │   ├── icons.ts
-│       │   └── index.ts
-│       ├── package.json
-│       ├── plugins
-│       │   ├── link-preview.ts
-│       │   ├── override-svg-attributes.ts
-│       │   ├── rehype-steps.ts
-│       │   ├── rehype-tabs.ts
-│       │   ├── remark-plugins.ts
-│       │   ├── toc.ts
-│       │   └── virtual-user-config.ts
-│       ├── schemas
-│       │   ├── favicon.ts
-│       │   ├── head.ts
-│       │   ├── header.ts
-│       │   ├── links.ts
-│       │   ├── locale.ts
-│       │   ├── logo.ts
-│       │   ├── share.ts
-│       │   └── social.ts
-│       ├── scripts
-│       │   ├── check.mjs
-│       │   ├── index.js
-│       │   ├── libs
-│       │   │   ├── minimist.cjs
-│       │   │   └── slugify.cjs
-│       │   └── new.mjs
-│       ├── types
-│       │   ├── constants.ts
-│       │   ├── index.ts
-│       │   ├── integrations-config.ts
-│       │   ├── module.d.ts
-│       │   ├── theme-config.ts
-│       │   └── user-config.ts
-│       ├── utils
-│       │   ├── class-merge.ts
-│       │   ├── clsx.ts
-│       │   ├── date.ts
-│       │   ├── error-map.ts
-│       │   ├── index.ts
-│       │   ├── mdast-util-to-string.ts
-│       │   ├── reading-time.ts
-│       │   ├── server.ts
-│       │   ├── theme.ts
-│       │   └── toast.ts
-│       └── virtual.d.ts
-├── preset
-│   ├── README.md
-│   └── icons
-│       ├── androidstudio.svg
-│       ├── animate.svg
-│       ├── arc.svg
-│       ├── qt.svg
-│       ├── safari.svg
-│       ├── tailscale.svg
-│       ├── unity.svg
-│       ├── warp.svg
-│       └── zerotier.svg
-├── prettier.config.mjs
-├── public
-│   ├── blog-thumbnails
-│   ├── favicon
-│   ├── fonts
-│   ├── icons
-│   ├── images
-│   ├── links.json
-│   ├── scripts
-│   └── styles
-│       └── global.css
-├── src
-│   ├── assets
-│   │   ├── styles
-│   │   │   └── app.css
-│   ├── components
-│   │   ├── BaseHead.astro
-│   │   ├── about
-│   │   │   ├── Substats.astro
-│   │   │   └── ToolSection.astro
-│   │   ├── home
-│   │   │   ├── ProjectCard.astro
-│   │   │   ├── Section.astro
-│   │   │   └── SkillLayout.astro
-│   │   ├── links
-│   │   │   └── FriendList.astro
-│   │   └── projects
-│   │       ├── ProjectSection.astro
-│   │       └── Sponsors.astro
-│   ├── content
-│   │   └── blog
-│   │       └── ways-to-run-multiple-os.md
-│   ├── content.config.ts
-│   ├── layouts
-│   │   ├── BaseLayout.astro
-│   │   ├── BlogPost.astro
-│   │   ├── CommonPage.astro
-│   │   ├── ContentLayout.astro
-│   │   └── IndividualPage.astro
-│   ├── pages
-│   │   ├── 404.astro
-│   │   ├── about
-│   │   │   └── index.astro
-│   │   ├── archives
-│   │   │   └── index.astro
-│   │   ├── blog
-│   │   │   ├── [...id].astro
-│   │   │   └── [...page].astro
-│   │   ├── docs
-│   │   │   ├── DocsContents.astro
-│   │   │   ├── [...id].astro
+### Useful Commands
+
+| Command | Action |
+|---------|--------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start dev server at `localhost:4321` |
+| `npm run build` | Build production site to `./dist/` |
+| `npm run preview` | Preview built site locally |
+| `npm run astro -- --help` | Get help using Astro CLI |
+
+## 🌍 Internationalization (i18n)
+
+This site supports multiple languages with the following structure:
+
+### URL Structure
+
+- **English**: `/en/*` (e.g., `/en/blog`, `/en/projects`)
+- **Spanish**: `/es/*` (e.g., `/es/blog`, `/es/projects`)
+- **Root**: `/` → automatically redirects to `/en`
+
+### Language Configuration
+
+Configured in `astro.config.ts`:
+
+```typescript
+i18n: {
+  defaultLocale: 'en',
+  locales: ['en', 'es'],
+  routing: {
+    prefixDefaultLocale: true
+  }
+}
+```
+
+### Translation Files
+
+- `src/i18n/ui.ts` - UI translations for both languages
+- `src/i18n/utils.ts` - Helper functions (getLangFromUrl, useTranslations)
+- `src/i18n/es.config.ts` - Spanish site configuration
+
+### Adding New Languages
+
+1. Add locale to `astro.config.ts`
+2. Create translations in `src/i18n/ui.ts`
+3. Create page structure under `src/pages/{locale}/`
+4. Update blog posts with `language` frontmatter field
+
+### Content Language
+
+Blog posts specify language in frontmatter:
+
+```yaml
+---
+title: "My Post"
+language: en  # or 'es' for Spanish
+---
+```
+
+## 📁 Project Structure
+
+```
+├── src/
+│   ├── assets/          # Images, styles, fonts
+│   ├── components/      # Astro & framework components
+│   │   ├── basic/       # Custom header with i18n
+│   │   ├── home/        # Homepage sections
+│   │   ├── PostPreviewI18n.astro  # i18n-aware post preview
+│   │   └── LanguageSwitcher.astro # Language toggle
+│   ├── content/         # Content collections
+│   │   └── blog/        # Blog posts (Markdown)
+│   ├── i18n/            # Internationalization
+│   │   ├── ui.ts        # Translation strings
+│   │   ├── utils.ts     # i18n utilities
+│   │   └── es.config.ts # Spanish config
+│   ├── layouts/         # Page layouts
+│   │   └── BaseLayout.astro  # Uses HeaderWithI18n
+│   ├── pages/           # Routes & pages
+│   │   ├── index.astro  # Root redirect
+│   │   ├── en/          # English pages
 │   │   │   ├── index.astro
-│   │   │   └── rss.xml.ts
-│   │   ├── index.astro
-│   │   ├── links
-│   │   │   └── index.astro
-│   │   ├── projects
-│   │   │   └── index.astro
-│   │   ├── robots.txt.ts
-│   │   ├── rss.xml.ts
-│   │   ├── search
-│   │   │   └── index.astro
-│   │   ├── tags
-│   │   │   ├── [tag]
-│   │   │   │   └── [...page].astro
-│   │   │   └── index.astro
-│   │   └── terms
-│   │       ├── copyright.md
-│   │       ├── disclaimer.md
-│   │       ├── list.astro
-│   │       ├── privacy-policy.md
-│   │       └── terms-and-conditions.md
-│   ├── plugins
-│   │   ├── rehype-auto-link-headings.ts
-│   │   ├── shiki-official-transformers.ts
-│   │   └── shiki-transformers.ts
-│   ├── site.config.ts
-│   └── type.d.ts
-├── tsconfig.json
+│   │   │   ├── blog/
+│   │   │   ├── projects/
+│   │   │   └── about/
+│   │   └── es/          # Spanish pages
+│   │       ├── index.astro
+│   │       └── about/
+│   ├── plugins/         # Rehype/Remark plugins
+│   ├── content.config.ts # Content collections schema
+│   └── site.config.ts   # Main site configuration
+├── packages/pure/       # astro-theme-pure package
+├── public/              # Static assets
+├── astro.config.ts      # Astro configuration
+└── tsconfig.json        # TypeScript config
 ```
+
+## 🎨 Astro Theme Pure
+
+This site uses [astro-theme-pure](https://github.com/cworld1/astro-theme-pure) as a base template with custom modifications for i18n support.
+
+### Theme Features
+
+- ✅ Built-in components (Header, Footer, PostPreview, etc.)
+- ✅ Markdown/MDX support with enhanced features
+- ✅ Syntax highlighting with Shiki
+- ✅ Math equations with KaTeX
+- ✅ Image optimization with Sharp
+- ✅ UnoCSS for styling
+- ✅ Pagefind integration for search
+- ✅ Waline comment system
+
+### Custom Modifications
+
+To maintain i18n functionality while using the theme:
+
+1. **Custom Header**: `src/components/basic/HeaderWithI18n.astro`
+   - Replaces theme's default Header
+   - Adds language detection and URL prefixing
+   - Integrates LanguageSwitcher component
+
+2. **Custom PostPreview**: `src/components/PostPreviewI18n.astro`
+   - Language-aware blog post links
+   - Automatically prefixes URLs with current language
+
+3. **Modified BaseLayout**: `src/layouts/BaseLayout.astro`
+   - Uses HeaderWithI18n instead of theme's Header
+   - Maintains compatibility with theme features
+
+### Updating the Theme
+
+The theme is installed as an NPM package (`astro-pure`). To update:
+
+```bash
+npm update astro-pure
+```
+
+⚠️ **Important**: Custom components (`HeaderWithI18n`, `PostPreviewI18n`, `LanguageSwitcher`) should not be overwritten during updates.
+
+See `UPDATE_GUIDE.md` for detailed update procedures.
+
+## 📝 Content Management
+
+### Creating Blog Posts
+
+#### English Post
+
+```bash
+# Create new post (defaults to English)
+npm run new
+```
+
+Creates a file in `src/content/blog/` with frontmatter:
+
+```yaml
+---
+title: "Post Title"
+publishDate: 2024-01-01
+description: "Post description"
+language: en
+tags: ["tag1", "tag2"]
+---
+```
+
+#### Spanish Post
+
+1. Create markdown file in `src/content/blog/`
+2. Set frontmatter with `language: es`
+3. Write content in Spanish
+
+### Content Schema
+
+Defined in `src/content.config.ts`:
+
+```typescript
+language: z.enum(['en', 'es'])  // Required: 'en' or 'es'
+```
+
+## ⚙️ Configuration
+
+### Site Configuration
+
+Edit `src/site.config.ts`:
+
+```typescript
+export const theme: ThemeUserConfig = {
+  title: "David7ce's Site",
+  author: 'David7ce',
+  description: 'Stay hungry, stay foolish',
+  locale: {
+    lang: 'en-US',
+    dateLocale: 'en-US'
+  },
+  header: {
+    menu: [
+      { title: 'Blog', link: '/blog' },
+      { title: 'Projects', link: '/projects' },
+      { title: 'Stack', link: '/stack' },
+      { title: 'About', link: '/about' }
+    ]
+  }
+  // ... more config
+}
+```
+
+### Astro Configuration
+
+Edit `astro.config.ts` for:
+- i18n settings
+- Integrations
+- Build options
+- Markdown plugins
+
+## 🚢 Deployment
+
+### GitHub Pages
+
+1. **Build the site:**
+
+```bash
+npm run build
+```
+
+2. **Deploy:**
+
+The site automatically deploys to GitHub Pages via GitHub Actions.
+
+Configuration in `astro.config.ts`:
+
+```typescript
+export default defineConfig({
+  site: 'https://david7ce.github.io',
+  output: 'static',
+  trailingSlash: 'never'
+})
+```
+
+### Other Platforms
+
+The static build in `./dist/` can be deployed to:
+- Vercel
+- Netlify
+- Cloudflare Pages
+- Any static hosting service
+
+## 📚 Documentation
+
+Additional documentation files:
+
+- `I18N_GUIDE.md` - Comprehensive i18n implementation guide
+- `I18N_STRUCTURE.md` - i18n architecture details
+- `I18N_NAVIGATION_UPDATE.md` - Navigation system documentation
+- `UPDATE_GUIDE.md` - How to update the theme safely
+- `SUCCESS.md` - Testing and verification checklist
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Astro](https://astro.build) v5.15.4
+- **Theme**: [astro-theme-pure](https://github.com/cworld1/astro-theme-pure) v1.3.4
+- **Language**: TypeScript
+- **Styling**: UnoCSS
+- **Content**: Markdown/MDX
+- **Syntax Highlighting**: Shiki
+- **Math**: KaTeX
+- **Search**: Pagefind
+- **Comments**: Waline
+- **Deployment**: GitHub Pages
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
+
+- [astro-theme-pure](https://github.com/cworld1/astro-theme-pure) by CWorld
+- [Astro](https://astro.build) framework team
+- All open-source contributors
+
+## 📧 Contact
+
+- GitHub: [@David7ce](https://github.com/david7ce)
+- LinkedIn: [david-alonsodd](https://www.linkedin.com/in/david-alonsodd)
+
+---
+
+Built with ❤️ using Astro

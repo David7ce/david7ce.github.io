@@ -7,7 +7,7 @@ tags:
   - 'Computing'
   - 'Productivity'
 heroImage: { src: './thumbnails/password-manager.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ## Setting up a password manager

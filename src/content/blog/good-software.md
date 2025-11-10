@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'Software'
 heroImage: { src: './thumbnails/good-software.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 Firstly, let me write the rules that I consider software should follow to achieve "perfection".

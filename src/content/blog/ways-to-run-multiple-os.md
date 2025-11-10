@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'OS'
 heroImage: { src: './thumbnails/multiple-os.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 In today's world, where development and IT environments are constantly evolving, running multiple operating systems (OS) on a single machine is a common practice. Whether you need Windows for productivity applications or Linux for development and server management, there are several methods to have both operating systems co-exist on the same machine. Let’s explore some popular ways to run both Windows and Linux:

@@ -5,7 +5,7 @@ description: 'The Latest Image Revolution'
 tags:
   - 'Computing'
 heroImage: { src: './thumbnails/iptv-revolution.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 Few inventions have changed the way we perceive the world as much as television. Since its conception in the 19th century, the idea of **transmitting images at a distance** was as magical as any "tele" superpower: telecommunication, telepathy, teleportation. Television was our first "real television": a distant window for sight and sound.

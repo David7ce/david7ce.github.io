@@ -1,0 +1,168 @@
+---
+// import { Image } from 'astro:assets'
+
+// import type { iconsType } from 'astro-pure/types'
+// import { Button, Icon } from 'astro-pure/user'
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+import config from '@/site-config'
+
+const headings = [
+  { depth: 2, slug: 'websites', text: 'Created Websites' },
+  { depth: 2, slug: 'projects', text: 'Involved Projects' },
+]
+---
+
+<PageLayout title='Projects' {headings} info={{ slug: '/projects', hideComment: true }}>
+  <!--
+  <p>Github Activities:</p>
+  <p>
+    <Image
+      src='https://ghchart.rshah.org/david7ce'
+      alt='github activities'
+      inferSize
+      loading='lazy'
+    />
+  </p>
+  -->
+
+  <h2 id='websites'>Created Websites</h2>
+  <ProjectSection
+    project={[
+      {
+        name: '🛒 E-commerce front-end',
+        description: 'An e-commerce front-end website using only vanill HTML, CSS, JS, no frameworks.',
+        links: [
+          { type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }
+        ]
+      },
+      {
+        name: '📍 Improve GeoImputation app',
+        description: 'Refactor and add functionality to a web app for tracking workers\' time and location built with Angular, Firebase and Ionic UI.',
+        links: [
+          { type: 'site', href: 'https://app.limpiezaspaula.com/home' }
+        ]
+      },
+      {
+        name: '🌐 Professional websites with WP',
+        description: 'Professional websites built with WordPress and Elementor.',
+        links: [
+          { type: 'site', href: 'https://alpayoga.com/' },
+          { type: 'site', href: 'https://candlemoments.live-website.com/' },
+          { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
+          { type: 'site', href: 'https://www.grmabogados.es/' },
+          { type: 'site', href: 'https://salondebellezanais.com/' },
+        ]
+      },
+      {
+        name: '🧰 Toolbox installer',
+        description: 'A tool for generating scripts for installing packages on multiple OS.',
+        links: [
+          { type: 'site', href: 'https://david7ce.github.io/toolbox-installer/' }
+        ]
+      },
+      {
+        name: '📚 Wiki of Computing',
+        description: 'A documentation wiki made with Obsidian + Quartz.',
+        links: [
+          { type: 'site', href: 'https://compuwiki.github.io/' },
+          { type: 'doc', href: 'https://quartz.jzhao.xyz/' }
+        ]
+      },
+      {
+        name: '🌱 Wiki of Cosmos',
+        description: 'A cosmological wiki using Obsidian.md with <a href="https://dg-docs.ole.dev/" target="_blank" rel="noopener">DG Docs</a>.',
+        links: [
+          { type: 'site', href: 'https://wikiterra.github.io/' }
+        ]
+      },
+    ]}
+  />
+
+  <h2 id='projects'>Involved Projects</h2>
+  <ProjectSection
+    project={[
+      {
+        name: '🔗 Interneto Project',
+        description: 'Big collection of internet links and a self-hosted bookmark manager to categorize links.',
+        links: [
+          { type: 'github', href: 'https://github.com/interneto' }
+        ]
+      },
+      {
+        name: '🏛️ Arksys OS',
+        description: 'Arksys an Arch Linux with K Desktop Environment as a System.',
+        links: [
+          { type: 'github', href: 'https://github.com/arksys-os' }
+        ]
+      },
+      {
+        name: '🧠 Obsidian PKM Vault',
+        description: 'A comprehensive Personal Knowledge Management system using Obsidian with organized vault structures, templates, and workflows for effective note-taking and knowledge organization.',
+        links: [
+          { type: 'github', href: 'https://github.com/obsidian-pkm-vault' }
+        ]
+      }
+    ]}
+  />
+
+  <!-- <h2 id='learnings'>Learnings</h2>
+  <ProjectSection
+    class='my-2'
+    project={[
+      {
+        name: 'Rust Learning',
+        description: 'Some notes and code about CWorld learning Rust',
+        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
+      },
+      {
+        name: 'CS 213 Learning',
+        description: 'Notes, code and experiences for Introduction to Computer Systems course',
+        links: [
+          {
+            type: 'github',
+            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
+          }
+        ]
+      },
+      {
+        name: "Astro JS Learning",
+        description: 'Notes and code about Astro JS learning',
+        links: [
+          {
+            type: 'github',
+            href: '',
+          }
+        ]
+      },
+      {
+        name: 'Web Development Learning',
+        description: 'Notes and code about Web Development learning',
+        links: [
+          {
+          type: 'github',
+          href: '',
+          }
+        ]
+      }
+    ]}
+  /> -->
+
+</PageLayout>
+
+<script
+  is:inline
+  type='module'
+  data-astro-rerun
+  define:vars={{ npmCDN: config.npmCDN, walineServer: config.integ.waline.server }}
+>
+  const loadPageviewCount = async () => {
+    const pageview = await import(`${npmCDN}/@waline/client@v3/dist/pageview.js`)
+    pageview.pageviewCount({
+      serverURL: walineServer,
+      path: window.location.pathname
+    })
+  }
+
+  await loadPageviewCount()
+</script>

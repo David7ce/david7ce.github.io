@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'Software'
 heroImage: { src: './thumbnails/kde-distros-comparison.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ## Why KDE is the Best Desktop Environment

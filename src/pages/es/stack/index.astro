@@ -1,0 +1,402 @@
+---
+import ToolSection from '../../../components/about/ToolSection.astro'
+import PageLayout from '../../../layouts/CommonPage.astro'
+
+const headings = [
+  { depth: 2, slug: 'operating-systems', text: 'Operating Systems & Environments' },
+  { depth: 2, slug: 'design-media', text: 'Design & Media Tools' },
+  { depth: 2, slug: 'development-tools', text: 'Development Tools' },
+  { depth: 2, slug: 'virtualization', text: 'Virtualization & Containerization' },
+  { depth: 2, slug: 'programming', text: 'Programming & Markup Languages' },
+  { depth: 2, slug: 'databases', text: 'Databases' },
+  { depth: 2, slug: 'frameworks', text: 'Web Frameworks & Libraries' },
+  { depth: 2, slug: 'servers-cloud', text: 'Web Servers & Cloud Platforms' },
+]
+---
+
+<!-- <PageLayout title='Tech Stack'  info={{ slug: '/stack', hideComment: true }}> -->
+<PageLayout title='Tech Stack' {headings} info={{ slug: '/stack', hideComment: true }}>
+  <!-- Introduction -->
+  <div class='mb-8'>
+    <p class='text-lg text-gray-700 dark:text-gray-300 mb-4'>
+      Welcome to my comprehensive tech stack! This page showcases the tools, technologies, 
+      and platforms I use for development, design, productivity, and system administration. 
+      From operating systems and programming languages to cloud platforms and development tools, 
+      here's everything that powers my digital workflow.
+    </p>
+  </div>
+
+  <!-- Table of Contents -->
+  <!-- <div class='mb-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-800 dark:to-gray-700 rounded-lg border border-blue-200 dark:border-gray-600'>
+    <h2 class='text-2xl font-bold mb-4 text-blue-900 dark:text-blue-100'>📋 Table of Contents</h2>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-sm'>
+      <a href='#operating-systems' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>🖥️</span> Operating Systems & Environments
+      </a>
+      <a href='#design-media' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>🎨</span> Design & Media Tools
+      </a>
+      <a href='#development-tools' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>⚡</span> Development Tools
+      </a>
+      <a href='#virtualization' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>🐳</span> Virtualization & Containerization
+      </a>
+      <a href='#programming' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>💻</span> Programming & Markup Languages
+      </a>
+      <a href='#databases' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>🗄️</span> Databases
+      </a>
+      <a href='#frameworks' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>🚀</span> Web Frameworks & Libraries
+      </a>
+      <a href='#servers-cloud' class='flex items-center p-2 text-blue-700 dark:text-blue-300 hover:text-blue-900 dark:hover:text-blue-100 hover:bg-blue-100 dark:hover:bg-gray-600 rounded transition-colors'>
+        <span class='mr-2'>☁️</span> Web Servers & Cloud Platforms
+      </a>
+    </div>
+  </div> -->
+
+  <div id="operating-systems">
+    <ToolSection
+      class='mb-5'
+      title='Operating Systems & Environments'
+      tools={[
+        {
+          name: 'Arch Linux',
+          description: 'Linux Distribution',
+          href: 'https://archlinux.org/',
+          icon: import('@/assets/software/archlinux.svg?raw')
+        },
+        {
+          name: 'Windows 11',
+          description: 'Windows OS',
+          href: 'https://www.microsoft.com/windows/',
+          icon: import('@/assets/software/windows-11.svg?raw')
+        },
+        {
+          name: 'KDE Plasma',
+          description: 'Desktop Environment',
+          href: 'https://kde.org/plasma-desktop/',
+          icon: import('@/assets/software/kde.svg?raw')
+        }
+      ]}
+    />
+  </div>
+
+  <div id="design-media">
+    <ToolSection
+      class='mb-5'
+      title='Design & Media Tools'
+    tools={[
+      {
+        name: 'Affinity Photo',
+        description: 'Photo Editor',
+        href: 'https://affinity.serif.com/photo/',
+        icon: import('@/assets/software/affinity-photo.svg?raw')
+      },
+      {
+        name: 'Affinity Designer',
+        description: 'Vector Design',
+        href: 'https://affinity.serif.com/designer/',
+        icon: import('@/assets/software/affinity-designer.svg?raw')
+      },
+      // {
+      //   name: 'Blender',
+      //   description: '3D Creation',
+      //   href: 'https://www.blender.org/',
+      //   icon: import('@/assets/software/blender.svg?raw')
+      // },
+      // {
+      //   name: 'GIMP',
+      //   description: 'Image Editor',
+      //   href: 'https://www.gimp.org/',
+      //   icon: import('@/assets/software/gimp.svg?raw')
+      // },
+      {
+        name: 'Inkscape',
+        description: 'Vector Graphics',
+        href: 'https://inkscape.org/',
+        icon: import('@/assets/software/inkscape.svg?raw')
+      },
+      {
+        name: 'Figma',
+        description: 'UI/UX Design',
+        href: 'https://www.figma.com/',
+        icon: import('@/assets/software/figma.svg?raw')
+      }
+      // {
+      //   name: 'OBS Studio',
+      //   description: 'Recording',
+      //   href: 'https://obsproject.com/',
+      //   icon: import('@/assets/software/obs.svg?raw')
+      //      }
+    ]}
+  />
+  </div>
+
+  <div id="development-tools">
+    <ToolSection
+      class='mb-5'
+      title='Development Tools'
+    tools={[
+      {
+        name: 'Git',
+        description: 'Version Control',
+        href: 'https://git-scm.com/',
+        icon: import('@/assets/software/git.svg?raw')
+      },
+      {
+        name: 'GitHub Copilot',
+        description: 'AI Code Assistant',
+        href: 'https://github.com/features/copilot',
+        icon: import('@/assets/software/github-copilot.svg?raw')
+      },
+      // {
+      //   name: 'Neovim',
+      //   description: 'IDE',
+      //   href: 'https://neovim.io/',
+      //   icon: import('@/assets/software/neovim.svg?raw')
+      // },
+      {
+        name: 'VS Code',
+        description: 'Code Editor',
+        href: 'https://code.visualstudio.com/',
+        icon: import('@/assets/software/vscode.svg?raw')
+      },
+      {
+        name: 'Visual Studio',
+        description: 'IDE',
+        href: 'https://visualstudio.microsoft.com/',
+        icon: import('@/assets/software/visual-studio.svg?raw')
+      },
+      {
+        name: 'Chromium',
+        description: 'Open Source Browser',
+        href: 'https://www.chromium.org/Home/',
+        icon: import('@/assets/software/chromium.svg?raw')
+      },
+      {
+        name: 'Firefox',
+        description: 'Privacy Browser',
+        href: 'https://www.mozilla.org/en-US/firefox',
+        icon: import('@/assets/software/firefox.svg?raw')
+      }
+    ]}
+  />
+  </div>
+
+  <div id="virtualization">
+    <ToolSection
+      class='mb-5'
+      title='Virtualization & Containerization'
+    tools={[
+      {
+        name: 'Kubernetes',
+        description: 'Container Orchestration',
+        href: 'https://kubernetes.io/',
+        icon: import('@/assets/software/kubernetes.svg?raw')
+      },
+      {
+        name: 'Docker',
+        description: 'Containerization',
+        href: 'https://www.docker.com/',
+        icon: import('@/assets/software/docker.svg?raw')
+      },
+      {
+        name: 'VirtualBox',
+        description: 'Virtualization',
+        href: 'https://www.virtualbox.org/',
+        icon: import('@/assets/software/virtualbox.svg?raw')
+      }
+    ]}
+  />
+  </div>
+
+  <!-- <ToolSection
+    class='mb-5'
+    title='Languages & Skills'
+    tools={[
+      {
+        name: 'Spanish',
+        description: 'Native Language',
+        href: '#',
+        icon: import('@/assets/software/es.svg?raw')
+      },
+      {
+        name: 'English',
+        description: 'Second Language',
+        href: '#',
+        icon: import('@/assets/software/en.svg?raw')
+      }
+    ]}
+  /> -->
+
+  <div id="programming">
+    <ToolSection
+      class='mb-5'
+      title='Programming & Markup Languages'
+    tools={[
+      {
+        name: 'Bash',
+        description: 'Shell Scripting',
+        href: 'https://www.gnu.org/software/bash/',
+        icon: import('@/assets/software/bash.svg?raw')
+      },
+      {
+        name: 'C#',
+        description: 'Programming Language',
+        href: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+        icon: import('@/assets/software/csharp.svg?raw')
+      },
+      {
+        name: 'JavaScript',
+        description: 'Programming Language',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+        icon: import('@/assets/software/js.svg?raw')
+      },
+      {
+        name: 'JSON',
+        description: 'Data Interchange Format',
+        href: 'https://www.json.org/json-en.html',
+        icon: import('@/assets/software/json.svg?raw')
+      },
+      {
+        name: 'CSS3',
+        description: 'Styling Language',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+        icon: import('@/assets/software/css.svg?raw')
+      },
+      {
+        name: 'HTML5',
+        description: 'Markup Language',
+        href: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+        icon: import('@/assets/software/html.svg?raw')
+      },
+      {
+        name: 'Markdown',
+        description: 'Markup Language',
+        href: 'https://www.markdownguide.org/',
+        icon: import('@/assets/software/markdown.svg?raw')
+      },
+      {
+        name: 'XML',
+        description: 'Markup Language',
+        href: 'https://www.w3.org/XML/',
+        icon: import('@/assets/software/xml.svg?raw')
+      }
+    ]}
+  />
+  </div>
+
+  <div id="databases">
+    <ToolSection
+      class='mb-5'
+      title='Databases'
+    tools={[
+      {
+        name: 'MariaDB',
+        description: 'Database',
+        href: 'https://mariadb.org/',
+        icon: import('@/assets/software/mariadb.svg?raw')
+      },
+      {
+        name: 'PostgreSQL',
+        description: 'Database',
+        href: 'https://www.postgresql.org/',
+        icon: import('@/assets/software/postgresql.svg?raw')
+      },
+      {
+        name: 'T-SQL',
+        description: 'SQL Server',
+        href: 'https://docs.microsoft.com/en-us/sql/t-sql/',
+        icon: import('@/assets/software/tsql.svg?raw')
+      }
+    ]}
+  />
+  </div>
+
+  <div id="frameworks">
+    <ToolSection
+      class='mb-5'
+      title='Web Frameworks & Libraries'
+    tools={[
+      {
+        name: 'ASP.NET',
+        description: 'Web Framework',
+        href: 'https://dotnet.microsoft.com/apps/aspnet',
+        icon: import('@/assets/software/dotnet.svg?raw')
+      },
+      {
+        name: 'Angular',
+        description: 'Frontend Framework',
+        href: 'https://angular.io/',
+        icon: import('@/assets/software/angular.svg?raw')
+      },
+      {
+        name: 'Astro',
+        description: 'Static Site Generator',
+        href: 'https://astro.build/',
+        icon: import('@/assets/software/astro-js.svg?raw')
+      },
+      {
+        name: 'React',
+        description: 'Frontend Library',
+        href: 'https://reactjs.org/',
+        icon: import('@/assets/software/react.svg?raw')
+      },
+      {
+        name: 'WordPress',
+        description: 'CMS',
+        href: 'https://wordpress.org/',
+        icon: import('@/assets/software/wordpress.svg?raw')
+      }
+    ]}
+  />
+  </div>
+
+  <div id="servers-cloud">
+    <ToolSection
+      class='mb-5'
+      title='Web Servers & Cloud Platforms'
+    tools={[
+      {
+        name: 'Apache',
+        description: 'Web Server',
+        href: 'https://httpd.apache.org/',
+        icon: import('@/assets/software/apache.svg?raw')
+      },
+      {
+        name: 'Nginx',
+        description: 'Web Server',
+        href: 'https://nginx.org/',
+        icon: import('@/assets/software/nginx.svg?raw')
+      },
+      {
+        name: 'Firebase',
+        description: 'Backend Platform',
+        href: 'https://firebase.google.com/',
+        icon: import('@/assets/software/firebase.svg?raw')
+      },
+      {
+        name: 'Supabase',
+        description: 'Backend Platform',
+        href: 'https://supabase.com/',
+        icon: import('@/assets/software/supabase.svg?raw')
+      },
+      {
+        name: 'GitHub Pages',
+        description: 'Code Hosting',
+        href: 'https://github.com/',
+        icon: import('@/assets/software/github.svg?raw')
+      },
+      {
+        name: 'XAMPP',
+        description: 'Development Stack',
+        href: 'https://www.apachefriends.org/',
+        icon: import('@/assets/software/xampp.svg?raw')
+      }
+    ]}
+  />
+  </div>
+</PageLayout>

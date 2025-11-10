@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'OS'
 heroImage: { src: './thumbnails/package-managent.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 In the world of software development and system administration, managing software efficiently is crucial. Package managers and packaging systems play a central role in this process, providing a structured way to install, update, and manage software applications on different operating systems. This article delves into the concept of package managers, explores how software is packaged and built across various distributions, and provides a comprehensive overview of different packaging systems.

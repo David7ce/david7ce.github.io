@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'Linux'
 heroImage: { src: './thumbnails/linux-distros.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 <!-- styles to the table -->

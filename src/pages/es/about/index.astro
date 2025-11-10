@@ -1,0 +1,51 @@
+---
+import PageLayout from '@/layouts/CommonPage.astro'
+import LanguageSwitcher from '@/components/LanguageSwitcher.astro'
+import Comment from '@/components/Comment.astro'
+
+const headings = [
+  { depth: 2, slug: 'quien-soy', text: 'Quién soy' },
+  { depth: 2, slug: 'habilidades', text: 'Habilidades' },
+  { depth: 2, slug: 'intereses', text: 'Intereses' }
+]
+---
+
+<PageLayout title='Acerca de' {headings} info='/es/about'>
+  <div class="flex justify-end mb-4">
+    <LanguageSwitcher />
+  </div>
+
+  <h2 id='quien-soy'>Quién soy 😎</h2>
+  <p>Soy David Alonso, también conocido como "David7ce" (en GitHub).</p>
+  <p>
+    Soy un desarrollador apasionado por crear soluciones web modernas y eficientes.
+  </p>
+
+  <h2 id='habilidades'>💪 Habilidades</h2>
+  <p>Mis principales habilidades técnicas incluyen:</p>
+  <ul>
+    <li><strong>Lenguajes de Marcado</strong>: HTML, Markdown, XML</li>
+    <li><strong>Estilos</strong>: CSS, Sass, Tailwind CSS</li>
+    <li><strong>Programación</strong>: C#, JavaScript/TypeScript</li>
+    <li><strong>Frameworks Web</strong>: ASP.NET Core, Astro, Angular, React</li>
+    <li><strong>Bases de Datos</strong>: MySQL, PostgreSQL, TSQL</li>
+  </ul>
+
+  <h2 id='intereses'>👀 Intereses</h2>
+  <p>Me interesan muchas cosas:</p>
+  <ul>
+    <li>
+      <strong>Cosmología 🌌</strong>. Me gusta leer y entender el funcionamiento de nuestro mundo
+      (Sol, Luna, estrellas, etc).
+    </li>
+    <li>
+      <strong>Computación (software) 🖥️💿</strong>. Me gusta entender los sistemas operativos y crear
+      aplicaciones útiles. Por eso empecé a usar Linux, especialmente Arch Linux.
+    </li>
+    <li>
+      <strong>Desarrollo Web 🌐</strong>. Crear experiencias web hermosas y funcionales.
+    </li>
+  </ul>
+
+  <Comment slot='bottom' />
+</PageLayout>

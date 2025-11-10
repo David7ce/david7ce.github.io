@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'OS'
 heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ![OS timeline](/img/my-os-timeline/os-timeline.png)

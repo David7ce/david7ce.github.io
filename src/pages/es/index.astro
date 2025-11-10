@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+
+import { Quote } from 'astro-pure/advanced'
+import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
+import { Button, Icon, Label } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import Section from '@/components/home/Section.astro'
+import SkillLayout from '@/components/home/SkillLayout.astro'
+import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
+import avatar from '@/assets/avatar.png'
+import config from '../../site.config'
+// import { useTranslations } from '../../i18n/utils'
+
+// const t = useTranslations('es')
+
+const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
+const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
+const programming = ['C#', 'JavaScript / TypeScript']
+const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
+const platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
+
+// Get Spanish blog posts only
+const MAX_POSTS = 10
+const allPosts = await getBlogCollection()
+const blogPosts = allPosts.filter((post): post is CollectionEntry<'blog'> => post.collection === 'blog')
+const spanishPosts = blogPosts.filter(post => post.data.language === 'es')
+const allPostsByDate = sortMDByDate(spanishPosts).slice(0, MAX_POSTS)
+
+const meta = {
+  title: 'Inicio',
+  description: 'Sitio personal de David7ce - Versión en Español'
+}
+---
+
+<PageLayout {meta} highlightColor='#659EB9'>
+  <main class='flex w-full flex-col items-center'>
+    <section class='animate mb-10 flex flex-col items-center gap-y-7' id='content-header'>
+      <Image
+        src={avatar}
+        alt='Perfil de David7ce'
+        class='h-28 w-auto rounded-full border p-1'
+        loading='eager'
+      />
+
+      <div class='flex flex-col items-center gap-y-4'>
+        <h1 class='text-3xl font-bold'>{config.author}</h1>
+        <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
+          <Label title='GitHub' as='a' href='https://github.com/david7ce' target='_blank'>
+            <Icon name='github' class='size-5' slot='icon' />
+          </Label>
+          <Label title='LinkedIn' as='a' href='https://www.linkedin.com/in/david-alonsodd' target='_blank'>
+            <Icon name='link' class='size-5' slot='icon' />
+          </Label>
+        </div>
+      </div>
+    </section>
+
+    <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
+      <Section title='Acerca de'>
+        <p class='text-muted-foreground'>Desarrollador Web</p>
+        <p class='text-muted-foreground'>
+          Soy un desarrollador web apasionado por construir software simple y bien diseñado. Valoro
+          el diseño minimalista y funcional, y contribuyo a la comunidad de código abierto.
+        </p>
+        <Button title='Más sobre mí' class='w-fit self-end' href='/es/about' style='ahead' />
+      </Section>
+      {
+        allPostsByDate.length > 0 ? (
+          <Section title='Publicaciones'>
+            <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
+              {allPostsByDate.map((p) => (
+                <PostPreviewI18n post={p as CollectionEntry<'blog'>} />
+              ))}
+            </ul>
+            <Button title='Más publicaciones' class='w-fit self-end' href='/es/blog' style='ahead' />
+          </Section>
+        ) : (
+          <Section title='Publicaciones'>
+            <p class='text-muted-foreground'>
+              No hay publicaciones en español todavía.{' '}
+              <a href='/en/blog' class='underline hover:text-foreground'>
+                Ver publicaciones en inglés
+              </a>
+            </p>
+          </Section>
+        )
+      }
+
+      <Section title='Habilidades'>
+        <SkillLayout title='Lenguajes de Marcado' skills={markup} />
+        <SkillLayout title='Estilos' skills={styling} />
+        <SkillLayout title='Programación' skills={programming} />
+        <SkillLayout title='Bibliotecas Web' skills={web_library} />
+        <SkillLayout title='Plataformas' skills={platforms} />
+      </Section>
+    </div>
+    <Quote class='mt-12' />
+  </main>
+</PageLayout>

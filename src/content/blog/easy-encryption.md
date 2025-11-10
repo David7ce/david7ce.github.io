@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'Software'
 heroImage: { src: './thumbnails/password-manager.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ## Easy Encryption: Protecting Your Files Safely and Simply

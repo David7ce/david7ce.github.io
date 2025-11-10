@@ -28,7 +28,16 @@ export default defineConfig({
   site: 'https://david7ce.github.io',
   // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
   // base: '/astro-pure/',
-  trailingSlash: 'never',
+  trailingSlash: 'ignore',
+
+  // i18n Configuration
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es'],
+    routing: {
+      prefixDefaultLocale: true // Now English pages will be under /en
+    }
+  },
 
   // Adapter
   // https://docs.astro.build/en/guides/deploy/
@@ -106,6 +115,9 @@ export default defineConfig({
     contentIntellisense: true
   },
   vite: {
+    optimizeDeps: {
+      exclude: ['astro-pure']
+    },
     plugins: [
       //   visualizer({
       //     emitFile: true,

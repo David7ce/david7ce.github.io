@@ -8,7 +8,7 @@ tags:
   - 'AI'
   - 'NLP'
 heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 As AI systems become increasingly integrated into our daily lives, knowing how to communicate effectively with them is becoming an essential skill. This guide explores optimal communication strategies with AI models, focusing on language efficiency, prompt engineering, and alternative communication methods.

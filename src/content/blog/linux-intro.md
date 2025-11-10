@@ -6,7 +6,7 @@ tags:
   - 'Computing'
   - 'Linux'
 heroImage: { src: './thumbnails/linux-intro.webp', color: '#4891B2' }
-language: 'English'
+language: en
 ---
 
 ## Introduction to Linux

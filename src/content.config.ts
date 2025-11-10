@@ -32,7 +32,7 @@ const blog = defineCollection({
         })
         .optional(),
       tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-      language: z.string().optional(),
+      language: z.enum(['en', 'es']).default('en'),
       draft: z.boolean().default(false),
       // Special fields
       comment: z.boolean().default(true)

@@ -1,8 +1,9 @@
 ---
-import { Footer, Header, ThemeProvider } from 'astro-pure/components/basic'
+import { Footer, ThemeProvider } from 'astro-pure/components/basic'
 import type { SiteMeta } from 'astro-pure/types'
 import BaseHead from '@/components/BaseHead.astro'
-import config from '@/site-config'
+import HeaderWithI18n from '@/components/basic/HeaderWithI18n.astro'
+import config from '../site.config'
 
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseLayout /> component.
@@ -36,7 +37,7 @@ const {
       )
     }
     <div class='w-full max-w-[70rem] px-4 sm:px-7 lg:px-10'>
-      <Header />
+      <HeaderWithI18n />
       <slot />
       <Footer />
     </div>
