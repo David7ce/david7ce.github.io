@@ -44,12 +44,15 @@ const pubDate = publishDate instanceof Date ? publishDate : new Date(publishDate
 const updDate = updatedDate instanceof Date ? updatedDate : (updatedDate ? new Date(updatedDate) : null);
 const articleDate = updDate?.toISOString() ?? pubDate.toISOString()
 const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-text-opacity))'
+
+// Determine back URL based on post language
+const backUrl = data.language === 'es' ? '/es/blog' : '/en/blog'
 ---
 
 <PageLayout
   meta={{ articleDate, description, ogImage: socialImage, title }}
   highlightColor={primaryColor}
-  back='/blog'
+  back={backUrl}
 >
   {!!headings.length && <TOC {headings} slot='sidebar' />}
 

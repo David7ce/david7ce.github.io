@@ -1,5 +1,7 @@
 ---
-// Root redirect to default language (English)
-// Astro i18n config handles language routing automatically
-return Astro.redirect('/en')
+// Root redirect based on browser language preference
+const browserLang = Astro.request.headers.get('accept-language')
+const preferredLang = browserLang?.toLowerCase().includes('es') ? 'es' : 'en'
+
+return Astro.redirect(`/${preferredLang}`)
 ---
