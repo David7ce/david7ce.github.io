@@ -1,7 +1,7 @@
 ---
 slug: file-manager-systems-es
 translationKey: file-manager-systems
-title: The best apps for manage content
+title: Las mejores aplicaciones para gestionar contenido
 publishDate: '2022-04-12'
 description: 'Sistemas de gestión de archivos para organizar y gestionar contenidos digitales.'
 tags:
@@ -147,8 +147,8 @@ Todos los gestores de audio que se enumeran a continuación son gratuitos.
 Los gestores de imágenes suelen ser galerías de imágenes con opciones adicionales.
 
 - [ACDSEE Photo Studio Home](https://www.acdsee.com/en/products/photo-studio-home/). Gestor de activos digitales (DAM) de pago (90 $ al año). Incluye:
-- Modo «Multimedia», que ahorra tiempo y permite interactuar directamente con la base de datos de fotos de ACDSee.
-- Modo «Personas», un motor de IA que identifica automáticamente los rostros. Disfruta de una perspectiva vibrante y colorida gracias a las mejoras de Home 2022 en las curvas tonales y la compatibilidad con ISO más altos.
+    - Modo «Multimedia», que ahorra tiempo y permite interactuar directamente con la base de datos de fotos de ACDSee.
+    - Modo «Personas», un motor de IA que identifica automáticamente los rostros. Disfruta de una perspectiva vibrante y colorida gracias a las mejoras de Home 2022 en las curvas tonales y la compatibilidad con ISO más altos.
 - [Allusion](https://allusion-app.github.io/). Herramienta diseñada para artistas, que ayuda a organizar la biblioteca visual. Un único lugar que contiene toda la colección de imágenes de referencia, inspiración y cualquier otro tipo de imagen.
 - [Digikam](https://www.digikam.org/). Aplicación para gestionar fotos, con reconocimiento facial y etiquetado de imágenes.
 - [KPhotoAlbum](https://www.kphotoalbum.org/). Gestor de imágenes de KDE con sistema de etiquetado.
@@ -251,7 +251,7 @@ El software utilizado para gestionar archivos es una buena herramienta para clas
 
 ## Referencias
 
-- [Aplicaciones para organizar contenido - AlternativeTo](https://alternativeto.net/list/30987/organize-content/)
+- [Aplicaciones para organizar contenido - AlternativeTo](https://alternativeto.net/lists/30987/organize-content/)
 - [Sincroniza tus notas sin conexión en todos los dispositivos sin necesidad de la nube](https://attilaorosz.medium.com/syncronise-your-offline-notes-across-all-devices-without-the-cloud-1e82fa53d1f1)
 - [¿Cuál es el mejor software para etiquetar archivos?](https://turbofuture.com/computers/Whats-the-Best-Software-for-Tagging-Files-A-Review)
 - [Lista de aplicaciones de Arch Linux](https://wiki.archlinux.org/title/List_of_applications)

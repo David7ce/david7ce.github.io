@@ -247,7 +247,7 @@ The software used to manage files is a good tool to classify information and fac
 
 ## References
 
-- [Apps for organize content - AlternativeTo](https://alternativeto.net/list/30987/organize-content/)
+- [Apps for organize content - AlternativeTo](https://alternativeto.net/lists/30987/organize-content/)
 - [Synchronise Your Offline Notes Across All Devices Without the Cloud](https://attilaorosz.medium.com/syncronise-your-offline-notes-across-all-devices-without-the-cloud-1e82fa53d1f1)
 - [What's the Best Software for Tagging Files?](https://turbofuture.com/computers/Whats-the-Best-Software-for-Tagging-Files-A-Review)
 - [List of Arch Linux apps](https://wiki.archlinux.org/title/List_of_applications)
