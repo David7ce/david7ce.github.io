@@ -9,7 +9,7 @@ import config from '@/site-config'
 
 const headings = [
   { depth: 2, slug: 'websites', text: 'Sitios Web Creados' },
-  { depth: 2, slug: 'projects', text: 'Proyectos Involucrados' },
+  { depth: 2, slug: 'projects', text: 'Proyectos Involucrados' }
 ]
 ---
 
@@ -31,17 +31,15 @@ const headings = [
     project={[
       {
         name: '🛒 E-commerce front-end',
-        description: 'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JS básicos, sin marcos de trabajo..',
-        links: [
-          { type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }
-        ]
+        description:
+          'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JS básicos, sin marcos de trabajo..',
+        links: [{ type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }]
       },
       {
-        name: '📍 Mejorar la aplicación GeoImputation',
-        description: 'Refactorizar y añadir funcionalidades a una aplicación web para el seguimiento del tiempo y la ubicación de los trabajadores, creada con Angular, Firebase e Ionic UI..',
-        links: [
-          { type: 'site', href: 'https://app.limpiezaspaula.com/home' }
-        ]
+        name: '📍 Mejora de la app GeoImputation',
+        description:
+          'Refactorizar y añadir funcionalidades a una aplicación web para el seguimiento del tiempo y la ubicación de los trabajadores, creada con Angular, Firebase e Ionic UI..',
+        links: [{ type: 'site', href: 'https://app.limpiezaspaula.com/home' }]
       },
       {
         name: '🌐 Sitios web profesionales con WP',
@@ -51,15 +49,36 @@ const headings = [
           { type: 'site', href: 'https://candlemoments.live-website.com/' },
           { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
           { type: 'site', href: 'https://www.grmabogados.es/' },
-          { type: 'site', href: 'https://salondebellezanais.com/' },
+          { type: 'site', href: 'https://salondebellezanais.com/' }
         ]
       },
       {
         name: '🧰 Herramienta de instalación',
         description: 'A tool for generating scripts for installing packages on multiple OS.',
-        links: [
-          { type: 'site', href: 'https://david7ce.github.io/toolbox-installer/' }
-        ]
+        links: [{ type: 'site', href: 'https://david7ce.github.io/toolbox-installer/' }]
+      }
+    ]}
+  />
+
+  <h2 id='projects'>Proyectos Personales</h2>
+  <ProjectSection
+    project={[
+      {
+        name: '🔗 Proyecto Interneto',
+        description:
+          'Gran colección de enlaces de internet y un gestor de marcadores autoalojado para categorizar enlaces.',
+        links: [{ type: 'github', href: 'https://github.com/interneto' }]
+      },
+      {
+        name: '🏛️ Arksys OS',
+        description: 'Arksys un Arch Linux con K Desktop Environment como sistema operativo.',
+        links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
+      },
+      {
+        name: '🧠 Categorización de bóvedas de conocimiento para Obsidian',
+        description:
+          'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas.',
+        links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },
       {
         name: '📚 Wiki de Computación',
@@ -70,84 +89,12 @@ const headings = [
         ]
       },
       {
-        name: '🌱 Wiki de Cosmos',
-        description: 'Una wiki cosmológica hecha con Obsidian.md y <a href="https://dg-docs.ole.dev/" target="_blank" rel="noopener">DG Docs</a>.',
-        links: [
-          { type: 'site', href: 'https://wikiterra.github.io/' }
-        ]
-      },
-    ]}
-  />
-
-  <h2 id='projects'>Proyectos Involucrados</h2>
-  <ProjectSection
-    project={[
-      {
-        name: '🔗 Proyecto Interneto',
-        description: 'Gran colección de enlaces de internet y un gestor de marcadores autoalojado para categorizar enlaces.',
-        links: [
-          { type: 'github', href: 'https://github.com/interneto' }
-        ]
-      },
-      {
-        name: '🏛️ Arksys OS',
-        description: 'Arksys un Arch Linux con K Desktop Environment como sistema operativo.',
-        links: [
-          { type: 'github', href: 'https://github.com/arksys-os' }
-        ]
-      },
-      {
-        name: '🧠 Vault de conocimiento de Obsidian',
-        description: 'Un sistema integral de Gestión del Conocimiento Personal utilizando Obsidian con estructuras de bóveda organizadas, plantillas y flujos de trabajo para una toma de notas y organización del conocimiento efectiva.',
-        links: [
-          { type: 'github', href: 'https://github.com/obsidian-pkm-vault' }
-        ]
+        name: '🌱 Wiki de Cosmología',
+        description: 'Una wiki de cosmología hecha con Obsidian.md y el plugin DG Docs.',
+        links: [{ type: 'site', href: 'https://wikiterra.github.io/' }]
       }
     ]}
   />
-
-  <!-- <h2 id='learnings'>Learnings</h2>
-  <ProjectSection
-    class='my-2'
-    project={[
-      {
-        name: 'Aprendizaje de Rust',
-        description: 'Algunas notas y código sobre el aprendizaje de Rust por CWorld',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
-      },
-      {
-        name: 'Aprendizaje CS 213',
-        description: 'Notas, código y experiencias para el curso Introducción a los Sistemas Informáticos',
-        links: [
-          {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
-          }
-        ]
-      },
-      {
-        name: "Aprendizaje de Astro JS",
-        description: 'Notas y código sobre el aprendizaje de Astro JS',
-        links: [
-          {
-            type: 'github',
-            href: '',
-          }
-        ]
-      },
-      {
-        name: 'Aprendizaje de Desarrollo Web',
-        description: 'Notas y código sobre el aprendizaje de Desarrollo Web',
-        links: [
-          {
-          type: 'github',
-          href: '',
-          }
-        ]
-      }
-    ]}
-  /> -->
-
 </PageLayout>
 
 <script
