@@ -7,27 +7,27 @@ import { getLangFromUrl } from '../i18n/utils'
 const lang = getLangFromUrl(Astro.url)
 const currentPath = Astro.url.pathname
 
-// Check if we're on a blog post page
-const isBlogPost = /^\/(en|es)\/blog\/[^/]+$/.test(currentPath)
+// Check if we're on a blog post page - handle nested paths
+const isBlogPost = currentPath.includes('/blog/') && !currentPath.endsWith('/blog') && !currentPath.endsWith('/blog/')
 
 let translations = new Map<string, string>()
 
 if (isBlogPost) {
-  // Extract the slug from the current path
-  const match = currentPath.match(/^\/(en|es)\/blog\/(.+)$/)
-  const currentSlug = match ? match[2] : null
+  // Extract the slug from the current path - handle nested paths
+  const pathParts = currentPath.split('/blog/')[1]?.split('/') || []
+  const currentSlug = pathParts[pathParts.length - 1] || null
 
   if (currentSlug) {
-    // Find the current post
     const allPosts = await getBlogCollection()
     const currentPost = allPosts.find(
-      (p): p is CollectionEntry<'blog'> =>
-        p.collection === 'blog' &&
-        ('slug' in p.data ? p.data.slug === currentSlug : p.id === currentSlug)
+      (p): p is CollectionEntry<'blog'> => {
+        if (p.collection !== 'blog') return false
+        const postSlug = 'slug' in p.data && p.data.slug ? p.data.slug : p.id.split('/').pop()
+        return postSlug === currentSlug
+      }
     )
 
     if (currentPost && 'translationKey' in currentPost.data && currentPost.data.translationKey) {
-      // Find all translations with the same translationKey
       const translationKey = currentPost.data.translationKey
       allPosts
         .filter(
@@ -38,7 +38,7 @@ if (isBlogPost) {
         )
         .forEach((p) => {
           const pLang = 'language' in p.data ? p.data.language : 'en'
-          const pSlug = 'slug' in p.data ? p.data.slug : p.id
+          const pSlug = 'slug' in p.data && p.data.slug ? p.data.slug : p.id.split('/').pop()
           translations.set(pLang, pSlug || p.id)
         })
     }

@@ -6,8 +6,9 @@ import type { CollectionEntry } from 'astro:content'
 import 'katex/dist/katex.min.css'
 
 import Comment from '../components/Comment.astro'
+import BlogNavigation from '../components/BlogNavigation.astro'
 import { MediumZoom } from 'astro-pure/advanced'
-import { ArticleBottom, Copyright, Hero, TOC } from 'astro-pure/components/pages'
+import { Copyright, Hero, TOC } from 'astro-pure/components/pages'
 import PageLayout from '@/layouts/ContentLayout.astro'
 import { integ } from '@/site-config'
 
@@ -45,6 +46,18 @@ const updDate = updatedDate instanceof Date ? updatedDate : (updatedDate ? new D
 const articleDate = updDate?.toISOString() ?? pubDate.toISOString()
 const primaryColor = data.heroImage?.color ?? 'hsl(var(--primary) / var(--un-text-opacity))'
 
+// Filter posts by language and sort by date (newest first)
+const filteredPosts = posts
+  .filter(post => post.data.language === data.language)
+  .sort((a, b) => {
+    const dateA = a.data.publishDate instanceof Date ? a.data.publishDate : new Date(a.data.publishDate)
+    const dateB = b.data.publishDate instanceof Date ? b.data.publishDate : new Date(b.data.publishDate)
+    return dateB.getTime() - dateA.getTime()
+  })
+
+// Use slug if defined, otherwise use the last part of id without extension
+const currentSlug = data.slug || id.split('/').pop()?.replace(/\.mdx?$/, '') || id
+
 // Determine back URL based on post language
 const backUrl = data.language === 'es' ? '/es/blog' : '/en/blog'
 ---
@@ -61,11 +74,12 @@ const backUrl = data.language === 'es' ? '/es/blog' : '/en/blog'
   <slot />
 
   <Fragment slot='bottom'>
-    {/* Copyright */}
     <Copyright {data} />
-    {/* Article recommend */}
-    <ArticleBottom collections={posts} {id} class='mt-3 sm:mt-6' />
-    {/* Comment */}
+    <BlogNavigation 
+      currentSlug={currentSlug}
+      posts={filteredPosts}
+      lang={data.language}
+    />
     {!isDraft && enableComment && <Comment class='mt-3 sm:mt-6' />}
   </Fragment>
 

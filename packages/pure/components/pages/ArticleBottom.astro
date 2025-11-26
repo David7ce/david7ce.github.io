@@ -9,14 +9,33 @@ type Props = {
   class?: string
 }
 
-// Get the requested entry
 const { id, collections, class: className } = Astro.props
-const path = Astro.url.pathname.split('/').slice(0, 2).join('/')
+const lang = Astro.url.pathname.split('/')[1] // Get 'en' or 'es'
 
-// Get the next and prev entries (modulo to wrap index)
-const index = collections.findIndex((x) => x.id === id)
+// Normalize the comparison - use slug if available, otherwise use last part of id
+const normalizeId = (entry: CollectionEntry<CollectionKey>) => {
+  if ('slug' in entry.data && entry.data.slug) {
+    return entry.data.slug as string
+  }
+  const parts = entry.id.split('/')
+  return parts[parts.length - 1].replace(/\.mdx?$/, '')
+}
+
+const normalizedCurrentId = id.replace(/\.mdx?$/, '')
+
+const index = collections.findIndex((x) => normalizeId(x) === normalizedCurrentId)
 const prev = collections[index - 1]
 const next = collections[index + 1]
+
+// Debug - remove this after fixing
+console.log('Current ID:', normalizedCurrentId)
+console.log('Index found:', index)
+console.log('Collections:', collections.map(c => ({ id: c.id, slug: c.data.slug, normalized: normalizeId(c) })))
+
+const getHref = (entry: CollectionEntry<CollectionKey>) => {
+  const slug = normalizeId(entry)
+  return `/${lang}/blog/${slug}` // AQUÍ está el cambio importante - siempre incluye /blog/
+}
 ---
 
 <div class={cn('flex max-sm:flex-col sm:justify-between gap-2', className)}>
@@ -24,7 +43,7 @@ const next = collections[index + 1]
     {
       prev && (
         <a
-          href={`${path}/${prev.id}`}
+          href={getHref(prev)}
           class='group inline-flex items-center gap-x-2 rounded-xl px-4 py-2 no-underline transition-colors duration-300 hover:bg-muted max-sm:max-w-[80%] sm:flex'
         >
           <svg
@@ -60,7 +79,7 @@ const next = collections[index + 1]
     {
       next && (
         <a
-          href={`${path}/${next.id}`}
+          href={getHref(next)}
           class='group inline-flex items-center gap-x-2 rounded-xl px-4 py-2 text-right no-underline transition-colors duration-300 hover:bg-muted max-sm:float-end max-sm:max-w-[80%] sm:flex'
         >
           <p class='truncate font-medium transition-colors'>{next.data.title}</p>

@@ -38,20 +38,30 @@ cd david7ce.github.io
 ```bash
 npm install
 # or
+pnpm install
+# or
 bun install
 ```
 
-3. **Start development server:**
+3. **Install Waline client (for comments):**
+
+```bash
+npm install @waline/client
+```
+
+4. **Start development server:**
 
 ```bash
 npm run dev
+# or
+pnpm dev
 # or
 bun dev
 ```
 
 Visit `http://localhost:4321` (redirects to `/en` by default)
 
-### Useful Commands
+### Available Commands
 
 | Command | Action |
 |---------|--------|
@@ -59,7 +69,31 @@ Visit `http://localhost:4321` (redirects to `/en` by default)
 | `npm run dev` | Start dev server at `localhost:4321` |
 | `npm run build` | Build production site to `./dist/` |
 | `npm run preview` | Preview built site locally |
+| `npx astro clean` | Clear Astro cache and build artifacts |
 | `npm run astro -- --help` | Get help using Astro CLI |
+| `npm run new` | Create new blog post (interactive) |
+
+### Troubleshooting
+
+#### Clear Cache
+
+If you experience issues with updates not appearing:
+
+```bash
+# Stop the dev server (Ctrl+C)
+npx astro clean
+# Or manually remove cache
+rm -rf .astro dist node_modules/.astro
+
+# Restart dev server
+npm run dev
+```
+
+#### Hard Refresh Browser
+
+- **Windows/Linux**: `Ctrl + Shift + R` or `Ctrl + F5`
+- **Mac**: `Cmd + Shift + R`
+- **Or**: Open DevTools (F12) → Network tab → Check "Disable cache"
 
 ## 🌍 Internationalization (i18n)
 
@@ -173,10 +207,21 @@ To maintain i18n functionality while using the theme:
 2. **Custom PostPreview**: `src/components/PostPreviewI18n.astro`
    - Language-aware blog post links
    - Automatically prefixes URLs with current language
+   - Uses `slug` field if defined, otherwise falls back to `id`
 
-3. **Modified BaseLayout**: `src/layouts/BaseLayout.astro`
+3. **Modified ArticleBottom**: `packages/pure/components/pages/ArticleBottom.astro`
+   - Updated to support i18n navigation (prev/next posts)
+   - Constructs URLs with proper language prefix: `/{lang}/blog/{slug}`
+   - Filters posts by current language
+
+4. **Modified BaseLayout**: `src/layouts/BaseLayout.astro`
    - Uses HeaderWithI18n instead of theme's Header
    - Maintains compatibility with theme features
+
+5. **Custom Comment Component**: `src/components/Comment.astro`
+   - Wrapper for Waline comment system
+   - Loads from local node_modules instead of CDN
+   - Supports Astro page transitions
 
 ### Updating the Theme
 
@@ -209,6 +254,7 @@ title: "Post Title"
 publishDate: 2024-01-01
 description: "Post description"
 language: en
+slug: post-title-en  # Optional: custom URL slug
 tags: ["tag1", "tag2"]
 ---
 ```
@@ -217,7 +263,28 @@ tags: ["tag1", "tag2"]
 
 1. Create markdown file in `src/content/blog/`
 2. Set frontmatter with `language: es`
-3. Write content in Spanish
+3. Optionally set custom `slug` (recommended to include `-es` suffix)
+4. Write content in Spanish
+
+Example:
+
+```yaml
+---
+title: "Título del Post"
+publishDate: 2024-01-01
+description: "Descripción del post"
+language: es
+slug: titulo-del-post-es
+tags: ["etiqueta1", "etiqueta2"]
+---
+```
+
+### Slug vs ID
+
+- **slug**: Custom URL-friendly identifier (optional)
+- **id**: Filename without extension (automatic)
+- If `slug` is not defined, `id` is used for URLs
+- Recommended: Use `slug` with language suffix (`-en`, `-es`)
 
 ### Content Schema
 
@@ -225,6 +292,7 @@ Defined in `src/content.config.ts`:
 
 ```typescript
 language: z.enum(['en', 'es'])  // Required: 'en' or 'es'
+slug: z.string().optional()     // Optional: custom URL slug
 ```
 
 ## ⚙️ Configuration
@@ -257,6 +325,7 @@ export const theme: ThemeUserConfig = {
 ### Astro Configuration
 
 Edit `astro.config.ts` for:
+
 - i18n settings
 - Integrations
 - Build options
@@ -289,6 +358,7 @@ export default defineConfig({
 ### Other Platforms
 
 The static build in `./dist/` can be deployed to:
+
 - Vercel
 - Netlify
 - Cloudflare Pages
@@ -314,7 +384,7 @@ Additional documentation files:
 - **Syntax Highlighting**: Shiki
 - **Math**: KaTeX
 - **Search**: Pagefind
-- **Comments**: Waline
+- **Comments**: [Waline](https://waline.js.org/) v3.8.0
 - **Deployment**: GitHub Pages
 
 ## 📄 License
