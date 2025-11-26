@@ -13,12 +13,22 @@ const isBlogPost = currentPath.includes('/blog/') && !currentPath.endsWith('/blo
 let translations = new Map<string, string>()
 
 if (isBlogPost) {
-  // Extract the slug from the current path - handle nested paths
-  const pathParts = currentPath.split('/blog/')[1]?.split('/') || []
+  // Extract the slug from the current path - handle nested paths and trailing slashes
+  const pathParts = currentPath.replace(/\/$/, '').split('/blog/')[1]?.split('/') || []
   const currentSlug = pathParts[pathParts.length - 1]?.replace(/\.mdx?$/, '') || null
 
   if (currentSlug) {
     const allPosts = await getBlogCollection()
+    
+    // Debug in production
+    console.log('Current slug:', currentSlug)
+    console.log('All post slugs:', allPosts.map(p => ({
+      id: p.id,
+      slug: p.data.slug,
+      translationKey: p.data.translationKey,
+      language: p.data.language
+    })))
+    
     const currentPost = allPosts.find(
       (p): p is CollectionEntry<'blog'> => {
         if (p.collection !== 'blog') return false
@@ -28,6 +38,8 @@ if (isBlogPost) {
         return postSlug === currentSlug
       }
     )
+    
+    console.log('Current post found:', currentPost?.id, currentPost?.data.translationKey)
 
     if (currentPost && 'translationKey' in currentPost.data && currentPost.data.translationKey) {
       const translationKey = currentPost.data.translationKey
@@ -40,6 +52,8 @@ if (isBlogPost) {
           p.data.translationKey === translationKey
       )
       
+      console.log('Related posts:', relatedPosts.map(p => ({ lang: p.data.language, slug: p.data.slug })))
+      
       // Map each language to its specific slug
       relatedPosts.forEach((p) => {
         const pLang = 'language' in p.data ? p.data.language : 'en'
@@ -51,6 +65,8 @@ if (isBlogPost) {
           translations.set(pLang, pSlug)
         }
       })
+      
+      console.log('Translations map:', Object.fromEntries(translations))
     }
   }
 }
