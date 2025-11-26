@@ -69,7 +69,7 @@ const backUrl = data.language === 'es' ? '/es/blog' : '/en/blog'
 >
   {!!headings.length && <TOC {headings} slot='sidebar' />}
 
-  <Hero data={Astro.props.post.data} {remarkPluginFrontmatter} slot='header' />
+  <Hero data={data} {remarkPluginFrontmatter} slot='header' />
 
   <slot />
 
