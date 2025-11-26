@@ -73,7 +73,7 @@ export const ui = {
     'nav.blog': 'Blog',
     'nav.projects': 'Proyectos',
     'nav.stack': 'Stack',
-    'nav.about': 'Acerca de',
+    'nav.about': 'Sobre mí',
     
     // Común
     'common.back': 'Volver',

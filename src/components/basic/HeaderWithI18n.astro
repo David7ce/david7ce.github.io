@@ -1,19 +1,20 @@
 ---
 import config from 'virtual:config'
-
 import { Icon } from 'astro-pure/user'
-
-import { getLangFromUrl } from '../../i18n/utils'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 import LanguageSwitcher from '../LanguageSwitcher.astro'
 
 const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 const langPrefix = `/${lang}`
 
-// Add language prefix to menu links
-const localizedMenu = config.header.menu.map((item) => ({
-  ...item,
-  link: `${langPrefix}${item.link}`
-}))
+// Translate menu items
+const localizedMenu = [
+  { title: t('nav.blog'), link: `${langPrefix}/blog` },
+  { title: t('nav.projects'), link: `${langPrefix}/projects` },
+  { title: t('nav.stack'), link: `${langPrefix}/stack` },
+  { title: t('nav.about'), link: `${langPrefix}/about` }
+]
 ---
 
 <header-component
@@ -29,8 +30,6 @@ const localizedMenu = config.header.menu.map((item) => ({
 
     <LanguageSwitcher />
   </div>
-
-  <!-- <div class="test-class">Test</div> -->
 
   <div class='flex items-center gap-x-2'>
     {/* Menu links */}
