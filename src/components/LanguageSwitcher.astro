@@ -15,32 +15,42 @@ let translations = new Map<string, string>()
 if (isBlogPost) {
   // Extract the slug from the current path - handle nested paths
   const pathParts = currentPath.split('/blog/')[1]?.split('/') || []
-  const currentSlug = pathParts[pathParts.length - 1] || null
+  const currentSlug = pathParts[pathParts.length - 1]?.replace(/\.mdx?$/, '') || null
 
   if (currentSlug) {
     const allPosts = await getBlogCollection()
     const currentPost = allPosts.find(
       (p): p is CollectionEntry<'blog'> => {
         if (p.collection !== 'blog') return false
-        const postSlug = 'slug' in p.data && p.data.slug ? p.data.slug : p.id.split('/').pop()
+        const postSlug = ('slug' in p.data && p.data.slug) 
+          ? p.data.slug 
+          : p.id.split('/').pop()?.replace(/\.mdx?$/, '')
         return postSlug === currentSlug
       }
     )
 
     if (currentPost && 'translationKey' in currentPost.data && currentPost.data.translationKey) {
       const translationKey = currentPost.data.translationKey
-      allPosts
-        .filter(
-          (p): p is CollectionEntry<'blog'> =>
-            p.collection === 'blog' &&
-            'translationKey' in p.data &&
-            p.data.translationKey === translationKey
-        )
-        .forEach((p) => {
-          const pLang = 'language' in p.data ? p.data.language : 'en'
-          const pSlug = 'slug' in p.data && p.data.slug ? p.data.slug : p.id.split('/').pop()
-          translations.set(pLang, pSlug || p.id)
-        })
+      
+      // Find all posts with the same translationKey
+      const relatedPosts = allPosts.filter(
+        (p): p is CollectionEntry<'blog'> =>
+          p.collection === 'blog' &&
+          'translationKey' in p.data &&
+          p.data.translationKey === translationKey
+      )
+      
+      // Map each language to its specific slug
+      relatedPosts.forEach((p) => {
+        const pLang = 'language' in p.data ? p.data.language : 'en'
+        const pSlug = ('slug' in p.data && p.data.slug) 
+          ? p.data.slug 
+          : p.id.split('/').pop()?.replace(/\.mdx?$/, '')
+        
+        if (pSlug) {
+          translations.set(pLang, pSlug)
+        }
+      })
     }
   }
 }
