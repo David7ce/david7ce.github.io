@@ -17,7 +17,6 @@ This blog is built using the web static generator framework **Astro.js**. It con
 - To configure Astro article display we add variables in the front-matter at the top of the markdown file.
 
 ```yaml
----
 title: "Markdown Syntax Guide"
 publishDate: '2021-01-01'
 updatedDate: '2025-06-03'
@@ -30,7 +29,6 @@ tags:
 heroImage: { src: './blog-thumbnails/markdown-guide.jpg', color: '#4891B2' }
 language: en
 draft: false
----
 ```
 
 ## Text with format

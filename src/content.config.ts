@@ -24,7 +24,7 @@ const blog = defineCollection({
       updatedDate: z.coerce.date().optional(),
       heroImage: z
         .object({
-          src: image(),
+          src: z.union([image(), z.string()]),
           alt: z.string().optional(),
           inferSize: z.boolean().optional(),
           width: z.number().optional(),
@@ -36,25 +36,9 @@ const blog = defineCollection({
       tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
       language: z.enum(['en', 'es']).default('en'),
       draft: z.boolean().default(false),
-      // Special fields
-      comment: z.boolean().default(true)
+      comment: z.boolean().default(true), // Comments enabled by default
     })
 })
 
-// Define docs collection
-const docs = defineCollection({
-  loader: glob({ base: './src/content/docs', pattern: '**/*.{md,mdx}' }),
-  schema: () =>
-    z.object({
-      title: z.string().max(60),
-      description: z.string().max(160),
-      publishDate: z.coerce.date().optional(),
-      updatedDate: z.coerce.date().optional(),
-      tags: z.array(z.string()).default([]).transform(removeDupsAndLowerCase),
-      draft: z.boolean().default(false),
-      // Special fields
-      order: z.number().default(999)
-    })
-})
-
-export const collections = { blog, docs }
+// Export only the collections you're using
+export const collections = { blog }

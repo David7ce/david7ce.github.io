@@ -17,7 +17,6 @@ Este blog está creado con el marco generador estático web **Astro.js**. Convie
 - Para configurar la visualización de los artículos de Astro, añadimos variables en la parte superior del archivo Markdown.
 
 ```yaml
----
 title: «Guía de sintaxis Markdown»
 publishDate: “2021-01-01”
 updatedDate: “2025-06-03”
@@ -28,9 +27,8 @@ tags:
   - html
   - astro
 heroImage: { src: “./blog-thumbnails/markdown-guide.jpg”, color: “#4891B2” }
-language: en
+language: es
 draft: false
----
 ```
 
 ## Texto con formato

@@ -8,7 +8,6 @@ updatedDate: 2023-10-26
 tags: ['Computing']
 heroImage: { src: './thumbnails/encode-decode.jpg', color: '#4891B2' }
 language: en
-
 ---
 
 ## The Significance of Encoding/Decoding
