@@ -20,19 +20,19 @@ Como estudiante de desarrollo web que utiliza tanto Windows como Linux, he dedic
 
 > MusicBee, Affinity Photo y Guitar Pro se pueden utilizar con WINE, pero la experiencia no es buena. Además, los juegos de Windows con anticheat a nivel de kernel son incompatibles con el kernel de Linux.
 
-1. Affinity Photo o Adobe Photos: edición fotográfica profesional
+1. **Affinity Photo o Adobe Photos**: edición fotográfica profesional
 Affinity Photo es una herramienta de edición fotográfica asequible pero de calidad profesional que rivaliza con Adobe Photoshop en cuanto a funcionalidad. Es muy elogiada por sus potentes funciones, su gran rendimiento y su modelo de precios asequible. En Linux tenemos GIMP, pero no es lo mismo. Aunque GIMP es potente y de código abierto, su interfaz de usuario y su flujo de trabajo pueden resultar torpes en comparación con la experiencia más fluida de Affinity Photo. Para cualquiera que trabaje mucho con la edición de fotos, esta falta de software pulido puede resultar limitante.
 
-2. FL Studio (FruityLoops): una laguna en la producción musical
+2. **FL Studio (FruityLoops)**: una laguna en la producción musical
 Otra área en la que Linux se queda corto es en el software de producción musical profesional como **FL Studio** (antes FruityLoops), una popular estación de trabajo de audio digital (DAW) para músicos y productores. FL Studio ofrece una interfaz pulida, una amplia compatibilidad con plugins y herramientas estándar del sector que lo convierten en uno de los favoritos entre los creadores de música. Desgraciadamente, no existe una versión nativa para Linux y, aunque se puede ejecutar a través de **Wine** o **Proton**, el rendimiento y la estabilidad no están garantizados. Aunque Linux tiene alternativas como **LMMS** o **Ardour**, estas no igualan por completo la profundidad y versatilidad de FL Studio, lo que supone una laguna importante tanto para los productores profesionales como para los aficionados.
 
-3. Guitar Pro: para músicos y guitarristas
+3. **Guitar Pro**: para músicos y guitarristas
 Como guitarrista, disfruto utilizando Guitar Pro, una sólida herramienta para crear, tocar y compartir tablaturas y partituras de guitarra. Por desgracia, Guitar Pro no tiene una versión nativa para Linux. Existen alternativas como TuxGuitar, pero carecen del mismo nivel de funciones, experiencia de usuario y soporte que Guitar Pro. Para los músicos, la ausencia de herramientas estándar del sector como esta en Linux puede suponer un verdadero obstáculo.
 
-4. MusicBee: el reproductor de música
+4. **MusicBee**: el reproductor de música
 MusicBee es uno de los mejores programas de gestión musical disponibles para Windows. Con una interfaz elegante, potentes opciones de personalización y una gestión eficiente de la biblioteca, es uno de los favoritos entre los audiófilos. Por desgracia, no existe un equivalente directo para Linux que iguale el acabado y la funcionalidad de MusicBee. Aunque existen alternativas como Rhythmbox o Clementine, se quedan cortas en cuanto a funciones y diseño de la interfaz de usuario, lo que hace que MusicBee sea una de las pocas cosas que echo de menos cuando trabajo en Linux.
 
-5. Juegos con anticheats a nivel del kernel (Fortnite, Valorant, etc.): un obstáculo para los juegos
+5. **Juegos con anticheats a nivel del kernel (Fortnite, Valorant, etc.)**: un obstáculo para los juegos
 Uno de los principales retos de los juegos en Linux es la falta de compatibilidad con las tecnologías anticheats a nivel del kernel que utilizan juegos populares como **Fortnite** y **Valorant**. Aunque esto mejora la seguridad y la privacidad, ya que el acceso a nivel del kernel plantea riesgos, también significa que estos juegos no se pueden jugar en Linux, lo que limita el atractivo del sistema para un gran público de jugadores. A pesar de los importantes avances con herramientas como **Steam Proton**, que permiten ejecutar muchos juegos de Windows en Linux, el software anticheat a menudo rompe la compatibilidad, lo que obliga a los jugadores a arrancar con Windows o a perderse estos títulos, lo que supone un importante inconveniente para los entusiastas de los juegos en Linux.
 
 ### Paquetes defectuosos y fallos gráficos: los problemas de la vanguardia

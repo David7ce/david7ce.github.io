@@ -42,7 +42,7 @@ El principal inconveniente: depende totalmente de una conexión a Internet y ope
 Detrás de cada lista M3U o aplicación de IPTV hay una arquitectura muy similar a la de cualquier plataforma de streaming importante:
 
 | Componente         | Función                                                | Equivalente OTT                      |
-| ------------------ | ------------------------------------------------------ | --- -------------------------------- |
+| ------------------ | ------------------------------------------------------ | ------------------------------------ |
 | Servidor de origen | Captura señales y las convierte a H.264/H.265          | «cabecera» como en Netflix o Disney+ |
 | Middleware         | Gestiona usuarios, canales, guías y autenticaciones    | Backend OTT                          |
 | CDN                | Distribuye contenido en forma segmentada (HLS / DASH)  | AWS, Akamai, CloudFront              |
@@ -70,13 +70,13 @@ En todas estas capas ha surgido una gran comunidad de desarrolladores, recopilad
 
 Los clientes de IPTV son aplicaciones que recopilan listas de reproducción de vídeo y permiten a los usuarios reproducirlas. Dado que no hay grandes empresas que respalden estos clientes, el ecosistema está fragmentado, con muchas aplicaciones similares, algunas llenas de anuncios y otras falsas. Aun así, hay algunas aplicaciones fiables y muy utilizadas, entre las que se incluyen:
 
-| Plataforma               | Aplicaciones/Reproductores                                                                                                                                                       |
-| ---------------------- | -------------------------------------------------------------------------- ----------------------------------------------------------------------------------------- - |
-| **Android TV**         | [TiviMate](https://tivimate.com/), [Televizo](https://televizo.net/)                                                                                                 |
-| **Android / iOS**      | [MYTVOnline+](https://www.formuler.tv/mytvonline-plus) ✨                                                                                                            |
-| **macOS / iOS / tvOS** | [UHF IPTV](https://www.uhfapp.com/)                                                                                                                                  |
-| **PC (multiplataforma)** | [IPTVnator](https://github.com/4gray/iptvnator) ✨, [OpenTV](https://github.com/Fredolx/open-tv)                                                                     |
-| **Todas las plataformas**      | [Zen Player](https://zeniptv.app/) ✨, [Smarters IPTV Expert](https://www.iptv-smarters-expert.app/), [Kodi](https://kodi.tv/), [VLC](https://www.videolan.org/vlc/) |
+| Plataforma                | Aplicaciones/Reproductores                                                                                                                                           |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Android TV**            | [TiviMate](https://tivimate.com/), [Televizo](https://televizo.net/)                                                                                                 |
+| **Android / iOS**         | [MYTVOnline+](https://www.formuler.tv/mytvonline-plus) ✨                                                                                                           |
+| **macOS / iOS / tvOS**    | [UHF IPTV](https://www.uhfapp.com/)                                                                                                                                  |
+| **PC (multiplataforma)**  | [IPTVnator](https://github.com/4gray/iptvnator) ✨, [OpenTV](https://github.com/Fredolx/open-tv)                                                                     |
+| **Todas las plataformas** | [Zen Player](https://zeniptv.app/) ✨, [Smarters IPTV Expert](https://www.iptv-smarters-expert.app/), [Kodi](https://kodi.tv/), [VLC](https://www.videolan.org/vlc/) |
 
 ## 💡 El futuro: televisión unificada
 

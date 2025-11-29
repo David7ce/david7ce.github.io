@@ -11,10 +11,7 @@ heroImage: { src: './thumbnails/linux-distros.jpg', color: '#4891B2' }
 language: en
 ---
 
-<!-- styles to the table -->
 <style>
-  /* a { text-decoration: none; } */
-  /* a img { border: none; } */
   table a { margin: 5px; }
   table img { display: inline-block; width: 30px; height: auto; }
 </style>
@@ -51,8 +48,8 @@ When a distribution provides the core components such as the Linux kernel, a pac
 
 While there are hundreds of Linux distributions, the majority are based on these ten foundational Linux base distros.
 
-| Linux distro                                                                | Mantainer | Release model | Package manager                 | Source repository                                                             |
-| --------------------------------------------------------------------------- | --------- | ------------- | ------------------------------- | ----------------------------------------------------------------------------- |
+| Linux distro                                                                    | Mantainer | Release model | Package manager                 | Source repository                                                             |
+| ------------------------------------------------------------------------------- | --------- | ------------- | ------------------------------- | ----------------------------------------------------------------------------- |
 | [![ArchLinux](/img/linux-distros/base/archlinux.webp)](https://archlinux.org/)  | Community | Rolling       | Pacman (pkg.tar.zst + PKGBUILD) | [Arch pkgs](https://archlinux.org/packages)+[AUR](https://aur.archlinux.org/) |
 | [![Debian](/img/linux-distros/base/debian.webp)](https://www.debian.org/)       | Community | Fixed         | APT (deb)                       | [Debian pkgs](https://packages.debian.org/stable/)                            |
 | [![Fedora](/img/linux-distros/base/fedora.webp)](https://fedoraproject.org/)    | Red Hat   | Fixed         | DNF (rpm)                       | [Fedora pkgs](https://packages.fedoraproject.org/)                            |
