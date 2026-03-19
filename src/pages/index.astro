@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Redirecting...</title>
-  <meta http-equiv="refresh" content="0; url=/en/">
   <script>
-    // Client-side language detection for better UX
     (function() {
-      const browserLang = navigator.language;
+      const browserLang = navigator.language || '';
       const preferredLang = browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
-      window.location.href = `/${preferredLang}/`;
+      window.location.replace(`/${preferredLang}/`);
     })();
   </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=/en/">
+  </noscript>
 </head>
-<body>
-  <p>Redirecting to <a href="/en/">/en/</a>...</p>
-</body>
+<body></body>
 </html>
