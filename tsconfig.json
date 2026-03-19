@@ -20,6 +20,10 @@
     // Others
     "baseUrl": ".",
     "strictNullChecks": true,
+    "types": [
+      "astro/client",
+      "node"
+    ],
     // Paths
     "paths": {
       "@/assets/*": [
