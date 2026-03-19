@@ -20,62 +20,34 @@ This boils down to four key decisions:
 - Control cost, latency, and output quality
 - Integrate AI into real-world workflows (beyond chat)
 - Connect tools in reproducible pipelines
+- Write good prompts for the AI
 
 ---
 
-## 1) Choosing AI Models by Use Case
-
-There is no universal “best model.” Select based on **use case**, **cost**, and **integration**.
-
-| Use Case                  | Primary Recommendation                                           | Alternatives                                                                                                                                                         | Why                                                       |
-|---------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| Code & Automation         | [GPT (OpenAI)](https://platform.openai.com/docs/models)          | [Claude](https://docs.anthropic.com/en/docs/about-claude/models), [DeepSeek](https://platform.deepseek.com/), [Gemini](https://ai.google.dev/gemini-api/docs/models) | Strong ecosystem + SDK support                            |
-| Long Documents / Analysis | [Claude](https://docs.anthropic.com/en/docs/about-claude/models) | [Gemini](https://ai.google.dev/gemini-api/docs/models), [GPT](https://developers.openai.com/api/docs/models)                                                         | Excellent handling of long context and structured content |
-| Cost-Optimized API        | [DeepSeek](https://platform.deepseek.com/)                       | [MiniMax](https://www.minimax.io/), [Qwen](https://qwenlm.github.io/)                                                                                                | Good price/performance ratio                              |
-| Google Ecosystem          | [Gemini](https://ai.google.dev/gemini-api/docs/models)           | [NotebookLM](https://notebooklm.google.com/), Google Workspace + Gemini                                                                                              | Native integration with Google apps                       |
-
-**Useful model comparison tools:**
-
-- [Arena AI Leaderboard](https://arena.ai/leaderboard)  
-- [OpenRouter Model Pricing](https://openrouter.ai/models?order=most-popular)  
-- [Price Per Token (API)](https://pricepertoken.com/)
-
----
-
-## 2) API vs MCP vs Closed Platforms
+## API vs MCP vs Integrated Platforms
 
 | Option                           | When to Use                         | Advantages                                        | Limitations                                       |
 |----------------------------------|-------------------------------------|---------------------------------------------------|---------------------------------------------------|
 | **API (custom backend)**         | Production, automation, custom apps | Full control of prompts, costs, logging, security | Requires development and infrastructure           |
 | **MCP (Model Context Protocol)** | Quick tool/context connection       | Easy integration, faster deployment               | Less flexible than full API                       |
-| **Closed Platform**              | Immediate team productivity         | Simple, fast adoption                             | Limited customization, less technical scalability |
-
-**References:**
-
-- [MCP Introduction](https://modelcontextprotocol.io/docs/getting-started/intro)  
-- [ChatGPT](https://chatgpt.com/)  
-- [Claude](https://claude.ai/)  
-- [Microsoft Copilot](https://copilot.microsoft.com/)  
-- [Google Workspace + Gemini](https://workspace.google.com/gemini/)
+| **Integrated Platform**          | Immediate team productivity         | Simple, fast adoption                             | Limited customization, less technical scalability |
 
 ---
 
-## 3) Optimal Workflow (AI-first)
+## Optimal Workflow (AI-first)
 
 Recommended production pipeline:
 
-```
-
+```md
 User → Structured Prompt → AI Model → Structured Output (JSON/Markdown)
 → Validation (script/rules) → Internal API → App (web, mobile, GIS, etc.)
-
 ```
 
 **Benefits:** traceability, testing, maintainability, reproducibility.
 
 ---
 
-## 4) AI-Friendly Formats
+## AI-Friendly Formats
 
 | Type                    | Recommended  | Why                                  |
 |-------------------------|--------------|--------------------------------------|
@@ -88,66 +60,62 @@ User → Structured Prompt → AI Model → Structured Output (JSON/Markdown)
 
 ---
 
-## 5) App Integration (GUI + Industry)
+## GUI Apps by Domain
 
-| Option              | Pros                                                                           | Cons                                                            |
-|---------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------|
-| **Direct API**      | Maximum flexibility, QGIS/web apps/pipelines, pay per usage                    | Requires backend, observability, security, ongoing maintenance  |
-| **MCP**             | Quick connection of tools and context, good for internal docs + search engines | Less flexible than full API, depends on MCP host/client         |
-| **Closed Platform** | Rapid adoption for non-technical teams, great UX for daily productivity        | Limited technical control, less suitable for complex automation |
-
----
-
-## 6) GUI Apps by Domain
-
-| Discipline                 | Application                                                                                 |
-|----------------------------|---------------------------------------------------------------------------------------------|
-| General Assistant          | ChatGPT, Claude, DeepSeek, Microsoft Copilot (with MS 365), Gemini (with Google Workspaces) |
-| Video Game Development     | Unity, Unreal Engine                                                                        |
-| AI-powered code editors    | Cursor.ai, VS Code + GitHub Copilot Chat, GitHub Copilot                                    |
-| Research                   | NotebookLM                                                                                  |
-| Music                      | ElevenLabs, Suno                                                                            |
-| Image generation (online)  | Civitai, Ideogram, Leonardo AI, Microsoft Designer, Midjourney, Pika, Runway                |
-| Image generation (offline) | ComfyUI, CogVideo, Stable Diffusion WebUI, Fooocus, Invoek AI, OneTrainer                   |
-| Presentations              | Gamma                                                                                       |
-| AI creative suite          | Affinity Studio (by Canva), Canva, Figma, Photoshop, FreePik                                |
+| Discipline                 | Application                                                                                                          |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------|
+| General Assistant          | ChatGPT, Claude, DeepSeek, Microsoft Copilot (integrated in MS Office 365), Gemini (integrated in Google Workspaces) |
+| Video Game Development     | Unity, Unreal Engine                                                                                                 |
+| AI-powered code editors    | Cursor.ai, VS Code + GitHub Copilot Chat, GitHub Copilot                                                             |
+| Research                   | NotebookLM                                                                                                           |
+| Music                      | ElevenLabs, Suno                                                                                                     |
+| Image generation (online)  | Civitai, Ideogram, Leonardo AI, Microsoft Designer, Midjourney, Pika, Runway                                         |
+| Image generation (offline) | ComfyUI, CogVideo, Stable Diffusion WebUI, Fooocus, Invoek AI, OneTrainer                                            |
+| Presentations              | Gamma                                                                                                                |
+| AI creative suite          | Affinity Studio (by Canva), Canva, Figma, Photoshop, FreePik                                                         |
 
 ---
 
-## 7) LLM Models by Domain (API)
+## LLM Models by Domain (API)
 
-| Discipline      | Provider          | Model                          |
-|-----------------|-------------------|--------------------------------|
-| Audio           | ElevenLabs        | ElevenLabs                     |
-| Audio           | Google DeepMind   | Lyria                          |
-| Audio           | OpenAI            | Whisper                        |
-| Code            | OpenAI            | GPT-5, Codex                   |
-| Code            | Anthropic         | Claude 3 (Opus, Sonnet, Haiku) |
-| Code            | Google            | Gemini API                     |
-| Code            | DeepSeek          | DeepSeek Coder                 |
-| Code            | Meta              | Llama 2/3                      |
-| Code            | MiniMax           | MiniMax                        |
-| Image/Video     | Black Forest Labs | Flux                           |
-| Image/Video     | OpenAI            | DALL-E 3                       |
-| Image/Video     | Stability AI      | Stable Diffusion 3             |
-| Image/Video     | Google DeepMind   | Veo                            |
-| Image/Video     | Tencent           | Hunyuan                        |
-| Image/Video     | Alibaba Cloud     | Qwen                           |
-| Image/Video     | Midjourney        | Midjourney                     |
-| Text (General)  | OpenAI            | GPT-5, GPT-4                   |
-| Text (General)  | Anthropic         | Claude 3 Opus                  |
-| Text (General)  | Google            | Gemini Pro                     |
-| Text (General)  | Meta              | Llama 3                        |
-| Text (General)  | DeepSeek          | DeepSeek Chat                  |
-| Text (Analysis) | Anthropic         | Claude 3 Opus (200k context)   |
-| Text (Analysis) | Google            | Gemini 1.5 Pro                 |
-| Embedding       | OpenAI            | text-embedding-3-large         |
-| Embedding       | Anthropic         | Claude Embedding               |
-| Embedding       | Google            | Gemini Embedding               |
+| Discipline      | Provider          | Model                          | Type        |
+|-----------------|-------------------|--------------------------------|-------------|
+| Audio           | ElevenLabs        | ElevenLabs                     | Proprietary |
+| Audio           | Google DeepMind   | Lyria                          | Proprietary |
+| Audio           | OpenAI            | Whisper                        | Open-source |
+| Code            | OpenAI            | GPT-5, Codex                   | Proprietary |
+| Code            | Anthropic         | Claude 3 (Opus, Sonnet, Haiku) | Proprietary |
+| Code            | Google            | Gemini API                     | Proprietary |
+| Code            | DeepSeek          | DeepSeek Coder                 | Open-source |
+| Code            | Meta              | Llama 2/3                      | Open-source |
+| Code            | MiniMax           | MiniMax                        | Proprietary |
+| Image/Video     | Black Forest Labs | Flux                           | Open-source |
+| Image/Video     | OpenAI            | DALL-E 3                       | Proprietary |
+| Image/Video     | Stability AI      | Stable Diffusion 3             | Open-source |
+| Image/Video     | Google DeepMind   | Veo                            | Proprietary |
+| Image/Video     | Tencent           | Hunyuan                        | Proprietary |
+| Image/Video     | Alibaba Cloud     | Qwen                           | Open-source |
+| Image/Video     | Midjourney        | Midjourney                     | Proprietary |
+| Text (General)  | OpenAI            | GPT-5, GPT-4                   | Proprietary |
+| Text (General)  | Anthropic         | Claude 3 Opus                  | Proprietary |
+| Text (General)  | Google            | Gemini Pro                     | Proprietary |
+| Text (General)  | Meta              | Llama 3                        | Open-source |
+| Text (General)  | DeepSeek          | DeepSeek Chat                  | Open-source |
+| Text (Analysis) | Anthropic         | Claude 3 Opus (200k context)   | Proprietary |
+| Text (Analysis) | Google            | Gemini 1.5 Pro                 | Proprietary |
+| Embedding       | OpenAI            | text-embedding-3-large         | Proprietary |
+| Embedding       | Anthropic         | Claude Embedding               | Proprietary |
+| Embedding       | Google            | Gemini Embedding               | Proprietary |
+
+*Useful model comparison tools:**
+
+- [Arena AI Leaderboard](https://arena.ai/leaderboard)  
+- [OpenRouter Model Pricing](https://openrouter.ai/models?order=most-popular)  
+- [Price Per Token (API)](https://pricepertoken.com/)
 
 ---
 
-## 8) Optimization Strategy
+## Optimization Strategy
 
 **Cost:**
 
@@ -169,7 +137,37 @@ User → Structured Prompt → AI Model → Structured Output (JSON/Markdown)
 
 ---
 
-## 9) Conclusion
+## Prompt Engineering + Agent Configuration Rules
+
+Strong results come from **clear prompts**, **well-scoped agents**, and **explicit constraints**.
+
+### Prompt writing rules
+
+- Define objective, audience, and expected output format
+- Add constraints (length, tone, schema, acceptance criteria)
+- Provide context files/data and state what is source of truth
+- Ask for structured outputs (JSON/Markdown/tables) when automation is needed
+- Break large tasks into steps instead of one overloaded prompt
+
+### Agent + skill configuration rules
+
+- Use one agent per responsibility (e.g., research, coding, review)
+- Keep skill instructions explicit, versioned, and testable
+- Restrict tools per agent to reduce risky or irrelevant actions
+- Define handoff contracts between agents (input/output schema)
+- Log runs and keep prompt/skill changes in Git for reproducibility
+
+### What not to do
+
+- Don’t use vague prompts like “improve this” without acceptance criteria
+- Don’t mix unrelated goals in one agent run
+- Don’t give write permissions to exploration-only agents
+- Don’t rely on hidden context; pass required files and assumptions explicitly
+- Don’t optimize only for model IQ while ignoring workflow design and validation
+
+---
+
+## Conclusion
 
 Competitive advantage is in **workflow architecture**, not just model choice:
 
