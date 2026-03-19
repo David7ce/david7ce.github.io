@@ -1,7 +1,7 @@
 ---
 slug: AIs
 translationKey: easy-encryption
-title: Optimizing AI Use: Models, Workflows, and Integration
+title: 'Optimizing AI Use: Models, Workflows, and Integration'
 publishDate: '2026-03-19'
 description: 'How to choose AI models, optimize usage, and integrate them into real-world workflows. AI pipelines, API, MCP, and workflow automation.'
 tags:

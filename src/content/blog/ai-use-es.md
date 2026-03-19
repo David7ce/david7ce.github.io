@@ -1,7 +1,7 @@
 ---
 slug: IAs
 translationKey: easy-encryption
-title: Optimización del uso de la IA (Modelos, Flujos de trabajo e Integración)
+title: 'Optimización del uso de IA: modelos y flujos'
 publishDate: '2026-03-19'
 description: 'Cómo elegir modelos de IA, optimizar su uso e integrarlos en workflows reales. Procesos de IA, API, MCP y automatización de flujos de trabajo'
 tags:
