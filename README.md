@@ -63,15 +63,15 @@ Visit `http://localhost:4321` (redirects to `/en` by default)
 
 ### Available Commands
 
-| Command | Action |
-|---------|--------|
-| `npm install` | Install dependencies |
-| `npm run dev` | Start dev server at `localhost:4321` |
-| `npm run build` | Build production site to `./dist/` |
-| `npm run preview` | Preview built site locally |
-| `npx astro clean` | Clear Astro cache and build artifacts |
-| `npm run astro -- --help` | Get help using Astro CLI |
-| `npm run new` | Create new blog post (interactive) |
+| Command                   | Action                                |
+|---------------------------|---------------------------------------|
+| `npm install`             | Install dependencies                  |
+| `npm run dev`             | Start dev server at `localhost:4321`  |
+| `npm run build`           | Build production site to `./dist/`    |
+| `npm run preview`         | Preview built site locally            |
+| `npx astro clean`         | Clear Astro cache and build artifacts |
+| `npm run astro -- --help` | Get help using Astro CLI              |
+| `npm run new`             | Create new blog post (interactive)    |
 
 ### Troubleshooting
 
