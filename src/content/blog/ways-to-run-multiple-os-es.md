@@ -6,7 +6,7 @@ publishDate: '2024-09-25'
 description: 'Métodos para que coexistan los sistemas operativos Windows y Linux'
 tags:
   - 'Informática'
-  - 'sistemas-operativos'
+  - 'sistemas operativos'
 heroImage: { src: './thumbnails/multiple-os.jpg', color: '#4891B2' }
 language: es
 ---

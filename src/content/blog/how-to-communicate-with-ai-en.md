@@ -6,7 +6,7 @@ publishDate: '2025-07-09'
 description: 'A comprehensive guide on effectively communicating with AI models, optimizing prompts, and understanding machine-friendly communication methods'
 tags:
   - 'Computing'
-  - 'OS'
+  - 'Operating System'
   - 'AI'
 heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
 language: en

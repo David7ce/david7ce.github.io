@@ -6,7 +6,7 @@ publishDate: '2024-09-02'
 description: 'Package managers and packaging systems for efficient software management'
 tags:
   - 'Computing'
-  - 'OS'
+  - 'Operating System'
 heroImage: { src: './thumbnails/package-managent.jpg', color: '#4891B2' }
 language: en
 ---

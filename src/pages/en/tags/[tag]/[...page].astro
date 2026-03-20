@@ -12,7 +12,8 @@ export const prerender = true
 
 export const getStaticPaths: GetStaticPaths = async ({ paginate }) => {
   const allPosts = await getBlogCollection()
-  const allPostsByDate = sortMDByDate(allPosts)
+  const englishPosts = allPosts.filter((post) => post.data.language === 'en')
+  const allPostsByDate = sortMDByDate(englishPosts)
   const uniqueTags = getUniqueTags(allPostsByDate)
 
   return uniqueTags.flatMap((tag) => {
@@ -53,7 +54,7 @@ const paginationProps = {
 ---
 
 <PageLayout {meta}>
-  <Button title='Back' href='/blog' style='back' />
+  <Button title='Back' href='/en/blog' style='back' />
   <main class='mt-6 lg:mt-10'>
     <div id='content-header' class='animate'>
       <h1 class='mb-6 flex items-end gap-x-2 text-3xl font-medium'>

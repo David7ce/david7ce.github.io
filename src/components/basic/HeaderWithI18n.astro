@@ -24,6 +24,7 @@ const getLocalizedPath = (path: string) => {
         return `${langPrefix}/${path}`
     }
   }
+  if (path === 'about') return '/en/about-me'
   return `${langPrefix}/${path}`
 }
 

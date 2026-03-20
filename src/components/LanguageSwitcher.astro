@@ -20,15 +20,6 @@ if (isBlogPost) {
   if (currentSlug) {
     const allPosts = await getBlogCollection()
     
-    // Debug in production
-    console.log('Current slug:', currentSlug)
-    console.log('All post slugs:', allPosts.map(p => ({
-      id: p.id,
-      slug: p.data.slug,
-      translationKey: p.data.translationKey,
-      language: p.data.language
-    })))
-    
     const currentPost = allPosts.find(
       (p): p is CollectionEntry<'blog'> => {
         if (p.collection !== 'blog') return false
@@ -38,8 +29,6 @@ if (isBlogPost) {
         return postSlug === currentSlug
       }
     )
-    
-    console.log('Current post found:', currentPost?.id, currentPost?.data.translationKey)
 
     if (currentPost && 'translationKey' in currentPost.data && currentPost.data.translationKey) {
       const translationKey = currentPost.data.translationKey
@@ -51,9 +40,7 @@ if (isBlogPost) {
           'translationKey' in p.data &&
           p.data.translationKey === translationKey
       )
-      
-      console.log('Related posts:', relatedPosts.map(p => ({ lang: p.data.language, slug: p.data.slug })))
-      
+
       // Map each language to its specific slug
       relatedPosts.forEach((p) => {
         const pLang = 'language' in p.data ? p.data.language : 'en'
@@ -65,14 +52,33 @@ if (isBlogPost) {
           translations.set(pLang, pSlug)
         }
       })
-      
-      console.log('Translations map:', Object.fromEntries(translations))
     }
   }
 }
 
 // Remove language prefix from current path for non-blog pages
 const basePath = currentPath.replace(/^\/(en|es)/, '') || '/'
+const normalizedBasePath = basePath !== '/' ? basePath.replace(/\/$/, '') : '/'
+
+const mapLocalizedPath = (targetLang: string, path: string) => {
+  if (path === '/' || path === '') return `/${targetLang}`
+
+  const localizedPairs: Record<string, { en: string; es: string }> = {
+    '/projects': { en: '/projects', es: '/proyectos' },
+    '/about': { en: '/about-me', es: '/sobre-mi' },
+    '/about-me': { en: '/about-me', es: '/sobre-mi' },
+    '/archives': { en: '/archives', es: '/archivos' },
+    '/search': { en: '/search', es: '/buscador' }
+  }
+
+  const matched = Object.values(localizedPairs).find((pair) => pair.en === path || pair.es === path)
+
+  if (matched) {
+    return `/${targetLang}${targetLang === 'es' ? matched.es : matched.en}`
+  }
+
+  return `/${targetLang}${path}`
+}
 ---
 
 <div class='language-switcher flex gap-1'>
@@ -90,7 +96,7 @@ const basePath = currentPath.replace(/^\/(en|es)/, '') || '/'
         }
       } else {
         // Regular page or blog post without translations
-        href = `/${langCode}${basePath}`
+        href = mapLocalizedPath(langCode, normalizedBasePath)
       }
 
       const isActive = lang === langCode

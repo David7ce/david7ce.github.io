@@ -6,7 +6,7 @@ publishDate: '2025-07-09'
 description: 'Una guía completa sobre cómo comunicarse eficazmente con modelos de IA.'
 tags:
   - 'Informática'
-  - 'sistemas-operativos'
+  - 'sistemas operativos'
   - 'IA'
 heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
 language: es

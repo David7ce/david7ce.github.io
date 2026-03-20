@@ -6,7 +6,7 @@ publishDate: '2024-09-02'
 description: 'Gestores de paquetes y sistemas de empaquetado para una gestión eficiente del software'
 tags:
   - 'Informática'
-  - 'sistemas-operativos'
+  - 'sistemas operativos'
 heroImage: { src: './thumbnails/package-managent.jpg', color: '#4891B2' }
 language: es
 ---

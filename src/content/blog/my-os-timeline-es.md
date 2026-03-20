@@ -6,7 +6,7 @@ publishDate: '2024-01-21'
 description: 'Esta es mi historia con los SO'
 tags:
   - 'Informática'
-  - 'sistemas-operativos'
+  - 'sistemas operativos'
 heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
 language: es
 ---

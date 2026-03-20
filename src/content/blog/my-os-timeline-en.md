@@ -6,7 +6,7 @@ publishDate: '2024-01-21'
 description: 'This my story with OS''s'
 tags:
   - 'Computing'
-  - 'OS'
+  - 'Operating System'
 heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
 language: en
 ---

@@ -6,7 +6,7 @@ publishDate: '2024-09-05'
 description: 'The Linux vs. Windows Dilemma: What I Miss and What I Love About Linux'
 tags:
   - 'Computing'
-  - 'OS'
+  - 'Operating System'
 heroImage: { src: './thumbnails/linux-dilemma.jpg', color: '#4891B2' }
 language: en
 ---

@@ -6,7 +6,7 @@ publishDate: '2024-09-05'
 description: 'El dilema entre Linux y Windows: lo que echo de menos y lo que me encanta de Linux'
 tags:
   - 'Informática'
-  - 'sistemas-operativos'
+  - 'sistemas operativos'
 heroImage: { src: './thumbnails/linux-dilemma.jpg', color: '#4891B2' }
 language: es
 ---
