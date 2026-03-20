@@ -46,24 +46,29 @@ The current trend is moving toward specialized graphical interfaces adapted to s
 |:------------------------------|:--------------------------------------------------------|
 | **General Assistant**         | ChatGPT, Claude, DeepSeek, Microsoft Copilot, Gemini    |
 | **Software Development**      | Cursor.ai, VS Code + GitHub Copilot, Windsurf           |
+| **Design**                    | Adobe Firefly (Photoshop), Canva AI, Figma              |
 | **Research**                  | NotebookLM, Perplexity                                  |
+| **Image (Online)**            | Midjourney, Ideogram, Leonardo AI, DALL-E 3             |
+| **Image (Local)**             | ComfyUI, Stable Diffusion WebUI (Forge/A1111), InvokeAI |
 | **Music & Audio**             | ElevenLabs, Suno, Udio                                  |
-| **Image Generation (Online)** | Midjourney, Ideogram, Leonardo AI, DALL-E 3             |
-| **Image Generation (Local)**  | ComfyUI, Stable Diffusion WebUI (Forge/A1111), InvokeAI |
-| **Creative Suite**            | Adobe Firefly (Photoshop), Canva, Figma                 |
+| **Creative Suite**            | Canva + AI, Figma, Google Stitch                         |
 
 ### Models and Providers (via API)
 
 In a professional environment, it is common to use a "master" application that calls different models based on the specific need:
 
-| Domain                      | Provider          | Model                    | Type         |
-|:----------------------------|:------------------|:-------------------------|:-------------|
-| **Text/Reasoning**          | OpenAI            | GPT-4o / o1              | Proprietary  |
-| **Text/Reasoning**          | Anthropic         | Claude 3.5 Sonnet / Opus | Proprietary  |
-| **Code**                    | DeepSeek          | DeepSeek-V3 / Coder      | Open Weights |
-| **Multimodal/Long Context** | Google            | Gemini 1.5 Pro           | Proprietary  |
-| **Image**                   | Black Forest Labs | FLUX.1                   | Open Weights |
-| **Audio/Transcription**     | OpenAI            | Whisper                  | Open Source  |
+| Domain                      | Provider          | Model                | Type         |
+|:----------------------------|:------------------|:---------------------|:-------------|
+| **Audio/Transcription**     | OpenAI            | Whisper              | Open Source  |
+| **Code**                    | DeepSeek          | DeepSeek-V3 / Coder  | Open Source  |
+| **Code**                    | OpenAI            | GPT-Codex            | Proprietary  |
+| **Code**                    | Kimi              | Kimi K2.5            | Open Source  |
+| **Code**                    | MiniMax           | MiniMax M2.5         | Open Source  |
+| **Code**                    | Qwen              | Qwen 3.5             | Open Source  |
+| **Image**                   | Black Forest Labs | FLUX.1               | Open Source  |
+| **Text/Reasoning**          | Google            | Gemini 3.1           | Proprietary  |
+| **Text/Reasoning**          | OpenAI            | GPT-5 / o1           | Proprietary  |
+| **Text/Reasoning**          | Anthropic         | Claude Sonnet / Opus | Proprietary  |
 
 ---
 
@@ -102,6 +107,55 @@ AI processes plain text more efficiently than complex binary files.
 
 ---
 
+## The Economics of AI: The Utility Bill Analogy
+
+Today, the pricing model for AI services is surprisingly similar to residential electricity billing. Both follow a **consumption-based pricing** pattern with variations depending on timing, contracted capacity, and available infrastructure.
+
+This is because you are paying for both energy consumption and compute capacity on physical servers with CPU, GPU, RAM, and storage.
+
+### Similarities Between Electricity and AI
+
+| Aspect                 | Electricity               | Artificial Intelligence            |
+|:-----------------------|:--------------------------|:-----------------------------------|
+| **Unit of consumption**| kWh (kilowatt-hour)       | Tokens (input + output)            |
+| **Pricing**            | Cost per kWh              | Cost per million tokens            |
+| **Contracted capacity**| Available watts           | Model capacity (parameters)        |
+| **Time variation**     | Peak/Off-peak (day/night) | Model size and complexity          |
+| **Infrastructure**     | Power grid, generators    | Servers, GPUs, data centers        |
+| **Sustainability**     | Renewable energy          | Model energy efficiency            |
+
+### API Pricing by Model
+
+There are several platforms that let you consume AI models through API access, which makes it easier to estimate budget from the design phase. Among them are [Replicate](https://replicate.com/explore) and [OpenRouter](https://openrouter.ai/models).
+
+Each model shows its **unit execution cost**, allowing you to estimate with precision how much your application will cost before implementation. It is equivalent to an itemized electricity bill: you know what you consumed and how much you paid.
+
+### Cost Optimization in AI
+
+Just as electricity bills are reduced through insulation, smart schedules, and energy efficiency, AI costs can be optimized through:
+
+1. **Choosing the right model:** You don't always need GPT-5; sometimes a smaller efficient model is enough.
+2. **Context caching:** Reusing long prompts avoids reprocessing the same information.
+3. **Batch processing:** Process multiple requests in bursts, during "off-peak hours".
+4. **Data compression:** Reduce input size (tokens) using summaries and LLM-based filtering.
+5. **Local AI:** Run models locally for recurring tasks (without internet connection or additional cost).
+
+The key is understanding that **AI is a utility**: like electricity, it must be managed, budgeted, and continuously optimized.
+
+---
+
 ## Conclusion
 
 The future of AI points toward **platform decentralization**. Value will not reside in the OpenAI or Google web portals, but in how users integrate advanced models into their own specialized tools. As models become more efficient, we will see a surge in **Local AI (Edge Computing)**. Local processing power will allow users to run private models without an internet connection, ensuring total data privacy and reducing reliance on third-party providers.
+
+## References
+
+- AI model pricing:
+  - [OpenRouter - Models](https://openrouter.ai/models)
+  - [Replicate - Models](https://replicate.com/explore)
+  - [Price per Token](https://pricepertoken.com/)
+
+- AI model ranking:
+  - [Arena - Leaderboard](https://arena.ai/leaderboard)
+  - [OpenRouter - Rankings](https://openrouter.ai/rankings)
+  - [LiveBench](https://livebench.ai/#/?highunseenbias=true)

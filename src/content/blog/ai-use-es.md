@@ -42,28 +42,33 @@ Dependiendo del perfil del usuario y el objetivo, existen tres vías principales
 
 La tendencia actual es el uso de interfaces gráficas adaptadas a flujos de trabajo específicos:
 
-| Disciplina                     | Aplicaciones destacadas                                 |
-|:-------------------------------|:--------------------------------------------------------|
-| **Asistente general**          | ChatGPT, Claude, DeepSeek, Microsoft Copilot, Gemini    |
-| **Desarrollo de Software**     | Cursor.ai, VS Code + GitHub Copilot, Windsurf           |
-| **Investigación**              | NotebookLM, Perplexity                                  |
-| **Música y Audio**             | ElevenLabs, Suno, Udio                                  |
-| **Generación Imagen (Online)** | Midjourney, Ideogram, Leonardo AI, DALL-E 3             |
-| **Generación Imagen (Local)**  | ComfyUI, Stable Diffusion WebUI (Forge/A1111), InvokeAI |
-| **Suite Creativa**             | Adobe Firefly (Photoshop), Canva, Figma                 |
+| Disciplina                 | Aplicaciones destacadas                                 |
+|:---------------------------|:--------------------------------------------------------|
+| **Asistente general**      | ChatGPT, Claude, DeepSeek, Microsoft Copilot, Gemini    |
+| **Desarrollo de Software** | Cursor.ai, VS Code + GitHub Copilot, Windsurf           |
+| **Diseño**                 | Adobe Firefly (Photoshop), Canva AI, Figma              |
+| **Investigación**          | NotebookLM, Perplexity                                  |
+| **Imagen (Online)**        | Midjourney, Ideogram, Leonardo AI, DALL-E 3             |
+| **Imagen (Local)**         | ComfyUI, Stable Diffusion WebUI (Forge/A1111), InvokeAI |
+| **Música y Audio**         | ElevenLabs, Suno, Udio                                  |
+| **Suite creativa**         | Canva + AI, Figma, Google Stitch                        |
 
 ### Modelos y proveedores (Vía API)
 
 En un entorno profesional, es común utilizar una misma aplicación "maestra" que invoca a diferentes modelos según la necesidad:
 
-| Dominio                       | Proveedor         | Modelo                   | Tipo         |
-|:------------------------------|:------------------|:-------------------------|:-------------|
-| **Audio/Transcripción**       | OpenAI            | Whisper                  | Open Source  |
-| **Código**                    | DeepSeek          | DeepSeek-V3 / Coder      | Open Weights |
-| **Imagen**                    | Black Forest Labs | FLUX.1                   | Open Weights |
-| **Multimodal/Largo Contexto** | Google            | Gemini 1.5 Pro           | Propietario  |
-| **Texto/Razonamiento**        | OpenAI            | GPT-5 / o1               | Propietario  |
-| **Texto/Razonamiento**        | Anthropic         | Claude 3.5 Sonnet / Opus | Propietario  |
+| Dominio                 | Proveedor         | Modelo               | Tipo           |
+|:------------------------|:------------------|:---------------------|:---------------|
+| **Audio/Transcripción** | OpenAI            | Whisper              | Código abierto |
+| **Código**              | DeepSeek          | DeepSeek-V3 / Coder  | Código abierto |
+| **Código**              | OpenAI            | GPT-Codex            | Propietario    |
+| **Código**              | Kimi              | Kimi K2.5            | Código abierto |
+| **Código**              | MiniMax           | MiniMax M2.5         | Código abierto |
+| **Código**              | Qwen              | Qwen 3.5             | Código abierto |
+| **Imagen**              | Black Forest Labs | FLUX.1               | Código abierto |
+| **Texto/Razonamiento**  | Google            | Gemini 3.1           | Propietario    |
+| **Texto/Razonamiento**  | OpenAI            | GPT-5 / o1           | Propietario    |
+| **Texto/Razonamiento**  | Anthropic         | Claude Sonnet / Opus | Propietario    |
 
 ---
 
@@ -102,6 +107,55 @@ La IA procesa mejor formatos de texto plano que archivos binarios complejos.
 
 ---
 
+## Economía de la IA: La analogía con la factura de la luz
+
+Hoy en día el modelo de precios de los servicios de IA es sorprendentemente similar al de la energía eléctrica doméstica. Ambos siguen un patrón de **tarificación por consumo** con variaciones según el tiempo, la potencia contratada y la infraestructura disponible.
+
+Esto se debe a que se paga por el consumo energético y la capacidad de cómputo de servidores físicos con CPU, GPU, RAM y almacenamiento.
+
+### Similitudes entre luz e IA
+
+| Aspecto                 | Electricidad               | Inteligencia Artificial            |
+|:------------------------|:---------------------------|:-----------------------------------|
+| **Unidad de consumo**   | kWh (kilowatio·hora)       | Tokens (entrada + salida)          |
+| **Tarificación**        | Coste por kWh              | Coste por millón de tokens         |
+| **Potencia contratada** | Vatios disponibles         | Capacidad del modelo (parámetros)  |
+| **Variación horaria**   | Pico/Valle (día/noche)     | Tamaño modelo y complejidad        |
+| **Infraestructura**     | Red eléctrica, generadores | Servidores, GPUs, centros de datos |
+| **Sostenibilidad**      | Energías renovables        | Eficiencia energética de modelos   |
+
+### Precios de API por Modelo
+
+Existen varias plataformas que permiten consumir modelos de IA vía API, lo que facilita estimar presupuesto desde la fase de diseño. Entre ellas están [Replicate](https://replicate.com/explore) y [OpenRouter](https://openrouter.ai/models).
+
+Cada modelo muestra su **coste unitario por ejecución**, permitiendo calcular con precisión cuánto costará tu aplicación antes de implementarla. Es equivalente al desglose de una factura de luz: sabes qué consumiste y cuánto pagaste.
+
+### Optimización de costes en IA
+
+Al igual que se reduce la factura de luz con aislamiento, horarios inteligentes y eficiencia energética, la factura de IA se optimiza mediante:
+
+1. **Selección del modelo correcto:** No siempre necesitas GPT-5; a veces un modelo pequeño eficiente es suficiente.
+2. **Caché de contexto:** Reutilizar prompts largos evita reprocesar la misma información.
+3. **Batch processing:** Procesar múltiples solicitudes en ráfagas, durante "horas valle".
+4. **Compresión de datos:** Reducir el tamaño de entrada (tokens) mediante resúmenes y filtrado con LLM.
+5. **Local AI:** Ejecutar modelos localmente para tareas recurrentes (sin conexión a internet ni coste adicional).
+
+La clave está en entender que **la IA es una utilidad**: como la energía, debe gestionarse, presupuestarse y optimizarse constantemente.
+
+---
+
 ## Conclusión
 
 El futuro de la IA apunta hacia la **descentralización de la plataforma**. El valor no estará en el portal web de OpenAI o Google, sino en cómo el usuario integra modelos avanzados en sus propias herramientas de trabajo. A medida que los modelos se vuelven más eficientes, veremos un auge del **Local AI (Edge Computing)**, donde la potencia de cálculo local permitirá ejecutar modelos privados, sin conexión a internet, garantizando total privacidad y reduciendo la dependencia de terceros.
+
+## Referencias
+
+- Precios por modelo de IAs:
+    - [OpenRouter - Modelos](https://openrouter.ai/models)
+    - [Replicate - Modelos](https://replicate.com/explore)
+    - [Precio por Token](https://pricepertoken.com/)
+
+- Tabla de clasificación de modelos de IAs:
+    - [Arena - Clasificación](https://arena.ai/leaderboard)
+    - [OpenRouter - Clasificación](https://openrouter.ai/rankings)
+    - [LiveBench](https://livebench.ai/#/?highunseenbias=true)
