@@ -143,9 +143,25 @@ language: en  # or 'es' for Spanish
 ---
 ```
 
+### Blog Naming Policy (Mini)
+
+To keep a consistent and predictable convention across the repository:
+
+- Use filenames ending in `-en.md` and `-es.md`.
+  - Example: `ai-use-en.md` and `ai-use-es.md`
+- Do **not** use `.en.md` / `.es.md` in this project.
+- Keep the same base name for translation pairs.
+  - Example: `post-name-en.md` ↔ `post-name-es.md`
+- Define these frontmatter fields in both files:
+  - `language: en|es`
+  - `translationKey: same-key-for-both`
+  - `slug: localized-slug` (one per language)
+
+This policy matches the current codebase and avoids naming drift over time.
+
 ## 📁 Project Structure
 
-```
+```md
 ├── src/
 │   ├── assets/          # Images, styles, fonts
 │   ├── components/      # Astro & framework components
