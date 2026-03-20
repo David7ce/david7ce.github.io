@@ -36,9 +36,12 @@ const typographyConfig = {
       position: 'relative',
       overflow: 'hidden',
       'border-width': '1px',
+      'border-color': 'hsl(var(--border) / 1)',
       'border-left': 'inherit',
       'border-radius': 'var(--radius)',
       'padding-inline': '1.6rem',
+      'background-color': 'hsl(var(--muted) / 0.35)',
+      color: fg,
       'box-shadow': '0 5px 0 ' + bgMuted,
       ...(typographyCustom.blockquoteStyle === 'normal' && { 'font-style': 'normal' })
     },
@@ -96,6 +99,8 @@ const typographyConfig = {
     ...(typographyCustom.inlineCodeBlockStyle === 'modern' && {
       ':not(pre) > code': {
         padding: '0.3em 0.5em',
+        color: fg,
+        'font-weight': '500',
         border: '1px solid hsl(var(--border) / 1)',
         'border-radius': 'var(--radius)',
         'background-color': 'hsl(var(--muted) / var(--un-bg-opacity, 1))'
@@ -130,6 +135,12 @@ const typographyConfig = {
       color: fg
     },
     'code:not(pre code)': {
+      color: fg,
+      'font-weight': '500',
+      padding: '0.2em 0.45em',
+      border: '1px solid hsl(var(--border) / 1)',
+      'border-radius': 'calc(var(--radius) - 0.1rem)',
+      'background-color': 'hsl(var(--muted) / 0.65)',
       'white-space': 'pre-wrap!important',
       'word-break': 'break-all!important'
     }
