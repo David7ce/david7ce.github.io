@@ -1,6 +1,6 @@
 ---
 title: Comparación de distros KDE
-slug: kde-distros-comparison-es
+slug: compracion-distros-kde
 translationKey: kde-distros-comparison
 publishDate: '2024-02-10'
 description: 'En búsqueda de la mejor distro que integre KDE'

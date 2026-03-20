@@ -1,6 +1,6 @@
 ---
 title: Mi historia con los Sistemas Operativos
-slug: my-os-timeline-es
+slug: my-historia-con-os
 translationKey: my-os-timeline
 publishDate: '2024-01-21'
 description: 'Esta es mi historia con los SO'

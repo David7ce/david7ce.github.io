@@ -1,6 +1,6 @@
 ---
 title: De la TV analógica al ecosistema IPTV
-slug: iptv-revolution-es
+slug: revolucion-iptv
 translationKey: iptv-revolution
 publishDate: '2025-10-06'
 description: 'The Latest Image Revolution'

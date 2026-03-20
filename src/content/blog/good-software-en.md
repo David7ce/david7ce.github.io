@@ -1,5 +1,5 @@
 ---
-title: Good software
+title: Defining <Good software>
 slug: good-software-en
 translationKey: good-software
 publishDate: '2024-02-10'

@@ -1,6 +1,6 @@
 ---
 title: Formas de ejecutar múltiples sistemas operativos
-slug: ways-to-run-multiple-os-es
+slug: formas-de-correr-multiples-os
 translationKey: ways-to-run-multiple-os
 publishDate: '2024-09-25'
 description: 'Métodos para que coexistan los sistemas operativos Windows y Linux'

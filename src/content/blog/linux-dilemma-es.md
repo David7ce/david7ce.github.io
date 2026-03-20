@@ -1,6 +1,6 @@
 ---
 title: El Dilema de Linux
-slug: linux-dilemma-es
+slug: el-dilema-de-linux
 translationKey: linux-dilemma
 publishDate: '2024-09-05'
 description: 'El dilema entre Linux y Windows: lo que echo de menos y lo que me encanta de Linux'

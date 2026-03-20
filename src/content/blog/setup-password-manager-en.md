@@ -14,81 +14,20 @@ language: en
 
 ## Setting up a password manager
 
-This is an article that explains how to set up a password manager in a secure and private way. I don't recommend using web applications running on a server, because someone can intercept and decrypt your data. These methods use local apps with an encrypted file, no data is shared over the internet. However, if you insist on using online web-apps you should use [Bitwarden](https://bitwarden.com/).
+This guide is for choosing and setting up a password manager without turning it into a complicated project. If your top priority is privacy and control, local-first apps are usually the best route. If your top priority is convenience and seamless sync across devices, an online service may fit you better.
 
-There are two main options to encrypt and organize your passwords in a single file:
+For local use, the KeePass ecosystem is still one of the strongest options: [KeePass](https://keepass.info/), [KeePassXC](https://keepassxc.org/), and [KeePassDX](https://www.keepassdx.com/). KeePass and KeePassXC are great on desktop, while KeePassDX is excellent on Android. They all revolve around the `.kdbx` format, which means you can move your vault between compatible apps instead of being locked into one vendor.
 
-### 1. An encrypted spreadsheet file
+The main benefit of this approach is ownership. Your encrypted vault stays where you decide, and you control backups and sync. You still get modern essentials such as strong password generation, folders/tags, custom fields, and autofill depending on the client you use. The trade-off is responsibility: you need a backup routine and a sync strategy that works for your devices.
 
-Use a spreadsheet with these file formats:
+If you prefer a fully managed experience, online managers make sense. [Bitwarden](https://bitwarden.com/) is a very balanced choice for transparency and value, while [1Password](https://1password.com/) stands out for polish, integrations, and family/team workflows. If you already use Proton services, [Proton Pass](https://proton.me/pass) is also worth a look. In any cloud setup, the basics are the same: use a strong master password, enable 2FA, and review trusted devices regularly.
 
-- ODS (Open Document Spreadsheet), compatible with Libre Office, Collabora Office, Only Office, Open Office
-- XLS (Microsoft Excel Spreadsheet), compatible with Microsoft Office Excel, WPS Spreadsheet
+I used to keep credentials in an encrypted spreadsheet, and it can work for very simple cases, but it quickly becomes painful in real life. You miss good password generation, secure autofill, and clean organization as accounts grow. For most people, a dedicated password manager is both safer and easier.
 
-XLS or ODS allows you to save your password and accounts as a spreadsheet in an encrypted file with a chosen password.
+A quick decision rule is simple: if you want maximum control and minimal data exposure, go with KeePass/KeePassXC/KeePassDX; if you want effortless syncing and less maintenance, go with Bitwarden or 1Password. Neither path is perfect, but both are far better than reusing passwords.
 
-To do this, you need to install an Office suite, open the spreadsheet application and "Save as" with password.
+### Your master password is everything
 
-> In Libre Office Calc: "File -> Save As (Ctrl+Shift+S) and select "Save with password".
-> For Microsoft Excel, it is very similar to XLS, but safer.
+No matter which app you choose, your security depends on the master password. Use a long passphrase that is easy for you to remember but hard for others to guess. If forgetting is a concern, keep a private hint that only you can decode, and store backup copies of your vault in more than one safe location.
 
-I recommend using Libre Office Calc, which is part of the Libre Office suite, because it is FOSS (free open source) and works on Windows, MacOS, Linux; and to open the file on the phone, just use Collabora Office. You can also use XLS, with MS Excel or the free alternatives such as WPS.
-
-#### Advantages
-
-- An encrypted file in the local drive
-- You can only enter the beginning and end of the password, it is in clear text.
-- You can organize it in your own way.
-   	- Columns: email, category, company, username, password, notes
-   	- Rows: like the values.
-
-#### Disadvantages
-
-- There is no option to generate the password automatically
-- The file can be cracked with several attempts and depends on the strength of the password.
-- No option to hide the password
-- No auto synchronisation
-
-### 2. A KeePass file (kdbx)
-
-[KeePass](https://keepass.info/) or the fork [KeePassXC](https://keepassxc.org/) are free open source password manager cross-platform (Windows, macOS, Linux), where you can store usernames, passwords, other fields, free-form notes and file attachments in an encrypted file with kdbx format.
-
-Here the software is designed to encrypt and classify password information instead of saving your info encrypting an xsl file.
-
-Due to the great boom of KeePass there are many compatible KeePass clients apps, where you can directly open the kdbx file generated.
-
-- For the web: [KeeWeb](https://github.com/keeweb/keeweb/releases/)
-- For macOS: [MacPAss](https://github.com/MacPass/MacPass/releases)
-- For Android: [KeePassDX](https://www.keepassdx.com/), [KeePass2Android](https://github.com/PhilippC/keepass2android/releases)
-- For iOS: [KeePassium](https://keepassium.com/), [StrongBox](https://strongboxsafe.com/)
-
-#### Pros
-
-- Local only, don't stored on a remote server
-- Encrypted file
-- Classification system by (folders, tags) with associated (username, password, mail, etc)
-- Option to hide passwords
-- Integrated on web-browser
-- Generate random password
-- Auto type passwrod
-
-#### Cons
-
-- Data is stored in one file that can be cracked
-- No autosync method
-
-### Conclusion
-
-These are the simple methods I have found to manage secret passwords in a secure and private way. I used an ODS encrypted file, but now I'm using KeePassXC on desktop and KeePassDX on Android.
-
-### Do not forget your master password
-
-Lastly one important thing is that you need to create a strong master password to enter to the *password manager*, so a good idea is to develop a method to don't forget your password. You can develop a skill to don't forget your password but my recommendation is to write the encrypted password in some place in case you forget it and better digitally next to your kdbx file.
-
-Some ideas to encrypt you master password in a *traditional way* are  storing on a file that you only understand and you can translate to a password, like in a drawing or any other thing that refresh your memory. In my case I use an image with symbols that I understand, others use a meme, parts of a book, an encoded text. The idea is store your password in a way that no-one understand but is very accesible to you.
-
-And here some types of password that you can generate:
-
-1. A long password, phrase or various words. Example: "perro mesa suelo cielo sobre mente alto año dos".
-2. An imaginable action combining letters, numbers and symbols. Example: "12_PájaroAzulVuelaAlto_21!!"
-3. A password generated by a program with special chars, also you need to copy-paste with a plugin of the password manager. Example: "dòÏ¡EÑt½·¶ÃÖÔ`Aq0²V½éK&m_¤Ã·"
+If you start today, keep it practical: add your most important accounts, enable 2FA in the manager, and rotate critical passwords first (email, banking, and primary social accounts). That alone gives you a major security upgrade.

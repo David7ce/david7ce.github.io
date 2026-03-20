@@ -1,6 +1,6 @@
 ---
 title: 'Codifica-Decodifica'
-slug: encode-decode-es
+slug: codifica-decofica
 translationKey: encode-decode
 description: 'Herramientas online para codificar/decodificar texto o archivos.'
 publishDate: 2024-10-29

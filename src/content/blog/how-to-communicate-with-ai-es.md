@@ -1,6 +1,6 @@
 ---
 title: Cómo comunicarse con la IA
-slug: how-to-communicate-with-ai-es
+slug: como-comunicarse-con-las-ias
 translationKey: how-to-communicate-with-ai
 publishDate: '2025-07-09'
 description: 'Una guía completa sobre cómo comunicarse eficazmente con modelos de IA.'

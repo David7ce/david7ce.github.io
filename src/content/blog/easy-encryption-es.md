@@ -1,6 +1,6 @@
 ---
 title: Encripta fácil con un Gestor de Contraseñas
-slug: easy-encryption-es
+slug: encripta-facil
 translationKey: easy-encryption
 publishDate: '2023-11-15'
 description: 'Cifra tus archivos de forma sencilla.'

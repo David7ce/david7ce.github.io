@@ -1,6 +1,6 @@
 ---
 title: Introducción a Linux
-slug: linux-intro-es
+slug: intro-a-linux
 translationKey: linux-intro
 publishDate: '2022-06-18'
 description: 'Linux for noobs'

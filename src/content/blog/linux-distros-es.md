@@ -1,6 +1,6 @@
 ---
 title: Distro de Linux
-slug: linux-distros-es
+slug: distros-de-linux
 translationKey: linux-distros
 publishDate: '2022-07-13'
 description: 'Formas y maneras de instalar una distro de Linux'

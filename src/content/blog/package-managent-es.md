@@ -1,6 +1,6 @@
 ---
 title: Entendiendo los Gestores de Paquetes entre Distros
-slug: package-management-es
+slug: gestores-de-paquetes
 translationKey: package-management
 publishDate: '2024-09-02'
 description: 'Gestores de paquetes y sistemas de empaquetado para una gestión eficiente del software'

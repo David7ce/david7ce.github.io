@@ -1,7 +1,7 @@
 ---
-slug: file-manager-systems-es
-translationKey: file-manager-systems
 title: Las mejores aplicaciones para gestionar contenido
+slug: mejores-gestores-de-contenido
+translationKey: file-manager-systems
 publishDate: '2022-04-12'
 description: 'Sistemas de gestión de archivos para organizar y gestionar contenidos digitales.'
 tags:

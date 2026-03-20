@@ -1,208 +1,107 @@
 ---
-slug: IAs
-translationKey: easy-encryption
 title: 'Optimización del uso de IA: modelos y flujos'
+slug: optimizacion-del-uso-de-ias
+translationKey: optimizing-ai
 publishDate: '2026-03-19'
 description: 'Cómo elegir modelos de IA, optimizar su uso e integrarlos en workflows reales. Procesos de IA, API, MCP y automatización de flujos de trabajo'
 tags:
-  - 'Computing'
-  - 'AI'
+  - 'Computación'
+  - 'IA'
   - 'Software'
 heroImage: { src: './thumbnails/how-to-choose-ais.png', color: '#4891B2' }
 language: es
 ---
 
-La IA actual no es una herramienta única, sino un **ecosistema modular**. La ventaja real no está en “usar IA”, sino en diseñar bien el sistema: modelo correcto, formato correcto e integración correcta.
+La IA actual no es una herramienta aislada, sino un **ecosistema modular**. La ventaja competitiva ya no reside simplemente en "usar IA", sino en diseñar sistemas eficientes que combinen el modelo adecuado, el formato de datos óptimo y una integración fluida.
 
-En la práctica, esto se resume en cuatro decisiones:
+Para lograrlo, la estrategia se basa en cinco pilares:
 
-- Elegir el modelo adecuado para cada tipo de tarea
-- Controlar coste, latencia y calidad desde el diseño
-- Integrar IA dentro de workflows reales (no solo chat)
-- Conectar herramientas en pipelines reproducibles
-- Escribir buenos mensajes para la IA
+1. **Selección:** Elegir el modelo según la tarea.
+2. **Eficiencia:** Controlar coste, latencia y calidad desde el diseño.
+3. **Integración:** Insertar la IA en *workflows* reales (más allá del chat).
+4. **Reproducibilidad:** Conectar herramientas en pipelines consistentes.
+5. **Estructura:** Definir mensajes y tareas claras para la IA.
 
----
+## Anatomía de una aplicación de IA
 
-## API vs MCP vs plataformas cerradas
-
-Las tres opciones sirven, pero con niveles de control técnico muy distintos.
-
-| Enfoque                      | Cuándo usarlo                             | Ventajas                                              | Limitaciones                                     |
-|------------------------------|-------------------------------------------|-------------------------------------------------------|--------------------------------------------------|
-| API (backend propio)         | Producción, automatización, apps a medida | Control total de prompts, costes, logging y seguridad | Requiere desarrollo e infraestructura            |
-| MCP (Model Context Protocol) | Conectar herramientas/contexto rápido     | Menor fricción inicial, buena interoperabilidad       | Menos flexible que una arquitectura API completa |
-| Plataforma cerrada           | Productividad inmediata de equipos        | Implementación simple y rápida                        | Menor personalización y escalabilidad técnica    |
-
-Referencias:
-
-- [MCP Introduction](https://modelcontextprotocol.io/docs/getting-started/intro)
-- [ChatGPT](https://chatgpt.com/)
-- [Claude](https://claude.ai/)
-- [Microsoft Copilot](https://copilot.microsoft.com/)
-- [Google Workspace + Gemini](https://workspace.google.com/gemini/)
+Aunque herramientas como ChatGPT popularizaron los chatbots, técnicamente cualquier aplicación de IA se divide en dos partes: el **Front-end** (la interfaz visual en web o móvil) y el **Back-end** (donde residen el modelo de lenguaje, la lógica del servidor y las bases de datos).
 
 ---
 
-## Workflow óptimo (primero IA)
+## Formas de conexión: Interfaz vs. API vs. MCP
 
-El patrón recomendado para producción:
+Dependiendo del perfil del usuario y el objetivo, existen tres vías principales para interactuar con la IA:
 
-```md
-Usuario → Prompt estructurado → Modelo IA → Salida estructurada (JSON/Markdown)
-→ Validación (script/reglas) → API interna → App (web, móvil, GIS, etc.)
-```
-
-Este enfoque mejora trazabilidad, testeo y mantenimiento.
+- **Interfaces de plataforma (Web/App):** Uso directo a través de portales como [chatgpt.com](https://chatgpt.com/), [claude.ai](https://claude.ai/) o [gemini.google.com](https://gemini.google.com/).
+- **API (Application Programming Interface):** La vía estándar para que desarrolladores conecten la IA con sus propias aplicaciones.
+- **MCP (Model Context Protocol):** Un estándar emergente para conectar modelos de IA con herramientas y fuentes de datos externas de forma universal.
 
 ---
 
-## Formatos recomendados (amigable para IA)
+## Ecosistema de herramientas por disciplina
 
-Mejores formatos para editar con IA.
+La tendencia actual es el uso de interfaces gráficas adaptadas a flujos de trabajo específicos:
 
-| Tipo                    | Recomendado      | Motivo                                |
-|-------------------------|------------------|---------------------------------------|
-| Datos estructurados     | `JSON`, `YAML`   | Parseo y automatización directa       |
-| Publicación web         | `HTML`, `CSS`    | Integración directa en frontend y CMS |
-| Contenido/documentación | `Markdown`       | Versionable y fácil de transformar    |
-| Documentación técnica   | `LaTeX`, `Typst` | Mayor control semántico               |
+| Disciplina                     | Aplicaciones destacadas                                 |
+|:-------------------------------|:--------------------------------------------------------|
+| **Asistente general**          | ChatGPT, Claude, DeepSeek, Microsoft Copilot, Gemini    |
+| **Desarrollo de Software**     | Cursor.ai, VS Code + GitHub Copilot, Windsurf           |
+| **Investigación**              | NotebookLM, Perplexity                                  |
+| **Música y Audio**             | ElevenLabs, Suno, Udio                                  |
+| **Generación Imagen (Online)** | Midjourney, Ideogram, Leonardo AI, DALL-E 3             |
+| **Generación Imagen (Local)**  | ComfyUI, Stable Diffusion WebUI (Forge/A1111), InvokeAI |
+| **Suite Creativa**             | Adobe Firefly (Photoshop), Canva, Figma                 |
 
-> Evita los formatos DOCX, XLSX, PPTX y PDF para el procesamiento de IA: las estructuras ZIP/XML propietarias son difíciles de analizar de forma fiable.
+### Modelos y proveedores (Vía API)
 
----
+En un entorno profesional, es común utilizar una misma aplicación "maestra" que invoca a diferentes modelos según la necesidad:
 
-## Integración en apps (GUI + industria)
-
-| Opción                 | Ventajas                                                                                                        | Inconvenientes                                                           |
-|------------------------|-----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| **API directa**        | Máxima flexibilidad, QGIS/aplicaciones web/flujos de trabajo, pago por uso                                      | Requiere backend, observabilidad, seguridad y mantenimiento continuo     |
-| **MCP**                | Conexión rápida de herramientas y contexto, ideal para documentación interna y motores de búsqueda              | Menos flexible que la API completa, depende del host/cliente MCP         |
-| **Plataforma cerrada** | Rápida adopción por parte de equipos no técnicos, excelente experiencia de usuario para la productividad diaria | Control técnico limitado, menos adecuada para automatizaciones complejas |
-
----
-
-## Apps GUI por dominio
-
-| Disciplina                       | Aplicación                                                                                                     |
-|----------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Asistente general                | ChatGPT, Claude, DeepSeek, Microsoft Copilot (integrado en MS Office), Gemini (integrado en Google Workspaces) |
-| Desarrollo de videojuegos        | Unity, Unreal Engine                                                                                           |
-| Editores de código con IA        | Cursor.ai, VS Code + GitHub Copilot Chat, GitHub Copilot                                                       |
-| Investigación                    | NotebookLM                                                                                                     |
-| Música                           | ElevenLabs, Suno                                                                                               |
-| Generación de imágenes (online)  | Civitai, , Ideogram, Leonardo AI, Microsoft Designer, Midjourney, Pika, Runway                                 |
-| Generación de imágenes (offline) | ComfyUI, CogVideo, Stable Diffusion WebUI, Fooocus, Invoek AI, OneTrainer                                      |
-| Presentaciones                   | Gamma                                                                                                          |
-| Suite creativa de IA             | Affinity Studio (by Canva), Canva, Figma, Photoshop, FreePik                                                   |
+| Dominio                       | Proveedor         | Modelo                   | Tipo         |
+|:------------------------------|:------------------|:-------------------------|:-------------|
+| **Audio/Transcripción**       | OpenAI            | Whisper                  | Open Source  |
+| **Código**                    | DeepSeek          | DeepSeek-V3 / Coder      | Open Weights |
+| **Imagen**                    | Black Forest Labs | FLUX.1                   | Open Weights |
+| **Multimodal/Largo Contexto** | Google            | Gemini 1.5 Pro           | Propietario  |
+| **Texto/Razonamiento**        | OpenAI            | GPT-5 / o1               | Propietario  |
+| **Texto/Razonamiento**        | Anthropic         | Claude 3.5 Sonnet / Opus | Propietario  |
 
 ---
 
-## Modelos LLM por dominio (API)
+## Estrategia de optimización y Workflows
 
-| Disciplina       | Proveedor         | Modelo                         | Tipo           |
-|------------------|-------------------|--------------------------------|----------------|
-| Audio            | ElevenLabs        | ElevenLabs                     | Propietario    |
-| Audio            | Google DeepMind   | Lyria                          | Propietario    |
-| Audio            | OpenAI            | Whisper                        | Código abierto |
-| Code             | OpenAI            | GPT-5, Codex                   | Propietario    |
-| Code             | Anthropic         | Claude 3 (Opus, Sonnet, Haiku) | Propietario    |
-| Code             | Google            | Gemini API                     | Propietario    |
-| Code             | DeepSeek          | DeepSeek Coder                 | Código abierto |
-| Code             | Meta              | Llama 2/3                      | Código abierto |
-| Code             | MiniMax           | MiniMax                        | Propietario    |
-| Imagen/Video     | Black Forest Labs | Flux                           | Código abierto |
-| Imagen/Video     | OpenAI            | DALL-E 3                       | Propietario    |
-| Imagen/Video     | Stability AI      | Stable Diffusion 3             | Código abierto |
-| Imagen/Video     | Google DeepMind   | Veo                            | Propietario    |
-| Imagen/Video     | Tencent           | Hunyuan                        | Propietario    |
-| Imagen/Video     | Alibaba Cloud     | Qwen                           | Código abierto |
-| Imagen/Video     | Midjourney        | Midjourney                     | Propietario    |
-| Texto (General)  | OpenAI            | GPT-5, GPT-4                   | Propietario    |
-| Texto (General)  | Anthropic         | Claude 3 Opus                  | Propietario    |
-| Texto (General)  | Google            | Gemini Pro                     | Propietario    |
-| Texto (General)  | Meta              | Llama 3                        | Código abierto |
-| Texto (General)  | DeepSeek          | DeepSeek Chat                  | Código abierto |
-| Texto (Analysis) | Anthropic         | Claude 3 Opus (200k context)   | Propietario    |
-| Texto (Analysis) | Google            | Gemini 1.5 Pro                 | Propietario    |
-| Embebido         | OpenAI            | text-embedding-3-large         | Propietario    |
-| Embebido         | Anthropic         | Claude Embedding               | Propietario    |
-| Embebido         | Google            | Gemini Embedding               | Propietario    |
+El objetivo es obtener el **máximo valor de salida con el mínimo coste de entrada (tokens)**. Esto se logra reduciendo el ruido en los prompts, reutilizando contextos mediante caché y dividiendo tareas complejas en subtareas ejecutadas por agentes especializados.
+
+### El Workflow "IA-First"
+
+Para entornos de producción, el patrón recomendado es:
+`Usuario` → `Prompt estructurado` → `Modelo IA` → `Salida estructurada (JSON)` → `Validación técnica` → `Acción en App`.
+
+### Formatos amigables para la IA
+
+La IA procesa mejor formatos de texto plano que archivos binarios complejos.
+
+- **Recomendados:** `JSON` o `YAML` (datos), `Markdown` (documentación), `HTML/CSS` (web) y `LaTeX/Typst` (técnico).
+- **A evitar:** `DOCX`, `XLSX` o `PDF` para procesamiento interno, ya que sus estructuras internas generan ruido y errores de lectura.
 
 ---
 
-## Estrategia de optimización
+## Guía de interacción: Prompts y Agentes
 
-### Coste
+### Buenas prácticas
 
-- reducir tokens con prompts concretos
-- reutilizar contexto cuando aporte valor
-- cachear respuestas repetitivas
+- **Define el rol y el objetivo:** Indica quién es la IA y qué debe conseguir exactamente.
+- **Aporta contexto real:** Adjunta archivos o datos específicos; no asumas que la IA "sabe" lo que estás pensando.
+- **Salida estructurada:** Solicita siempre `JSON` o tablas si el resultado va a ser procesado por otra herramienta.
+- **Modulariza:** Es preferible tener tres agentes con una sola "habilidad" cada uno que un solo agente intentando resolver todo el proceso.
 
-### Calidad
+### Qué NO hacer
 
-- usar prompts estructurados
-- pedir salida en `JSON` o `Markdown`
-- dividir tareas complejas en subtareas
-
-### Arquitectura
-
-- Separar generación (IA) de ejecución (sistema)
-- Diseñar pipelines modulares y observables
-- Versionar prompts, esquemas y scripts con Git
-- Escribe buenos mensajes para la IA
-
----
-
-## Reglas de prompts + configuración de agentes
-
-Los mejores resultados dependen de **prompts claros**, **agentes bien delimitados** y **restricciones explícitas**.
-
-### Reglas para escribir buenos prompts
-
-- define objetivo, audiencia y formato esperado de salida
-- añade restricciones (longitud, tono, esquema, criterios de aceptación)
-- aporta contexto real (archivos/datos) e indica la fuente de verdad
-- solicita salida estructurada (`JSON`/`Markdown`/tablas) cuando haya automatización
-- divide tareas grandes en pasos, en vez de pedir todo en un único prompt
-
-### Reglas para configurar agentes y skills
-
-- usa un agente por responsabilidad (investigación, implementación, revisión)
-- mantén instrucciones de skills explícitas, versionadas y testeables
-- limita herramientas por agente para reducir acciones riesgosas o irrelevantes
-- define contratos de handoff entre agentes (schema de entrada/salida)
-- registra ejecuciones y versiona cambios de prompts/skills con Git
-
-### Qué no hacer
-
-- no uses prompts vagos tipo “mejóralo” sin criterios de aceptación
-- no mezcles objetivos no relacionados en una sola ejecución de agente
-- no des permisos de escritura a agentes de exploración
-- no dependas de contexto oculto; pasa archivos y supuestos de forma explícita
-- no optimices solo por “IQ del modelo” ignorando diseño de workflow y validación
+- **Prompts vagos:** Evita el "mejora esto". Usa "recribe esto eliminando la voz pasiva y limitándolo a 100 palabras".
+- **Mezclar contextos:** No pidas código de Python y un poema sobre cocina en la misma sesión; diluye la atención del modelo.
+- **Exceso de confianza:** Nunca des permisos de escritura o ejecución automática a un agente sin un paso de validación humana o mediante código (*Human-in-the-loop*).
 
 ---
 
 ## Conclusión
 
-La ventaja competitiva no está solo en el modelo, sino en la arquitectura completa del flujo:
-
-- cómo integras la IA
-- cómo estructuras los datos
-- cómo automatizas la ejecución
-
-Stack recomendado:
-
-- Buscar el mejor modelo calidad-precio según tu tarea, alguno típicos son [Claude Opus](https://claude.ai/) o [GPT Codex](https://chatgpt.com/)
-- API para automatización real
-- `Markdown`/`JSON` como base operativa
-- pipeline modular con validación
-
-Con este enfoque puedes escalar desde uso personal hasta sistemas complejos en producción.
-
-## Fuentes
-
-- [Introducción a MCP](https://modelcontextprotocol.io/docs/getting-started/intro)
-- [Modelos OpenRouter](https://openrouter.ai/models?order=most-popular)
-- [Ranking de OpenRouter](https://openrouter.ai/rankings#leaderboard)
+El futuro de la IA apunta hacia la **descentralización de la plataforma**. El valor no estará en el portal web de OpenAI o Google, sino en cómo el usuario integra modelos avanzados en sus propias herramientas de trabajo. A medida que los modelos se vuelven más eficientes, veremos un auge del **Local AI (Edge Computing)**, donde la potencia de cálculo local permitirá ejecutar modelos privados, sin conexión a internet, garantizando total privacidad y reduciendo la dependencia de terceros.

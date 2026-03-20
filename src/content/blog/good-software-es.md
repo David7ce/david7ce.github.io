@@ -1,6 +1,6 @@
 ---
-title: Buen Software
-slug: good-software-es
+title: Definiendo <Buen Software>
+slug: buen-software
 translationKey: good-software
 publishDate: '2024-02-10'
 description: 'Definiendo qué es Buen Software'
