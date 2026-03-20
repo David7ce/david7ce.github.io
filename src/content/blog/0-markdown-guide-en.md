@@ -1,6 +1,6 @@
 ---
 title: "Markdown Syntax Guide"
-slug: 0-markdown-guide-en
+slug: markdown-guide
 translationKey: 0-markdown-guide
 publishDate: '2100-01-01'
 updatedDate: '2500-06-03'

@@ -1,26 +1,72 @@
 ---
 import { integ } from '../site.config'
+import '@waline/client/style'
 
-// This is a wrapper for the Waline comment system
-// Since the Comment component was removed from astro-pure/advanced
+const { class: className } = Astro.props
 ---
 
 {
   integ.waline?.enable && (
-    <div class="waline-container">
-      <div id="waline"></div>
-      <script define:vars={{ serverURL: integ.waline.server }} is:inline>
-        import { init } from 'https://unpkg.com/@waline/client@3.1.3/dist/waline.js';
-        
-        init({
-          el: '#waline',
-          serverURL,
-          ...Object.assign(
-            {},
-            {/* Additional configs from site config */},
-          ),
-        });
-      </script>
-    </div>
+    <comment-component>
+      <div id='waline' class={`not-prose ${className ?? ''}`}></div>
+    </comment-component>
   )
 }
+
+<script>
+  import { init as walineInit } from '@waline/client'
+  import type { WalineEmojiPresets } from '@waline/client'
+  import { integ, theme } from '../site.config'
+
+  const walineConfig = integ.waline
+
+  class Comment extends HTMLElement {
+    connectedCallback() {
+      const emoji = walineConfig.emoji?.map(
+        (preset) => `${theme.npmCDN}/@waline/emojis@1.2.0/${preset}` as WalineEmojiPresets
+      )
+
+      walineInit({
+        el: '#waline',
+        serverURL: walineConfig.server || '',
+        dark: 'html.dark',
+        emoji,
+        ...walineConfig.additionalConfigs
+      })
+    }
+  }
+
+  if (walineConfig.enable && !customElements.get('comment-component')) {
+    customElements.define('comment-component', Comment)
+  }
+</script>
+
+<style>
+  #waline {
+    --waline-font-size: 16px;
+    --waline-white: hsl(var(--background) / var(--un-bg-opacity, 1));
+    --waline-light-grey: #999;
+    --waline-dark-grey: #666;
+    --waline-theme-color: hsl(var(--foreground) / var(--un-text-opacity, 1));
+    --waline-active-color: hsl(var(--primary) / var(--un-text-opacity, 1));
+    --waline-color: hsl(var(--muted-foreground) / var(--un-text-opacity, 1));
+    --waline-bg-color: hsl(var(--muted) / var(--un-bg-opacity, 1));
+    --waline-bg-color-light: hsl(var(--input) / var(--un-bg-opacity, 1));
+    --waline-bg-color-hover: hsl(var(--muted) / var(--un-bg-opacity, 1));
+    --waline-border-color: hsl(var(--border) / var(--un-border-opacity, 1));
+    --waline-disable-bg-color: hsl(var(--muted) / var(--un-bg-opacity, 1));
+    --waline-disable-color: #bbb;
+    --waline-code-bg-color: #282c34;
+    --waline-bq-color: hsl(var(--muted) / var(--un-bg-opacity, 1));
+    --waline-avatar-size: 3.25rem;
+    --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+    --waline-badge-color: hsl(var(--border) / var(--un-border-opacity, 1));
+    --waline-badge-font-size: 0.775em;
+    --waline-info-bg-color: var(--waline-bg-color-light);
+    --waline-info-color: var(--waline-color);
+    --waline-info-font-size: 0.625em;
+    --waline-border: 1px solid var(--waline-border-color);
+    --waline-avatar-radius: 50%;
+    --waline-box-shadow: none;
+  }
+</style>

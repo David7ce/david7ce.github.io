@@ -14,9 +14,9 @@ export const esConfig: Partial<ThemeUserConfig> = {
   header: {
     menu: [
       { title: 'Blog', link: '/es/blog' },
-      { title: 'Proyectos', link: '/es/projects' },
+      { title: 'Proyectos', link: '/es/proyectos' },
       { title: 'Stack', link: '/es/stack' },
-      { title: 'Acerca de', link: '/es/about' }
+      { title: 'Acerca de', link: '/es/sobre-mi' }
     ]
   }
 }

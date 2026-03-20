@@ -7,26 +7,30 @@ import PageLayout from '@/layouts/BaseLayout.astro'
 export const prerender = true
 
 const allPosts = await getBlogCollection()
-const allPostsByDate = sortMDByDate(allPosts)
+// Filter only Spanish blog posts
+const spanishPosts = allPosts.filter(
+  (post) => post.collection === 'blog' && post.data.language === 'es'
+)
+const allPostsByDate = sortMDByDate(spanishPosts)
 const allPostsByYear = groupCollectionsByYear(allPostsByDate)
 
 const meta = {
-  description: 'A list of all the years of creating my posts',
-  title: 'Archives'
+  description: 'Una lista de todos los años de creación de mis posts',
+  title: 'Archivos'
 }
 ---
 
 <PageLayout {meta}>
-  <Button title='Back' href='/en/blog' style='back' />
+  <Button title='Atrás' href='/es/blog' style='back' />
 
   <main class='mt-6 lg:mt-10'>
     <div id='content-header' class='animate'>
-      <h1 class='mb-6 text-3xl font-medium'>Archives</h1>
+      <h1 class='mb-6 text-3xl font-medium'>Archivos</h1>
     </div>
 
-    {allPosts.length === 0 && <p>No posts yet.</p>}
+    {spanishPosts.length === 0 && <p>Sin posts aún.</p>}
 
-    <section id='content' class='animate' aria-label='Blog post list'>
+    <section id='content' class='animate' aria-label='Lista de posts del blog'>
       {
         allPostsByYear.map(([year, posts]) => (
           <div class='relative mt-20'>

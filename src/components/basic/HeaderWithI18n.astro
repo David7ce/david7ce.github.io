@@ -8,12 +8,30 @@ const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
 const langPrefix = `/${lang}`
 
-// Translate menu items
+// Translate menu items with localized routes
+const getLocalizedPath = (path: string) => {
+  if (lang === 'es') {
+    switch (path) {
+      case 'projects':
+        return '/es/proyectos'
+      case 'about':
+        return '/es/sobre-mi'
+      case 'search':
+        return '/es/buscador'
+      case 'archives':
+        return '/es/archivos'
+      default:
+        return `${langPrefix}/${path}`
+    }
+  }
+  return `${langPrefix}/${path}`
+}
+
 const localizedMenu = [
   { title: t('nav.blog'), link: `${langPrefix}/blog` },
-  { title: t('nav.projects'), link: `${langPrefix}/projects` },
+  { title: t('nav.projects'), link: getLocalizedPath('projects') },
   { title: t('nav.stack'), link: `${langPrefix}/stack` },
-  { title: t('nav.about'), link: `${langPrefix}/about` }
+  { title: t('nav.about'), link: getLocalizedPath('about') }
 ]
 ---
 
@@ -50,8 +68,8 @@ const localizedMenu = [
           ))
         }
         <div class='flex w-full grow flex-row justify-end gap-x-3 sm:w-fit sm:gap-x-5'>
-          <a class='px-1 py-2 transition-none sm:px-2' href={langPrefix + '/search'} title='Search'>
-            <span class='sr-only'>Search</span>
+          <a class='px-1 py-2 transition-none sm:px-2' href={getLocalizedPath('search')} title={lang === 'es' ? 'Buscar' : 'Search'}>
+            <span class='sr-only'>{lang === 'es' ? 'Buscar' : 'Search'}</span>
             <Icon name='search' class='size-5' />
           </a>
         </div>

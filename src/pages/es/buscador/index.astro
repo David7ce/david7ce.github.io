@@ -1,0 +1,33 @@
+---
+import { PFSearch } from 'astro-pure/components/pages'
+import { Button } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import { integ } from '@/site-config'
+
+const meta = {
+  description: 'Busca posts relacionados de todo el blog',
+  title: 'Buscador'
+}
+---
+
+<PageLayout {meta}>
+  <Button title='Atrás' href='/es/blog' style='back' />
+  <main class='mt-6 lg:mt-10'>
+    <div id='content-header' class='animate'>
+      <h1 class='mb-6 text-3xl font-medium'>Buscador</h1>
+    </div>
+
+    <div id='content' class='animate'>
+      {
+        integ.pagefind ? (
+          <>
+            <p>Introduce un término o frase de búsqueda para buscar en el blog.</p>
+            <PFSearch />
+          </>
+        ) : (
+          <p>Pagefind está deshabilitado.</p>
+        )
+      }
+    </div>
+  </main>
+</PageLayout>
