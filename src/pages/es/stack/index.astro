@@ -7,7 +7,8 @@ const headings = [
   { depth: 2, slug: 'design-media', text: 'Design & Media Tools' },
   { depth: 2, slug: 'development-tools', text: 'Development Tools' },
   { depth: 2, slug: 'virtualization', text: 'Virtualization & Containerization' },
-  { depth: 2, slug: 'programming', text: 'Programming & Markup Languages' },
+  { depth: 2, slug: 'programming-languages', text: 'Programming Languages' },
+  { depth: 2, slug: 'markup-languages', text: 'Markup Languages' },
   { depth: 2, slug: 'databases', text: 'Databases' },
   { depth: 2, slug: 'frameworks', text: 'Web Frameworks & Libraries' },
   { depth: 2, slug: 'servers-cloud', text: 'Web Servers & Cloud Platforms' }
@@ -91,16 +92,10 @@ const headings = [
       title='Design & Media Tools'
       tools={[
         {
-          name: 'Affinity Photo',
-          description: 'Photo Editor',
-          href: 'https://affinity.serif.com/photo/',
-          icon: import('@/assets/software/affinity-photo.svg?raw')
-        },
-        {
-          name: 'Affinity Designer',
-          description: 'Vector Design',
-          href: 'https://affinity.serif.com/designer/',
-          icon: import('@/assets/software/affinity-designer.svg?raw')
+          name: 'Affinity Studio',
+          description: 'Design Suite',
+          href: 'https://affinity.serif.com/',
+          icon: import('@/assets/software/affinity-studio.svg?raw')
         },
         // {
         //   name: 'Blender',
@@ -233,10 +228,10 @@ const headings = [
     ]}
   /> -->
 
-  <div id='programming'>
+  <div id='programming-languages'>
     <ToolSection
       class='mb-5'
-      title='Programming & Markup Languages'
+      title='Programming Languages'
       tools={[
         {
           name: 'Bash',
@@ -251,23 +246,26 @@ const headings = [
           icon: import('@/assets/software/csharp.svg?raw')
         },
         {
+          name: 'PHP',
+          description: 'Programming Language',
+          href: 'https://www.php.net/',
+          icon: import('@/assets/software/php.svg?raw')
+        },
+        {
           name: 'JavaScript',
           description: 'Programming Language',
           href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
           icon: import('@/assets/software/js.svg?raw')
-        },
-        {
-          name: 'JSON',
-          description: 'Data Interchange Format',
-          href: 'https://www.json.org/json-en.html',
-          icon: import('@/assets/software/json.svg?raw')
-        },
-        {
-          name: 'CSS3',
-          description: 'Styling Language',
-          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
-          icon: import('@/assets/software/css.svg?raw')
-        },
+        }
+      ]}
+    />
+  </div>
+
+  <div id='markup-languages'>
+    <ToolSection
+      class='mb-5'
+      title='Markup Languages'
+      tools={[
         {
           name: 'HTML5',
           description: 'Markup Language',
@@ -285,6 +283,18 @@ const headings = [
           description: 'Markup Language',
           href: 'https://www.w3.org/XML/',
           icon: import('@/assets/software/xml.svg?raw')
+        },
+        {
+          name: 'CSS3',
+          description: 'Styling Language',
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          icon: import('@/assets/software/css.svg?raw')
+        },
+        {
+          name: 'JSON',
+          description: 'Data Interchange Format',
+          href: 'https://www.json.org/json-en.html',
+          icon: import('@/assets/software/json.svg?raw')
         }
       ]}
     />
@@ -351,6 +361,12 @@ const headings = [
           description: 'CMS',
           href: 'https://wordpress.org/',
           icon: import('@/assets/software/wordpress.svg?raw')
+        },
+        {
+          name: 'Joomla',
+          description: 'CMS',
+          href: 'https://www.joomla.org/',
+          icon: import('@/assets/software/joomla.svg?raw')
         }
       ]}
     />
@@ -390,6 +406,12 @@ const headings = [
           description: 'Code Hosting',
           href: 'https://github.com/',
           icon: import('@/assets/software/github.svg?raw')
+        },
+        {
+          name: 'Laragon',
+          description: 'Development Stack',
+          href: 'https://laragon.org/',
+          icon: import('@/assets/software/laragon.svg?raw')
         },
         {
           name: 'XAMPP',
