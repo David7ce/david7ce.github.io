@@ -3,159 +3,62 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Comment from '@/components/Comment.astro'
 
 const headings = [
-  { depth: 2, slug: 'who-am-i', text: 'Quién soy' },
-  { depth: 2, slug: 'swot-analysis', text: 'Análisis DAFO' },
-  { depth: 2, slug: 'skills', text: 'Habilidades' },
-  { depth: 2, slug: 'tools', text: 'Herramientas' },
-  { depth: 2, slug: 'interests', text: 'Intereses' },
+  { depth: 2, slug: 'who-am-i', text: 'Perfil profesional' },
+  { depth: 2, slug: 'skills', text: 'Competencias clave' },
+  { depth: 2, slug: 'tools', text: 'Stack tecnologico' },
+  { depth: 2, slug: 'interests', text: 'Enfoque actual' },
   { depth: 2, slug: 'public-profile', text: 'Perfil público' },
 ]
 ---
 
 <PageLayout title='Acerca de' {headings} info='/sobre-mi'>
-  <h2 id='who-am-i'>Quién soy 😎</h2>
-  <p>Soy David Alonso, alias «David7ce» (en GitHub).</p>
+  <h2 id='who-am-i'>Perfil profesional</h2>
+  <p>Soy David Alonso (David7ce), desarrollador web enfocado en construir soluciones digitales practicas.</p>
   <p>
-    Actualmente estoy estudiando una carrera en desarrollo web. Mi objetivo es crear aplicaciones
-    útiles con un diseño bonito y sencillo.
+    Combino ejecución técnica, UX clara y arquitectura mantenible para entregar productos útiles,
+    accesibles y fiables.
   </p>
-  <p>Soy una persona enérgica, versátil, analítica y ambiciosa, con una actitud responsable.</p>
-  <p>Me apasionan el análisis de datos, los procesos informáticos y los proyectos científicos.</p>
-  <p>Soy un entusiasta del software libre y de código abierto, pero entiendo el código cerrado.</p>
-  <!-- <p>Enlace a mi <a href="../CV-David7ce.pdf" target="_blank">currículum vitae</a>.</p> -->
 
-  <h2 id='swot-analysis'>Análisis DAFO</h2>
-
-  <h3>Fortalezas 💪</h3>
+  <h2 id='skills'>Competencias clave</h2>
+  <h3>Técnicas</h3>
   <ul>
-    <li><strong>Visión global</strong>: Excelente en planificación y pensamiento estratégico.</li>
-    <li>
-      <strong>Resolución de problemas</strong>: Excelente para encontrar soluciones a problemas
-      complejos.
-    </li>
-    <li>
-      <strong>Independiente-compartido</strong>: Trabajo bien por mi cuenta, pero también me
-      desenvuelvo bien en grupos cohesionados.
-    </li>
+    <li>Desarrollo web frontend y backend</li>
+    <li>Administración de sistemas y entornos de desarrollo</li>
+    <li>Modelado de datos y fundamentos de SQL</li>
   </ul>
 
-  <h3>Debilidades ⚠️</h3>
+  <h3>Fortalezas clave</h3>
   <ul>
-    <li><strong>Crítico</strong>: Puedo ser duro conmigo mismo y con los demás.</li>
-    <li>
-      <strong>Perfeccionista</strong>: Puedo sentirme insatisfecho si las cosas no son «perfectas».
-    </li>
-    <li>
-      <strong>No me gustan las reglas</strong>: Me frustran los sistemas ineficaces o rígidos.
-    </li>
+    <li>Resolución analítica de problemas y depuración</li>
+    <li>Pensamiento estratégico y ejecución estructurada</li>
+    <li>Aprendizaje continuo, adaptabilidad y autonomía</li>
   </ul>
 
-  <h3>Oportunidades 🌟</h3>
+  <h2 id='tools'>Stack tecnologico</h2>
   <ul>
-    <li>
-      <strong>Liderazgo</strong>: Mi pensamiento estratégico puede brillar en puestos de liderazgo.
-    </li>
-    <li><strong>Tecnología</strong>: Me interesa explorar nuevas herramientas y métodos.</li>
-    <li>
-      <strong>Aprendizaje</strong>: Me apasiona aprender, siempre con nuevas habilidades en el
-      horizonte.
-    </li>
+    <li><strong>Lenguajes</strong>: Bash, C#, JavaScript, PHP</li>
+    <li><strong>Marcado/Estilo</strong>: Markdown, HTML, CSS, JSON, XML, YAML</li>
+    <li><strong>Bases de datos</strong>: MariaDB, PostgreSQL, T-SQL</li>
+    <li><strong>Entorno</strong>: Arch Linux, Windows 11, VS Code, Git</li>
   </ul>
 
-  <h3>Amenazas ⚠️</h3>
+  <h2 id='interests'>Enfoque actual</h2>
   <ul>
-    <li>
-      <strong>Agotamiento</strong>: El perfeccionismo puede llevar al exceso de trabajo y al
-      agotamiento.
-      <li><strong>Aislamiento</strong>: Demasiada independencia me hace sentir aislado.</li>
-    </li>
-
-    <h2 id='skills'>Habilidades 🤹</h2>
-
-    <h3>Habilidades técnicas</h3>
-    <ul>
-      <li>Administración de sistemas informáticos.</li>
-      <li>Conocimientos de física y matemáticas.</li>
-      <li>Diseño y desarrollo web</li>
-    </ul>
-
-    <h3>Habilidades sociales</h3>
-    <ul>
-      <li>Buenas habilidades analíticas y de resolución de problemas</li>
-      <li>Capacidad de liderazgo</li>
-      <li>Mente abierta y visión multidisciplinar</li>
-    </ul>
-
-    {/* herramientas */}
-    <h2 id='tools'>Herramientas 🔧</h2>
-
-    <h3>Idiomas utilizados</h3>
-    <ul>
-      <li><strong>Humanos</strong>: 🇪🇸 (Español nativo) y 🇬🇧 (Inglés B2)</li>
-      <li><strong>Programación</strong>: Bash, C#, JavaScript, PHP, Python</li>
-      <li><strong>Marcado</strong>: HTML, Markdown, XML</li>
-      <li><strong>Estilo</strong>: CSS</li>
-      <li><strong>Consulta de búsqueda (SQL)</strong>: MySQL, PostgresSQL, TSQL</li>
-      <li>
-        <strong>Biblioteca/marco web</strong>: CSS (Bootstrap), full-stack con PHP (Laravel),
-        generador de sitios estáticos (HUGO)
-      </li>
-    </ul>
-
-    {/* intereses */}
-    <h2 id='intereses'>👀 Intereses</h2>
-    <p>Me interesan muchas cosas.</p>
-    <ul>
-      <li>
-        <strong>Cosmología 🌌</strong>. Me gusta leer y comprender el funcionamiento de nuestro
-        mundo (el Sol, la Luna, las estrellas, etc.).
-      </li>
-      <li>
-        <strong>Informática (software) 🖥️ 💿</strong>. Me gusta comprender los sistemas operativos y
-        crear aplicaciones útiles. Por eso empecé a usar Linux, especialmente Arch Linux. «Por
-        cierto, yo uso Arch».
-      </li>
-      <li>
-        <strong>Electrónica (hardware) ⚡🔌</strong>. Me gusta la tecnología electrónica, y
-        construir hardware electrónico es algo que me gustaría aprender en el futuro.
-      </li>
-      <li>
-        <strong>Fotografía 📷</strong>. Me gusta capturar paisajes, incluida la astrofotografía. Y
-        descubrir nuevos lugares, calles y personas.
-      </li>
-      <li>
-        <strong>Idiomas 🗣️💬</strong>. Me gustan los idiomas, principalmente consumo inglés o
-        español (nativo). Pero me interesan más.
-      </li>
-      <li>
-        <strong>Actividad física 🏊‍♂️💪</strong>. Me gusta hacer actividad física para mantenerme sano
-        y fuerte. Prefiero hacer ejercicio con mi propio cuerpo, como gimnasia, escalada, senderismo
-        y algunos deportes de equipo como el baloncesto.
-      </li>
-      <li>
-        <strong>Tocar y escuchar música 🎧🎸🎶</strong>. Me gusta escuchar buena música, dependiendo
-        de mi estado de ánimo, un género u otro, y a veces toco la guitarra. En el futuro me
-        gustaría aprender a tocar el piano.
-      </li>
-      <li><strong>Viajar 🗺️⁀જ✈︎</strong>. Me gusta descubrir nuevos lugares y culturas.</li>
-      <li><strong>Escribir ✍️</strong>. Me gusta escribir cosas para desarrollar mis ideas.</li>
-    </ul>
-
-    {/* public-profile */}
-    <h2 id='public-profile'>🔗 Perfil público</h2>
-    <ul>
-      <li>
-        <a href='https://alternativeto.net/user/d7' target='_blank'>D7 - AlternativeTo</a>
-      </li>
-      <li><a href='https://github.com/david7ce' target='_blank'>David7ce - GitHub</a></li>
-      <li>
-        <a href='https://www.linkedin.com/in/david-alonsodd' target='_blank'
-          >David Alonso - LinkedIn</a
-        >
-      </li>
-      <li><a href='https://www.youtube.com/@CompuB1t' target='_blank'>Compub1t - YouTube</a></li>
-    </ul>
-
-    <Comment slot='bottom' />
+    <li>Construir aplicaciones web mantenibles y orientadas a valor</li>
+    <li>Mejorar arquitectura, rendimiento y calidad de código</li>
+    <li>Participar en flujos colaborativos y comunidades open source</li>
+    <li>Evolucionar en practicas de ingeniería y visión de producto</li>
   </ul>
+
+  <h2 id='public-profile'>🔗 Perfil público</h2>
+  <ul>
+    <li><a href='https://alternativeto.net/user/d7' target='_blank'>D7 - AlternativeTo</a></li>
+    <li><a href='https://github.com/david7ce' target='_blank'>David7ce - GitHub</a></li>
+    <li>
+      <a href='https://www.linkedin.com/in/david-alonsodd' target='_blank'>David Alonso - LinkedIn</a>
+    </li>
+    <li><a href='https://www.youtube.com/@CompuB1t' target='_blank'>Compub1t - YouTube</a></li>
+  </ul>
+
+  <Comment slot='bottom' />
 </PageLayout>
