@@ -26,13 +26,23 @@ const { class: className } = Astro.props
         (preset) => `${theme.npmCDN}/@waline/emojis@1.2.0/${preset}` as WalineEmojiPresets
       )
 
-      walineInit({
-        el: '#waline',
-        serverURL: walineConfig.server || '',
-        dark: 'html.dark',
-        emoji,
-        ...walineConfig.additionalConfigs
+      console.log('Waline Config:', {
+        serverURL: walineConfig.server,
+        path: window.location.pathname
       })
+
+      if (walineConfig.server) {
+        walineInit({
+          el: '#waline',
+          serverURL: walineConfig.server,
+          path: window.location.pathname,
+          dark: 'html.dark',
+          emoji: emoji || undefined,
+          ...walineConfig.additionalConfigs
+        })
+      } else {
+        console.error('Waline server URL is not configured')
+      }
     }
   }
 

@@ -79,14 +79,14 @@ const shares = {
       <button
         id='copy-link'
         aria-label='Copy link'
-        class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+        class='group rounded-full bg-muted p-2 max-sm:p-2.5 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
       >
         <Icon class='size-5' name='link' />
       </button>
       <button
         id='get-qrcode'
         aria-label='Get QR code'
-        class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+        class='group rounded-full bg-muted p-2 max-sm:p-2.5 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
       >
         <Icon class='size-5' name='qrcode' />
       </button>
@@ -97,7 +97,7 @@ const shares = {
             target='_blank'
             id={`share-${share}`}
             aria-label={`Share to ${share}`}
-            class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
+            class='group rounded-full bg-muted p-2 max-sm:p-2.5 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
           >
             <Icon class='size-5' name={share} />
           </a>
