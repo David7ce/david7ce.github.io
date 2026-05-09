@@ -6,9 +6,7 @@
   <title>Redirecting...</title>
   <script>
     (function() {
-      const browserLang = navigator.language || '';
-      const preferredLang = browserLang.toLowerCase().startsWith('es') ? 'es' : 'en';
-      window.location.replace(`/${preferredLang}/`);
+      window.location.replace('/en/');
     })();
   </script>
   <noscript>
