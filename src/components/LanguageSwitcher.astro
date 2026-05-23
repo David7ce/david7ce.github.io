@@ -8,13 +8,13 @@ const lang = getLangFromUrl(Astro.url)
 const currentPath = Astro.url.pathname
 
 // Check if we're on a blog post page - handle nested paths
-const isBlogPost = currentPath.includes('/blog/') && !currentPath.endsWith('/blog') && !currentPath.endsWith('/blog/')
+const isBlogPost = currentPath.includes('/post/') && !currentPath.endsWith('/post') && !currentPath.endsWith('/post/')
 
 let translations = new Map<string, string>()
 
 if (isBlogPost) {
   // Extract the slug from the current path - handle nested paths and trailing slashes
-  const pathParts = currentPath.replace(/\/$/, '').split('/blog/')[1]?.split('/') || []
+  const pathParts = currentPath.replace(/\/$/, '').split('/post/')[1]?.split('/') || []
   const currentSlug = pathParts[pathParts.length - 1]?.replace(/\.mdx?$/, '') || null
 
   if (currentSlug) {
@@ -89,7 +89,7 @@ const mapLocalizedPath = (targetLang: string, path: string) => {
       if (isBlogPost && translations.size > 0) {
         // Blog post with translations
         if (translations.has(langCode)) {
-          href = `/${langCode}/blog/${translations.get(langCode)}`
+          href = `/${langCode}/post/${translations.get(langCode)}`
         } else {
           // No translation, redirect to blog home
           href = `/${langCode}/blog`

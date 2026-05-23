@@ -21,7 +21,7 @@ const postDate = data.updatedDate ?? data.publishDate
 const lang = getLangFromUrl(Astro.url)
 // Use slug if defined, otherwise fallback to id
 const postSlug = data.slug || id
-const href = `/${lang}/blog/${postSlug}`
+const href = `/${lang}/post/${postSlug}`
 ---
 
 <li

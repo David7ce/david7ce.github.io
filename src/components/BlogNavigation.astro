@@ -19,7 +19,7 @@ const next = posts[index + 1]
 
 const getUrl = (post: CollectionEntry<'blog'>) => {
   const slug = post.data.slug || post.id.split('/').pop()?.replace(/\.mdx?$/, '')
-  return `/${lang}/blog/${slug}`
+  return `/${lang}/post/${slug}`
 }
 ---
 

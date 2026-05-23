@@ -1,12 +1,12 @@
 ---
-import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, groupCollectionsByYear, sortMDByDate } from 'astro-pure/server'
 import { Button } from 'astro-pure/user'
+import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
 
 export const prerender = true
 
-const allPosts = await getBlogCollection()
+const allPosts = (await getBlogCollection()).filter((p) => p.data.language === 'en')
 const allPostsByDate = sortMDByDate(allPosts)
 const allPostsByYear = groupCollectionsByYear(allPostsByDate)
 
@@ -41,7 +41,7 @@ const meta = {
             </p>
             <ul class='flex flex-col text-start'>
               {posts.map((p) => (
-                <PostPreview post={p} class='border-0 bg-transparent py-2' />
+                <PostPreviewI18n post={p} class='border-0 bg-transparent py-2' />
               ))}
             </ul>
           </div>

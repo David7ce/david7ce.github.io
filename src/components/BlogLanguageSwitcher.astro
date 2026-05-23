@@ -42,10 +42,10 @@ const currentSlug = 'slug' in post.data ? post.data.slug : post.id
       
       if (translations.has(langCode)) {
         // Translation exists, use its slug
-        href = `/${langCode}/blog/${translations.get(langCode)}`
+        href = `/${langCode}/post/${translations.get(langCode)}`
       } else if (langCode === currentLang) {
         // Current language
-        href = `/${langCode}/blog/${currentSlug}`
+        href = `/${langCode}/post/${currentSlug}`
       } else {
         // No translation, redirect to blog home
         href = `/${langCode}/blog`

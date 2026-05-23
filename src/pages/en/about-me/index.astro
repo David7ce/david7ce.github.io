@@ -1,5 +1,4 @@
 ---
-import Comment from '../../../components/Comment.astro'
 import PageLayout from '@/layouts/CommonPage.astro'
 
 const headings = [
@@ -11,7 +10,7 @@ const headings = [
 ]
 ---
 
-<PageLayout title='About' {headings} info='/about-me'>
+<PageLayout title='About' {headings} info={{ slug: '/about-me', hideComment: true }}>
   <h2 id='who-am-i'>Professional Profile</h2>
   <p>I am David Alonso (David7ce), a web developer focused on building practical digital solutions.</p>
   <p>
@@ -61,6 +60,4 @@ const headings = [
     </li>
     <li><a href='https://www.youtube.com/@CompuB1t' target='_blank'>Compub1t - YouTube</a></li>
   </ul>
-
-  <Comment slot='bottom' />
 </PageLayout>

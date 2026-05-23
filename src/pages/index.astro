@@ -2,8 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <script>
+    (function(){
+      var l=(navigator.language||'en').toLowerCase();
+      location.replace(l.indexOf('es')===0?'/es/':'/en/');
+    })();
+  </script>
   <meta http-equiv="refresh" content="0; url=/en/">
-  <link rel="canonical" href="/en/">
+  <link rel="alternate" hreflang="en" href="/en/">
+  <link rel="alternate" hreflang="es" href="/es/">
+  <link rel="alternate" hreflang="x-default" href="/en/">
   <title>Redirecting...</title>
 </head>
 <body></body>
