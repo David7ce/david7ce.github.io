@@ -3,6 +3,8 @@ import { Footer, ThemeProvider } from 'astro-pure/components/basic'
 import type { SiteMeta } from 'astro-pure/types'
 import BaseHead from '@/components/BaseHead.astro'
 import HeaderWithI18n from '@/components/basic/HeaderWithI18n.astro'
+import { esConfig } from '../i18n/es.config'
+import { getLangFromUrl } from '../i18n/utils'
 import config from '../site.config'
 
 // Import the global.css file here so that it is included on
@@ -18,9 +20,15 @@ const {
   meta: { articleDate, description = config.description, ogImage, title },
   highlightColor
 } = Astro.props
+
+// Derive the page language from the URL so Pagefind indexes (and searches)
+// each language independently. Pagefind splits its index by the `<html lang>`
+// attribute and only queries the index matching the current page's language.
+const lang = getLangFromUrl(Astro.url)
+const htmlLang = lang === 'es' ? (esConfig.locale?.lang ?? 'es-ES') : config.locale.lang
 ---
 
-<html lang={config.locale.lang}>
+<html lang={htmlLang}>
   <head>
     <BaseHead {articleDate} {description} {ogImage} {title} />
     <ThemeProvider />
