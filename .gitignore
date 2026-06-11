@@ -68,8 +68,8 @@ pnpm-debug.log*
 node_modules/
 
 # environment variables
-.env
-.env.production
+.env*
+!.env.example
 
 # others
 .DS_Store
