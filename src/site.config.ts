@@ -78,7 +78,7 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/david7ce' },
+    social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/david7ce' }],
     year: '2025'
   },
 
@@ -151,9 +151,7 @@ export const integ: IntegrationUserConfig = {
         reaction0: 'Like',
         placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
       },
-      imageUploader: false,
-      admin: ['tu-email@ejemplo.com'],
-      moderator: []
+      imageUploader: false
     }
   }
 }
