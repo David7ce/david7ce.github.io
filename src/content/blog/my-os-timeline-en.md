@@ -1,6 +1,6 @@
 ---
 title: My Story with OS's
-slug: my-os-timeline-en
+slug: my-os-timeline
 translationKey: my-os-timeline
 publishDate: '2024-01-21'
 description: 'This my story with OS''s'

@@ -1,5 +1,5 @@
 ---
-slug: linux-dilemma-en
+slug: linux-dilemma
 translationKey: linux-dilemma
 title: The Linux dilemma
 publishDate: '2024-09-05'

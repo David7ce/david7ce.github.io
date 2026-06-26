@@ -1,6 +1,6 @@
 ---
 title: 'Encode / Decode'
-slug: encode-decode-en
+slug: encode-decode
 translationKey: encode-decode
 description: 'The base of computing is encoding/decoding.'
 publishDate: 2023-10-26

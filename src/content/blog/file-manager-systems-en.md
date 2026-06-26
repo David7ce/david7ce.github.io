@@ -1,5 +1,5 @@
 ---
-slug: file-manager-systems-en
+slug: file-manager-systems
 translationKey: file-manager-systems
 title: The best apps for manage content
 publishDate: '2022-04-12'

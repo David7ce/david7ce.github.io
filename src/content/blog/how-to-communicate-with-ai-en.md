@@ -1,6 +1,6 @@
 ---
 title: How to communicate with AI
-slug: how-to-communicate-with-ai-en
+slug: how-to-communicate-with-ai
 translationKey: how-to-communicate-with-ai
 publishDate: '2025-07-09'
 description: 'A comprehensive guide on effectively communicating with AI models, optimizing prompts, and understanding machine-friendly communication methods'

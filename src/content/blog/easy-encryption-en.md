@@ -1,5 +1,5 @@
 ---
-slug: easy-encryption-en
+slug: easy-encryption
 translationKey: easy-encryption
 title: Encrypt easy with Password Manager
 publishDate: '2023-11-15'

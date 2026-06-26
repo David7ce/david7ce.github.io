@@ -1,5 +1,5 @@
 ---
-slug: linux-distros-en
+slug: linux-distros
 translationKey: linux-distros
 title: Linux distros
 publishDate: '2022-07-13'

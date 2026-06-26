@@ -1,6 +1,6 @@
 ---
 title: KDE distro comparison
-slug: kde-distros-comparison-en
+slug: kde-distros-comparison
 translationKey: kde-distros-comparison
 publishDate: '2024-02-10'
 description: 'In search of the best distro with KDE integrated'

@@ -1,5 +1,5 @@
 ---
-slug: linux-intro-en
+slug: linux-intro
 translationKey: linux-intro
 title: Linux introduction
 publishDate: '2022-06-18'

@@ -1,6 +1,6 @@
 ---
 title: Understanding Package Management Across Distros
-slug: package-management-en
+slug: package-management
 translationKey: package-management
 publishDate: '2024-09-02'
 description: 'Package managers and packaging systems for efficient software management'

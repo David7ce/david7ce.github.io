@@ -1,6 +1,6 @@
 ---
 title: Setup password manager
-slug: setup-password-manager-en
+slug: setup-password-manager
 translationKey: setup-password-manager
 publishDate: '2023-06-11'
 updatedDate: '2025-06-03'
