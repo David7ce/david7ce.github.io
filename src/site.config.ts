@@ -140,7 +140,7 @@ export const integ: IntegrationUserConfig = {
   },
   // Comment system: https://waline.js.org/en/reference/client/props.html
   waline: {
-    enable: false,
+    enable: true,
     server: 'https://waline-three-azure.vercel.app/',
     emoji: ['bmoji', 'weibo'],
     additionalConfigs: {
