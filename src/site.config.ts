@@ -88,9 +88,9 @@ export const theme: ThemeUserConfig = {
       properties: {}
     },
     /** Blog page size for pagination (optional) */
-    blogPageSize: 8
+    blogPageSize: 8,
     // Currently support weibo, x, bluesky
-    // share: ['weibo', 'x', 'bluesky']
+    share: []
   }
 }
 
@@ -147,6 +147,8 @@ export const integ: IntegrationUserConfig = {
       // search: false,
       pageview: true,
       comment: true,
+      noCopyright: true,
+      noRss: true,
       locale: {
         reaction0: 'Like',
         placeholder: 'Welcome to comment. (Email to receive replies. Login is unnecessary)'
