@@ -1,199 +1,264 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json",
-  "description": "Timeline of my OS in Computers",
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "description": "Timeline of operating systems used on my computers",
+  "background": "white",
   "width": 900,
-  "height": 320,
-  "data": {
-    "values": [
-      {
-        "pc": "Desktop PC (family)",
-        "os": "Windows XP",
-        "start": "2004-01-01",
-        "end": "2009-01-01"
-      },
-      {
-        "pc": "Desktop PC (family)",
-        "os": "Windows 7",
-        "start": "2009-01-01",
-        "end": "2012-01-01"
-      },
-      {
-        "pc": "Desktop PC (family)",
-        "os": "Windows 8",
-        "start": "2012-01-01",
-        "end": "2015-01-01"
-      },
-      {
-        "pc": "Desktop PC (family)",
-        "os": "Windows 10",
-        "start": "2015-01-01",
-        "end": "2025-12-31"
-      },
-      {
-        "pc": "Laptop 1",
-        "os": "Windows 7",
-        "start": "2011-01-01",
-        "end": "2012-07-01"
-      },
-      {
-        "pc": "Laptop 1",
-        "os": "Windows 10",
-        "start": "2012-07-01",
-        "end": "2022-01-01"
-      },
-      {
-        "pc": "Laptop 1",
-        "os": "Garuda",
-        "start": "2022-01-01",
-        "end": "2025-12-31"
-      },
-      {
-        "pc": "Laptop 2",
-        "os": "Windows 10",
-        "start": "2015-01-01",
-        "end": "2017-01-01"
-      },
-      {
-        "pc": "Laptop 2",
-        "os": "Ubuntu",
-        "start": "2017-01-01",
-        "end": "2019-01-01"
-      },
-      {
-        "pc": "Laptop 2",
-        "os": "Windows 10",
-        "start": "2019-01-01",
-        "end": "2024-12-31"
-      },
-      {
-        "pc": "Laptop 2",
-        "os": "Fedora",
-        "start": "2025-01-01",
-        "end": "2025-12-31"
-      },
-      {
-        "pc": "Desktop PC (my)",
-        "os": "Windows 10",
-        "start": "2019-01-01",
-        "end": "2021-05-01"
-      },
-      {
-        "pc": "Desktop PC (my)",
-        "os": "Arch-based",
-        "start": "2021-05-01",
-        "end": "2025-12-31"
-      },
-      {
-        "pc": "Laptop 3",
-        "os": "Windows 11",
-        "start": "2023-01-01",
-        "end": "2025-12-31"
-      }
-    ]
+  "height": 300,
+  "padding": {
+    "top": 20,
+    "left": 10,
+    "right": 20,
+    "bottom": 40
   },
-  "layer": [
+  "data": [
     {
-      "mark": {"type": "bar", "size": 24},
-      "encoding": {
-        "y": {
-          "field": "pc",
-          "type": "nominal",
-          "title": "Computer",
-          "sort": [
-            "Desktop PC (family)",
-            "Laptop 1",
-            "Laptop 2",
-            "Desktop PC (my)",
-            "Laptop 3"
-          ]
+      "name": "os_timeline",
+      "values": [
+        {
+          "pc": "Laptop 3",
+          "os": "Windows 11",
+          "start": "2023-01-01",
+          "end": "2026-08-10"
         },
-        "x": {"field": "start", "type": "temporal", "title": "Year"},
-        "x2": {"field": "end"},
-        "color": {
-          "field": "os",
-          "type": "nominal",
-          "title": "Operating System",
-          "scale": {
-            "domain": [
-              "Windows XP",
-              "Windows 7",
-              "Windows 8",
-              "Windows 10",
-              "Windows 11",
-              "Ubuntu",
-              "Fedora",
-              "Garuda",
-              "Arch-based"
-            ],
-            "range": [
-              "#A6C8FF",
-              "#78A9FF",
-              "#4589FF",
-              "#0F62FE",
-              "#0043CE",
-              "#e95420",
-              "#56a4db",
-              "#7f67e7",
-              "#1e93d2"
-            ]
+        {
+          "pc": "Desktop PC (my)",
+          "os": "Windows 10",
+          "start": "2019-01-01",
+          "end": "2021-05-01"
+        },
+        {
+          "pc": "Desktop PC (my)",
+          "os": "Arch-based",
+          "start": "2021-05-01",
+          "end": "2025-06-01"
+        },
+        {
+          "pc": "Desktop PC (my)",
+          "os": "Windows 11",
+          "start": "2025-06-01",
+          "end": "2026-08-10"
+        },
+        {
+          "pc": "Laptop 2",
+          "os": "Windows 10",
+          "start": "2015-01-01",
+          "end": "2017-01-01"
+        },
+        {
+          "pc": "Laptop 2",
+          "os": "Ubuntu",
+          "start": "2017-01-01",
+          "end": "2019-01-01"
+        },
+        {
+          "pc": "Laptop 2",
+          "os": "Windows 10",
+          "start": "2019-01-01",
+          "end": "2024-12-31"
+        },
+        {
+          "pc": "Laptop 2",
+          "os": "Fedora",
+          "start": "2025-01-01",
+          "end": "2026-08-10"
+        },
+        {
+          "pc": "Laptop 1",
+          "os": "Windows 7",
+          "start": "2011-01-01",
+          "end": "2012-07-01"
+        },
+        {
+          "pc": "Laptop 1",
+          "os": "Windows 10",
+          "start": "2012-07-01",
+          "end": "2022-01-01"
+        },
+        {
+          "pc": "Laptop 1",
+          "os": "Garuda",
+          "start": "2022-01-01",
+          "end": "2026-08-10"
+        },
+        {
+          "pc": "Desktop PC (family)",
+          "os": "Windows XP",
+          "start": "2004-01-01",
+          "end": "2009-01-01"
+        },
+        {
+          "pc": "Desktop PC (family)",
+          "os": "Windows 7",
+          "start": "2009-01-01",
+          "end": "2012-01-01"
+        },
+        {
+          "pc": "Desktop PC (family)",
+          "os": "Windows 8",
+          "start": "2012-01-01",
+          "end": "2015-01-01"
+        },
+        {
+          "pc": "Desktop PC (family)",
+          "os": "Windows 10",
+          "start": "2015-01-01",
+          "end": "2026-08-10"
+        }
+      ],
+      "format": {
+        "parse": {
+          "start": "date",
+          "end": "date"
+        }
+      }
+    }
+  ],
+  "scales": [
+    {
+      "name": "x",
+      "type": "time",
+      "range": "width",
+      "domain": {
+        "data": "os_timeline",
+        "fields": ["start", "end"]
+      },
+      "nice": "year"
+    },
+    {
+      "name": "y",
+      "type": "band",
+      "range": "height",
+      "domain": [
+        "Laptop 3",
+        "Desktop PC (my)",
+        "Laptop 2",
+        "Laptop 1",
+        "Desktop PC (family)"
+      ],
+      "padding": 0.3
+    },
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": [
+        "Windows XP",
+        "Windows 7",
+        "Windows 8",
+        "Windows 10",
+        "Windows 11",
+        "Ubuntu",
+        "Fedora",
+        "Garuda",
+        "Arch-based"
+      ],
+      "range": [
+        "#A6C8FF",
+        "#78A9FF",
+        "#4589FF",
+        "#0F62FE",
+        "#0043CE",
+        "#E95420",
+        "#56A4DB",
+        "#7F67E7",
+        "#1E93D2"
+      ]
+    }
+  ],
+  "axes": [
+    {
+      "scale": "x",
+      "orient": "bottom",
+      "title": "Year",
+      "format": "%Y",
+      "tickCount": 12,
+      "grid": true
+    },
+    {
+      "scale": "y",
+      "orient": "left",
+      "title": "Computer",
+      "domain": false,
+      "ticks": false
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {
+        "data": "os_timeline"
+      },
+      "encode": {
+        "enter": {
+          "y": {
+            "signal": "scale('y', datum.pc) + bandwidth('y') / 2 - 9"
+          },
+          "height": {
+            "value": 18
+          },
+          "fill": {
+            "scale": "color",
+            "field": "os"
+          },
+          "cornerRadius": {
+            "value": 2
           }
         },
-        "tooltip": [
-          {"field": "pc", "title": "Computer"},
-          {"field": "os", "title": "Operating System"},
-          {"field": "start", "title": "From"},
-          {"field": "end", "title": "To"}
-        ]
+        "update": {
+          "x": {
+            "scale": "x",
+            "field": "start"
+          },
+          "x2": {
+            "scale": "x",
+            "field": "end"
+          },
+          "tooltip": {
+            "signal": "{'Computer': datum.pc, 'Operating System': datum.os, 'From': timeFormat(datum.start, '%Y-%m-%d'), 'To': timeFormat(datum.end, '%Y-%m-%d')}"
+          }
+        }
       }
     },
     {
-      "mark": {
-        "type": "text",
-        "align": "left",
-        "baseline": "middle",
-        "dx": 5,
-        "fontSize": 10,
-        "fill": "white"
+      "type": "text",
+      "from": {
+        "data": "os_timeline"
       },
-      "encoding": {
-        "x": {"field": "start", "type": "temporal"},
-        "x2": {"field": "end"},
-        "y": {"field": "pc", "type": "nominal"},
-        "text": {"field": "os", "type": "nominal"},
-        "color": {
-          "field": "os",
-          "type": "nominal",
-          "legend": null,
-          "scale": {
-            "domain": [
-              "Windows XP",
-              "Windows 7",
-              "Windows 8",
-              "Windows 10",
-              "Windows 11",
-              "Ubuntu",
-              "Fedora",
-              "Garuda",
-              "Arch-based"
-            ],
-            "range": [
-              "#A6C8FF",
-              "#78A9FF",
-              "#4589FF",
-              "#0F62FE",
-              "#0043CE",
-              "#e95420",
-              "#56a4db",
-              "#7f67e7",
-              "#1e93d2"
-            ]
+      "encode": {
+        "enter": {
+          "align": {
+            "value": "center"
+          },
+          "baseline": {
+            "value": "middle"
+          },
+          "fontSize": {
+            "value": 11
+          },
+          "fontWeight": {
+            "value": "bold"
+          },
+          "fill": {
+            "value": "white"
+          }
+        },
+        "update": {
+          "x": {
+            "signal": "scale('x', (datum.start + datum.end) / 2)"
+          },
+          "y": {
+            "signal": "scale('y', datum.pc) + bandwidth('y') / 2"
+          },
+          "text": {
+            "field": "os"
           }
         }
       }
     }
   ],
   "config": {
-    "scale": {"bandPaddingInner": 0.1, "bandPaddingOuter": 0.05},
-    "axis": {"labelFontSize": 12, "titleFontSize": 14}
+    "axis": {
+      "labelFontSize": 11,
+      "titleFontSize": 13
+    }
   }
 }
