@@ -23,6 +23,33 @@ const programming = ['C#', 'JavaScript / TypeScript']
 const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
 const platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
+const selectedProjects = [
+  {
+    name: 'Cellular Automata (Rust)',
+    description:
+      'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
+    href: 'https://github.com/David7ce/cellular-automata-rust'
+  },
+  {
+    name: 'App Launcher',
+    description:
+      'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
+    href: 'https://github.com/David7ce/app-launcher'
+  },
+  {
+    name: 'Universal Map-Time Engine',
+    description:
+      'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
+    href: 'https://david7ce.is-a.dev/universal-map-app/'
+  },
+  {
+    name: 'audio2score-mcp',
+    description:
+      'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
+    href: 'https://github.com/David7ce/audio2score-mcp'
+  }
+]
+
 // Get English blog posts only
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -66,16 +93,50 @@ const allPostsByDate = sortMDByDate(englishPosts).slice(0, MAX_POSTS)
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Web Developer</p>
+        <p class='text-muted-foreground'>Software developer</p>
         <p class='text-muted-foreground'>
-          I'm a web developer passionate about building simple, well-designed software. I value
-          minimal, functional design and contribute to the open-source community.
+          I'm a web developer by training: I completed a two-year degree in web application
+          development and have taken additional courses. My interests have since grown towards
+          systems, AI, developer tooling, Rust, Linux and free and open-source software.
+        </p>
+        <p class='text-muted-foreground'>
+          I build small web apps, command-line and desktop tools and websites, and I write notes
+          about what I learn. This site collects my projects and those notes.
         </p>
         <Button title='More about me' class='w-fit self-end' href='/en/about-me' style='ahead' />
       </Section>
+
+      <Section title='Exploring'>
+        <p class='text-muted-foreground'>
+          Systems and computer architecture, Linux, AI tooling and integrations (APIs, MCP)
+          and developer tooling. Outside of software: electronics, physics and teaching.
+        </p>
+        <p class='text-muted-foreground'>
+          These are interests I'm following. The projects below show what I have built so far.
+        </p>
+      </Section>
+
+      <Section title='Projects'>
+        <ul class='flex flex-col gap-y-3'>
+          {
+            selectedProjects.map((project) => (
+              <li>
+                <a href={project.href} target='_blank' class='font-medium hover:underline'>
+                  {project.name}
+                </a>
+                <p class='text-muted-foreground'>{project.description}</p>
+              </li>
+            ))
+          }
+        </ul>
+        <Button title='All projects' class='w-fit self-end' href='/en/projects' style='ahead' />
+      </Section>
       {
         allPostsByDate.length > 0 && (
-          <Section title='Posts'>
+          <Section title='Blog'>
+            <p class='text-muted-foreground'>
+              Notes, guides and comparisons on Linux, computing and AI, written while learning.
+            </p>
             <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
               {allPostsByDate.map((p) => (
                 <PostPreviewI18n post={p as CollectionEntry<'blog'>} />
@@ -86,7 +147,10 @@ const allPostsByDate = sortMDByDate(englishPosts).slice(0, MAX_POSTS)
         )
       }
 
-      <Section title='Skills'>
+      <Section title='Technologies'>
+        <p class='text-muted-foreground'>
+          Technologies I have used in my studies and projects, not a proficiency ranking.
+        </p>
         <SkillLayout title='Markup' skills={markup} />
         <SkillLayout title='Styling' skills={styling} />
         <SkillLayout title='Programming' skills={programming} />

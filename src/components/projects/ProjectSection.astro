@@ -12,6 +12,8 @@ interface Props {
     image?: string
     name: string
     description: string
+    tech?: string
+    status?: string
     links: {
       type: string
       href: string
@@ -74,9 +76,14 @@ const projectIconSet: Record<string, IconsType> = {
               >
                 {project.name}
               </a>
-              <div class='line-clamp-4 leading-relaxed text-muted-foreground flex-1 sm:min-h-[80px]'>
-                {project.description}
-              </div>
+              <div class='flex-1 leading-relaxed text-muted-foreground'>{project.description}</div>
+              {(project.tech || project.status) && (
+                <p class='text-sm text-muted-foreground'>
+                  {project.tech && <span>{project.tech}</span>}
+                  {project.tech && project.status && ' · '}
+                  {project.status && <span>{project.status}</span>}
+                </p>
+              )}
               <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
                 {project.links.map((link) => {
                   const icon = projectIconSet[link.type]

@@ -2,52 +2,54 @@
 import PageLayout from '@/layouts/CommonPage.astro'
 
 const headings = [
-  { depth: 2, slug: 'who-am-i', text: 'Perfil profesional' },
-  { depth: 2, slug: 'skills', text: 'Competencias clave' },
-  { depth: 2, slug: 'tools', text: 'Stack tecnologico' },
-  { depth: 2, slug: 'interests', text: 'Enfoque actual' },
+  { depth: 2, slug: 'who-am-i', text: 'Perfil' },
+  { depth: 2, slug: 'interests', text: 'Intereses y dirección' },
+  { depth: 2, slug: 'tools', text: 'Tecnologías' },
   { depth: 2, slug: 'public-profile', text: 'Perfil público' },
 ]
 ---
 
 <PageLayout title='Acerca de' {headings} info={{ slug: '/sobre-mi', hideComment: true }}>
-  <h2 id='who-am-i'>Perfil profesional</h2>
-  <p>Soy David Alonso (David7ce), desarrollador web enfocado en construir soluciones digitales practicas.</p>
+  <h2 id='who-am-i'>Perfil</h2>
   <p>
-    Combino ejecución técnica, UX clara y arquitectura mantenible para entregar productos útiles,
-    accesibles y fiables.
+    Soy David Alonso (David7ce), desarrollador web de formación. Completé un ciclo de dos años en
+    desarrollo de aplicaciones web y he realizado cursos adicionales. Hablo español e inglés, y
+    este sitio está disponible en ambos idiomas.
+  </p>
+  <p>
+    Construyo pequeñas aplicaciones web, herramientas de línea de comandos y de escritorio, y sitios
+    web, y escribo notas sobre lo que voy aprendiendo.
   </p>
 
-  <h2 id='skills'>Competencias clave</h2>
-  <h3>Técnicas</h3>
+  <h2 id='interests'>Intereses y dirección</h2>
+  <p>Mis intereses han crecido más allá del desarrollo web hacia:</p>
   <ul>
-    <li>Desarrollo web frontend y backend</li>
-    <li>Administración de sistemas y entornos de desarrollo</li>
-    <li>Modelado de datos y fundamentos de SQL</li>
+    <li>Sistemas y arquitectura de computadores</li>
+    <li>Rust</li>
+    <li>Linux y el software libre y de código abierto</li>
+    <li>IA, herramientas de desarrollo, APIs e integraciones</li>
   </ul>
+  <p>
+    Fuera del software me interesan la electrónica, la física, la investigación técnica y la
+    enseñanza.
+  </p>
+  <p>
+    Esto describe hacia dónde va mi curiosidad. Lo que he construido realmente está en los
+    <a href='/es/proyectos'>proyectos</a>; lo que escribo mientras aprendo, en el
+    <a href='/es/blog'>blog</a>.
+  </p>
 
-  <h3>Fortalezas clave</h3>
+  <h2 id='tools'>Tecnologías</h2>
+  <p>Tecnologías que he usado en mis estudios y proyectos. No es un ranking de nivel.</p>
   <ul>
-    <li>Resolución analítica de problemas y depuración</li>
-    <li>Pensamiento estratégico y ejecución estructurada</li>
-    <li>Aprendizaje continuo, adaptabilidad y autonomía</li>
-  </ul>
-
-  <h2 id='tools'>Stack tecnologico</h2>
-  <ul>
-    <li><strong>Lenguajes</strong>: Bash, C#, JavaScript, PHP</li>
-    <li><strong>Marcado/Estilo</strong>: Markdown, HTML, CSS, JSON, XML, YAML</li>
+    <li><strong>Lenguajes</strong>: Bash, C#, JavaScript / TypeScript, PHP; Rust y Python en algunos proyectos personales</li>
+    <li><strong>Marcado y estilos</strong>: HTML, Markdown, XML, CSS</li>
     <li><strong>Bases de datos</strong>: MariaDB, PostgreSQL, T-SQL</li>
+    <li><strong>Frameworks web y CMS</strong>: ASP.NET, Angular, React, Astro, WordPress, Joomla</li>
     <li><strong>Entorno</strong>: Arch Linux, Windows 11, VS Code, Git</li>
+    <li><strong>Asistentes de programación con IA</strong>: Claude Code, GitHub Copilot</li>
   </ul>
-
-  <h2 id='interests'>Enfoque actual</h2>
-  <ul>
-    <li>Construir aplicaciones web mantenibles y orientadas a valor</li>
-    <li>Mejorar arquitectura, rendimiento y calidad de código</li>
-    <li>Participar en flujos colaborativos y comunidades open source</li>
-    <li>Evolucionar en practicas de ingeniería y visión de producto</li>
-  </ul>
+  <p>La página de <a href='/es/stack'>Stack</a> lista con más detalle las herramientas que uso.</p>
 
   <h2 id='public-profile'>🔗 Perfil público</h2>
   <ul>
