@@ -8,7 +8,7 @@ interface friend {
   link: string
 }
 
-interface friend_list {
+interface FriendGroup {
   id_name: string
   desc: string
   link_list: friend[]
@@ -22,7 +22,7 @@ function shuffle(arr: friend[]) {
 
 interface Props {
   title?: string
-  list: friend_list
+  list: FriendGroup
 }
 const { title, list: friend_list, ...props } = Astro.props
 ---
