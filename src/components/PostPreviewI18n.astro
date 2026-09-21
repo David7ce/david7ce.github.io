@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import { render, type CollectionEntry } from 'astro:content'
-import type { HTMLTag, Polymorphic } from 'astro/types'
+import type { ComponentProps, HTMLTag, Polymorphic } from 'astro/types'
 import { cn } from '../../packages/pure/utils'
 import { FormattedDate, Icon } from '../../packages/pure/components/user'
 import { getLangFromUrl } from '../i18n/utils'
@@ -47,10 +47,10 @@ const href = `/${lang}/post/${postSlug}`
     {
       detailed && data.heroImage && (
         <Image
+          {...(data.heroImage as ComponentProps<typeof Image>)}
           alt={data.heroImage.alt || data.title}
           class='cover-image absolute end-0 top-0 z-0 h-2/3 w-full rounded-2xl object-cover opacity-50 transition-opacity duration-300 group-hover/card:opacity-70 md:h-full md:w-3/5'
           loading='eager'
-          {...data.heroImage}
         />
       )
     }
