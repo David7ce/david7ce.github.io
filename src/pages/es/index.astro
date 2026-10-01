@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
-
 import { Quote } from 'astro-pure/advanced'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
 import { Button, Icon, Label } from 'astro-pure/user'
@@ -19,14 +18,14 @@ const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
 const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
 const programming = ['C#', 'JavaScript / TypeScript']
 const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
-const platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
+const web_servers_platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
 const selectedProjects = [
   {
-    name: 'Autómatas Celulares (Rust)',
+    name: 'Audio2Score MCP',
     description:
-      'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.',
-    href: 'https://github.com/David7ce/cellular-automata-rust'
+      'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.',
+    href: 'https://github.com/David7ce/audio2score-mcp'
   },
   {
     name: 'App Launcher',
@@ -35,16 +34,16 @@ const selectedProjects = [
     href: 'https://github.com/David7ce/app-launcher'
   },
   {
+    name: 'Autómatas Celulares (Rust)',
+    description:
+      'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.',
+    href: 'https://github.com/David7ce/cellular-automata-rust'
+  },
+  {
     name: 'Universal Map-Time Engine',
     description:
       'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.',
     href: 'https://david7ce.is-a.dev/universal-map-app/'
-  },
-  {
-    name: 'audio2score-mcp',
-    description:
-      'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.',
-    href: 'https://github.com/David7ce/audio2score-mcp'
   }
 ]
 
@@ -161,7 +160,7 @@ const meta = {
         <SkillLayout title='Estilos' skills={styling} />
         <SkillLayout title='Programación' skills={programming} />
         <SkillLayout title='Bibliotecas Web' skills={web_library} />
-        <SkillLayout title='Plataformas' skills={platforms} />
+        <SkillLayout title='Servidores Web y Plataformas Cloud' skills={web_servers_platforms} />
       </Section>
     </div>
     <Quote class='mt-12' />

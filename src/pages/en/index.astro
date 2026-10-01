@@ -21,14 +21,14 @@ const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
 const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
 const programming = ['C#', 'JavaScript / TypeScript']
 const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
-const platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
+const web_servers_platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
 const selectedProjects = [
   {
-    name: 'Cellular Automata (Rust)',
+    name: 'Audio2Score MCP',
     description:
-      'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
-    href: 'https://github.com/David7ce/cellular-automata-rust'
+      'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
+    href: 'https://github.com/David7ce/audio2score-mcp'
   },
   {
     name: 'App Launcher',
@@ -37,16 +37,16 @@ const selectedProjects = [
     href: 'https://github.com/David7ce/app-launcher'
   },
   {
+    name: 'Cellular Automata (Rust)',
+    description:
+      'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
+    href: 'https://github.com/David7ce/cellular-automata-rust'
+  },
+  {
     name: 'Universal Map-Time Engine',
     description:
       'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
     href: 'https://david7ce.is-a.dev/universal-map-app/'
-  },
-  {
-    name: 'audio2score-mcp',
-    description:
-      'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
-    href: 'https://github.com/David7ce/audio2score-mcp'
   }
 ]
 
@@ -155,7 +155,7 @@ const allPostsByDate = sortMDByDate(englishPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Styling' skills={styling} />
         <SkillLayout title='Programming' skills={programming} />
         <SkillLayout title='Web Library' skills={web_library} />
-        <SkillLayout title='Platforms' skills={platforms} />
+        <SkillLayout title='Web Servers & Cloud Platforms' skills={web_servers_platforms} />
       </Section>
     </div>
     <Quote class='mt-12' />

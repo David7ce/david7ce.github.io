@@ -4,116 +4,14 @@ import ProjectSection from '@/components/projects/ProjectSection.astro'
 import config from '@/site-config'
 
 const headings = [
-  { depth: 2, slug: 'personal', text: 'Proyectos Personales' },
-  { depth: 2, slug: 'websites', text: 'Sitios Web' },
-  { depth: 2, slug: 'projects', text: 'Proyectos Involucrados' }
+  { depth: 2, slug: 'websites', text: 'Sitios Web Profesionales' },
+  { depth: 2, slug: 'projects', text: 'Proyectos Involucrados' },
+  { depth: 2, slug: 'personal', text: 'Apps Pequeñas' }
 ]
 ---
 
 <PageLayout title='Proyectos' {headings} info={{ slug: '/proyectos', hideComment: true }}>
-  <h2 id='personal'>Proyectos Personales</h2>
-  <p>Proyectos pequeños que he creado y publicado en GitHub.</p>
-  <ProjectSection
-    project={[
-      {
-        name: '🧬 Autómatas Celulares',
-        description:
-          'Un sandbox de escritorio nativo para autómatas celulares tipo Life. El Juego de la Vida de Conway es una de las 21 reglas incluidas, y un único motor genérico de reglas nacimiento/supervivencia permite definir las tuyas. Las células vivas se guardan de forma dispersa en un plano acotado de 4096×4096.',
-        tech: 'Rust, egui / eframe',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
-      },
-      {
-        name: '🚀 App Launcher',
-        description:
-          'Un panel de inicio categorizado para lanzar las aplicaciones de escritorio instaladas en tu equipo. Construye su catálogo escaneando los registros propios de cada sistema (archivos .desktop, el registro de Windows y el menú Inicio, paquetes .app) y permite ocultar, renombrar o recategorizar los mosaicos.',
-        tech: 'Tauri (backend en Rust), HTML / CSS / JavaScript sin frameworks',
-        status: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.',
-        links: [
-          { type: 'github', href: 'https://github.com/David7ce/app-launcher' },
-          { type: 'release', href: 'https://github.com/David7ce/app-launcher/releases' }
-        ]
-      },
-      {
-        name: '🗺️ Universal Map-Time Engine',
-        description:
-          'Un mapa estático que funciona solo en el navegador y que trata el calendario como una dimensión más. Cada "mundo" es una carpeta de archivos JSON y GeoJSON, así que añadir un mapa nuevo no requiere cambiar el motor.',
-        tech: 'TypeScript, Leaflet, OpenStreetMap',
-        links: [
-          { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
-          { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
-        ]
-      },
-      {
-        name: '🎼 audio2score-mcp',
-        description:
-          'Convierte un archivo de audio grabado en una partitura editable (audio → MIDI → MusicXML), ya sea con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA. Cada paso escribe un archivo real, así que la transcripción automática se puede revisar o corregir antes de convertirse en partitura.',
-        tech: 'Python, basic-pitch, music21, MCP',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
-      },
-      {
-        name: '🤖 AI Config',
-        description:
-          'Dotfiles para agentes de IA de programación: una carpeta .ai/ como fuente única de verdad, generada en el formato de configuración propio de cada herramienta (Claude Code, Codex, opencode, Cursor, Windsurf, GitHub Copilot CLI y MCP).',
-        tech: 'JavaScript (CLI de Node)',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/ai-config' }]
-      },
-      {
-        name: '🔖 Bookmarks Report',
-        description:
-          'Compara los marcadores de un navegador basado en Chromium y de Firefox y escribe un único informe en Markdown. Lee directamente el JSON Bookmarks de Chromium y el places.sqlite de Firefox.',
-        tech: 'Python (solo biblioteca estándar)',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/bookmarks-report' }]
-      },
-      {
-        name: '🐚 Shell Toolkit',
-        description:
-          'Un conjunto pequeño de scripts de shell para tareas cotidianas en Windows, macOS y Linux: un script nativo por shell (.sh y .ps1) más un menú interactivo, sin frameworks ni instalaciones adicionales.',
-        tech: 'Bash, PowerShell',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/shell-toolkit' }]
-      },
-      {
-        name: '📖 Read Rapide',
-        description:
-          'Una web de lectura rápida que muestra el texto palabra por palabra (RSVP) a velocidad fija o con aceleración progresiva, con resaltado opcional del punto de enfoque y carga de archivos .txt. La interfaz está en español e inglés.',
-        tech: 'React, TypeScript, Vite',
-        links: [
-          { type: 'site', href: 'https://david7ce.is-a.dev/read-rapide/' },
-          { type: 'github', href: 'https://github.com/David7ce/read-rapide' }
-        ]
-      },
-      {
-        name: '🌙 Calculadora de Ciclos de Sueño',
-        description:
-          'Sugiere horas de acostarse o de despertarse alineadas con ciclos de sueño de 90 minutos. Una PWA instalable sin dependencias que funciona sin conexión tras la primera carga.',
-        tech: 'HTML, CSS, JavaScript',
-        links: [
-          { type: 'site', href: 'https://david7ce.is-a.dev/sleep-cycles-calc/' },
-          { type: 'github', href: 'https://github.com/David7ce/sleep-cycles-calc' }
-        ]
-      },
-      {
-        name: '🌐 Traductor Multilenguaje',
-        description:
-          'Traduce texto a varios idiomas a la vez. Usa la API Translator integrada de Chrome cuando el navegador la tiene y, si no, recurre al endpoint público de Google Translate.',
-        tech: 'React, TypeScript',
-        status: 'Demo desplegada en GitHub Pages.',
-        links: [
-          { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
-          { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
-        ]
-      },
-      {
-        name: '📻 Oracle Radio',
-        description:
-          'Un prototipo mínimo que salta entre emisoras de radio por internet en directo, reproduce fragmentos y los transcribe. Las listas de emisoras vienen de la API abierta de radio-browser.info.',
-        tech: 'Python, Whisper, FFmpeg',
-        status: 'Prototipo v0.1 alpha.',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
-      }
-    ]}
-  />
-
-  <h2 id='websites'>Sitios Web</h2>
+  <h2 id='websites'>Sitios Web Profesionales</h2>
   <ProjectSection
     project={[
       {
@@ -152,6 +50,14 @@ const headings = [
   <ProjectSection
     project={[
       {
+        name: '🏛️ Arksys OS',
+        description:
+          'Arksys es un Linux basado en Arch con KDE como escritorio: un perfil de ArchISO, una configuración del instalador Calamares y scripts de post-instalación.',
+        tech: 'Shell, ArchISO, Calamares',
+        status: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.',
+        links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
+      },
+      {
         name: '🔗 Proyecto Interneto',
         description:
           'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes. Un gestor de marcadores anterior, en PHP, está archivado.',
@@ -159,21 +65,6 @@ const headings = [
           { type: 'site', href: 'https://interneto.github.io/' },
           { type: 'github', href: 'https://github.com/interneto' }
         ]
-      },
-      {
-        name: '🧰 Toolbox Installer (TUI)',
-        description:
-          'Una aplicación de terminal que detecta tu sistema operativo y gestor de paquetes, permite seleccionar varios paquetes y ejecuta las instalaciones. Usa las mismas listas de paquetes que la toolbox web de Interneto.',
-        tech: 'Python',
-        links: [{ type: 'github', href: 'https://github.com/interneto/tui-toolbox-installer' }]
-      },
-      {
-        name: '🏛️ Arksys OS',
-        description:
-          'Arksys es un Linux basado en Arch con KDE como escritorio: un perfil de ArchISO, una configuración del instalador Calamares y scripts de post-instalación.',
-        tech: 'Shell, ArchISO, Calamares',
-        status: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.',
-        links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
       },
       {
         name: '🧠 Categorización de bóvedas de conocimiento para Obsidian',
@@ -192,6 +83,115 @@ const headings = [
         name: '🌱 Wiki de Cosmología',
         description: 'Una wiki de cosmología hecha con Obsidian.md y el plugin Digital Garden.',
         links: [{ type: 'doc', href: 'https://wikiterra.github.io/' }]
+      }
+    ]}
+  />
+
+  <h2 id='personal'>Apps Pequeñas</h2>
+  <p>Proyectos pequeños que he creado y publicado en GitHub.</p>
+  <ProjectSection
+    project={[
+      {
+        name: '🤖 AI Config',
+        description:
+          'Dotfiles para agentes de IA de programación: una carpeta .ai/ como fuente única de verdad, generada en el formato de configuración propio de cada herramienta (Claude Code, Codex, opencode, Cursor, Windsurf, GitHub Copilot CLI y MCP).',
+        tech: 'JavaScript (CLI de Node)',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/ai-config' }]
+      },
+      {
+        name: '🚀 App Launcher',
+        description:
+          'Un panel de inicio categorizado para lanzar las aplicaciones de escritorio instaladas en tu equipo. Construye su catálogo escaneando los registros propios de cada sistema (archivos .desktop, el registro de Windows y el menú Inicio, paquetes .app) y permite ocultar, renombrar o recategorizar los mosaicos.',
+        tech: 'Tauri (backend en Rust), HTML / CSS / JavaScript sin frameworks',
+        status: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.',
+        links: [
+          { type: 'github', href: 'https://github.com/David7ce/app-launcher' },
+          { type: 'release', href: 'https://github.com/David7ce/app-launcher/releases' }
+        ]
+      },
+      {
+        name: '🧬 Autómatas Celulares',
+        description:
+          'Un sandbox de escritorio nativo para autómatas celulares tipo Life. El Juego de la Vida de Conway es una de las 21 reglas incluidas, y un único motor genérico de reglas nacimiento/supervivencia permite definir las tuyas. Las células vivas se guardan de forma dispersa en un plano acotado de 4096×4096.',
+        tech: 'Rust, egui / eframe',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
+      },
+      {
+        name: '🎼 Audio2Score MCP',
+        description:
+          'Convierte un archivo de audio grabado en una partitura editable (audio → MIDI → MusicXML), ya sea con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA. Cada paso escribe un archivo real, así que la transcripción automática se puede revisar o corregir antes de convertirse en partitura.',
+        tech: 'Python, basic-pitch, music21, MCP',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
+      },
+      {
+        name: '🔖 Bookmarks Report',
+        description:
+          'Compara los marcadores de un navegador basado en Chromium y de Firefox y escribe un único informe en Markdown. Lee directamente el JSON Bookmarks de Chromium y el places.sqlite de Firefox.',
+        tech: 'Python (solo biblioteca estándar)',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/bookmarks-report' }]
+      },
+      {
+        name: '📖 Read Rapide',
+        description:
+          'Una web de lectura rápida que muestra el texto palabra por palabra (RSVP) a velocidad fija o con aceleración progresiva, con resaltado opcional del punto de enfoque y carga de archivos .txt. La interfaz está en español e inglés.',
+        tech: 'React, TypeScript, Vite',
+        links: [
+          { type: 'site', href: 'https://david7ce.is-a.dev/read-rapide/' },
+          { type: 'github', href: 'https://github.com/David7ce/read-rapide' }
+        ]
+      },
+      {
+        name: '🐚 Shell Toolkit',
+        description:
+          'Un conjunto pequeño de scripts de shell para tareas cotidianas en Windows, macOS y Linux: un script nativo por shell (.sh y .ps1) más un menú interactivo, sin frameworks ni instalaciones adicionales.',
+        tech: 'Bash, PowerShell',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/shell-toolkit' }]
+      },
+      {
+        name: '🌙 Calculadora de Ciclos de Sueño',
+        description:
+          'Sugiere horas de acostarse o de despertarse alineadas con ciclos de sueño de 90 minutos. Una PWA instalable sin dependencias que funciona sin conexión tras la primera carga.',
+        tech: 'HTML, CSS, JavaScript',
+        links: [
+          { type: 'site', href: 'https://david7ce.is-a.dev/sleep-cycles-calc/' },
+          { type: 'github', href: 'https://github.com/David7ce/sleep-cycles-calc' }
+        ]
+      },
+      {
+        name: '🧰 Toolbox Installer (TUI)',
+        description:
+          'Una aplicación de terminal que detecta tu sistema operativo y gestor de paquetes, permite seleccionar varios paquetes y ejecuta las instalaciones. Usa las mismas listas de paquetes que la toolbox web de Interneto.',
+        tech: 'Python',
+        links: [{ type: 'github', href: 'https://github.com/interneto/tui-toolbox-installer' }]
+      },
+      {
+        name: '🌐 Traductor Multilenguaje',
+        description:
+          'Traduce texto a varios idiomas a la vez. Usa la API Translator integrada de Chrome cuando el navegador la tiene y, si no, recurre al endpoint público de Google Translate.',
+        tech: 'React, TypeScript',
+        status: 'Demo desplegada en GitHub Pages.',
+        links: [
+          { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
+          { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
+        ]
+      },
+      {
+        name: '📻 Oracle Radio',
+        description:
+          'Un prototipo mínimo que salta entre emisoras de radio por internet en directo, reproduce fragmentos y los transcribe. Las listas de emisoras vienen de la API abierta de radio-browser.info.',
+        tech: 'Python, Whisper, FFmpeg',
+        status: 'Prototipo v0.1 alpha.',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
+      },
+      {
+        name: '🗺️ Universal Map-Time Engine',
+        description:
+          'Un mapa estático que funciona solo en el navegador y que trata el calendario como una dimensión más. Cada "mundo" es una carpeta de archivos JSON y GeoJSON, así que añadir un mapa nuevo no requiere cambiar el motor.',
+        tech: 'TypeScript, Leaflet, OpenStreetMap',
+        links: [
+          { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
+          { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
+        ]
       }
     ]}
   />
