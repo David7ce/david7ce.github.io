@@ -362,6 +362,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Dotfiles para agentes de IA de programación: una carpeta .ai/ como fuente única de verdad, generada en el formato de configuración propio de cada herramienta (Claude Code, Codex, opencode, Cursor, Windsurf, GitHub Copilot CLI y MCP).'
             },
             tech: { en: 'JavaScript (Node CLI)', es: 'JavaScript (CLI de Node)' },
+            image: 'ai-config.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/ai-config' }]
           },
           {
@@ -388,6 +389,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Compara los marcadores de un navegador basado en Chromium y de Firefox y escribe un único informe en Markdown. Lee directamente el JSON Bookmarks de Chromium y el places.sqlite de Firefox.'
             },
             tech: { en: 'Python (standard library only)', es: 'Python (solo biblioteca estándar)' },
+            image: 'bookmarks-report.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/bookmarks-report' }]
           },
           {
@@ -398,6 +400,7 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Python, Whisper, FFmpeg',
             status: { en: 'v0.1 alpha prototype.', es: 'Prototipo v0.1 alpha.' },
+            image: 'oracle-radio.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
           },
           {
@@ -407,6 +410,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un conjunto pequeño de scripts de shell para tareas cotidianas en Windows, macOS y Linux: un script nativo por shell (.sh y .ps1) más un menú interactivo, sin frameworks ni instalaciones adicionales.'
             },
             tech: 'Bash, PowerShell',
+            image: 'shell-toolkit.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/shell-toolkit' }]
           },
           {
@@ -435,6 +439,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Una herramienta de línea de comandos que convierte las exportaciones JSON de RecipeSage en libros de recetas en PDF y en archivos Markdown compatibles con Obsidian.'
             },
             tech: 'TypeScript',
+            image: 'recipesage-converter.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/recipesage-converter' }]
           },
           {
