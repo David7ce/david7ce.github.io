@@ -35,7 +35,7 @@ Content lives in `src/data/`, so a change is made once and appears in both langu
 | `home.ts`, `about.ts` | Home and About texts |
 | `i18n.ts` | `Localized` type and the `t()` helper |
 
-Stack tools and projects are sorted alphabetically at render time in each language, so new entries can be added anywhere. Keep the names inside `skills.ts` groups alphabetical by hand.
+Stack tools and projects are sorted alphabetically at render time in each language, so new entries can be added anywhere. A project section can opt out with `manualOrder: true` in `projects.ts` (used for Professional Websites). Keep the names inside `skills.ts` groups alphabetical by hand.
 Page-to-page language links (`hreflang`) for the pages above are in `src/i18n/alternates.ts`.
 
 ## License

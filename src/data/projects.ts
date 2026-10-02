@@ -27,6 +27,8 @@ export interface ProjectSectionData {
   id: string
   title: Localized
   intro?: Localized
+  /** Keep the projects in the order written here instead of sorting them alphabetically. */
+  manualOrder?: boolean
   projects?: Project[]
   subsections?: ProjectSubsection[]
 }
@@ -36,21 +38,9 @@ export const projectsTitle: Localized = { en: 'Projects', es: 'Proyectos' }
 export const projectSections: ProjectSectionData[] = [
   {
     id: 'websites',
+    manualOrder: true,
     title: { en: 'Professional Websites', es: 'Sitios Web Profesionales' },
     projects: [
-      {
-        name: { en: '🌐 Professional websites with WP', es: '🌐 Sitios web profesionales con WP' },
-        description: {
-          en: 'Professional websites built with WordPress and Elementor.',
-          es: 'Sitios web profesionales construidos con WordPress y Elementor.'
-        },
-        links: [
-          { type: 'site', href: 'https://alpayoga.com/' },
-          { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
-          { type: 'site', href: 'https://www.grmabogados.es/' },
-          { type: 'site', href: 'https://salondebellezanais.com/' }
-        ]
-      },
       {
         name: {
           en: '🗺️ Tenerife Commerce Institutional Website: Entrepreneurship and Business Directory',
@@ -77,6 +67,20 @@ export const projectSections: ProjectSectionData[] = [
             href: { en: '/en/projects/tenerife-comercio', es: '/es/proyectos/tenerife-comercio' }
           }
         ]
+      },
+      {
+        name: { en: '🌐 Professional Websites With WP', es: '🌐 Sitios Web Profesionales Con WP' },
+        description: {
+          en: 'Professional websites built with WordPress and Elementor.',
+          es: 'Sitios web profesionales construidos con WordPress y Elementor.'
+        },
+        image: 'wordpress-elementor.jpg',
+        links: [
+          { type: 'site', href: 'https://alpayoga.com/' },
+          { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
+          { type: 'site', href: 'https://www.grmabogados.es/' },
+          { type: 'site', href: 'https://salondebellezanais.com/' }
+        ]
       }
     ]
   },
@@ -90,6 +94,7 @@ export const projectSections: ProjectSectionData[] = [
           en: 'A GitHub organization for media streaming apps, such as TV Multiview.',
           es: 'Una organización de GitHub para aplicaciones de streaming multimedia, como TV Multiview.'
         },
+        image: 'mediahub-org.jpg',
         links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
       },
       {
@@ -136,6 +141,7 @@ export const projectSections: ProjectSectionData[] = [
           en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
           es: 'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.'
         },
+        image: 'obsidian-pkm-vault.jpg',
         links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },
       {

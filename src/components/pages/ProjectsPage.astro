@@ -15,29 +15,34 @@ const collator = new Intl.Collator(lang, { sensitivity: 'base' })
 // Sort by the visible name, ignoring the leading emoji
 const sortKey = (name: string) => name.replace(/^[^\p{L}\p{N}]+/u, '')
 
-const localize = (projects: Project[]) =>
-  projects
-    .map(({ name, description, tech, status, links, image }) => ({
-      name: t(name, lang),
-      description: t(description, lang),
-      tech: tech && t(tech, lang),
-      status: status && t(status, lang),
-      links: links.map((link) => ({ ...link, href: t(link.href, lang) })),
-      image: image && t(image, lang)
-    }))
-    .sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))
-
-const sections = projectSections.map(({ id, title, intro, projects, subsections }) => ({
-  id,
-  title: t(title, lang),
-  intro: intro && t(intro, lang),
-  projects: projects && localize(projects),
-  subsections: subsections?.map((sub) => ({
-    id: sub.id,
-    title: t(sub.title, lang),
-    projects: localize(sub.projects)
+// Projects are sorted alphabetically unless the section asks to keep its written order
+const localize = (projects: Project[], manualOrder = false) => {
+  const items = projects.map(({ name, description, tech, status, links, image }) => ({
+    name: t(name, lang),
+    description: t(description, lang),
+    tech: tech && t(tech, lang),
+    status: status && t(status, lang),
+    links: links.map((link) => ({ ...link, href: t(link.href, lang) })),
+    image: image && t(image, lang)
   }))
-}))
+  return manualOrder
+    ? items
+    : items.sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))
+}
+
+const sections = projectSections.map(
+  ({ id, title, intro, manualOrder, projects, subsections }) => ({
+    id,
+    title: t(title, lang),
+    intro: intro && t(intro, lang),
+    projects: projects && localize(projects, manualOrder),
+    subsections: subsections?.map((sub) => ({
+      id: sub.id,
+      title: t(sub.title, lang),
+      projects: localize(sub.projects)
+    }))
+  })
+)
 
 const headings = sections.flatMap(({ id, title, subsections }) => [
   { depth: 2, slug: id, text: title },
