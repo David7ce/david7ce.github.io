@@ -44,6 +44,7 @@ const featuredProjects = projectSections
   .map(({ name, featured, links }) => ({
     // Featured projects may override the long page title; strip the leading emoji
     name: t(featured!.title ?? name, lang).replace(/^[^\p{L}\p{N}]+/u, ''),
+    kind: t(featured!.kind, lang),
     description: t(featured!.summary, lang),
     href: (links.find((link) => link.type === 'site') ?? links[0]).href
   }))
@@ -105,6 +106,7 @@ const featuredProjects = projectSections
               <a href={project.href} target='_blank' class='font-medium hover:underline'>
                 {project.name}
               </a>
+              <span class='ms-2 text-sm text-muted-foreground'>{project.kind}</span>
               <p class='text-muted-foreground'>{project.description}</p>
             </li>
           ))}

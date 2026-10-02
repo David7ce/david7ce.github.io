@@ -12,7 +12,7 @@ export interface Project {
   status?: Localized
   links: ProjectLink[]
   /** Shown on the home page, ordered by ascending rank. */
-  featured?: { rank: number; title?: Localized | string; summary: Localized }
+  featured?: { rank: number; title?: Localized | string; kind: Localized; summary: Localized }
 }
 
 export interface ProjectSubsection {
@@ -75,8 +75,9 @@ export const projectSections: ProjectSectionData[] = [
           es: 'Una web del "Cabildo de Tenerife", con información para Emprender con Empresas y con un mapa de los comercios de Tenerife.'
         },
         featured: {
-          rank: 1,
+          rank: 3,
           title: 'Tenerife Comercio',
+          kind: { en: 'Institutional website', es: 'Web institucional' },
           summary: {
             en: 'Institutional website of the Cabildo de Tenerife with guidance for starting a business and a map of local businesses.',
             es: 'Web institucional del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
@@ -146,7 +147,8 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
             featured: {
-              rank: 4,
+              rank: 7,
+              kind: { en: 'Web app', es: 'App web' },
               summary: {
                 en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
                 es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
@@ -226,7 +228,8 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.'
             },
             featured: {
-              rank: 2,
+              rank: 4,
+              kind: { en: 'Desktop app', es: 'App de escritorio' },
               summary: {
                 en: 'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
                 es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo, hecho con Tauri.'
@@ -244,6 +247,14 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un sandbox de escritorio nativo para autómatas celulares tipo Life. El Juego de la Vida de Conway es una de las 21 reglas incluidas, y un único motor genérico de reglas nacimiento/supervivencia permite definir las tuyas. Las células vivas se guardan de forma dispersa en un plano acotado de 4096×4096.'
             },
             tech: 'Rust, egui / eframe',
+            featured: {
+              rank: 5,
+              kind: { en: 'Desktop app', es: 'App de escritorio' },
+              summary: {
+                en: 'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
+                es: 'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.'
+              }
+            },
             links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
           }
         ]
@@ -269,7 +280,8 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Python, basic-pitch, music21, MCP',
             featured: {
-              rank: 3,
+              rank: 6,
+              kind: { en: 'CLI and MCP server', es: 'CLI y servidor MCP' },
               summary: {
                 en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
                 es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
@@ -376,6 +388,15 @@ export const projectSections: ProjectSectionData[] = [
           en: 'A web directory of internet links, plus a blog and a package-installer generator. An earlier PHP bookmark manager is archived.',
           es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes. Un gestor de marcadores anterior, en PHP, está archivado.'
         },
+        featured: {
+          rank: 1,
+          title: 'Interneto Project',
+          kind: { en: 'Web directory and blog', es: 'Directorio web y blog' },
+          summary: {
+            en: 'A web directory of internet links, plus a blog and a package-installer generator.',
+            es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes.'
+          }
+        },
         links: [
           { type: 'site', href: 'https://interneto.github.io/' },
           { type: 'github', href: 'https://github.com/interneto' }
@@ -397,6 +418,15 @@ export const projectSections: ProjectSectionData[] = [
         description: {
           en: 'A documentation wiki made with Obsidian + Quartz.',
           es: 'Una wiki de documentación hecha con Obsidian + Quartz.'
+        },
+        featured: {
+          rank: 2,
+          title: 'CompuWiki',
+          kind: { en: 'Documentation wiki', es: 'Wiki de documentación' },
+          summary: {
+            en: 'A computing documentation wiki made with Obsidian and Quartz; it also hosts the OS & Distro Directory.',
+            es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
+          }
         },
         links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
       },
