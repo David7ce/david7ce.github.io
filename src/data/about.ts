@@ -28,16 +28,17 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       publicProfile: 'Public Profile'
     },
     profile: [
-      'I am David Alonso (David7ce), a web developer by training. I completed a two-year degree in web application development and have taken additional courses. I speak Spanish and English, and this site is available in both.',
-      'I build small web apps, command-line and desktop tools and websites, and I write notes about what I learn along the way.'
+      'I am David Alonso (David7ce), a software and web developer by training. I completed a two-year degree in web application development and have taken additional courses. I speak Spanish and English, and this site is available in both.',
+      'I write HTML, CSS and JavaScript by hand and work in C#, Python and Java, with SQL (PostgreSQL, T-SQL) for data and Figma for web and interface design. More recently I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants.',
+      'I build websites, small web apps, and command-line and desktop tools, and I write notes about what I learn along the way.'
     ],
     interests: {
       intro: 'My interests have grown beyond web development towards:',
       items: [
         'Systems and computer architecture',
-        'Rust',
+        'Cross-platform apps with Rust and Dart',
         'Linux and free and open-source software',
-        'AI, developer tooling, APIs and integrations'
+        'AI, developer tooling, APIs and integrations (MCP)'
       ],
       outside:
         'Outside of software I am interested in electronics, physics, technical investigation and teaching.',
@@ -70,16 +71,17 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       publicProfile: 'Perfil público'
     },
     profile: [
-      'Soy David Alonso (David7ce), desarrollador web de formación. Completé un ciclo de dos años en desarrollo de aplicaciones web y he realizado cursos adicionales. Hablo español e inglés, y este sitio está disponible en ambos idiomas.',
-      'Construyo pequeñas aplicaciones web, herramientas de línea de comandos y de escritorio, y sitios web, y escribo notas sobre lo que voy aprendiendo.'
+      'Soy David Alonso (David7ce), desarrollador de software y web de formación. Completé un ciclo de dos años en desarrollo de aplicaciones web y he realizado cursos adicionales. Hablo español e inglés, y este sitio está disponible en ambos idiomas.',
+      'Escribo HTML, CSS y JavaScript a mano y trabajo con C#, Python y Java, con SQL (PostgreSQL, T-SQL) para los datos y Figma para el diseño web y de interfaces. Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA.',
+      'Construyo sitios web, pequeñas aplicaciones web y herramientas de línea de comandos y de escritorio, y escribo notas sobre lo que voy aprendiendo.'
     ],
     interests: {
       intro: 'Mis intereses han crecido más allá del desarrollo web hacia:',
       items: [
         'Sistemas y arquitectura de computadores',
-        'Rust',
+        'Aplicaciones multiplataforma con Rust y Dart',
         'Linux y el software libre y de código abierto',
-        'IA, herramientas de desarrollo, APIs e integraciones'
+        'IA, herramientas de desarrollo, APIs e integraciones (MCP)'
       ],
       outside:
         'Fuera del software me interesan la electrónica, la física, la investigación técnica y la enseñanza.',
