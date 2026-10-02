@@ -33,8 +33,6 @@ Files can also be synchronized via terminal commands:
 
 - [robocopy](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/robocopy). This is a Windows command that allows backups to be made between two directory paths.
 - [rsync](https://rsync.samba.org/). An open source utility that provides fast incremental file transfer, it is completely free to download.
-- cp. Linux command for copy files and directories.
-  ´cp [OPTION] filename destinationDirectory´. [Option]=-f,-h,-i,-n,-p,-r, --backup.
 
 ## File manager
 
@@ -48,19 +46,12 @@ File managers are the oldest and best known software for organizing all types of
 
 #### For Linux (Graphical)
 
-- [4 pane](https://www.4pane.co.uk/). 4Pane is a multi-pane, detailed-list file manager for Linux.
-- [Caja - Mate desktop](https://github.com/mate-desktop/caja)
-- [DDE file manager](https://www.deepin.org/en/original/dde-file-manager/)
-- [DMenu](https://tools.suckless.org/dmenu/)
 - [Dolphin - KDE](https://apps.kde.org/dolphin/). The most complete file manager of KDE Plasma desktop.
-- [Lfm - Katxi](https://inigo.katxi.org/devel/lfm/). File manager of Lfm.
 - [Files - GNOME](https://wiki.gnome.org/Apps/Files). File manager of GNOME.
 - [Nemo - Cinnamon](https://github.com/linuxmint/nemo). File manager of Cinnamon.
 - [Krusader](https://krusader.org/). Twin panel file management
 for your desktop.
 - [PCManFM](https://sourceforge.net/projects/pcmanfm/). An extremly fast and lightweight file manager which features tabbed browsing and user-friendly interface.
-- [Polo file manager](https://teejee2008.github.io/polo/). Polo is a modern, light-weight file manager for Linux with support for multiple panes and tabs; support for archives, and much more.
-- [Qtfm.eu](https://qtfm.eu/). Basic file manager for linux.
 - [XFCE Thunar](https://docs.xfce.org/xfce/thunar/start). Thunar is a modern file manager for the Xfce Desktop Environment.
 
 #### For Mac
@@ -68,9 +59,7 @@ for your desktop.
 - [Finder](https://support.apple.com/en-us/HT201732) the default apple manager on PC.
 - [Commander One](https://mac.eltima.com/file-manager.html). Free dual panel file manager for Mac
 - [ForLift 3](https://binarynights.com/). The most advanced dual pane file manager and file transfer client for macOS.
-- [HoudahSpot](https://www.houdah.com/houdahSpot/). HoudahSpot is an essential tool for professionals and power users who work with thousands of files. HoudahSpot picks the needles out of the proverbial haystack.
 - [Path finder](https://www.cocoatech.io/).
-- [Transmit](https://panic.com/transmit/). A macOS file transfer app, upload, download and manage files on tons of servers with an easy, familiar, and powerful UI.
 
 #### For Windows
 
@@ -88,13 +77,11 @@ for your desktop.
 
 #### For Linux (CLI)
 
-- [Cfiles](https://github.com/mananapr/cfiles). A ncurses file manager written in C with vim like keybindings.
 - [Lf](https://github.com/gokcehan/lf). Terminal file manager written in Go with a heavy inspiration from ranger file manager.
 - [Midnight Commander](https://midnight-commander.org/). GNU Midnight Commander is a free cross-platform orthodox file manager.
 - [nnn](https://github.com/jarun/nnn). The unorthodox terminal file manager with many features.
 - [ranger](https://ranger.github.io/). ranger is a console file manager with VI key bindings.
 - [Vfim.info](https://vifm.info/). Vifm is a file manager with curses interface, which provides Vim-like environment for managing objects within file systems, extended with some useful ideas from mutt.
-- WCM Commander. Open source file manager orthodox file manager.
 
 #### For Windows (CLI)
 
@@ -106,19 +93,12 @@ The library managers have a general use for categorizing and displaying almost a
 
 - [Adobe Bridge](https://www.adobe.com/products/bridge.html). Adobe Bridge is a powerful creative asset manager that allows you to preview, organize, edit and publish multiple creative assets quickly and easily. Edit metadata. Add keywords, tags, and ratings to assets. Organize assets using collections and find assets using powerful filters and advanced metadata search capabilities. Optimal for the Adobe suite, but requires an account and is paid monthly.
 - [Eagle.cool](https://eagle.cool/). The best file manager focused for designers with images but with an expandable use to all types of files. The user interface is very elegant and well designed, visually there are two side panels with information and in the middle the file list.
-   	- In the left panel is the structural part, with three blocks:
-		1. General tagging with 7 sections ("All, Uncategorized, Untagged, Untagged, Recent, Shuffle, Tag manager, Trash".
-		2. Smart folders and folder shortcuts.
-		3. Folder tree listing.
-		4. Folder encryption with password.
-   	- In the right panel you can find the metadata associated to each file (thumbnail, similar color, file name, tagging, notes, url, folders, properties (score, dimensions, duration, size, type, creation date and modification date).
-   	- The central part shows the file list that allows to find files by filters, multiple sorting options and button to perform actions for a set of tagging files. Files can be sorted according to customizable filters and it has multiple types of file view on screen.
    	- The downside is that it is paid and only supports two devices. And its storage library is only visible with the associated info by Eagle.
 
 ### Online manager
 
-- DAM managers: [Digitile.io](https://digitile.io/), [Damion](https://daminion.net/), [Canto](https://www.canto.com/), [Infinity](https://startinfinity.com/), [Tagbox.io](https://www.tagbox.io/), [Taglery](https://taglery.com/).
-- Cloud managers: [Dropbox](https://www.dropbox.com/), [Google Drive](https://www.google.com/drive/), [MEGA](https://mega.io/), [Nexcloud](https://nextcloud.com/), [pCloud.com](https://www.pcloud.com/eu), [Sync.com](https://www.sync.com/).
+- DAM managers: [Daminion](https://daminion.net/), [Canto](https://www.canto.com/), [Tagbox.io](https://www.tagbox.io/).
+- Cloud managers: [Dropbox](https://www.dropbox.com/), [Google Drive](https://www.google.com/drive/), [MEGA](https://mega.io/), [Nextcloud](https://nextcloud.com/).
 - Chats with file managers:  [Discord](https://discord.com/), [Telegram](https://telegram.org/), [WhatsApp](https://www.whatsapp.com/),
 - Online content managers: meta search engines (Google, DuckDckGo, Bing), audio (Spotify), image (Pixabay), text (Openlibrary), video (YouTube, Odysee, Vimeo) platforms.
 - Project managers: [Notion.so](https://www.notion.so)
@@ -134,23 +114,16 @@ All of the audio managers listed below are free.
 - [MusicBee](https://getmusicbee.com/). The best Windows music player, highly customizable, with metadata editing and additional song information.
 - [MusicBrainz Picard](https://musicbrainz.org/). Self-tagging app with music song metadata (artists, albums, composers, etc).
 - [Foobar2000](https://www.foobar2000.org/). An old known music player that allows to organize audio files in Windows.
-- [AIMP](https://www.aimp.ru/). Audio manager with a renewed and light interface.
-- [Audacious](https://audacious-media-player.org/). Lightweight, cross-platform and open source audio manager.
 - [Strawberry music player](https://www.strawberrymusicplayer.org/). A lightweight, cross-platform, open source music player.
 
 ### Image manager (gallery)
 
 Image managers are usually image galleries with additional options.
 
-- [ACDSEE Photo Studio Home](https://www.acdsee.com/en/products/photo-studio-home/). Digital Asset Manager (DAM) for a fee ($90 per year). Includes:
-   	- "Multimedia" mode, which saves time and allows you to interact directly with the ACDSee photo database.
-   	- "People" mode, an AI engine that seamlessly places a name to a face. A vibrant and colorful perspective awaits you with Home 2022's enhancements to Tone Curves and support for higher ISOs.
-- [Alussion](https://allusion-app.github.io/). Tool built for artists, aimed at helping you organize your visual library. A single place that contains your entire collection of reference, inspiration and any other type of images.
 - [Digikam](https://www.digikam.org/). App to manage photos, with face recognition and image tagging.
 - [KPhotoAlbum](https://www.kphotoalbum.org/). KDE image manager with tagging system.
 - [LibrePhotos](https://github.com/LibrePhotos/librephotos). Self-hosted open source photo management service, oriented for Docker installation.
 - [Photoprism](https://photoprism.app/). Similar to LibrePhotos uses an AI to browse, organize and share your photo collection. Features tagging system and can be used on local, private server or in the cloud. Oriented for Docker installation.
-- [Photoview](https://photoview.github.io/). Photo gallery for personal servers.
 - [Xnview MP](https://www.xnview.com/en/xnviewmp/). Image manager with integrated gallery and photo editing.
 
 ### Text manager
@@ -165,12 +138,8 @@ They allow you to view entire directories with all their files and edit the code
 - [VSCodium](https://vscodium.com/). A Visual Studio but open source and without sending data in the background.
 - [Notepad++](https://notepad-plus-plus.org/). Famous free editor, lightweight and simple.
 - [Sublime Text](https://www.sublimetext.com/). Paid text editor but can be used for free for life.
-- [Netbeans](https://netbeans.apache.org/). Famous Apache IDE oriented to java, php, html.
 - [Emacs](https://www.gnu.org/software/emacs/). Cross-platform text editor.
 - [NeoVim](https://neovim.io/). Editor of the famous Vim but with renewed environment.
-- [Atom.io](https://atom.io/). GitHub oriented editor with Git.
-- [KDevelop](https://www.kdevelop.org/). KDE community editor.
-- [Eclipse.org](https://www.eclipse.org/). Oriented editor for C++.
 - [IntelliJ IDEA](https://www.jetbrains.com/idea/). Paid IntelliJ editor, with a nice interface.
 
 #### Notes manager
@@ -183,10 +152,8 @@ The markdown (md) format editors are very useful for managing information and ex
 
 ### Video manager
 
-There are few apps that are dedicated exclusively to video management, as it is usually included in file managers, gallery or library managers. And the few that there are are focused on pornography, although this use is simply optional.
+There are few apps that are dedicated exclusively to video management, as it is usually included in file managers, gallery or library managers.
 
-- [Porn Vault](https://gitlab.com/porn-vault/porn-vault). It is a cross-platform image and video manager focused on pornography, but it can be used for any type of videos. It allows tagging, adding additional information such as the person appearing, the studio, rating.
-- [Stash](https://stashapp.cc/). Rate your scenes and images, and tag them with performers, labels, movies and studios. Sort your content with a variety of filtering and sorting options. Stash also allows you to get metadata from file names and has a small built-in video editor. The software is free, open source and proprietary, the program runs on a private local network visible through the browser and allows password encryption.
 - [Vide Hub App](https://videohubapp.com/en/). It is a free video manager with an interface that displays several thumbnails and references of the added videos.
 
 ### Formats manager for mobile

@@ -62,9 +62,8 @@ En todas estas capas ha surgido una gran comunidad de desarrolladores, recopilad
 
 #### 📺 Recursos públicos de IPTV
 
-- **Listados de IPTV:** [iptv-org](https://iptv-org.github.io/), [Free-TV/IPTV](https://github.com/Free-TV/IPTV)
+- **Listados de IPTV:** [iptv-org](https://iptv-org.github.io/), [Free-TV/IPTV](https://github.com/Free-TV/IPTV), [TDTChannels](https://www.tdtchannels.com/)
 - **EPG (guías electrónicas de programación):** [globetvapp/epg](https://github.com/globetvapp/epg), [IPTV-EPG.org](https://iptv-epg.org/), [David Muma EPG](https://davidmuma.github.io/EPG/), [Open EPG](https://www.open-epg.com/app/index.php)
-- **Portales web/reproductores en el navegador:** [WatchIPTV.xyz](https://watchiptv.xyz), [Worlds TV](https://worldstvmobile.com/category/sports), [TV Garden](https://tv.garden/), [TDTChannels](https://www.tdtchannels.com/)
 
 #### 📱 Clientes de IPTV
 
