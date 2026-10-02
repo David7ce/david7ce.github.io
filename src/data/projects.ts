@@ -12,7 +12,7 @@ export interface Project {
   status?: Localized
   links: ProjectLink[]
   /** File name in src/assets/projects/, shown faded behind the card. */
-  image?: string
+  image?: Localized | string
   /** Shown on the home page, ordered by ascending rank. */
   featured?: { rank: number; title?: Localized | string; kind: Localized; summary: Localized }
 }
@@ -98,6 +98,92 @@ export const projectSections: ProjectSectionData[] = [
     ]
   },
   {
+    id: 'involved',
+    title: { en: 'Involved Projects', es: 'Proyectos Involucrados' },
+    projects: [
+      {
+        name: '🎬 MediaHub Org',
+        description: {
+          en: 'A GitHub organization for media streaming apps, such as TV Multiview.',
+          es: 'Una organización de GitHub para aplicaciones de streaming multimedia, como TV Multiview.'
+        },
+        links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
+      },
+      {
+        name: '🏛️ Arksys OS',
+        description: {
+          en: 'Arksys is an Arch-based Linux with KDE as the desktop: an ArchISO profile, a Calamares installer configuration and post-install scripts.',
+          es: 'Arksys es un Linux basado en Arch con KDE como escritorio: un perfil de ArchISO, una configuración del instalador Calamares y scripts de post-instalación.'
+        },
+        tech: 'Shell, ArchISO, Calamares',
+        status: {
+          en: 'Personal project; its README recommends established Arch-based distros for a stable setup.',
+          es: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.'
+        },
+        links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
+      },
+      {
+        name: { en: '🔗 Interneto Project', es: '🔗 Proyecto Interneto' },
+        description: {
+          en: 'A web directory of internet links, plus a blog and a package-installer generator. An earlier PHP bookmark manager is archived.',
+          es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes. Un gestor de marcadores anterior, en PHP, está archivado.'
+        },
+        featured: {
+          rank: 1,
+          title: 'Interneto Project',
+          kind: { en: 'Web directory and blog', es: 'Directorio web y blog' },
+          summary: {
+            en: 'A web directory of internet links, plus a blog and a package-installer generator.',
+            es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes.'
+          }
+        },
+        image: 'interneto.jpg',
+        links: [
+          { type: 'site', href: 'https://interneto.github.io/' },
+          { type: 'github', href: 'https://github.com/interneto' }
+        ]
+      },
+      {
+        name: {
+          en: '🧠 Obsidian PKM Vault',
+          es: '🧠 Obsidian PKM Vault'
+        },
+        description: {
+          en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
+          es: 'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.'
+        },
+        links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
+      },
+      {
+        name: { en: '📚 Wiki of Computing', es: '📚 Wiki de Computación' },
+        description: {
+          en: 'A documentation wiki made with Obsidian + Quartz.',
+          es: 'Una wiki de documentación hecha con Obsidian + Quartz.'
+        },
+        featured: {
+          rank: 2,
+          title: 'CompuWiki',
+          kind: { en: 'Documentation wiki', es: 'Wiki de documentación' },
+          summary: {
+            en: 'A computing documentation wiki made with Obsidian and Quartz; it also hosts the OS & Distro Directory.',
+            es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
+          }
+        },
+        image: 'compuwiki.jpg',
+        links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
+      },
+      {
+        name: { en: '🌱 Wiki of Cosmology', es: '🌱 Wiki de Cosmología' },
+        description: {
+          en: 'A cosmological wiki using Obsidian.md with the Digital Garden plugin.',
+          es: 'Una wiki de cosmología hecha con Obsidian.md y el plugin Digital Garden.'
+        },
+        image: 'wiki-cosmology.jpg',
+        links: [{ type: 'doc', href: 'https://wikiterra.github.io/' }]
+      }
+    ]
+  },
+  {
     id: 'small-apps',
     title: { en: 'Small Apps', es: 'Apps Pequeñas' },
     intro: {
@@ -132,7 +218,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Una web de lectura rápida que muestra el texto palabra por palabra (RSVP) a velocidad fija o con aceleración progresiva, con resaltado opcional del punto de enfoque y carga de archivos .txt. La interfaz está en español e inglés.'
             },
             tech: 'React, TypeScript, Vite',
-            image: 'read-rapide.jpg',
+            image: { en: 'read-rapide-en.jpg', es: 'read-rapide-es.jpg' },
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/read-rapide/' },
               { type: 'github', href: 'https://github.com/David7ce/read-rapide' }
@@ -158,6 +244,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un mapa estático que funciona solo en el navegador y que trata el calendario como una dimensión más. Cada "mundo" es una carpeta de archivos JSON y GeoJSON, así que añadir un mapa nuevo no requiere cambiar el motor.'
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
+            image: 'universal-map.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
               { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
@@ -209,6 +296,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Mira varios canales de televisión en una sola pantalla.'
             },
             tech: 'JavaScript',
+            image: 'tv-multiview.jpg',
             links: [
               { type: 'site', href: 'https://mediahub-org.github.io/tv-multiview/' },
               { type: 'github', href: 'https://github.com/mediahub-org/tv-multiview' }
@@ -354,92 +442,6 @@ export const projectSections: ProjectSectionData[] = [
             links: [{ type: 'github', href: 'https://github.com/arksys-os/affinity-on-linux' }]
           }
         ]
-      }
-    ]
-  },
-  {
-    id: 'involved',
-    title: { en: 'Involved Projects', es: 'Proyectos Involucrados' },
-    projects: [
-      {
-        name: '🎬 MediaHub Org',
-        description: {
-          en: 'A GitHub organization for media streaming apps, such as TV Multiview.',
-          es: 'Una organización de GitHub para aplicaciones de streaming multimedia, como TV Multiview.'
-        },
-        links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
-      },
-      {
-        name: '🏛️ Arksys OS',
-        description: {
-          en: 'Arksys is an Arch-based Linux with KDE as the desktop: an ArchISO profile, a Calamares installer configuration and post-install scripts.',
-          es: 'Arksys es un Linux basado en Arch con KDE como escritorio: un perfil de ArchISO, una configuración del instalador Calamares y scripts de post-instalación.'
-        },
-        tech: 'Shell, ArchISO, Calamares',
-        status: {
-          en: 'Personal project; its README recommends established Arch-based distros for a stable setup.',
-          es: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.'
-        },
-        links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
-      },
-      {
-        name: { en: '🔗 Interneto Project', es: '🔗 Proyecto Interneto' },
-        description: {
-          en: 'A web directory of internet links, plus a blog and a package-installer generator. An earlier PHP bookmark manager is archived.',
-          es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes. Un gestor de marcadores anterior, en PHP, está archivado.'
-        },
-        featured: {
-          rank: 1,
-          title: 'Interneto Project',
-          kind: { en: 'Web directory and blog', es: 'Directorio web y blog' },
-          summary: {
-            en: 'A web directory of internet links, plus a blog and a package-installer generator.',
-            es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes.'
-          }
-        },
-        image: 'interneto.jpg',
-        links: [
-          { type: 'site', href: 'https://interneto.github.io/' },
-          { type: 'github', href: 'https://github.com/interneto' }
-        ]
-      },
-      {
-        name: {
-          en: '🧠 Obsidian PKM Vault',
-          es: '🧠 Obsidian PKM Vault'
-        },
-        description: {
-          en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
-          es: 'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.'
-        },
-        links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
-      },
-      {
-        name: { en: '📚 Wiki of Computing', es: '📚 Wiki de Computación' },
-        description: {
-          en: 'A documentation wiki made with Obsidian + Quartz.',
-          es: 'Una wiki de documentación hecha con Obsidian + Quartz.'
-        },
-        featured: {
-          rank: 2,
-          title: 'CompuWiki',
-          kind: { en: 'Documentation wiki', es: 'Wiki de documentación' },
-          summary: {
-            en: 'A computing documentation wiki made with Obsidian and Quartz; it also hosts the OS & Distro Directory.',
-            es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
-          }
-        },
-        image: 'compuwiki.jpg',
-        links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
-      },
-      {
-        name: { en: '🌱 Wiki of Cosmology', es: '🌱 Wiki de Cosmología' },
-        description: {
-          en: 'A cosmological wiki using Obsidian.md with the Digital Garden plugin.',
-          es: 'Una wiki de cosmología hecha con Obsidian.md y el plugin Digital Garden.'
-        },
-        image: 'wiki-cosmology.jpg',
-        links: [{ type: 'doc', href: 'https://wikiterra.github.io/' }]
       }
     ]
   }
