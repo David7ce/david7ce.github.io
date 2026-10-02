@@ -284,6 +284,10 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Python',
             image: 'llm-pricing.jpg',
+            status: {
+              en: 'Fork of sanand0/llmpricing (MIT), with my changes.',
+              es: 'Fork de sanand0/llmpricing (MIT), con mis cambios.'
+            },
             links: [
               { type: 'site', href: 'https://interneto.github.io/llm-pricing/' },
               { type: 'github', href: 'https://github.com/interneto/llm-pricing' }
@@ -297,6 +301,10 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'JavaScript',
             image: 'tv-multiview.jpg',
+            status: {
+              en: 'Fork of Alplox/teles (MIT), with added features.',
+              es: 'Fork de Alplox/teles (MIT), con funciones añadidas.'
+            },
             links: [
               { type: 'site', href: 'https://mediahub-org.github.io/tv-multiview/' },
               { type: 'github', href: 'https://github.com/mediahub-org/tv-multiview' }
@@ -446,6 +454,10 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'TypeScript',
             image: 'slidr.jpg',
+            status: {
+              en: 'Fork of UitbreidenOS/Slidr, with my fixes and additions.',
+              es: 'Fork de UitbreidenOS/Slidr, con mis correcciones y añadidos.'
+            },
             links: [{ type: 'github', href: 'https://github.com/David7ce/Slidr' }]
           },
           {

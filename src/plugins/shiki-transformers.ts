@@ -24,7 +24,8 @@ export const updateStyle = (): ShikiTransformer => {
   return {
     name: 'shiki-transformer-update-style',
     pre(node) {
-      const container = h('pre', node.children)
+      // tabindex: the block can scroll horizontally, so keyboard users must be able to focus it
+      const container = h('pre', { tabindex: '0' }, node.children)
       node.children = [container]
       node.tagName = 'div'
     }
@@ -100,6 +101,8 @@ export const addCopyButton = (timeout?: number): ShikiTransformer => {
       const button = h(
         'button',
         {
+          type: 'button',
+          'aria-label': 'Copy code',
           class: 'copy text-muted-foreground p-1 box-content border rounded bg-primary-foreground',
           'data-code': this.source,
           onclick: `

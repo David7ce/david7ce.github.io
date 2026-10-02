@@ -54,6 +54,9 @@ const htmlLang = lang === 'es' ? (esConfig.locale?.lang ?? 'es-ES') : config.loc
       document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('toc-heading h2')?.replaceChildren('CONTENIDO')
         document.getElementById('to-top-btn')?.setAttribute('aria-label', 'Volver arriba')
+        document
+          .querySelectorAll('button.copy')
+          .forEach((button) => button.setAttribute('aria-label', 'Copiar código'))
       })
     </script>}
 

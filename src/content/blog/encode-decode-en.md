@@ -2,44 +2,70 @@
 title: 'Encode / Decode'
 slug: encode-decode
 translationKey: encode-decode
-description: 'The base of computing is encoding/decoding.'
+description: 'What encoding and decoding are, the formats you meet every day (UTF-8, Base64, URL encoding) and how to convert between them.'
 publishDate: 2023-10-26
-updatedDate: 2023-10-26
-tags: ['Computing']
+updatedDate: 2026-10-02
+tags: ['Computing', 'Software']
 heroImage: { src: './thumbnails/encode-decode.jpg', color: '#4891B2' }
 language: en
 ---
 
-## The Significance of Encoding/Decoding
+## What encoding means
 
-At the core of computing, communication, and even biology lies the fundamental concept of encoding and decoding. This process involves the transformation of information from one form to another, facilitating the exchange and manipulation of data. Whether it's translating binary code into meaningful instructions for a computer or deciphering genetic information within a cell, encoding and decoding play a pivotal role in myriad systems.
+**Encoding** turns information into a format that can be stored or transmitted, and **decoding** turns it back. The idea is everywhere: Morse code encodes letters, a barcode encodes a number, and even DNA encodes proteins in three-letter groups that cells decode. In computing everything ends up as bytes, and an encoding is simply the agreement about what those bytes mean.
 
-### Computing: Translating Data into Actionable Instructions
+## Encoding, encryption and hashing are not the same
 
-In the realm of computing, encoding and decoding are fundamental processes that underpin the execution of tasks and the operation of software and hardware systems. At its simplest form, encoding refers to the representation of data in a specific format, while decoding involves the extraction and interpretation of this data.
+| Type | Purpose | Reversible? | Needs a key? | Examples |
+| --- | --- | --- | --- | --- |
+| **Encoding** | Represent data in a format | Yes | No | UTF-8, Base64, URL encoding |
+| **Encryption** | Keep data secret | Yes, with the key | Yes | AES, GPG (see [Encrypt easy with Password Manager](/en/post/easy-encryption)) |
+| **Hashing** | Fingerprint data, check integrity | No | No | SHA-256 |
 
-#### Example: Binary Encoding in Computers
+The most common mistake is treating an encoding as protection: **anyone can decode Base64**, so it hides nothing.
 
-Computers rely on binary encoding, where data is represented using a series of 0s and 1s. This binary code encodes instructions, characters, and other forms of data, which are then decoded by the computer's processor to perform various operations.
+## Formats you meet every day
 
-### Communication: Facilitating Information Exchange
+- **UTF-8** is how text becomes bytes. A letter takes one to four bytes: `A` is `41`, `é` is `C3 A9`, `€` is `E2 82 AC` and `😀` is `F0 9F 98 80`. Read those bytes with the wrong encoding and you get the classic garbled text: `café` shown as `cafÃ©`.
+- **Base64** carries binary data inside plain text (e-mail attachments, `data:` URLs, JSON, tokens). Every 3 bytes become 4 printable characters, so the result is about a third bigger. `Hello` becomes `SGVsbG8=`.
+- **URL (percent) encoding** replaces unsafe characters with `%` and the byte in hexadecimal: `café & té` becomes `caf%C3%A9%20%26%20t%C3%A9`.
+- **Hexadecimal and binary** are just other ways to write bytes: `Hi` is `48 69` in hex and `01001000 01101001` in binary.
 
-In communication systems, encoding and decoding enable the transmission and reception of information between different entities. Whether it's sending messages over a network or encoding audiovisual signals for broadcasting, these processes ensure the efficient exchange of data.
+## Try it yourself
 
-#### Example: Digital Modulation in Telecommunications
+In a Linux or macOS terminal:
 
-In telecommunications, digital modulation techniques encode analog signals into digital formats for transmission over communication channels. Upon reception, these digital signals are decoded back into their original analog form, enabling clear and reliable communication.
+```bash
+echo -n "Hello" | base64        # SGVsbG8=
+echo "SGVsbG8=" | base64 -d     # Hello
+```
 
-### Biology: Encoding Genetic Information
+In PowerShell:
 
-Even in biological systems, encoding and decoding mechanisms are prevalent, facilitating the storage and expression of genetic information. The genetic code, encoded within DNA molecules, dictates the synthesis of proteins and ultimately governs the functioning of living organisms.
+```powershell
+[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("Hello"))
+# SGVsbG8=
+[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String("SGVsbG8="))
+# Hello
+```
 
-#### Example: Genetic Encoding in Cells
+In Python:
 
-Within cells, DNA serves as the repository of genetic information, encoding the instructions for protein synthesis. Through processes such as transcription and translation, this genetic code is decoded into functional proteins, which carry out essential biological functions.
+```python
+import base64, urllib.parse
 
-## Conclusion
+base64.b64encode("café".encode("utf-8")).decode()   # 'Y2Fmw6k='
+urllib.parse.quote("café & té")                      # 'caf%C3%A9%20%26%20t%C3%A9'
+```
 
-In essence, the concept of encoding and decoding transcends disciplinary boundaries, forming the basis of numerous systems and processes across various domains. From the execution of computer programs to the transmission of signals in communication networks, and even the expression of genetic traits in living organisms, the ability to encode and decode information is fundamental to our understanding of the world around us.
+To experiment without writing code, [CyberChef](https://gchq.github.io/CyberChef/) runs in the browser and chains many encodings and decodings.
 
-By recognizing the significance of encoding and decoding, we gain insight into the intricate mechanisms that govern the exchange and transformation of data and energy, underscoring their importance in shaping our technological advancements and biological intricacies alike.
+## Common mistakes
+
+- **Using Base64 as encryption.** It is reversible by anyone; use real encryption if the data is secret.
+- **Encoding twice.** A `%20` that gets encoded again becomes `%2520`.
+- **Not stating the encoding.** Save files as UTF-8, declare `<meta charset="utf-8">` in web pages and, in Python, open text files with `encoding="utf-8"` instead of relying on the system default (on Windows it is often a legacy code page).
+
+## In short
+
+Encoding is only a format agreement: it makes data portable, not secret. Knowing which one you are looking at (UTF-8, Base64, percent-encoding, hex) is most of the work when something looks garbled.
