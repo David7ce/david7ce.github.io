@@ -26,7 +26,9 @@ const backLabel = useTranslations(getLangFromUrl(Astro.url))('common.back')
 ---
 
 <PageLayout meta={{ title, description, ogImage: socialImage }}>
-  <Button title={backLabel} href={back ?? '/'} style='back' />
+  <nav aria-label={backLabel}>
+    <Button title={backLabel} href={back ?? '/'} style='back' />
+  </nav>
   <main class='mt-6 items-start gap-x-10 md:flex lg:mt-10'>
     {!!headings.length && (
       <TOC

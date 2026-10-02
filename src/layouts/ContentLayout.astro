@@ -19,7 +19,9 @@ const backLabel = useTranslations(getLangFromUrl(Astro.url))('common.back')
 ---
 
 <PageLayout {meta} {highlightColor} {...props}>
-  <Button title={backLabel} href={back} style='back' />
+  <nav aria-label={backLabel}>
+    <Button title={backLabel} href={back} style='back' />
+  </nav>
   <main class='mt-6 items-start gap-x-10 md:flex'>
     {/* Sidebar */}
     <aside
