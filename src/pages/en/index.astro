@@ -20,6 +20,7 @@ import config from '../../site.config'
 const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
 const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
 const programming = ['C#', 'JavaScript / TypeScript']
+const cms = ['Joomla', 'WordPress']
 const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
 const web_servers_platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
@@ -155,6 +156,7 @@ const allPostsByDate = sortMDByDate(englishPosts).slice(0, MAX_POSTS)
         <SkillLayout title='Styling' skills={styling} />
         <SkillLayout title='Programming' skills={programming} />
         <SkillLayout title='Web Library' skills={web_library} />
+        <SkillLayout title='CMS' skills={cms} />
         <SkillLayout title='Web Servers & Cloud Platforms' skills={web_servers_platforms} />
       </Section>
     </div>

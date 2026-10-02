@@ -1,7 +1,8 @@
 {
-  "name": "astro-theme-pure",
+  "name": "david7ce-github-io",
   "type": "module",
-  "version": "4.0.8",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.7.1",
   "scripts": {
     "dev": "astro dev",
     "dev:check": "astro check --watch & astro dev",
