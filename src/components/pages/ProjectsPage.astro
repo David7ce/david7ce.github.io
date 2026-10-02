@@ -1,8 +1,9 @@
 ---
-import ProjectSection from '@/components/projects/ProjectSection.astro'
-import PageLayout from '@/layouts/CommonPage.astro'
-import { projectSections, projectsTitle } from '@/data/projects'
 import { t, type Lang } from '@/data/i18n'
+import { projectSections, projectsTitle } from '@/data/projects'
+
+import PageLayout from '@/layouts/CommonPage.astro'
+import ProjectSection from '@/components/projects/ProjectSection.astro'
 
 interface Props {
   lang: Lang
@@ -34,13 +35,11 @@ const headings = sections.map(({ id, title }) => ({ depth: 2, slug: id, text: ti
 ---
 
 <PageLayout title={t(projectsTitle, lang)} {headings} info={{ slug, hideComment: true }}>
-  {
-    sections.map(({ id, title, intro, projects }) => (
-      <>
-        <h2 id={id}>{title}</h2>
-        {intro && <p>{intro}</p>}
-        <ProjectSection project={projects} />
-      </>
-    ))
-  }
+  {sections.map(({ id, title, intro, projects }) => (
+    <>
+      <h2 id={id}>{title}</h2>
+      {intro && <p>{intro}</p>}
+      <ProjectSection project={projects} />
+    </>
+  ))}
 </PageLayout>

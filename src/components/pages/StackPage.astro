@@ -1,8 +1,9 @@
 ---
-import ToolSection from '@/components/about/ToolSection.astro'
-import PageLayout from '@/layouts/CommonPage.astro'
-import { stackIntro, stackSections, stackTitle } from '@/data/stack'
 import { t, type Lang } from '@/data/i18n'
+import { stackIntro, stackSections, stackTitle } from '@/data/stack'
+
+import PageLayout from '@/layouts/CommonPage.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
 
 interface Props {
   lang: Lang
@@ -22,19 +23,17 @@ const headings = stackSections.map(({ id, title }) => ({
     <p class='mb-4 text-lg text-gray-700 dark:text-gray-300'>{t(stackIntro, lang)}</p>
   </div>
 
-  {
-    stackSections.map(({ id, title, tools }) => (
-      <div id={id}>
-        <ToolSection
-          class='mb-5'
-          title={t(title, lang)}
-          tools={tools.map((tool) => ({
-            ...tool,
-            description: t(tool.description, lang),
-            href: t(tool.href, lang)
-          }))}
-        />
-      </div>
-    ))
-  }
+  {stackSections.map(({ id, title, tools }) => (
+    <div id={id}>
+      <ToolSection
+        class='mb-5'
+        title={t(title, lang)}
+        tools={tools.map((tool) => ({
+          ...tool,
+          description: t(tool.description, lang),
+          href: t(tool.href, lang)
+        }))}
+      />
+    </div>
+  ))}
 </PageLayout>

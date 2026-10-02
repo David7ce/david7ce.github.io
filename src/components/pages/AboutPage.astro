@@ -1,0 +1,66 @@
+---
+import { aboutCopy, publicProfiles } from '@/data/about'
+import { t, type Lang } from '@/data/i18n'
+import { skillGroups } from '@/data/skills'
+
+import PageLayout from '@/layouts/CommonPage.astro'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = aboutCopy[lang]
+const { headings: h, interests, technologies, routes } = copy
+
+const headings = [
+  { depth: 2, slug: 'who-am-i', text: h.profile },
+  { depth: 2, slug: 'interests', text: h.interests },
+  { depth: 2, slug: 'tools', text: h.technologies },
+  { depth: 2, slug: 'public-profile', text: h.publicProfile }
+]
+
+const [pointerStart, pointerProjects, pointerMid, pointerBlog, pointerEnd] = interests.pointers
+const [stackBefore, stackLabel, stackAfter] = technologies.stackNote
+---
+
+<PageLayout title={copy.title} {headings} info={{ slug: routes.slug, hideComment: true }}>
+  <h2 id='who-am-i'>{h.profile}</h2>
+  {copy.profile.map((paragraph) => (
+    <p>{paragraph}</p>
+  ))}
+
+  <h2 id='interests'>{h.interests}</h2>
+  <p>{interests.intro}</p>
+  <ul>
+    {interests.items.map((item) => (
+      <li>{item}</li>
+    ))}
+  </ul>
+  <p>{interests.outside}</p>
+  <!-- prettier-ignore -->
+  <p>{pointerStart}<a href={routes.projects}>{pointerProjects}</a>{pointerMid}<a href={routes.blog}>{pointerBlog}</a>{pointerEnd}</p>
+
+  <h2 id='tools'>{h.technologies}</h2>
+  <p>{technologies.intro}</p>
+  <ul>
+    {skillGroups.map(({ title, skills }) => (
+      <li>
+        <strong>{t(title, lang)}</strong>: {skills.join(', ')}
+      </li>
+    ))}
+  </ul>
+  <!-- prettier-ignore -->
+  <p>{stackBefore}<a href={routes.stack}>{stackLabel}</a>{stackAfter}</p>
+
+  <h2 id='public-profile'>🔗 {h.publicProfile}</h2>
+  <ul>
+    {publicProfiles.map(({ label, href }) => (
+      <li>
+        <a href={href} target='_blank'>
+          {label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</PageLayout>

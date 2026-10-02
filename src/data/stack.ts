@@ -89,7 +89,10 @@ export const stackSections: StackSection[] = [
       {
         name: 'Firefox',
         description: { en: 'Privacy Browser', es: 'Navegador centrado en privacidad' },
-        href: { en: 'https://www.mozilla.org/en-US/firefox', es: 'https://www.mozilla.org/es-ES/firefox' },
+        href: {
+          en: 'https://www.mozilla.org/en-US/firefox',
+          es: 'https://www.mozilla.org/es-ES/firefox'
+        },
         icon: import('@/assets/software/firefox.svg?raw')
       },
       {
@@ -155,13 +158,19 @@ export const stackSections: StackSection[] = [
       {
         name: 'C#',
         description: { en: 'Programming Language', es: 'Lenguaje de programación' },
-        href: { en: 'https://docs.microsoft.com/en-us/dotnet/csharp/', es: 'https://docs.microsoft.com/es-es/dotnet/csharp/' },
+        href: {
+          en: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
+          es: 'https://docs.microsoft.com/es-es/dotnet/csharp/'
+        },
         icon: import('@/assets/software/csharp.svg?raw')
       },
       {
         name: 'JavaScript',
         description: { en: 'Programming Language', es: 'Lenguaje de programación' },
-        href: { en: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', es: 'https://developer.mozilla.org/es/docs/Web/JavaScript' },
+        href: {
+          en: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+          es: 'https://developer.mozilla.org/es/docs/Web/JavaScript'
+        },
         icon: import('@/assets/software/js.svg?raw')
       },
       {
@@ -179,7 +188,10 @@ export const stackSections: StackSection[] = [
       {
         name: 'HTML5',
         description: { en: 'Markup Language', es: 'Lenguaje de marcado' },
-        href: { en: 'https://developer.mozilla.org/en-US/docs/Web/HTML', es: 'https://developer.mozilla.org/es/docs/Web/HTML' },
+        href: {
+          en: 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+          es: 'https://developer.mozilla.org/es/docs/Web/HTML'
+        },
         icon: import('@/assets/software/html.svg?raw')
       },
       {
@@ -209,7 +221,10 @@ export const stackSections: StackSection[] = [
       {
         name: 'CSS3',
         description: { en: 'Styling Language', es: 'Lenguaje de estilos' },
-        href: { en: 'https://developer.mozilla.org/en-US/docs/Web/CSS', es: 'https://developer.mozilla.org/es/docs/Web/CSS' },
+        href: {
+          en: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          es: 'https://developer.mozilla.org/es/docs/Web/CSS'
+        },
         icon: import('@/assets/software/css.svg?raw')
       }
     ]
@@ -233,7 +248,10 @@ export const stackSections: StackSection[] = [
       {
         name: 'T-SQL',
         description: { en: 'SQL Server', es: 'SQL Server' },
-        href: { en: 'https://docs.microsoft.com/en-us/sql/t-sql/', es: 'https://docs.microsoft.com/es-es/sql/t-sql/' },
+        href: {
+          en: 'https://docs.microsoft.com/en-us/sql/t-sql/',
+          es: 'https://docs.microsoft.com/es-es/sql/t-sql/'
+        },
         icon: import('@/assets/software/tsql.svg?raw')
       }
     ]

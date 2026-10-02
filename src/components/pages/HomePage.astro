@@ -1,0 +1,137 @@
+---
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+import { featuredProjects, homeCopy } from '@/data/home'
+import { t, type Lang } from '@/data/i18n'
+import { skillGroups } from '@/data/skills'
+
+import { Quote } from 'astro-pure/advanced'
+import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
+import { Button, Icon, Label } from 'astro-pure/user'
+import PageLayout from '@/layouts/BaseLayout.astro'
+import Section from '@/components/home/Section.astro'
+import SkillLayout from '@/components/home/SkillLayout.astro'
+import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
+import avatar from '@/assets/avatar.png'
+
+import config from '../../site.config'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const copy = homeCopy[lang]
+
+// Latest blog posts in this language
+const MAX_POSTS = 10
+const allPosts = await getBlogCollection()
+const posts = allPosts.filter(
+  (post): post is CollectionEntry<'blog'> =>
+    post.collection === 'blog' && post.data.language === lang
+)
+const latestPosts = sortMDByDate(posts).slice(0, MAX_POSTS)
+---
+
+<PageLayout meta={copy.meta} highlightColor='#659EB9'>
+  <main class='flex w-full flex-col items-center'>
+    <section class='animate mb-10 flex flex-col items-center gap-y-7' id='content-header'>
+      <Image
+        src={avatar}
+        alt={copy.avatarAlt}
+        class='h-28 w-auto rounded-full border p-1'
+        loading='eager'
+      />
+
+      <div class='flex flex-col items-center gap-y-4'>
+        <h1 class='text-3xl font-bold'>{config.author}</h1>
+        <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
+          <Label title='GitHub' as='a' href='https://github.com/david7ce' target='_blank'>
+            <Icon name='github' class='size-5' slot='icon' />
+          </Label>
+          <Label
+            title='LinkedIn'
+            as='a'
+            href='https://www.linkedin.com/in/david-alonsodd'
+            target='_blank'
+          >
+            <Icon name='link' class='size-5' slot='icon' />
+          </Label>
+        </div>
+      </div>
+    </section>
+
+    <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
+      <Section title={copy.about.title}>
+        <p class='text-muted-foreground'>{copy.about.role}</p>
+        {copy.about.paragraphs.map((text) => (
+          <p class='text-muted-foreground'>{text}</p>
+        ))}
+        <Button
+          title={copy.about.button}
+          class='w-fit self-end'
+          href={copy.routes.about}
+          style='ahead'
+        />
+      </Section>
+
+      <Section title={copy.exploring.title}>
+        {copy.exploring.paragraphs.map((text) => (
+          <p class='text-muted-foreground'>{text}</p>
+        ))}
+      </Section>
+
+      <Section title={copy.projects.title}>
+        <ul class='flex flex-col gap-y-3'>
+          {featuredProjects.map((project) => (
+            <li>
+              <a href={project.href} target='_blank' class='font-medium hover:underline'>
+                {t(project.name, lang)}
+              </a>
+              <p class='text-muted-foreground'>{t(project.description, lang)}</p>
+            </li>
+          ))}
+        </ul>
+        <Button
+          title={copy.projects.button}
+          class='w-fit self-end'
+          href={copy.routes.projects}
+          style='ahead'
+        />
+      </Section>
+      {latestPosts.length > 0 ? (
+        <Section title={copy.blog.title}>
+          <p class='text-muted-foreground'>{copy.blog.intro}</p>
+          <ul class='flex flex-col gap-y-1.5 sm:gap-y-2'>
+            {latestPosts.map((post) => (
+              <PostPreviewI18n post={post} />
+            ))}
+          </ul>
+          <Button
+            title={copy.blog.button}
+            class='w-fit self-end'
+            href={copy.routes.blog}
+            style='ahead'
+          />
+        </Section>
+      ) : (
+        <Section title={copy.blog.title}>
+          <p class='text-muted-foreground'>
+            {copy.blog.empty}{' '}
+            <a href={copy.routes.otherLanguageBlog} class='underline hover:text-foreground'>
+              {copy.blog.emptyLink}
+            </a>
+          </p>
+        </Section>
+      )}
+
+      <Section title={copy.technologies.title}>
+        <p class='text-muted-foreground'>{copy.technologies.intro}</p>
+        {skillGroups.map(({ title, skills }) => (
+          <SkillLayout title={t(title, lang)} skills={skills} />
+        ))}
+      </Section>
+    </div>
+    <Quote class='mt-12' />
+  </main>
+</PageLayout>
