@@ -11,6 +11,8 @@ interface Props {
 
 const { lang } = Astro.props
 
+const collator = new Intl.Collator(lang, { sensitivity: 'base' })
+
 const headings = stackSections.map(({ id, title }) => ({
   depth: 2,
   slug: id,
@@ -28,11 +30,13 @@ const headings = stackSections.map(({ id, title }) => ({
       <ToolSection
         class='mb-5'
         title={t(title, lang)}
-        tools={tools.map((tool) => ({
-          ...tool,
-          description: t(tool.description, lang),
-          href: t(tool.href, lang)
-        }))}
+        tools={tools
+          .map((tool) => ({
+            ...tool,
+            description: t(tool.description, lang),
+            href: t(tool.href, lang)
+          }))
+          .sort((a, b) => collator.compare(a.name, b.name))}
       />
     </div>
   ))}
