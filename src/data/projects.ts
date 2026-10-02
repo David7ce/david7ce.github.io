@@ -44,6 +44,7 @@ export const projectSections: ProjectSectionData[] = [
           en: 'An e-commerce front-end website using only vanilla HTML, CSS and JavaScript, no frameworks.',
           es: 'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JavaScript básicos, sin frameworks.'
         },
+        image: 'ecommerce.jpg',
         links: [{ type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }]
       },
       {
@@ -181,6 +182,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un conversor web entre varios calendarios.'
             },
             tech: 'JavaScript',
+            image: 'calendar-converter.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/calendar-converter/' },
               { type: 'github', href: 'https://github.com/David7ce/calendar-converter' }
@@ -320,6 +322,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Una aplicación de terminal que detecta tu sistema operativo y gestor de paquetes, permite seleccionar varios paquetes y ejecuta las instalaciones. Usa las mismas listas de paquetes que la toolbox web de Interneto.'
             },
             tech: 'Python',
+            image: 'tui-toolbox.jpg',
             links: [{ type: 'github', href: 'https://github.com/interneto/tui-toolbox-installer' }]
           },
           {
@@ -434,6 +437,7 @@ export const projectSections: ProjectSectionData[] = [
           en: 'A cosmological wiki using Obsidian.md with the Digital Garden plugin.',
           es: 'Una wiki de cosmología hecha con Obsidian.md y el plugin Digital Garden.'
         },
+        image: 'wiki-cosmology.jpg',
         links: [{ type: 'doc', href: 'https://wikiterra.github.io/' }]
       }
     ]
