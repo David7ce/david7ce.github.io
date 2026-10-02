@@ -25,12 +25,12 @@
     "@astrojs/vercel": "^10.0.8",
     "@playform/compress": "^0.2.5",
     "@unocss/astro": "^66.10.5",
-    "@waline/client": "^3.15.2",
+    "@waline/client": "^3.16.0",
     "astro": "^6.4.8",
-    "astro-pure": "^1.4.7",
+    "astro-pure": "^1.4.9",
     "hast-util-select": "^6.0.4",
     "hastscript": "^9.0.1",
-    "katex": "^0.18.7",
+    "katex": "^0.18.10",
     "node-html-parser": "^7.1.0",
     "rehype": "^13.0.2",
     "rehype-external-links": "^3.0.0",
@@ -40,7 +40,7 @@
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
     "sharp": "^0.34.5",
-    "shiki": "^4.4.3",
+    "shiki": "^4.5.0",
     "typescript": "^5.9.3",
     "ultrahtml": "^1.7.0",
     "unified": "^11.0.5",
@@ -57,9 +57,9 @@
     "@unocss/reset": "^66.10.5",
     "eslint": "^10.11.0",
     "eslint-plugin-astro": "^3.2.1",
-    "prettier": "^3.9.8",
-    "prettier-plugin-astro": "^1.0.1",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
     "rollup-plugin-visualizer": "^7.1.1",
-    "typescript-eslint": "^8.70.0"
+    "typescript-eslint": "^8.71.0"
   }
 }
