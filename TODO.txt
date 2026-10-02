@@ -1,0 +1,9 @@
+# TODO
+
+Creo que en Small apps hay que diferenciar entre we apps y desktop apps y añadir también https://compuwiki.github.io/os-database/ https://github.com/compuwiki/os-database/
+
+Ahora redcatame para LinkedIn esta bloque de info a rellenar en ingles.
+"You can write about your years of experience, industry, or skills. People also talk about their achievements or previous job experiences."
+
+
+---
