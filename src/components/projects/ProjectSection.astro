@@ -33,76 +33,75 @@ const projectIconSet: Record<string, IconsType> = {
 ---
 
 <div class={className} {...props}>
-  <div class='grid grid-cols-1 gap-x-4 gap-y-3 sm:grid-cols-2 sm:gap-y-4'>
-    {
-      project.map((project) => {
-        var imagePath = null
-        if (project.image) {
-          imagePath = '/src/assets/projects/' + project.image
-          if (!images[imagePath])
-            throw new Error(
-              `"${imagePath}" does not exist in glob: "src/assets/projects/*.{jpeg,jpg,png,gif}"`
-            )
-        }
+  <div class='project-columns'>
+    {project.map((project) => {
+      var imagePath = null
+      if (project.image) {
+        imagePath = '/src/assets/projects/' + project.image
+        if (!images[imagePath])
+          throw new Error(
+            `"${imagePath}" does not exist in glob: "src/assets/projects/*.{jpeg,jpg,png,gif}"`
+          )
+      }
 
-        return (
-          <div class='relative overflow-hidden rounded-xl border'>
-            {imagePath && (
-              <Image
-                class='absolute end-0 z-0 m-0 h-full w-1/2 object-cover opacity-40'
-                src={images[imagePath]()}
-                alt={project.name}
-                loading='lazy'
-                style={{
-                  maskImage:
-                    'linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
-                  msMaskImage:
-                    '-ms-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)',
-                  WebkitMaskImage:
-                    '-webkit-linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)'
-                }}
-              />
+      return (
+        <div class='relative mb-3 flex break-inside-avoid flex-col overflow-hidden rounded-xl border sm:mb-4'>
+          {imagePath && (
+            <Image
+              class='m-0 aspect-[2/1] w-full border-b object-cover object-top'
+              src={images[imagePath]()}
+              alt={project.name}
+              loading='lazy'
+            />
+          )}
+          <div
+            class={cn(
+              'relative z-10 flex flex-1 flex-col gap-y-3 px-4 py-4 sm:px-5 sm:py-5 min-h-[140px]'
             )}
-            <div
-              class={cn(
-                'relative z-10 flex flex-col gap-y-3 px-4 py-4 sm:px-5 sm:py-5 min-h-[140px]',
-                imagePath && 'me-20'
-              )}
+          >
+            <a
+              class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
+              href={project.links[0].href}
+              target='_blank'
             >
-              <a
-                class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
-                href={project.links[0].href}
-                target='_blank'
-              >
-                {project.name}
-              </a>
-              <div class='flex-1 leading-relaxed text-muted-foreground'>{project.description}</div>
-              {(project.tech || project.status) && (
-                <p class='text-sm text-muted-foreground'>
-                  {project.tech && <span>{project.tech}</span>}
-                  {project.tech && project.status && ' · '}
-                  {project.status && <span>{project.status}</span>}
-                </p>
-              )}
-              <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
-                {project.links.map((link) => {
-                  const icon = projectIconSet[link.type]
-                  return (
-                    <a
-                      href={link.href}
-                      class='rounded-full bg-muted p-1 text-muted-foreground transition-colors sm:p-1.5'
-                      aria-label={link.type}
-                      target='_blank'
-                    >
-                      <Icon class='size-5' name={icon} />
-                    </a>
-                  )
-                })}
-              </div>
+              {project.name}
+            </a>
+            <div class='flex-1 leading-relaxed text-muted-foreground'>{project.description}</div>
+            {(project.tech || project.status) && (
+              <p class='text-sm text-muted-foreground'>
+                {project.tech && <span>{project.tech}</span>}
+                {project.tech && project.status && ' · '}
+                {project.status && <span>{project.status}</span>}
+              </p>
+            )}
+            <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
+              {project.links.map((link) => {
+                const icon = projectIconSet[link.type]
+                return (
+                  <a
+                    href={link.href}
+                    class='rounded-full bg-muted p-1 text-muted-foreground transition-colors sm:p-1.5'
+                    aria-label={link.type}
+                    target='_blank'
+                  >
+                    <Icon class='size-5' name={icon} />
+                  </a>
+                )
+              })}
             </div>
           </div>
-        )
-      })
-    }
+        </div>
+      )
+    })}
   </div>
 </div>
+
+<style>
+  /* Cards have different heights (some have a screenshot): flow them in columns so no gaps appear */
+  @media (min-width: 640px) {
+    .project-columns {
+      column-count: 2;
+      column-gap: 1rem;
+    }
+  }
+</style>

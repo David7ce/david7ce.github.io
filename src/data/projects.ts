@@ -11,6 +11,8 @@ export interface Project {
   tech?: Localized | string
   status?: Localized
   links: ProjectLink[]
+  /** File name in src/assets/projects/, shown faded behind the card. */
+  image?: string
   /** Shown on the home page, ordered by ascending rank. */
   featured?: { rank: number; title?: Localized | string; kind: Localized; summary: Localized }
 }
@@ -83,6 +85,7 @@ export const projectSections: ProjectSectionData[] = [
             es: 'Web institucional del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
           }
         },
+        image: 'tenerife-comercio.jpg',
         links: [{ type: 'site', href: 'https://www.tenerifecomercio.com/' }]
       }
     ]
@@ -122,6 +125,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Una web de lectura rápida que muestra el texto palabra por palabra (RSVP) a velocidad fija o con aceleración progresiva, con resaltado opcional del punto de enfoque y carga de archivos .txt. La interfaz está en español e inglés.'
             },
             tech: 'React, TypeScript, Vite',
+            image: 'read-rapide.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/read-rapide/' },
               { type: 'github', href: 'https://github.com/David7ce/read-rapide' }
@@ -134,6 +138,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Sugiere horas de acostarse o de despertarse alineadas con ciclos de sueño de 90 minutos. Una PWA instalable sin dependencias que funciona sin conexión tras la primera carga.'
             },
             tech: 'HTML, CSS, JavaScript',
+            image: 'sleep-cycles.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/sleep-cycles-calc/' },
               { type: 'github', href: 'https://github.com/David7ce/sleep-cycles-calc' }
@@ -158,6 +163,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un directorio estático de una sola página de sistemas operativos (Windows, macOS, Linux, BSD, móviles, embebidos y retro). Permite buscar, filtrar y comparar hasta 10 sistemas lado a lado, sin paso de compilación ni backend.'
             },
             tech: 'HTML, JavaScript, Tailwind CSS, JSON',
+            image: 'os-database.jpg',
             links: [
               { type: 'site', href: 'https://compuwiki.github.io/os-database/' },
               { type: 'github', href: 'https://github.com/compuwiki/os-database' }
@@ -182,6 +188,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Compara el coste y la calidad de distintos LLM.'
             },
             tech: 'Python',
+            image: 'llm-pricing.jpg',
             links: [
               { type: 'site', href: 'https://interneto.github.io/llm-pricing/' },
               { type: 'github', href: 'https://github.com/interneto/llm-pricing' }
@@ -381,6 +388,7 @@ export const projectSections: ProjectSectionData[] = [
             es: 'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes.'
           }
         },
+        image: 'interneto.jpg',
         links: [
           { type: 'site', href: 'https://interneto.github.io/' },
           { type: 'github', href: 'https://github.com/interneto' }
@@ -412,6 +420,7 @@ export const projectSections: ProjectSectionData[] = [
             es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
           }
         },
+        image: 'compuwiki.jpg',
         links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
       },
       {

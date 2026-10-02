@@ -17,12 +17,13 @@ const sortKey = (name: string) => name.replace(/^[^\p{L}\p{N}]+/u, '')
 
 const localize = (projects: Project[]) =>
   projects
-    .map(({ name, description, tech, status, links }) => ({
+    .map(({ name, description, tech, status, links, image }) => ({
       name: t(name, lang),
       description: t(description, lang),
       tech: tech && t(tech, lang),
       status: status && t(status, lang),
-      links
+      links,
+      image
     }))
     .sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))
 
