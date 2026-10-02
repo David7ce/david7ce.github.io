@@ -87,6 +87,12 @@ export const stackSections: StackSection[] = [
         icon: import('@/assets/software/claude-code.svg?raw')
       },
       {
+        name: 'OpenCode',
+        description: { en: 'AI Coding Agent', es: 'Agente de IA para programar' },
+        href: 'https://opencode.ai/',
+        icon: import('@/assets/software/opencode.svg?raw')
+      },
+      {
         name: 'Firefox',
         description: { en: 'Privacy Browser', es: 'Navegador centrado en privacidad' },
         href: {

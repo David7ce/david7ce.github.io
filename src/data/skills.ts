@@ -57,6 +57,6 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'ai-assistants',
     title: { en: 'AI Coding Assistants', es: 'Asistentes de Programación con IA' },
-    skills: ['Claude Code', 'GitHub Copilot']
+    skills: ['Claude Code', 'GitHub Copilot', 'OpenCode']
   }
 ]
