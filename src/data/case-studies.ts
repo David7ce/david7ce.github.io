@@ -47,8 +47,11 @@ export const tenerifeComercio: CaseStudy = {
       }
     },
     {
-      label: { en: 'Period', es: 'Periodo' },
-      value: { en: 'January to September 2026', es: 'De enero a septiembre de 2026' }
+      label: { en: 'Status', es: 'Estado' },
+      value: {
+        en: 'The new version has not been published yet; the live site is the previous one',
+        es: 'La versión nueva aún no está publicada; la web en línea es la anterior'
+      }
     },
     {
       label: { en: 'Stack', es: 'Tecnologías' },

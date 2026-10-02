@@ -85,7 +85,6 @@ export const projectSections: ProjectSectionData[] = [
             es: 'Web institucional del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
           }
         },
-        image: 'tenerife-comercio.jpg',
         links: [
           { type: 'site', href: 'https://www.tenerifecomercio.com/' },
           {
