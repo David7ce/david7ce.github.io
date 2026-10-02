@@ -117,9 +117,9 @@ const mapLocalizedPath = (targetLang: string, path: string) => {
               'opacity-50': !hasTranslation
             }
           ]}
-          aria-label={`Switch to ${label}`}
+          aria-label={`${lang === 'es' ? 'Cambiar a' : 'Switch to'} ${label}`}
           aria-current={isActive ? 'page' : undefined}
-          title={!hasTranslation ? `No translation available in ${label}` : undefined}
+          title={!hasTranslation ? `${lang === 'es' ? 'No hay traducción en' : 'No translation available in'} ${label}` : undefined}
         >
           {langCode.toUpperCase()}
         </a>

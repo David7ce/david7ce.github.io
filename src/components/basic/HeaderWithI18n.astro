@@ -1,6 +1,8 @@
 ---
 import config from 'virtual:config'
+
 import { Icon } from 'astro-pure/user'
+
 import { getLangFromUrl, useTranslations } from '../../i18n/utils'
 import LanguageSwitcher from '../LanguageSwitcher.astro'
 
@@ -36,16 +38,15 @@ const localizedMenu = [
 ]
 ---
 
-<header-component
-  class='group sticky top-4 z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:bg-background [&.not-top]:px-1.5 dark:[&.not-top]:bg-muted'
->
+<header-component class='group sticky top-4 z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:bg-background [&.not-top]:px-1.5 dark:[&.not-top]:bg-muted'>
   <div class='flex items-center gap-x-6'>
     <a
       class='z-30 text-xl font-semibold group-[.not-top]:ms-2 sm:group-[.not-top]:ms-3'
       style='transition:margin-inline 0.3s'
       href={langPrefix}
-      aria-label='Brand'>{config.title}</a
     >
+      {config.title}
+    </a>
 
     <LanguageSwitcher />
   </div>
@@ -57,19 +58,20 @@ const localizedMenu = [
       class='end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted max-sm:absolute max-sm:opacity-0 max-sm:group-[.not-top]:border-border max-sm:group-[.expanded.not-top]:bg-background max-sm:group-[.not-top]:px-4 max-sm:group-[.not-top]:py-2 sm:grid-rows-1'
     >
       <div class='flex flex-col items-center justify-center overflow-hidden sm:flex-row'>
-        {
-          localizedMenu.map((item) => (
-            <a
-              href={item.link}
-              class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary sm:w-fit sm:px-3'
-              aria-label='Nav menu item'
-            >
-              {item.title}
-            </a>
-          ))
-        }
+        {localizedMenu.map((item) => (
+          <a
+            href={item.link}
+            class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary sm:w-fit sm:px-3'
+          >
+            {item.title}
+          </a>
+        ))}
         <div class='flex w-full grow flex-row justify-end gap-x-3 sm:w-fit sm:gap-x-5'>
-          <a class='px-1 py-2 transition-none sm:px-2' href={getLocalizedPath('search')} title={lang === 'es' ? 'Buscar' : 'Search'}>
+          <a
+            class='px-1 py-2 transition-none sm:px-2'
+            href={getLocalizedPath('search')}
+            title={lang === 'es' ? 'Buscar' : 'Search'}
+          >
             <span class='sr-only'>{lang === 'es' ? 'Buscar' : 'Search'}</span>
             <Icon name='search' class='size-5' />
           </a>
@@ -83,7 +85,7 @@ const localizedMenu = [
         id='toggleDarkMode'
         class='group/dark box-content size-5 rounded-md border p-2 max-sm:p-2.5 transition-colors hover:bg-border sm:p-1.5 sm:group-[.not-top]:rounded-xl'
       >
-        <span class='sr-only'>Dark Theme</span>
+        <span class='sr-only'>{lang === 'es' ? 'Cambiar tema' : 'Toggle theme'}</span>
         <Icon class='system size-5 group-hover/dark:text-primary' name='computer' />
         <Icon class='light hidden size-5 group-hover/dark:text-primary' name='sun' />
         <Icon class='dark hidden size-5 group-hover/dark:text-primary' name='moon' />
@@ -92,7 +94,7 @@ const localizedMenu = [
         id='toggleMenu'
         class='rounded-md border p-2 max-sm:p-2.5 transition-colors hover:bg-border sm:p-1.5 sm:hidden sm:group-[.not-top]:rounded-xl'
       >
-        <span class='sr-only'>Menu</span>
+        <span class='sr-only'>{lang === 'es' ? 'Menú' : 'Menu'}</span>
         <Icon class='size-5' name='menu' />
       </button>
     </div>

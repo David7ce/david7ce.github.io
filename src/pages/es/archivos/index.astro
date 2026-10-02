@@ -1,8 +1,8 @@
 ---
 import { getBlogCollection, groupCollectionsByYear, sortMDByDate } from 'astro-pure/server'
 import { Button } from 'astro-pure/user'
-import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
 import PageLayout from '@/layouts/BaseLayout.astro'
+import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
 
 export const prerender = true
 
@@ -31,26 +31,24 @@ const meta = {
     {spanishPosts.length === 0 && <p>Sin posts aún.</p>}
 
     <section id='content' class='animate' aria-label='Lista de posts del blog'>
-      {
-        allPostsByYear.map(([year, posts]) => (
-          <div class='relative mt-20'>
-            <h2
-              class='absolute -start-6 -top-16 z-0 text-9xl font-bold text-transparent opacity-10'
-              style='-webkit-text-stroke-width:2px;-webkit-text-stroke-color:hsl(var(--foreground)/var(--un-text-opacity))'
-            >
-              <samp>{year}</samp>
-            </h2>
-            <p class='px-5 text-muted-foreground'>
-              {posts.length} post{posts.length > 1 && 's'}
-            </p>
-            <ul class='flex flex-col text-start'>
-              {posts.map((p) => (
-                <PostPreviewI18n post={p} class='border-0 bg-transparent py-2' />
-              ))}
-            </ul>
-          </div>
-        ))
-      }
+      {allPostsByYear.map(([year, posts]) => (
+        <div class='relative mt-20'>
+          <h2
+            class='absolute -start-6 -top-16 z-0 text-9xl font-bold text-transparent opacity-10'
+            style='-webkit-text-stroke-width:2px;-webkit-text-stroke-color:hsl(var(--foreground)/var(--un-text-opacity))'
+          >
+            <samp>{year}</samp>
+          </h2>
+          <p class='px-5 text-muted-foreground'>
+            {posts.length} {posts.length === 1 ? 'publicación' : 'publicaciones'}
+          </p>
+          <ul class='flex flex-col text-start'>
+            {posts.map((p) => (
+              <PostPreviewI18n post={p} class='border-0 bg-transparent py-2' />
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   </main>
 </PageLayout>

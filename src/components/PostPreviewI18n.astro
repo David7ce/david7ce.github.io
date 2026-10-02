@@ -2,9 +2,11 @@
 import { Image } from 'astro:assets'
 import { render, type CollectionEntry } from 'astro:content'
 import type { ComponentProps, HTMLTag, Polymorphic } from 'astro/types'
+
+import { Icon } from '../../packages/pure/components/user'
 import { cn } from '../../packages/pure/utils'
-import { FormattedDate, Icon } from '../../packages/pure/components/user'
 import { getLangFromUrl } from '../i18n/utils'
+import LocalizedDate from './LocalizedDate.astro'
 
 type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
   post: CollectionEntry<'blog'>
@@ -30,10 +32,12 @@ const href = `/${lang}/post/${postSlug}`
     detailed && 'max-sm:px-4 sm:py-5',
     className
   )}
-  style={detailed &&
+  style={
+    detailed &&
     data.heroImage?.color &&
     `--preview-highlight:color-mix(in srgb,${data.heroImage.color} 40%,hsl(var(--foreground)/var(--un-text-opacity,1)));
-    --preview-highlight-bg:hsl(from ${data.heroImage.color} h s l/20%)`}
+    --preview-highlight-bg:hsl(from ${data.heroImage.color} h s l/20%)`
+  }
 >
   <a
     class={cn(
@@ -44,18 +48,16 @@ const href = `/${lang}/post/${postSlug}`
     href={href}
     data-astro-prefetch
   >
-    {
-      detailed && data.heroImage && (
-        <Image
-          {...(data.heroImage as ComponentProps<typeof Image>)}
-          alt={data.heroImage.alt || data.title}
-          class='cover-image absolute end-0 top-0 z-0 h-2/3 w-full rounded-2xl object-cover opacity-50 transition-opacity duration-300 group-hover/card:opacity-70 md:h-full md:w-3/5'
-          loading='eager'
-        />
-      )
-    }
+    {detailed && data.heroImage && (
+      <Image
+        {...(data.heroImage as ComponentProps<typeof Image>)}
+        alt={data.heroImage.alt || data.title}
+        class='cover-image absolute end-0 top-0 z-0 h-2/3 w-full rounded-2xl object-cover opacity-50 transition-opacity duration-300 group-hover/card:opacity-70 md:h-full md:w-3/5'
+        loading='eager'
+      />
+    )}
 
-    <FormattedDate class='min-w-[95px] py-1 text-xs' date={postDate} />
+    <LocalizedDate class='min-w-[95px] py-1 text-xs' date={postDate} {lang} />
 
     <Tag class='z-10 flex-grow'>
       <div class='flex justify-between'>
@@ -87,35 +89,33 @@ const href = `/${lang}/post/${postSlug}`
           ></polyline>
         </svg>
       </div>
-      {
-        detailed && (
-          <>
-            {/* desc */}
-            <p
-              class={cn(
-                'line-clamp-2 pt-1 text-sm text-muted-foreground sm:line-clamp-3',
-                data.heroImage && 'sm:me-24'
-              )}
-            >
-              {data.description}
-            </p>
-            <div class='flex items-center gap-2 py-1.5 text-sm italic leading-4 text-muted-foreground sm:py-3'>
-              {/* reading time */}
+      {detailed && (
+        <>
+          {/* desc */}
+          <p
+            class={cn(
+              'line-clamp-2 pt-1 text-sm text-muted-foreground sm:line-clamp-3',
+              data.heroImage && 'sm:me-24'
+            )}
+          >
+            {data.description}
+          </p>
+          <div class='flex items-center gap-2 py-1.5 text-sm italic leading-4 text-muted-foreground sm:py-3'>
+            {/* reading time */}
+            <span class='flex items-center gap-1'>
+              <Icon name='time' class='size-4' />
+              {remarkPluginFrontmatter.minutesRead}
+            </span>
+            {/* language */}
+            {data.language && (
               <span class='flex items-center gap-1'>
-                <Icon name='time' class='size-4' />
-                {remarkPluginFrontmatter.minutesRead}
+                <Icon name='earth' class='size-4' />
+                {data.language}
               </span>
-              {/* language */}
-              {data.language && (
-                <span class='flex items-center gap-1'>
-                  <Icon name='earth' class='size-4' />
-                  {data.language}
-                </span>
-              )}
-            </div>
-          </>
-        )
-      }
+            )}
+          </div>
+        </>
+      )}
     </Tag>
   </a>
 </li>

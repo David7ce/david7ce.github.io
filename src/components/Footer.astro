@@ -4,6 +4,10 @@ import config from 'virtual:config'
 import { Icon } from 'astro-pure/user'
 
 const footerConf = config.footer
+const lang = Astro.url.pathname.startsWith('/es') ? 'es' : 'en'
+// Link titles come from site.config.ts (English); show the Spanish equivalent on /es
+const titles: Record<string, string> = lang === 'es' ? { 'Site Policy': 'Política del sitio' } : {}
+const localize = (title: string) => titles[title] ?? title
 const social = footerConf.social || []
 
 const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
@@ -20,7 +24,7 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
               {footerLink1.map(({ title, link, style }, index) => (
                 <>
                   <a href={link} target='_blank' class={style}>
-                    {title}
+                    {localize(title)}
                   </a>
                   {index < footerLink1.length - 1 && <span class='mx-1'>•</span>}
                 </>
@@ -30,47 +34,47 @@ const footerLink1 = footerConf.links?.filter(({ pos }) => pos === 1) || []
         }
         {/* Position 2 */}
         <div>
-          {config.footer.year}{' '}{config.author}
-          {
-            footerConf.links && footerConf.links.length > 0 && (
-              <>
-                {' '}&{' '}
-                <span>
-                  {footerConf.links
-                    .filter(({ pos }) => pos === 2)
-                    .map(({ title, link, style }) => (
-                      <span>
-                        <a href={link} target='_blank' class={style}>
-                          {title}
-                        </a>
-                      </span>
-                    ))}
-                </span>
-              </>
-            )
-          }
+          {config.footer.year} {config.author}
+          {footerConf.links && footerConf.links.length > 0 && (
+            <>
+              {' '}
+              &{' '}
+              <span>
+                {footerConf.links
+                  .filter(({ pos }) => pos === 2)
+                  .map(({ title, link, style }) => (
+                    <span>
+                      <a href={link} target='_blank' class={style}>
+                        {localize(title)}
+                      </a>
+                    </span>
+                  ))}
+              </span>
+            </>
+          )}
         </div>
-        {
-          footerConf.credits && (
-            <span>
-              <a href='https://github.com/withastro/astro' target='_blank'>Astro</a>{' '}&{' '}
-              <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>Pure</a>{' '}
-              theme powered
-            </span>
-          )
-        }
+        {footerConf.credits && (
+          <span>
+            <a href='https://github.com/withastro/astro' target='_blank'>
+              Astro
+            </a>
+            {lang === 'es' ? ' y el tema ' : ' & '}
+            <a href='https://github.com/cworld1/astro-theme-pure' target='_blank'>
+              Pure
+            </a>
+            {lang === 'es' ? '' : ' theme powered'}
+          </span>
+        )}
       </div>
 
       {/* Social Brands */}
       <div class='flex items-center gap-x-4'>
-        {
-          social.map(({ label, href, icon }) => (
-            <a {href} rel='me' class='sl-flex'>
-              <span class='sr-only'>{label}</span>
-              <Icon name={icon} />
-            </a>
-          ))
-        }
+        {social.map(({ label, href, icon }) => (
+          <a {href} rel='me' class='sl-flex'>
+            <span class='sr-only'>{label}</span>
+            <Icon name={icon} />
+          </a>
+        ))}
       </div>
     </div>
   </div>

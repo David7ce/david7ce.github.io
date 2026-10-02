@@ -2,12 +2,12 @@
 import { ThemeProvider } from 'astro-pure/components/basic'
 import type { SiteMeta } from 'astro-pure/types'
 import BaseHead from '@/components/BaseHead.astro'
-import Footer from '@/components/Footer.astro'
 import HeaderWithI18n from '@/components/basic/HeaderWithI18n.astro'
+import Footer from '@/components/Footer.astro'
+
 import { esConfig } from '../i18n/es.config'
 import { getLangFromUrl } from '../i18n/utils'
 import config from '../site.config'
-
 // Import the global.css file here so that it is included on
 // all pages through the use of the <BaseLayout /> component.
 import '@/assets/styles/app.css'
@@ -36,20 +36,26 @@ const htmlLang = lang === 'es' ? (esConfig.locale?.lang ?? 'es-ES') : config.loc
   </head>
 
   <body class='flex justify-center bg-background text-foreground'>
-    {
-      highlightColor && (
-        <div
-          id='highlight-gradient'
-          class='pointer-events-none absolute start-0 top-0 z-0 h-screen w-full opacity-25'
-          style={`background-image:linear-gradient(${highlightColor},transparent)`}
-        />
-      )
-    }
+    {highlightColor && (
+      <div
+        id='highlight-gradient'
+        class='pointer-events-none absolute start-0 top-0 z-0 h-screen w-full opacity-25'
+        style={`background-image:linear-gradient(${highlightColor},transparent)`}
+      />
+    )}
     <div class='w-full max-w-[70rem] px-4 sm:px-7 lg:px-10'>
       <HeaderWithI18n />
       <slot />
       <Footer />
     </div>
+
+    {/* The theme hardcodes two English labels (table of contents, back-to-top button): translate them on /es */}
+    {lang === 'es' && <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector('toc-heading h2')?.replaceChildren('CONTENIDO')
+        document.getElementById('to-top-btn')?.setAttribute('aria-label', 'Volver arriba')
+      })
+    </script>}
 
     {/* Set highlight color */}
     <style define:vars={{ highlightColor }}>

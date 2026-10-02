@@ -1,0 +1,25 @@
+---
+import type { HTMLAttributes } from 'astro/types'
+
+import { cn } from '../../packages/pure/utils'
+
+type Props = HTMLAttributes<'span'> & {
+  date: Date
+  lang: 'en' | 'es'
+  class?: string
+}
+
+const { date, lang, class: className, ...attrs } = Astro.props
+
+const valid = date instanceof Date && !isNaN(date.getTime())
+const locale = lang === 'es' ? 'es-ES' : 'en-US'
+const text = valid
+  ? new Intl.DateTimeFormat(locale, { day: 'numeric', month: 'short', year: 'numeric' }).format(
+      date
+    )
+  : ''
+---
+
+<span class={cn('font-mono text-muted-foreground', className)} {...attrs}>
+  <time datetime={valid ? date.toISOString() : ''}>{text}</time>
+</span>

@@ -6,6 +6,8 @@ import { cn } from 'astro-pure/utils'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import { integ } from '@/site-config'
 
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
+
 interface Props {
   meta: SiteMeta
   highlightColor?: string
@@ -13,10 +15,11 @@ interface Props {
 }
 
 const { meta, highlightColor, back = '/', ...props } = Astro.props
+const backLabel = useTranslations(getLangFromUrl(Astro.url))('common.back')
 ---
 
 <PageLayout {meta} {highlightColor} {...props}>
-  <Button title='Back' href={back} style='back' />
+  <Button title={backLabel} href={back} style='back' />
   <main class='mt-6 items-start gap-x-10 md:flex'>
     {/* Sidebar */}
     <aside
