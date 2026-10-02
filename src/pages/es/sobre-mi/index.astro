@@ -1,4 +1,6 @@
 ---
+import { skillGroups } from '@/data/skills'
+import { t } from '@/data/i18n'
 import PageLayout from '@/layouts/CommonPage.astro'
 
 const headings = [
@@ -42,12 +44,13 @@ const headings = [
   <h2 id='tools'>Tecnologías</h2>
   <p>Tecnologías que he usado en mis estudios y proyectos. No es un ranking de nivel.</p>
   <ul>
-    <li><strong>Lenguajes</strong>: Bash, C#, JavaScript / TypeScript, PHP; Rust y Python en algunos proyectos personales</li>
-    <li><strong>Marcado y estilos</strong>: HTML, Markdown, XML, CSS</li>
-    <li><strong>Bases de datos</strong>: MariaDB, PostgreSQL, T-SQL</li>
-    <li><strong>Frameworks web y CMS</strong>: ASP.NET, Angular, React, Astro, WordPress, Joomla</li>
-    <li><strong>Entorno</strong>: Arch Linux, Windows 11, VS Code, Git</li>
-    <li><strong>Asistentes de programación con IA</strong>: Claude Code, GitHub Copilot</li>
+    {
+      skillGroups.map(({ title, skills }) => (
+        <li>
+          <strong>{t(title, 'es')}</strong>: {skills.join(', ')}
+        </li>
+      ))
+    }
   </ul>
   <p>La página de <a href='/es/stack'>Stack</a> lista con más detalle las herramientas que uso.</p>
 

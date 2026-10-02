@@ -7,6 +7,8 @@ import { Button, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
+import { skillGroups } from '@/data/skills'
+import { t } from '@/data/i18n'
 import PostPreviewI18n from '@/components/PostPreviewI18n.astro'
 import avatar from '@/assets/avatar.png'
 import config from '../../site.config'
@@ -14,12 +16,6 @@ import config from '../../site.config'
 
 // const t = useTranslations('es')
 
-const markup = ['XML', 'HTML', 'MD', 'LaTeX', 'YAML']
-const styling = ['CSS', 'Sass', 'Tailwind CSS', 'Bootstrap']
-const programming = ['C#', 'JavaScript / TypeScript']
-const cms = ['Joomla', 'WordPress']
-const web_library = ['ASP.NET Core', 'Astro JS', 'Angular', 'React']
-const web_servers_platforms = ['GitHub', 'Firebase', 'Supabase', 'Vercel']
 
 const selectedProjects = [
   {
@@ -157,12 +153,7 @@ const meta = {
         <p class='text-muted-foreground'>
           Tecnologías que he usado en mis estudios y proyectos, no un ranking de nivel.
         </p>
-        <SkillLayout title='Lenguajes de Marcado' skills={markup} />
-        <SkillLayout title='Estilos' skills={styling} />
-        <SkillLayout title='Programación' skills={programming} />
-        <SkillLayout title='Bibliotecas Web' skills={web_library} />
-        <SkillLayout title='CMS' skills={cms} />
-        <SkillLayout title='Servidores Web y Plataformas Cloud' skills={web_servers_platforms} />
+        {skillGroups.map(({ title, skills }) => <SkillLayout title={t(title, 'es')} skills={skills} />)}
       </Section>
     </div>
     <Quote class='mt-12' />
