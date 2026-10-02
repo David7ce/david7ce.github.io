@@ -12,7 +12,12 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'programming',
     title: { en: 'Programming', es: 'Programación' },
-    skills: ['Bash', 'C#', 'JavaScript / TypeScript', 'PHP', 'Python', 'Rust']
+    skills: ['Bash', 'C#', 'Java', 'JavaScript', 'PHP', 'Python']
+  },
+  {
+    id: 'programming-ai',
+    title: { en: 'Programming (AI-assisted)', es: 'Programación (con IA)' },
+    skills: ['Dart', 'Rust', 'TypeScript']
   },
   {
     id: 'markup',
