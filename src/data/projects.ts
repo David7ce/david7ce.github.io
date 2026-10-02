@@ -39,23 +39,6 @@ export const projectSections: ProjectSectionData[] = [
     title: { en: 'Professional Websites', es: 'Sitios Web Profesionales' },
     projects: [
       {
-        name: '🛒 E-commerce front-end',
-        description: {
-          en: 'An e-commerce front-end website using only vanilla HTML, CSS and JavaScript, no frameworks.',
-          es: 'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JavaScript básicos, sin frameworks.'
-        },
-        image: 'ecommerce.jpg',
-        links: [{ type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' }]
-      },
-      {
-        name: { en: '📍 Improve GeoImputation app', es: '📍 Mejora de la app GeoImputation' },
-        description: {
-          en: "Refactor and add functionality to a web app for tracking workers' time and location built with Angular, Firebase and Ionic UI.",
-          es: 'Refactorizar y añadir funcionalidades a una aplicación web para el seguimiento del tiempo y la ubicación de los trabajadores, creada con Angular, Firebase e Ionic UI.'
-        },
-        links: [{ type: 'site', href: 'https://app.limpiezaspaula.com/home' }]
-      },
-      {
         name: { en: '🌐 Professional websites with WP', es: '🌐 Sitios web profesionales con WP' },
         description: {
           en: 'Professional websites built with WordPress and Elementor.',
@@ -120,6 +103,7 @@ export const projectSections: ProjectSectionData[] = [
           en: 'Personal project; its README recommends established Arch-based distros for a stable setup.',
           es: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.'
         },
+        image: 'arksys-logo.jpg',
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
       },
       {
@@ -196,6 +180,18 @@ export const projectSections: ProjectSectionData[] = [
         title: { en: 'Web Apps', es: 'Aplicaciones Web' },
         projects: [
           {
+            name: '🛒 E-commerce front-end',
+            description: {
+              en: 'An e-commerce front-end website using only vanilla HTML, CSS and JavaScript, no frameworks.',
+              es: 'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JavaScript básicos, sin frameworks.'
+            },
+            image: 'ecommerce.jpg',
+            links: [
+              { type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' },
+              { type: 'github', href: 'https://github.com/David7ce/guanxe-web-interface' }
+            ]
+          },
+          {
             name: { en: '🌐 Multi-language Translator', es: '🌐 Traductor Multilenguaje' },
             description: {
               en: "Translates text into several languages at once. It uses Chrome's built-in Translator API when the browser has it and falls back to the public Google Translate endpoint otherwise.",
@@ -206,6 +202,7 @@ export const projectSections: ProjectSectionData[] = [
               en: 'Demo deployed on GitHub Pages.',
               es: 'Demo desplegada en GitHub Pages.'
             },
+            image: 'translator.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
               { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
@@ -439,6 +436,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un script que instala las aplicaciones de Affinity en Linux usando WINE.'
             },
             tech: 'Shell',
+            image: 'affinity-on-linux.jpg',
             links: [{ type: 'github', href: 'https://github.com/arksys-os/affinity-on-linux' }]
           }
         ]
