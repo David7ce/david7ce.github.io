@@ -16,6 +16,8 @@ export interface CaseStudy {
   slug: string
   title: Localized
   summary: Localized
+  /** File name in src/assets/projects/, shown under the summary. */
+  image?: { file: string; alt: Localized }
   facts: { label: Localized; value: Localized }[]
   sections: CaseStudySection[]
 }
@@ -30,6 +32,13 @@ export const tenerifeComercio: CaseStudy = {
   summary: {
     en: "Redesign and extension of the Cabildo de Tenerife's commercial atlas: an interactive map of about 40,000 businesses with socioeconomic layers, downloadable reports and a data pipeline built on official statistics.",
     es: 'Rediseño y ampliación del atlas comercial del Cabildo de Tenerife: un mapa interactivo de unos 40.000 comercios con capas socioeconómicas, informes descargables y un pipeline de datos basado en estadísticas oficiales.'
+  },
+  image: {
+    file: 'tenerife-comercio.jpg',
+    alt: {
+      en: 'The interactive map of Tenerife with clusters of businesses, a search box and a filters panel',
+      es: 'El mapa interactivo de Tenerife con agrupaciones de comercios, buscador y panel de filtros'
+    }
   },
   facts: [
     {
