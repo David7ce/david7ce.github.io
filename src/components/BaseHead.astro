@@ -4,6 +4,7 @@
 import { prod } from 'astro-pure/server'
 import type { SiteMeta } from 'astro-pure/types'
 import config from '@/site-config'
+import { getAlternates, ogLocale } from '../i18n/alternates'
 
 type Props = SiteMeta
 
@@ -11,7 +12,9 @@ const { articleDate, description, ogImage, title } = Astro.props
 
 const siteTitle = `${title} ${config.titleDelimiter} ${config.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
-const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', Astro.url).href
+const socialImageURL = new URL(ogImage ? ogImage : '/img/social-card.png', Astro.url).href
+const pageLang = Astro.url.pathname.startsWith('/es') ? 'es' : 'en'
+const alternates = getAlternates(Astro.url.pathname)
 ---
 
 <meta charset='utf-8' />
@@ -35,8 +38,18 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
   crossorigin
 />
 
-{/* Canonical URL */}
+{/* Canonical URL and language alternates */}
 <link rel='canonical' href={canonicalURL} />
+{
+  alternates.map(({ lang, path }) => (
+    <link rel='alternate' hreflang={lang} href={new URL(path, Astro.site)} />
+  ))
+}
+{
+  alternates.length > 0 && (
+    <link rel='alternate' hreflang='x-default' href={new URL(alternates[0].path, Astro.site)} />
+  )
+}
 
 {/* Primary Meta Tags */}
 <meta content={siteTitle} name='title' />
@@ -52,7 +65,7 @@ const socialImageURL = new URL(ogImage ? ogImage : '/images/social-card.png', As
 <meta content={description} property='og:description' />
 <meta content={canonicalURL} property='og:url' />
 <meta content={config.title} property='og:site_name' />
-<meta content={config.locale.attrs} property='og:locale' />
+<meta content={ogLocale[pageLang]} property='og:locale' />
 <meta content={socialImageURL} property='og:image' />
 <meta content='1200' property='og:image:width' />
 <meta content='630' property='og:image:height' />

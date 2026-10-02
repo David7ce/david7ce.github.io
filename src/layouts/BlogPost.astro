@@ -42,7 +42,7 @@ const socialImage = heroImage
   ? typeof heroImage.src === 'string'
     ? heroImage.src
     : heroImage.src.src
-  : '/images/social-card.png'
+  : '/img/social-card.png'
 const pubDate = publishDate instanceof Date ? publishDate : new Date(publishDate);
 const updDate = updatedDate instanceof Date ? updatedDate : (updatedDate ? new Date(updatedDate) : null);
 const articleDate = updDate?.toISOString() ?? pubDate.toISOString()
