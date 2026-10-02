@@ -28,8 +28,8 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       title: 'About',
       role: 'Software & Web Developer',
       paragraphs: [
-        'I am a software and web developer by training, with a two-year degree in web application development and further courses since. I write HTML, CSS and JavaScript by hand, work in C#, Python and Java, and use SQL (PostgreSQL, T-SQL) and Figma for data and interface design.',
-        'Lately I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants. This site collects my projects and the notes I write while learning.'
+        'I write HTML, CSS and JavaScript by hand, work in C#, Python and SQL, and design interfaces in Figma. Lately I build cross-platform tools with Rust and Dart, working with AI assistants.',
+        'Most of my time goes into long-running open projects: Interneto, a web directory and blog, and CompuWiki, a computing documentation wiki. This site collects them, my smaller apps and the notes I write while learning.'
       ],
       button: 'More about me'
     },
@@ -73,8 +73,8 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       title: 'Acerca de',
       role: 'Desarrollador de software y web',
       paragraphs: [
-        'Soy desarrollador de software y web de formación, con un ciclo de dos años en desarrollo de aplicaciones web y más cursos desde entonces. Escribo HTML, CSS y JavaScript a mano, trabajo con C#, Python y Java, y uso SQL (PostgreSQL, T-SQL) y Figma para el diseño de datos y de interfaces.',
-        'Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA. Este sitio reúne mis proyectos y las notas que escribo mientras aprendo.'
+        'Escribo HTML, CSS y JavaScript a mano, trabajo con C#, Python y SQL, y diseño interfaces en Figma. Últimamente construyo herramientas multiplataforma con Rust y Dart, trabajando con asistentes de IA.',
+        'La mayor parte de mi tiempo la dedico a proyectos abiertos de largo recorrido: Interneto, un directorio web con blog, y CompuWiki, una wiki de documentación de informática. Este sitio los reúne, junto con mis apps más pequeñas y las notas que escribo mientras aprendo.'
       ],
       button: 'Más sobre mí'
     },

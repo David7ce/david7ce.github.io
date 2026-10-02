@@ -5,7 +5,15 @@ type LinkedText = string[]
 
 export interface AboutCopy {
   title: string
-  headings: { profile: string; interests: string; technologies: string; publicProfile: string }
+  headings: {
+    profile: string
+    maintained: string
+    interests: string
+    technologies: string
+    publicProfile: string
+  }
+  maintained: { intro: string }
+  publicProfileIntro: string
   profile: string[]
   interests: {
     intro: string
@@ -23,10 +31,15 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     title: 'About',
     headings: {
       profile: 'Profile',
+      maintained: 'Projects I Maintain',
       interests: 'Interests and Direction',
       technologies: 'Technologies',
       publicProfile: 'Public Profile'
     },
+    maintained: {
+      intro: 'Beyond small apps, these are the longer-running projects I keep working on.'
+    },
+    publicProfileIntro: 'You can find me and my work here:',
     profile: [
       'I am David Alonso (David7ce), a software and web developer by training. I completed a two-year degree in web application development and have taken additional courses. I speak Spanish and English, and this site is available in both.',
       'I write HTML, CSS and JavaScript by hand and work in C#, Python and Java, with SQL (PostgreSQL, T-SQL) for data and Figma for web and interface design. More recently I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants.',
@@ -66,10 +79,16 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     title: 'Acerca de',
     headings: {
       profile: 'Perfil',
+      maintained: 'Proyectos que mantengo',
       interests: 'Intereses y dirección',
       technologies: 'Tecnologías',
       publicProfile: 'Perfil público'
     },
+    maintained: {
+      intro:
+        'Más allá de las apps pequeñas, estos son los proyectos de más recorrido en los que sigo trabajando.'
+    },
+    publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
       'Soy David Alonso (David7ce), desarrollador de software y web de formación. Completé un ciclo de dos años en desarrollo de aplicaciones web y he realizado cursos adicionales. Hablo español e inglés, y este sitio está disponible en ambos idiomas.',
       'Escribo HTML, CSS y JavaScript a mano y trabajo con C#, Python y Java, con SQL (PostgreSQL, T-SQL) para los datos y Figma para el diseño web y de interfaces. Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA.',

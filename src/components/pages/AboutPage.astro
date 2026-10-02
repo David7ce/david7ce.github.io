@@ -1,6 +1,7 @@
 ---
 import { aboutCopy, publicProfiles } from '@/data/about'
 import { t, type Lang } from '@/data/i18n'
+import { projectSections } from '@/data/projects'
 import { skillGroups } from '@/data/skills'
 
 import PageLayout from '@/layouts/CommonPage.astro'
@@ -13,8 +14,19 @@ const { lang } = Astro.props
 const copy = aboutCopy[lang]
 const { headings: h, interests, technologies, routes } = copy
 
+// Maintained projects come from the "involved" section of the projects data
+const collator = new Intl.Collator(lang, { sensitivity: 'base' })
+const maintained = (projectSections.find((section) => section.id === 'involved')?.projects ?? [])
+  .map(({ name, description, links }) => ({
+    name: t(name, lang).replace(/^[^\p{L}\p{N}]+/u, ''),
+    description: t(description, lang),
+    href: (links.find((link) => link.type === 'site') ?? links[0]).href
+  }))
+  .sort((a, b) => collator.compare(a.name, b.name))
+
 const headings = [
   { depth: 2, slug: 'who-am-i', text: h.profile },
+  { depth: 2, slug: 'maintained', text: h.maintained },
   { depth: 2, slug: 'interests', text: h.interests },
   { depth: 2, slug: 'tools', text: h.technologies },
   { depth: 2, slug: 'public-profile', text: h.publicProfile }
@@ -29,6 +41,13 @@ const [stackBefore, stackLabel, stackAfter] = technologies.stackNote
   {copy.profile.map((paragraph) => (
     <p>{paragraph}</p>
   ))}
+
+  <h2 id='maintained'>{h.maintained}</h2>
+  <p>{copy.maintained.intro}</p>
+  <!-- prettier-ignore -->
+  <ul>
+    {maintained.map(({ name, description, href }) => <li><a href={href} target='_blank'>{name}</a>: {description}</li>)}
+  </ul>
 
   <h2 id='interests'>{h.interests}</h2>
   <p>{interests.intro}</p>
@@ -54,6 +73,7 @@ const [stackBefore, stackLabel, stackAfter] = technologies.stackNote
   <p>{stackBefore}<a href={routes.stack}>{stackLabel}</a>{stackAfter}</p>
 
   <h2 id='public-profile'>🔗 {h.publicProfile}</h2>
+  <p>{copy.publicProfileIntro}</p>
   <ul>
     {publicProfiles.map(({ label, href }) => (
       <li>

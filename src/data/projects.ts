@@ -405,7 +405,7 @@ export const projectSections: ProjectSectionData[] = [
       {
         name: {
           en: '🧠 Obsidian PKM Vault',
-          es: '🧠 Categorización de bóvedas de conocimiento para Obsidian'
+          es: '🧠 Obsidian PKM Vault'
         },
         description: {
           en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
