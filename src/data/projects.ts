@@ -380,6 +380,7 @@ export const projectSections: ProjectSectionData[] = [
                 es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
               }
             },
+            image: 'audio2score-mcp.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
           },
           {
@@ -430,6 +431,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un generador de carruseles con IA para Instagram, LinkedIn y TikTok que funciona en local. La IA escribe el contenido en JSON estructurado y un renderizador determinista lo convierte en diapositivas HTML/CSS y PNG o JPG consistentes.'
             },
             tech: 'TypeScript',
+            image: 'slidr.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/Slidr' }]
           },
           {
