@@ -15,13 +15,6 @@ const headings = [
   <ProjectSection
     project={[
       {
-        name: '🗺️ Tenerife Commerce Institutional Website: Entrepreneurship and Business Directory',
-        description: 'A website by "Cabildo de Tenerife", featuring information on starting a business and a map of businesses in Tenerife.',
-        links: [
-          { type: 'site', href: 'https://www.tenerifecomercio.com/' }
-        ]
-      },
-      {
         name: '🛒 E-commerce front-end',
         description: 'An e-commerce front-end website using only vanilla HTML, CSS and JavaScript, no frameworks.',
         links: [
@@ -43,6 +36,13 @@ const headings = [
           { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
           { type: 'site', href: 'https://www.grmabogados.es/' },
           { type: 'site', href: 'https://salondebellezanais.com/' }
+        ]
+      },
+      {
+        name: '🗺️ Tenerife Commerce Institutional Website: Entrepreneurship and Business Directory',
+        description: 'A website by "Cabildo de Tenerife", featuring information on starting a business and a map of businesses in Tenerife.',
+        links: [
+          { type: 'site', href: 'https://www.tenerifecomercio.com/' }
         ]
       }
     ]}
@@ -118,13 +118,6 @@ const headings = [
         ]
       },
       {
-        name: '🧬 Cellular Automata',
-        description:
-          "A native desktop sandbox for Life-like cellular automata. Conway's Game of Life is one of 21 built-in rules, and a single generic birth/survive rule engine lets you define your own. Live cells are stored sparsely on a bounded 4096×4096 plane.",
-        tech: 'Rust, egui / eframe',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
-      },
-      {
         name: '🎼 Audio2Score MCP',
         description:
           'Turns a recorded audio file into an editable music score (audio → MIDI → MusicXML), either as plain CLI scripts or as an MCP server that AI agents can call. Each step writes a real file, so the automatic transcription can be checked or fixed before it becomes a score.',
@@ -137,6 +130,32 @@ const headings = [
           "Compares the bookmarks of a Chromium-based browser and Firefox and writes a single Markdown report. It reads Chromium's Bookmarks JSON and Firefox's places.sqlite directly.",
         tech: 'Python (standard library only)',
         links: [{ type: 'github', href: 'https://github.com/David7ce/bookmarks-report' }]
+      },
+      {
+        name: '🧬 Cellular Automata',
+        description:
+          "A native desktop sandbox for Life-like cellular automata. Conway's Game of Life is one of 21 built-in rules, and a single generic birth/survive rule engine lets you define your own. Live cells are stored sparsely on a bounded 4096×4096 plane.",
+        tech: 'Rust, egui / eframe',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
+      },
+      {
+        name: '🌐 Multi-language Translator',
+        description:
+          "Translates text into several languages at once. It uses Chrome's built-in Translator API when the browser has it and falls back to the public Google Translate endpoint otherwise.",
+        tech: 'React, TypeScript',
+        status: 'Demo deployed on GitHub Pages.',
+        links: [
+          { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
+          { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
+        ]
+      },
+      {
+        name: '📻 Oracle Radio',
+        description:
+          'A minimal prototype that zaps between live internet radio streams, plays snippets and transcribes them. Station lists come from the open radio-browser.info API.',
+        tech: 'Python, Whisper, FFmpeg',
+        status: 'v0.1 alpha prototype.',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
       },
       {
         name: '📖 Read Rapide',
@@ -171,25 +190,6 @@ const headings = [
           'A terminal app that detects your operating system and package manager, lets you multi-select packages, and runs the installs. It uses the same package lists as the Interneto web toolbox.',
         tech: 'Python',
         links: [{ type: 'github', href: 'https://github.com/interneto/tui-toolbox-installer' }]
-      },
-      {
-        name: '🌐 Multi-language Translator',
-        description:
-          "Translates text into several languages at once. It uses Chrome's built-in Translator API when the browser has it and falls back to the public Google Translate endpoint otherwise.",
-        tech: 'React, TypeScript',
-        status: 'Demo deployed on GitHub Pages.',
-        links: [
-          { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
-          { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
-        ]
-      },
-      {
-        name: '📻 Oracle Radio',
-        description:
-          'A minimal prototype that zaps between live internet radio streams, plays snippets and transcribes them. Station lists come from the open radio-browser.info API.',
-        tech: 'Python, Whisper, FFmpeg',
-        status: 'v0.1 alpha prototype.',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
       },
       {
         name: '🗺️ Universal Map-Time Engine',

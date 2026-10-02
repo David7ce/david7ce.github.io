@@ -36,16 +36,16 @@ const headings = [
           icon: import('@/assets/software/archlinux.svg?raw')
         },
         {
-          name: 'Windows 11',
-          description: 'Sistema operativo',
-          href: 'https://www.microsoft.com/windows/',
-          icon: import('@/assets/software/windows-11.svg?raw')
-        },
-        {
           name: 'KDE Plasma',
           description: 'Entorno de escritorio',
           href: 'https://kde.org/plasma-desktop/',
           icon: import('@/assets/software/kde.svg?raw')
+        },
+        {
+          name: 'Windows 11',
+          description: 'Sistema operativo',
+          href: 'https://www.microsoft.com/windows/',
+          icon: import('@/assets/software/windows-11.svg?raw')
         }
       ]}
     />
@@ -63,16 +63,16 @@ const headings = [
           icon: import('@/assets/software/affinity-studio.svg?raw')
         },
         {
-          name: 'Inkscape',
-          description: 'Gráficos vectoriales',
-          href: 'https://inkscape.org/',
-          icon: import('@/assets/software/inkscape.svg?raw')
-        },
-        {
           name: 'Figma',
           description: 'Diseño UI/UX',
           href: 'https://www.figma.com/',
           icon: import('@/assets/software/figma.svg?raw')
+        },
+        {
+          name: 'Inkscape',
+          description: 'Gráficos vectoriales',
+          href: 'https://inkscape.org/',
+          icon: import('@/assets/software/inkscape.svg?raw')
         }
       ]}
     />
@@ -83,6 +83,24 @@ const headings = [
       class='mb-5'
       title='Herramientas de desarrollo'
       tools={[
+        {
+          name: 'Chromium',
+          description: 'Navegador open source',
+          href: 'https://www.chromium.org/Home/',
+          icon: import('@/assets/software/chromium.svg?raw')
+        },
+        {
+          name: 'Claude Code',
+          description: 'Agente de IA para programar',
+          href: 'https://claude.com/claude-code',
+          icon: import('@/assets/software/claude-code.svg?raw')
+        },
+        {
+          name: 'Firefox',
+          description: 'Navegador centrado en privacidad',
+          href: 'https://www.mozilla.org/es-ES/firefox',
+          icon: import('@/assets/software/firefox.svg?raw')
+        },
         {
           name: 'Git',
           description: 'Control de versiones',
@@ -96,34 +114,16 @@ const headings = [
           icon: import('@/assets/software/github-copilot.svg?raw')
         },
         {
-          name: 'Claude Code',
-          description: 'Agente de IA para programar',
-          href: 'https://claude.com/claude-code',
-          icon: import('@/assets/software/claude-code.svg?raw')
-        },
-        {
-          name: 'VS Code',
-          description: 'Editor de código',
-          href: 'https://code.visualstudio.com/',
-          icon: import('@/assets/software/vscode.svg?raw')
-        },
-        {
           name: 'Visual Studio',
           description: 'IDE',
           href: 'https://visualstudio.microsoft.com/',
           icon: import('@/assets/software/visual-studio.svg?raw')
         },
         {
-          name: 'Chromium',
-          description: 'Navegador open source',
-          href: 'https://www.chromium.org/Home/',
-          icon: import('@/assets/software/chromium.svg?raw')
-        },
-        {
-          name: 'Firefox',
-          description: 'Navegador centrado en privacidad',
-          href: 'https://www.mozilla.org/es-ES/firefox',
-          icon: import('@/assets/software/firefox.svg?raw')
+          name: 'VS Code',
+          description: 'Editor de código',
+          href: 'https://code.visualstudio.com/',
+          icon: import('@/assets/software/vscode.svg?raw')
         }
       ]}
     />
@@ -135,16 +135,16 @@ const headings = [
       title='Virtualización y contenedores'
       tools={[
         {
-          name: 'Kubernetes',
-          description: 'Orquestación de contenedores',
-          href: 'https://kubernetes.io/',
-          icon: import('@/assets/software/kubernetes.svg?raw')
-        },
-        {
           name: 'Docker',
           description: 'Contenerización',
           href: 'https://www.docker.com/',
           icon: import('@/assets/software/docker.svg?raw')
+        },
+        {
+          name: 'Kubernetes',
+          description: 'Orquestación de contenedores',
+          href: 'https://kubernetes.io/',
+          icon: import('@/assets/software/kubernetes.svg?raw')
         },
         {
           name: 'VirtualBox',
@@ -174,16 +174,16 @@ const headings = [
           icon: import('@/assets/software/csharp.svg?raw')
         },
         {
-          name: 'PHP',
-          description: 'Lenguaje de programación',
-          href: 'https://www.php.net/',
-          icon: import('@/assets/software/php.svg?raw')
-        },
-        {
           name: 'JavaScript',
           description: 'Lenguaje de programación',
           href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
           icon: import('@/assets/software/js.svg?raw')
+        },
+        {
+          name: 'PHP',
+          description: 'Lenguaje de programación',
+          href: 'https://www.php.net/',
+          icon: import('@/assets/software/php.svg?raw')
         }
       ]}
     />
@@ -201,6 +201,12 @@ const headings = [
           icon: import('@/assets/software/html.svg?raw')
         },
         {
+          name: 'JSON',
+          description: 'Formato de intercambio de datos',
+          href: 'https://www.json.org/json-es.html',
+          icon: import('@/assets/software/json.svg?raw')
+        },
+        {
           name: 'Markdown',
           description: 'Lenguaje de marcado',
           href: 'https://www.markdownguide.org/',
@@ -211,12 +217,6 @@ const headings = [
           description: 'Lenguaje de marcado',
           href: 'https://www.w3.org/XML/',
           icon: import('@/assets/software/xml.svg?raw')
-        },
-        {
-          name: 'JSON',
-          description: 'Formato de intercambio de datos',
-          href: 'https://www.json.org/json-es.html',
-          icon: import('@/assets/software/json.svg?raw')
         }
       ]}
     />
@@ -270,22 +270,28 @@ const headings = [
       title='Frameworks y librerías web'
       tools={[
         {
-          name: 'ASP.NET',
-          description: 'Framework web',
-          href: 'https://dotnet.microsoft.com/apps/aspnet',
-          icon: import('@/assets/software/dotnet.svg?raw')
-        },
-        {
           name: 'Angular',
           description: 'Framework frontend',
           href: 'https://angular.io/',
           icon: import('@/assets/software/angular.svg?raw')
         },
         {
+          name: 'ASP.NET',
+          description: 'Framework web',
+          href: 'https://dotnet.microsoft.com/apps/aspnet',
+          icon: import('@/assets/software/dotnet.svg?raw')
+        },
+        {
           name: 'Astro',
           description: 'Generador de sitios estáticos',
           href: 'https://astro.build/',
           icon: import('@/assets/software/astro-js.svg?raw')
+        },
+        {
+          name: 'Joomla',
+          description: 'CMS',
+          href: 'https://www.joomla.org/',
+          icon: import('@/assets/software/joomla.svg?raw')
         },
         {
           name: 'React',
@@ -298,12 +304,6 @@ const headings = [
           description: 'CMS',
           href: 'https://wordpress.org/',
           icon: import('@/assets/software/wordpress.svg?raw')
-        },
-        {
-          name: 'Joomla',
-          description: 'CMS',
-          href: 'https://www.joomla.org/',
-          icon: import('@/assets/software/joomla.svg?raw')
         }
       ]}
     />
@@ -321,22 +321,10 @@ const headings = [
           icon: import('@/assets/software/apache.svg?raw')
         },
         {
-          name: 'Nginx',
-          description: 'Servidor web',
-          href: 'https://nginx.org/',
-          icon: import('@/assets/software/nginx.svg?raw')
-        },
-        {
           name: 'Firebase',
           description: 'Plataforma backend',
           href: 'https://firebase.google.com/',
           icon: import('@/assets/software/firebase.svg?raw')
-        },
-        {
-          name: 'Supabase',
-          description: 'Plataforma backend',
-          href: 'https://supabase.com/',
-          icon: import('@/assets/software/supabase.svg?raw')
         },
         {
           name: 'GitHub Pages',
@@ -349,6 +337,18 @@ const headings = [
           description: 'Stack de desarrollo',
           href: 'https://laragon.org/',
           icon: import('@/assets/software/laragon.svg?raw')
+        },
+        {
+          name: 'Nginx',
+          description: 'Servidor web',
+          href: 'https://nginx.org/',
+          icon: import('@/assets/software/nginx.svg?raw')
+        },
+        {
+          name: 'Supabase',
+          description: 'Plataforma backend',
+          href: 'https://supabase.com/',
+          icon: import('@/assets/software/supabase.svg?raw')
         },
         {
           name: 'XAMPP',

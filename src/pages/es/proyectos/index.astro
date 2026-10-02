@@ -15,13 +15,6 @@ const headings = [
   <ProjectSection
     project={[
       {
-        name: '🗺️ Web Institucional de Tenerife Comercio: Emprendimiento y Mapa de comercios',
-        description: 'Una web del "Cabildo de Tenerife", con información para Emprender con Empresas y con un mapa de los comercios de Tenerife.',
-        links: [
-          { type: 'site', href: 'https://www.tenerifecomercio.com/' }
-        ]
-      },
-      {
         name: '🛒 E-commerce front-end',
         description:
           'Un sitio web de comercio electrónico front-end que utiliza solo HTML, CSS y JavaScript básicos, sin frameworks.',
@@ -42,6 +35,13 @@ const headings = [
           { type: 'site', href: 'https://www.grmabogados.es/' },
           { type: 'site', href: 'https://salondebellezanais.com/' }
         ]
+      },
+      {
+        name: '🗺️ Web Institucional de Tenerife Comercio: Emprendimiento y Mapa de comercios',
+        description: 'Una web del "Cabildo de Tenerife", con información para Emprender con Empresas y con un mapa de los comercios de Tenerife.',
+        links: [
+          { type: 'site', href: 'https://www.tenerifecomercio.com/' }
+        ]
       }
     ]}
   />
@@ -58,6 +58,12 @@ const headings = [
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
       },
       {
+        name: '🧠 Categorización de bóvedas de conocimiento para Obsidian',
+        description:
+          'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.',
+        links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
+      },
+      {
         name: '🔗 Proyecto Interneto',
         description:
           'Un directorio web de enlaces de internet, además de un blog y un generador de instaladores de paquetes. Un gestor de marcadores anterior, en PHP, está archivado.',
@@ -65,12 +71,6 @@ const headings = [
           { type: 'site', href: 'https://interneto.github.io/' },
           { type: 'github', href: 'https://github.com/interneto' }
         ]
-      },
-      {
-        name: '🧠 Categorización de bóvedas de conocimiento para Obsidian',
-        description:
-          'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.',
-        links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },
       {
         name: '📚 Wiki de Computación',
@@ -110,13 +110,6 @@ const headings = [
         ]
       },
       {
-        name: '🧬 Autómatas Celulares',
-        description:
-          'Un sandbox de escritorio nativo para autómatas celulares tipo Life. El Juego de la Vida de Conway es una de las 21 reglas incluidas, y un único motor genérico de reglas nacimiento/supervivencia permite definir las tuyas. Las células vivas se guardan de forma dispersa en un plano acotado de 4096×4096.',
-        tech: 'Rust, egui / eframe',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
-      },
-      {
         name: '🎼 Audio2Score MCP',
         description:
           'Convierte un archivo de audio grabado en una partitura editable (audio → MIDI → MusicXML), ya sea con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA. Cada paso escribe un archivo real, así que la transcripción automática se puede revisar o corregir antes de convertirse en partitura.',
@@ -124,11 +117,36 @@ const headings = [
         links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
       },
       {
+        name: '🧬 Autómatas Celulares',
+        description:
+          'Un sandbox de escritorio nativo para autómatas celulares tipo Life. El Juego de la Vida de Conway es una de las 21 reglas incluidas, y un único motor genérico de reglas nacimiento/supervivencia permite definir las tuyas. Las células vivas se guardan de forma dispersa en un plano acotado de 4096×4096.',
+        tech: 'Rust, egui / eframe',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
+      },
+      {
         name: '🔖 Bookmarks Report',
         description:
           'Compara los marcadores de un navegador basado en Chromium y de Firefox y escribe un único informe en Markdown. Lee directamente el JSON Bookmarks de Chromium y el places.sqlite de Firefox.',
         tech: 'Python (solo biblioteca estándar)',
         links: [{ type: 'github', href: 'https://github.com/David7ce/bookmarks-report' }]
+      },
+      {
+        name: '🌙 Calculadora de Ciclos de Sueño',
+        description:
+          'Sugiere horas de acostarse o de despertarse alineadas con ciclos de sueño de 90 minutos. Una PWA instalable sin dependencias que funciona sin conexión tras la primera carga.',
+        tech: 'HTML, CSS, JavaScript',
+        links: [
+          { type: 'site', href: 'https://david7ce.is-a.dev/sleep-cycles-calc/' },
+          { type: 'github', href: 'https://github.com/David7ce/sleep-cycles-calc' }
+        ]
+      },
+      {
+        name: '📻 Oracle Radio',
+        description:
+          'Un prototipo mínimo que salta entre emisoras de radio por internet en directo, reproduce fragmentos y los transcribe. Las listas de emisoras vienen de la API abierta de radio-browser.info.',
+        tech: 'Python, Whisper, FFmpeg',
+        status: 'Prototipo v0.1 alpha.',
+        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
       },
       {
         name: '📖 Read Rapide',
@@ -148,16 +166,6 @@ const headings = [
         links: [{ type: 'github', href: 'https://github.com/David7ce/shell-toolkit' }]
       },
       {
-        name: '🌙 Calculadora de Ciclos de Sueño',
-        description:
-          'Sugiere horas de acostarse o de despertarse alineadas con ciclos de sueño de 90 minutos. Una PWA instalable sin dependencias que funciona sin conexión tras la primera carga.',
-        tech: 'HTML, CSS, JavaScript',
-        links: [
-          { type: 'site', href: 'https://david7ce.is-a.dev/sleep-cycles-calc/' },
-          { type: 'github', href: 'https://github.com/David7ce/sleep-cycles-calc' }
-        ]
-      },
-      {
         name: '🧰 Toolbox Installer (TUI)',
         description:
           'Una aplicación de terminal que detecta tu sistema operativo y gestor de paquetes, permite seleccionar varios paquetes y ejecuta las instalaciones. Usa las mismas listas de paquetes que la toolbox web de Interneto.',
@@ -174,14 +182,6 @@ const headings = [
           { type: 'site', href: 'https://david7ce.github.io/translator-multilang/' },
           { type: 'github', href: 'https://github.com/David7ce/translator-multilang' }
         ]
-      },
-      {
-        name: '📻 Oracle Radio',
-        description:
-          'Un prototipo mínimo que salta entre emisoras de radio por internet en directo, reproduce fragmentos y los transcribe. Las listas de emisoras vienen de la API abierta de radio-browser.info.',
-        tech: 'Python, Whisper, FFmpeg',
-        status: 'Prototipo v0.1 alpha.',
-        links: [{ type: 'github', href: 'https://github.com/David7ce/oracle-radio' }]
       },
       {
         name: '🗺️ Universal Map-Time Engine',
