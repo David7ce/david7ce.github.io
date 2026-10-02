@@ -325,6 +325,7 @@ export const projectSections: ProjectSectionData[] = [
               en: 'Released on GitHub. Tested on Linux and Windows; the macOS build is untested on real hardware.',
               es: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.'
             },
+            image: 'app-launcher.jpg',
             links: [
               { type: 'github', href: 'https://github.com/David7ce/app-launcher' },
               { type: 'release', href: 'https://github.com/David7ce/app-launcher/releases' }
@@ -345,6 +346,7 @@ export const projectSections: ProjectSectionData[] = [
                 es: 'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.'
               }
             },
+            image: 'cellular-automata.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
           }
         ]
