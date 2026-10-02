@@ -1,0 +1,46 @@
+---
+import ProjectSection from '@/components/projects/ProjectSection.astro'
+import PageLayout from '@/layouts/CommonPage.astro'
+import { projectSections, projectsTitle } from '@/data/projects'
+import { t, type Lang } from '@/data/i18n'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+
+const slug = { en: '/projects', es: '/proyectos' }[lang]
+const collator = new Intl.Collator(lang, { sensitivity: 'base' })
+// Sort by the visible name, ignoring the leading emoji
+const sortKey = (name: string) => name.replace(/^[^\p{L}\p{N}]+/u, '')
+
+const sections = projectSections.map(({ id, title, intro, projects }) => ({
+  id,
+  title: t(title, lang),
+  intro: intro && t(intro, lang),
+  projects: projects
+    .map(({ name, description, tech, status, links }) => ({
+      name: t(name, lang),
+      description: t(description, lang),
+      tech: tech && t(tech, lang),
+      status: status && t(status, lang),
+      links
+    }))
+    .sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))
+}))
+
+const headings = sections.map(({ id, title }) => ({ depth: 2, slug: id, text: title }))
+---
+
+<PageLayout title={t(projectsTitle, lang)} {headings} info={{ slug, hideComment: true }}>
+  {
+    sections.map(({ id, title, intro, projects }) => (
+      <>
+        <h2 id={id}>{title}</h2>
+        {intro && <p>{intro}</p>}
+        <ProjectSection project={projects} />
+      </>
+    ))
+  }
+</PageLayout>
