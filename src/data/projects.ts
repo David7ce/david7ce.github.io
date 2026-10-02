@@ -11,6 +11,8 @@ export interface Project {
   tech?: Localized | string
   status?: Localized
   links: ProjectLink[]
+  /** Shown on the home page, ordered by ascending rank. */
+  featured?: { rank: number; title?: Localized | string; summary: Localized }
 }
 
 export interface ProjectSubsection {
@@ -72,6 +74,14 @@ export const projectSections: ProjectSectionData[] = [
           en: 'A website by "Cabildo de Tenerife", featuring information on starting a business and a map of businesses in Tenerife.',
           es: 'Una web del "Cabildo de Tenerife", con información para Emprender con Empresas y con un mapa de los comercios de Tenerife.'
         },
+        featured: {
+          rank: 1,
+          title: 'Tenerife Comercio',
+          summary: {
+            en: 'Institutional website of the Cabildo de Tenerife with guidance for starting a business and a map of local businesses.',
+            es: 'Web institucional del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
+          }
+        },
         links: [{ type: 'site', href: 'https://www.tenerifecomercio.com/' }]
       }
     ]
@@ -99,6 +109,13 @@ export const projectSections: ProjectSectionData[] = [
           en: 'Personal project; its README recommends established Arch-based distros for a stable setup.',
           es: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.'
         },
+        featured: {
+          rank: 6,
+          summary: {
+            en: 'An Arch-based Linux with KDE: an ArchISO profile, a Calamares installer configuration and post-install scripts.',
+            es: 'Un Linux basado en Arch con KDE: un perfil de ArchISO, la configuración del instalador Calamares y scripts de post-instalación.'
+          }
+        },
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
       },
       {
@@ -120,6 +137,14 @@ export const projectSections: ProjectSectionData[] = [
         description: {
           en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
           es: 'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.'
+        },
+        featured: {
+          rank: 2,
+          title: 'Obsidian PKM Vault',
+          summary: {
+            en: 'An awesome-list and categorization of Obsidian knowledge vaults, with over 500 GitHub stars.',
+            es: 'Una awesome-list y categorización de bóvedas de conocimiento para Obsidian, con más de 500 estrellas en GitHub.'
+          }
         },
         links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },
@@ -200,6 +225,13 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un mapa estático que funciona solo en el navegador y que trata el calendario como una dimensión más. Cada "mundo" es una carpeta de archivos JSON y GeoJSON, así que añadir un mapa nuevo no requiere cambiar el motor.'
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
+            featured: {
+              rank: 5,
+              summary: {
+                en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
+                es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
+              }
+            },
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
               { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
@@ -273,6 +305,13 @@ export const projectSections: ProjectSectionData[] = [
               en: 'Released on GitHub. Tested on Linux and Windows; the macOS build is untested on real hardware.',
               es: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.'
             },
+            featured: {
+              rank: 3,
+              summary: {
+                en: 'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
+                es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo, hecho con Tauri.'
+              }
+            },
             links: [
               { type: 'github', href: 'https://github.com/David7ce/app-launcher' },
               { type: 'release', href: 'https://github.com/David7ce/app-launcher/releases' }
@@ -309,6 +348,13 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Convierte un archivo de audio grabado en una partitura editable (audio → MIDI → MusicXML), ya sea con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA. Cada paso escribe un archivo real, así que la transcripción automática se puede revisar o corregir antes de convertirse en partitura.'
             },
             tech: 'Python, basic-pitch, music21, MCP',
+            featured: {
+              rank: 4,
+              summary: {
+                en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
+                es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
+              }
+            },
             links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
           },
           {

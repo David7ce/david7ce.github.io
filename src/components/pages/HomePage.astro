@@ -1,8 +1,9 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
-import { featuredProjects, homeCopy } from '@/data/home'
+import { homeCopy } from '@/data/home'
 import { t, type Lang } from '@/data/i18n'
+import { projectSections } from '@/data/projects'
 import { skillGroups } from '@/data/skills'
 
 import { Quote } from 'astro-pure/advanced'
@@ -31,6 +32,21 @@ const posts = allPosts.filter(
     post.collection === 'blog' && post.data.language === lang
 )
 const latestPosts = sortMDByDate(posts).slice(0, MAX_POSTS)
+
+// Featured projects come from the projects data, most relevant first
+const featuredProjects = projectSections
+  .flatMap(({ projects, subsections }) => [
+    ...(projects ?? []),
+    ...(subsections ?? []).flatMap((sub) => sub.projects)
+  ])
+  .filter((project) => project.featured)
+  .sort((a, b) => a.featured!.rank - b.featured!.rank)
+  .map(({ name, featured, links }) => ({
+    // Featured projects may override the long page title; strip the leading emoji
+    name: t(featured!.title ?? name, lang).replace(/^[^\p{L}\p{N}]+/u, ''),
+    description: t(featured!.summary, lang),
+    href: (links.find((link) => link.type === 'site') ?? links[0]).href
+  }))
 ---
 
 <PageLayout meta={copy.meta} highlightColor='#659EB9'>
@@ -82,13 +98,14 @@ const latestPosts = sortMDByDate(posts).slice(0, MAX_POSTS)
       </Section>
 
       <Section title={copy.projects.title}>
+        <p class='text-muted-foreground'>{copy.projects.intro}</p>
         <ul class='flex flex-col gap-y-3'>
           {featuredProjects.map((project) => (
             <li>
               <a href={project.href} target='_blank' class='font-medium hover:underline'>
-                {t(project.name, lang)}
+                {project.name}
               </a>
-              <p class='text-muted-foreground'>{t(project.description, lang)}</p>
+              <p class='text-muted-foreground'>{project.description}</p>
             </li>
           ))}
         </ul>

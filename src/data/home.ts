@@ -5,7 +5,7 @@ export interface HomeCopy {
   avatarAlt: string
   about: { title: string; role: string; paragraphs: string[]; button: string }
   exploring: { title: string; paragraphs: string[] }
-  projects: { title: string; button: string }
+  projects: { title: string; intro: string; button: string }
   blog: {
     title: string
     intro: string
@@ -26,21 +26,25 @@ export const homeCopy: Record<Lang, HomeCopy> = {
     avatarAlt: 'Profile picture of David7ce',
     about: {
       title: 'About',
-      role: 'Web developer',
+      role: 'Software & Web Developer',
       paragraphs: [
-        "I'm a web developer by training: I completed a two-year degree in web application development and have taken additional courses. My interests have since grown towards systems, AI, developer tooling, Rust, Linux and free and open-source software.",
-        'I build small web apps, command-line and desktop tools and websites, and I write notes about what I learn. This site collects my projects and those notes.'
+        'I am a software and web developer by training, with a two-year degree in web application development and further courses since. I write HTML, CSS and JavaScript by hand, work in C#, Python and Java, and use SQL (PostgreSQL, T-SQL) and Figma for data and interface design.',
+        'Lately I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants. This site collects my projects and the notes I write while learning.'
       ],
       button: 'More about me'
     },
     exploring: {
       title: 'Exploring',
       paragraphs: [
-        'Systems and computer architecture, Rust, Linux, AI tooling and integrations (APIs, MCP) and developer tooling. Outside of software: electronics, physics and teaching.',
-        "These are interests I'm following. The projects below show what I have built so far."
+        'Cross-platform apps with Rust and Dart, Linux and free software, AI tooling and integrations (APIs, MCP), and systems and computer architecture. Outside of software: electronics, physics and teaching.',
+        "These are directions I'm following, not a list of expertise. The projects below show what I have actually built."
       ]
     },
-    projects: { title: 'Projects', button: 'All projects' },
+    projects: {
+      title: 'Featured projects',
+      intro: 'A selection of the most relevant ones; the full list is on the projects page.',
+      button: 'All projects'
+    },
     blog: {
       title: 'Blog',
       intro: 'Notes, guides and comparisons on Linux, computing and AI, written while learning.',
@@ -67,21 +71,26 @@ export const homeCopy: Record<Lang, HomeCopy> = {
     avatarAlt: 'Foto de perfil de David7ce',
     about: {
       title: 'Acerca de',
-      role: 'Desarrollador web',
+      role: 'Desarrollador de software y web',
       paragraphs: [
-        'Soy desarrollador web de formación: completé un ciclo de dos años en desarrollo de aplicaciones web y he realizado cursos adicionales. Mis intereses han crecido desde entonces hacia los sistemas, la IA, las herramientas de desarrollo, Rust, Linux y el software libre y de código abierto.',
-        'Construyo pequeñas aplicaciones web, herramientas de línea de comandos y de escritorio, y sitios web, y escribo notas sobre lo que aprendo. Este sitio reúne mis proyectos y esas notas.'
+        'Soy desarrollador de software y web de formación, con un ciclo de dos años en desarrollo de aplicaciones web y más cursos desde entonces. Escribo HTML, CSS y JavaScript a mano, trabajo con C#, Python y Java, y uso SQL (PostgreSQL, T-SQL) y Figma para el diseño de datos y de interfaces.',
+        'Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA. Este sitio reúne mis proyectos y las notas que escribo mientras aprendo.'
       ],
       button: 'Más sobre mí'
     },
     exploring: {
       title: 'Explorando',
       paragraphs: [
-        'Sistemas y arquitectura de computadores, Rust, Linux, herramientas de IA e integraciones (APIs, MCP) y herramientas de desarrollo. Fuera del software: electrónica, física y enseñanza.',
-        'Son intereses que estoy siguiendo. Los proyectos de abajo muestran lo que he construido hasta ahora.'
+        'Aplicaciones multiplataforma con Rust y Dart, Linux y el software libre, herramientas de IA e integraciones (APIs, MCP), y sistemas y arquitectura de computadores. Fuera del software: electrónica, física y enseñanza.',
+        'Son direcciones que sigo, no una lista de dominio. Los proyectos de abajo muestran lo que he construido de verdad.'
       ]
     },
-    projects: { title: 'Proyectos', button: 'Todos los proyectos' },
+    projects: {
+      title: 'Proyectos destacados',
+      intro:
+        'Una selección de los más relevantes; la lista completa está en la página de proyectos.',
+      button: 'Todos los proyectos'
+    },
     blog: {
       title: 'Blog',
       intro:
@@ -102,39 +111,3 @@ export const homeCopy: Record<Lang, HomeCopy> = {
     }
   }
 }
-
-/** Projects featured on the home page, in display order. */
-export const featuredProjects = [
-  {
-    name: { en: 'Audio2Score MCP', es: 'Audio2Score MCP' },
-    description: {
-      en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
-      es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
-    },
-    href: 'https://github.com/David7ce/audio2score-mcp'
-  },
-  {
-    name: { en: 'App Launcher', es: 'App Launcher' },
-    description: {
-      en: 'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
-      es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo, hecho con Tauri.'
-    },
-    href: 'https://github.com/David7ce/app-launcher'
-  },
-  {
-    name: { en: 'Cellular Automata (Rust)', es: 'Autómatas Celulares (Rust)' },
-    description: {
-      en: 'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
-      es: 'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.'
-    },
-    href: 'https://github.com/David7ce/cellular-automata-rust'
-  },
-  {
-    name: { en: 'Universal Map-Time Engine', es: 'Universal Map-Time Engine' },
-    description: {
-      en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
-      es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
-    },
-    href: 'https://david7ce.is-a.dev/universal-map-app/'
-  }
-]
