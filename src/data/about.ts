@@ -23,7 +23,7 @@ export interface AboutCopy {
     pointers: LinkedText
   }
   technologies: { intro: string; stackNote: LinkedText }
-  routes: { slug: string; projects: string; blog: string; stack: string }
+  routes: { projects: string; blog: string; stack: string }
 }
 
 export const aboutCopy: Record<Lang, AboutCopy> = {
@@ -69,7 +69,6 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       stackNote: ['The ', 'Stack', ' page lists the tools I use in more detail.']
     },
     routes: {
-      slug: '/about-me',
       projects: '/en/projects',
       blog: '/en/blog',
       stack: '/en/stack'
@@ -117,7 +116,6 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       stackNote: ['La página de ', 'Stack', ' lista con más detalle las herramientas que uso.']
     },
     routes: {
-      slug: '/sobre-mi',
       projects: '/es/proyectos',
       blog: '/es/blog',
       stack: '/es/stack'

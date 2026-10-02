@@ -36,7 +36,7 @@ const [pointerStart, pointerProjects, pointerMid, pointerBlog, pointerEnd] = int
 const [stackBefore, stackLabel, stackAfter] = technologies.stackNote
 ---
 
-<PageLayout title={copy.title} {headings} info={{ slug: routes.slug, hideComment: true }}>
+<PageLayout title={copy.title} {headings}>
   <h2 id='who-am-i'>{h.profile}</h2>
   {copy.profile.map((paragraph) => (
     <p>{paragraph}</p>

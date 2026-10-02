@@ -20,7 +20,7 @@ const headings = stackSections.map(({ id, title }) => ({
 }))
 ---
 
-<PageLayout title={t(stackTitle, lang)} {headings} info={{ slug: '/stack', hideComment: true }}>
+<PageLayout title={t(stackTitle, lang)} {headings}>
   <div class='mb-8'>
     <p class='mb-4 text-lg text-gray-700 dark:text-gray-300'>{t(stackIntro, lang)}</p>
   </div>
