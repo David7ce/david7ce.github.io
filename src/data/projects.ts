@@ -146,14 +146,6 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un mapa estático que funciona solo en el navegador y que trata el calendario como una dimensión más. Cada "mundo" es una carpeta de archivos JSON y GeoJSON, así que añadir un mapa nuevo no requiere cambiar el motor.'
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
-            featured: {
-              rank: 7,
-              kind: { en: 'Web app', es: 'App web' },
-              summary: {
-                en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
-                es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
-              }
-            },
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
               { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
@@ -227,14 +219,6 @@ export const projectSections: ProjectSectionData[] = [
               en: 'Released on GitHub. Tested on Linux and Windows; the macOS build is untested on real hardware.',
               es: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.'
             },
-            featured: {
-              rank: 4,
-              kind: { en: 'Desktop app', es: 'App de escritorio' },
-              summary: {
-                en: 'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
-                es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo, hecho con Tauri.'
-              }
-            },
             links: [
               { type: 'github', href: 'https://github.com/David7ce/app-launcher' },
               { type: 'release', href: 'https://github.com/David7ce/app-launcher/releases' }
@@ -248,7 +232,7 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Rust, egui / eframe',
             featured: {
-              rank: 5,
+              rank: 4,
               kind: { en: 'Desktop app', es: 'App de escritorio' },
               summary: {
                 en: 'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
@@ -280,7 +264,7 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Python, basic-pitch, music21, MCP',
             featured: {
-              rank: 6,
+              rank: 5,
               kind: { en: 'CLI and MCP server', es: 'CLI y servidor MCP' },
               summary: {
                 en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',

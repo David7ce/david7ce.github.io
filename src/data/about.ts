@@ -42,7 +42,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     publicProfileIntro: 'You can find me and my work here:',
     profile: [
       'I am David Alonso (David7ce), a software and web developer by training. I completed a two-year degree in web application development and have taken additional courses. I speak Spanish and English, and this site is available in both.',
-      'I write HTML, CSS and JavaScript by hand and work in C#, Python and Java, with SQL (PostgreSQL, T-SQL) for data and Figma for web and interface design. More recently I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants.',
+      'I write HTML, CSS and JavaScript by hand and work in C#, Python and Java, with SQL (PostgreSQL, T-SQL) for data and Figma for web and interface design. More recently I build cross-platform tools in Rust and Dart, and web projects in TypeScript, working with AI assistants. My favorite web framework is Astro, and this site is built with it.',
       'I build websites, small web apps, and command-line and desktop tools, and I write notes about what I learn along the way.'
     ],
     interests: {
@@ -91,7 +91,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
       'Soy David Alonso (David7ce), desarrollador de software y web de formación. Completé un ciclo de dos años en desarrollo de aplicaciones web y he realizado cursos adicionales. Hablo español e inglés, y este sitio está disponible en ambos idiomas.',
-      'Escribo HTML, CSS y JavaScript a mano y trabajo con C#, Python y Java, con SQL (PostgreSQL, T-SQL) para los datos y Figma para el diseño web y de interfaces. Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA.',
+      'Escribo HTML, CSS y JavaScript a mano y trabajo con C#, Python y Java, con SQL (PostgreSQL, T-SQL) para los datos y Figma para el diseño web y de interfaces. Últimamente construyo herramientas multiplataforma en Rust y Dart, y proyectos web en TypeScript, trabajando con asistentes de IA. Mi framework web favorito es Astro, y este sitio está hecho con él.',
       'Construyo sitios web, pequeñas aplicaciones web y herramientas de línea de comandos y de escritorio, y escribo notas sobre lo que voy aprendiendo.'
     ],
     interests: {

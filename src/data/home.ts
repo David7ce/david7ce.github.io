@@ -29,7 +29,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       role: 'Software & Web Developer',
       paragraphs: [
         'I write HTML, CSS and JavaScript by hand, work in C#, Python and SQL, and design interfaces in Figma. Lately I build cross-platform tools with Rust and Dart, working with AI assistants.',
-        'Most of my time goes into long-running open projects: Interneto, a web directory and blog, and CompuWiki, a computing documentation wiki. This site collects them, my smaller apps and the notes I write while learning.'
+        'Most of my time goes into long-running open projects: Interneto, a web directory and blog, and CompuWiki, a computing documentation wiki. This site, built with Astro, my favorite web framework, collects them, my smaller apps and the notes I write while learning.'
       ],
       button: 'More about me'
     },
@@ -74,7 +74,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       role: 'Desarrollador de software y web',
       paragraphs: [
         'Escribo HTML, CSS y JavaScript a mano, trabajo con C#, Python y SQL, y diseño interfaces en Figma. Últimamente construyo herramientas multiplataforma con Rust y Dart, trabajando con asistentes de IA.',
-        'La mayor parte de mi tiempo la dedico a proyectos abiertos de largo recorrido: Interneto, un directorio web con blog, y CompuWiki, una wiki de documentación de informática. Este sitio los reúne, junto con mis apps más pequeñas y las notas que escribo mientras aprendo.'
+        'La mayor parte de mi tiempo la dedico a proyectos abiertos de largo recorrido: Interneto, un directorio web con blog, y CompuWiki, una wiki de documentación de informática. Este sitio, hecho con Astro, mi framework web favorito, los reúne junto con mis apps más pequeñas y las notas que escribo mientras aprendo.'
       ],
       button: 'Más sobre mí'
     },

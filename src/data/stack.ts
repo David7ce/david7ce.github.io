@@ -280,7 +280,10 @@ export const stackSections: StackSection[] = [
       },
       {
         name: 'Astro',
-        description: { en: 'Static Site Generator', es: 'Generador de sitios estáticos' },
+        description: {
+          en: 'My favorite web framework; builds this site',
+          es: 'Mi framework web favorito; construye este sitio'
+        },
         href: 'https://astro.build/',
         icon: import('@/assets/software/astro-js.svg?raw')
       },
