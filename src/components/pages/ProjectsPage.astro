@@ -22,7 +22,7 @@ const localize = (projects: Project[]) =>
       description: t(description, lang),
       tech: tech && t(tech, lang),
       status: status && t(status, lang),
-      links,
+      links: links.map((link) => ({ ...link, href: t(link.href, lang) })),
       image
     }))
     .sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))

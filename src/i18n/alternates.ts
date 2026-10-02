@@ -4,6 +4,7 @@ const pagePairs: [string, string][] = [
   ['blog', 'blog'],
   ['stack', 'stack'],
   ['projects', 'proyectos'],
+  ['projects/tenerife-comercio', 'proyectos/tenerife-comercio'],
   ['about-me', 'sobre-mi'],
   ['archives', 'archivos'],
   ['search', 'buscador']
@@ -19,13 +20,13 @@ export interface Alternate {
  * without a known counterpart (posts and tag pages are translated separately).
  */
 export function getAlternates(pathname: string): Alternate[] {
-  const [, lang, slug = ''] = pathname.split('/')
-  const rest = pathname.split('/').slice(3).join('/')
-  if ((lang !== 'en' && lang !== 'es') || rest) return []
+  const [, lang, ...parts] = pathname.split('/')
+  if (lang !== 'en' && lang !== 'es') return []
 
+  const slug = parts.filter(Boolean).join('/')
   const trailingSlash = pathname.endsWith('/') && pathname !== `/${lang}`
   const index = lang === 'en' ? 0 : 1
-  const pair = pagePairs.find((entry) => entry[index] === slug.replace(/\/$/, ''))
+  const pair = pagePairs.find((entry) => entry[index] === slug)
   if (!pair) return []
 
   return (['en', 'es'] as const).map((l, i) => {

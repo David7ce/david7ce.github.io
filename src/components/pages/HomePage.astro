@@ -46,7 +46,7 @@ const featuredProjects = projectSections
     name: t(featured!.title ?? name, lang).replace(/^[^\p{L}\p{N}]+/u, ''),
     kind: t(featured!.kind, lang),
     description: t(featured!.summary, lang),
-    href: (links.find((link) => link.type === 'site') ?? links[0]).href
+    href: t((links.find((link) => link.type === 'site') ?? links[0]).href, lang)
   }))
 ---
 

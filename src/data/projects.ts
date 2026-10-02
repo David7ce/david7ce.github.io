@@ -1,8 +1,8 @@
 import type { Localized } from './i18n'
 
 export interface ProjectLink {
-  type: 'github' | 'site' | 'doc' | 'release'
-  href: string
+  type: 'github' | 'site' | 'doc' | 'release' | 'case-study'
+  href: Localized | string
 }
 
 export interface Project {
@@ -86,7 +86,13 @@ export const projectSections: ProjectSectionData[] = [
           }
         },
         image: 'tenerife-comercio.jpg',
-        links: [{ type: 'site', href: 'https://www.tenerifecomercio.com/' }]
+        links: [
+          { type: 'site', href: 'https://www.tenerifecomercio.com/' },
+          {
+            type: 'case-study',
+            href: { en: '/en/projects/tenerife-comercio', es: '/es/proyectos/tenerife-comercio' }
+          }
+        ]
       }
     ]
   },

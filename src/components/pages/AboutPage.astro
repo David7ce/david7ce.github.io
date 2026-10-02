@@ -20,7 +20,7 @@ const maintained = (projectSections.find((section) => section.id === 'involved')
   .map(({ name, description, links }) => ({
     name: t(name, lang).replace(/^[^\p{L}\p{N}]+/u, ''),
     description: t(description, lang),
-    href: (links.find((link) => link.type === 'site') ?? links[0]).href
+    href: t((links.find((link) => link.type === 'site') ?? links[0]).href, lang)
   }))
   .sort((a, b) => collator.compare(a.name, b.name))
 

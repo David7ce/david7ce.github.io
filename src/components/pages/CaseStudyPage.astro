@@ -1,0 +1,58 @@
+---
+import { tenerifeComercio, type CaseStudy } from '@/data/case-studies'
+import { t, type Lang } from '@/data/i18n'
+
+import PageLayout from '@/layouts/CommonPage.astro'
+
+interface Props {
+  lang: Lang
+  study?: CaseStudy
+}
+
+const { lang, study = tenerifeComercio } = Astro.props
+
+const back = {
+  en: { label: 'All projects', href: '/en/projects' },
+  es: { label: 'Todos los proyectos', href: '/es/proyectos' }
+}[lang]
+
+const headings = study.sections.map(({ id, title }) => ({
+  depth: 2,
+  slug: id,
+  text: t(title, lang)
+}))
+---
+
+<PageLayout title={t(study.title, lang)} {headings}>
+  <p class='text-lg'>{t(study.summary, lang)}</p>
+
+  <dl class='not-prose my-6 grid gap-x-6 gap-y-3 rounded-xl border p-4 sm:grid-cols-[auto_1fr]'>
+    {study.facts.map(({ label, value }) => (
+      <>
+        <dt class='font-medium text-foreground'>{t(label, lang)}</dt>
+        <dd class='text-muted-foreground'>{t(value, lang)}</dd>
+      </>
+    ))}
+  </dl>
+
+  {study.sections.map(({ id, title, blocks }) => (
+    <>
+      <h2 id={id}>{t(title, lang)}</h2>
+      {blocks.map((block) => {
+        if (block.type === 'p') return <p>{t(block.text, lang)}</p>
+        if (block.type === 'h3') return <h3>{t(block.text, lang)}</h3>
+        return (
+          <ul>
+            {block.items.map((item) => (
+              <li>{t(item, lang)}</li>
+            ))}
+          </ul>
+        )
+      })}
+    </>
+  ))}
+
+  <p>
+    <a href={back.href}>← {back.label}</a>
+  </p>
+</PageLayout>
