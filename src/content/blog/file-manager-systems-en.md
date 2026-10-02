@@ -94,7 +94,7 @@ for your desktop.
 - [nnn](https://github.com/jarun/nnn). The unorthodox terminal file manager with many features.
 - [ranger](https://ranger.github.io/). ranger is a console file manager with VI key bindings.
 - [Vfim.info](https://vifm.info/). Vifm is a file manager with curses interface, which provides Vim-like environment for managing objects within file systems, extended with some useful ideas from mutt.
-- [WCM Commander](https://github.com/corporateshark/WCMCommander). Open source file manager orthodox file manager.
+- WCM Commander. Open source file manager orthodox file manager.
 
 #### For Windows (CLI)
 

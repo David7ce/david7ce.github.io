@@ -64,7 +64,7 @@ Across all these layers, a large community of developers, stream collectors, and
 
 - **IPTV Listings:** [iptv-org](https://iptv-org.github.io/), [Free-TV/IPTV](https://github.com/Free-TV/IPTV)
 - **EPG (Electronic Programming Guides):** [globetvapp/epg](https://github.com/globetvapp/epg), [IPTV-EPG.org](https://iptv-epg.org/), [David Muma EPG](https://davidmuma.github.io/EPG/), [Open EPG](https://www.open-epg.com/app/index.php)
-- **Web Portals / Players in the Browser:** [WatchIPTV.xyz](https://watchiptv.xyz), [Worlds TV](https://worldstvmobile.com/category/sports), [TV Garden](https://tv.garden/), [TDTChannels](https://www.tdtchannels.com/), [TDT Spain](https://play.google.com/store/apps/details?id=com.tv.tdtspain)
+- **Web Portals / Players in the Browser:** [WatchIPTV.xyz](https://watchiptv.xyz), [Worlds TV](https://worldstvmobile.com/category/sports), [TV Garden](https://tv.garden/), [TDTChannels](https://www.tdtchannels.com/)
 
 #### 📱 IPTV Clients
 

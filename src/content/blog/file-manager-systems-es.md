@@ -95,7 +95,7 @@ Los administradores de archivos son el software más antiguo y conocido para org
 - [nnn](https://github.com/jarun/nnn). Un gestor de archivos de terminal poco convencional con numerosas funciones.
 - [ranger](https://ranger.github.io/). Ranger es un gestor de archivos de consola con atajos de teclado de VI.
 - [Vfim.info](https://vifm.info/). Vifm es un gestor de archivos con interfaz curses, que proporciona un entorno similar a Vim para gestionar objetos dentro de sistemas de archivos, con algunas ideas útiles de Mutt.
-- [WCM Commander](https://github.com/corporateshark/WCMCommander). Gestor de archivos ortodoxo de código abierto.
+- WCM Commander. Gestor de archivos ortodoxo de código abierto.
 
 #### Para Windows (CLI)
 

@@ -1,0 +1,53 @@
+name: Check links
+
+# Weekly check of the links in the built site. It does not block deployments:
+# a failure only means some external link needs a look.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build site
+        run: pnpm run build
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 2
+            --timeout 20
+            --accept '200..=299,403,429,999'
+            --root-dir '${{ github.workspace }}/dist'
+            --exclude 'linkedin\.com'
+            --exclude 'x\.com/intent'
+            --exclude 'service\.weibo\.com'
+            --exclude 'bsky\.app/intent'
+            --exclude 'waline-three-azure\.vercel\.app'
+            --exclude 'localhost'
+            './dist/**/*.html'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
