@@ -1,6 +1,6 @@
 ---
 import { t, type Lang } from '@/data/i18n'
-import { projectSections, projectsTitle } from '@/data/projects'
+import { projectSections, projectsTitle, type Project } from '@/data/projects'
 
 import PageLayout from '@/layouts/CommonPage.astro'
 import ProjectSection from '@/components/projects/ProjectSection.astro'
@@ -16,11 +16,8 @@ const collator = new Intl.Collator(lang, { sensitivity: 'base' })
 // Sort by the visible name, ignoring the leading emoji
 const sortKey = (name: string) => name.replace(/^[^\p{L}\p{N}]+/u, '')
 
-const sections = projectSections.map(({ id, title, intro, projects }) => ({
-  id,
-  title: t(title, lang),
-  intro: intro && t(intro, lang),
-  projects: projects
+const localize = (projects: Project[]) =>
+  projects
     .map(({ name, description, tech, status, links }) => ({
       name: t(name, lang),
       description: t(description, lang),
@@ -29,17 +26,37 @@ const sections = projectSections.map(({ id, title, intro, projects }) => ({
       links
     }))
     .sort((a, b) => collator.compare(sortKey(a.name), sortKey(b.name)))
+
+const sections = projectSections.map(({ id, title, intro, projects, subsections }) => ({
+  id,
+  title: t(title, lang),
+  intro: intro && t(intro, lang),
+  projects: projects && localize(projects),
+  subsections: subsections?.map((sub) => ({
+    id: sub.id,
+    title: t(sub.title, lang),
+    projects: localize(sub.projects)
+  }))
 }))
 
-const headings = sections.map(({ id, title }) => ({ depth: 2, slug: id, text: title }))
+const headings = sections.flatMap(({ id, title, subsections }) => [
+  { depth: 2, slug: id, text: title },
+  ...(subsections ?? []).map((sub) => ({ depth: 3, slug: sub.id, text: sub.title }))
+])
 ---
 
 <PageLayout title={t(projectsTitle, lang)} {headings} info={{ slug, hideComment: true }}>
-  {sections.map(({ id, title, intro, projects }) => (
+  {sections.map(({ id, title, intro, projects, subsections }) => (
     <>
       <h2 id={id}>{title}</h2>
       {intro && <p>{intro}</p>}
-      <ProjectSection project={projects} />
+      {projects && <ProjectSection project={projects} />}
+      {subsections?.map((sub) => (
+        <>
+          <h3 id={sub.id}>{sub.title}</h3>
+          <ProjectSection project={sub.projects} />
+        </>
+      ))}
     </>
   ))}
 </PageLayout>
