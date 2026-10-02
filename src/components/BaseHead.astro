@@ -1,10 +1,11 @@
 ---
 // import { ClientRouter } from 'astro:transitions'
 
-import { prod } from 'astro-pure/server'
+import { getBlogCollection, prod } from 'astro-pure/server'
 import type { SiteMeta } from 'astro-pure/types'
 import config from '@/site-config'
-import { getAlternates, ogLocale } from '../i18n/alternates'
+
+import { getAlternates, getPostAlternates, ogLocale } from '../i18n/alternates'
 
 type Props = SiteMeta
 
@@ -14,7 +15,9 @@ const siteTitle = `${title} ${config.titleDelimiter} ${config.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL(ogImage ? ogImage : '/img/social-card.png', Astro.url).href
 const pageLang = Astro.url.pathname.startsWith('/es') ? 'es' : 'en'
-const alternates = getAlternates(Astro.url.pathname)
+const alternates = Astro.url.pathname.includes('/post/')
+  ? getPostAlternates(Astro.url.pathname, await getBlogCollection())
+  : getAlternates(Astro.url.pathname)
 ---
 
 <meta charset='utf-8' />
@@ -40,16 +43,16 @@ const alternates = getAlternates(Astro.url.pathname)
 
 {/* Canonical URL and language alternates */}
 <link rel='canonical' href={canonicalURL} />
-{
-  alternates.map(({ lang, path }) => (
-    <link rel='alternate' hreflang={lang} href={new URL(path, Astro.site)} />
-  ))
-}
-{
-  alternates.length > 0 && (
-    <link rel='alternate' hreflang='x-default' href={new URL(alternates[0].path, Astro.site)} />
-  )
-}
+{alternates.map(({ lang, path }) => (
+  <link rel='alternate' hreflang={lang} href={new URL(path, Astro.site)} />
+))}
+{alternates.length > 0 && (
+  <link
+    rel='alternate'
+    hreflang='x-default'
+    href={new URL((alternates.find((a) => a.lang === 'en') ?? alternates[0]).path, Astro.site)}
+  />
+)}
 
 {/* Primary Meta Tags */}
 <meta content={siteTitle} name='title' />
@@ -69,14 +72,12 @@ const alternates = getAlternates(Astro.url.pathname)
 <meta content={socialImageURL} property='og:image' />
 <meta content='1200' property='og:image:width' />
 <meta content='630' property='og:image:height' />
-{
-  articleDate && (
-    <>
-      <meta content={config.author} property='article:author' />
-      <meta content={articleDate} property='article:published_time' />
-    </>
-  )
-}
+{articleDate && (
+  <>
+    <meta content={config.author} property='article:author' />
+    <meta content={articleDate} property='article:published_time' />
+  </>
+)}
 
 {/* Twitter */}
 <meta content='summary_large_image' property='twitter:card' />
@@ -116,11 +117,11 @@ const alternates = getAlternates(Astro.url.pathname)
 
 {
   /* User script*/
-  prod && (
-    <script>
-      console.log( '%c Astro Theme Pure %c https://github.com/cworld1/astro-theme-pure/',
+  prod && <script>
+    console.log(
+      '%c Astro Theme Pure %c https://github.com/cworld1/astro-theme-pure/',
       'color:#fff;background:linear-gradient(90deg,#448bff,#44e9ff);padding:5px 0;',
-      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;' )
-    </script>
-  )
+      'color:#000;background:linear-gradient(90deg,#44e9ff,#ffffff);padding:5px 10px 5px 0px;'
+    )
+  </script>
 }

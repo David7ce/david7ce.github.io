@@ -146,7 +146,7 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
             featured: {
-              rank: 5,
+              rank: 4,
               summary: {
                 en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
                 es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
@@ -226,7 +226,7 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Publicado en GitHub. Probado en Linux y Windows; la versión de macOS no se ha probado en hardware real.'
             },
             featured: {
-              rank: 3,
+              rank: 2,
               summary: {
                 en: 'A categorized launcher for the desktop apps installed on your machine, built with Tauri.',
                 es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo, hecho con Tauri.'
@@ -269,7 +269,7 @@ export const projectSections: ProjectSectionData[] = [
             },
             tech: 'Python, basic-pitch, music21, MCP',
             featured: {
-              rank: 4,
+              rank: 3,
               summary: {
                 en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
                 es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
@@ -368,13 +368,6 @@ export const projectSections: ProjectSectionData[] = [
           en: 'Personal project; its README recommends established Arch-based distros for a stable setup.',
           es: 'Proyecto personal; su README recomienda distros basadas en Arch consolidadas para una instalación estable.'
         },
-        featured: {
-          rank: 6,
-          summary: {
-            en: 'An Arch-based Linux with KDE: an ArchISO profile, a Calamares installer configuration and post-install scripts.',
-            es: 'Un Linux basado en Arch con KDE: un perfil de ArchISO, la configuración del instalador Calamares y scripts de post-instalación.'
-          }
-        },
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
       },
       {
@@ -396,14 +389,6 @@ export const projectSections: ProjectSectionData[] = [
         description: {
           en: 'Categorization of knowledge vaults for Obsidian, for multiple topics. Includes an awesome-list of Obsidian vaults with over 500 GitHub stars.',
           es: 'Categorización de bóvedas de conocimiento para Obsidian, para múltiples temáticas. Incluye una awesome-list de bóvedas de Obsidian con más de 500 estrellas en GitHub.'
-        },
-        featured: {
-          rank: 2,
-          title: 'Obsidian PKM Vault',
-          summary: {
-            en: 'An awesome-list and categorization of Obsidian knowledge vaults, with over 500 GitHub stars.',
-            es: 'Una awesome-list y categorización de bóvedas de conocimiento para Obsidian, con más de 500 estrellas en GitHub.'
-          }
         },
         links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },

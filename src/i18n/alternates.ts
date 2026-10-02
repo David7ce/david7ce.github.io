@@ -36,3 +36,38 @@ export function getAlternates(pathname: string): Alternate[] {
 }
 
 export const ogLocale = { en: 'en_US', es: 'es_ES' } as const
+
+interface PostLike {
+  id: string
+  data: { slug?: string; translationKey?: string; language?: string }
+}
+
+const postSlug = (post: PostLike) =>
+  post.data.slug ??
+  post.id
+    .split('/')
+    .pop()
+    ?.replace(/\.mdx?$/, '')
+
+/**
+ * `hreflang` alternates for a blog post: the posts that share its `translationKey`.
+ * Returns an empty list when the post has no translation.
+ */
+export function getPostAlternates(pathname: string, posts: PostLike[]): Alternate[] {
+  const trailingSlash = pathname.endsWith('/')
+  const slug = decodeURIComponent(
+    pathname.replace(/\/$/, '').split('/post/')[1]?.split('/').pop() ?? ''
+  )
+  const current = posts.find((post) => postSlug(post) === slug)
+  const key = current?.data.translationKey
+  if (!key) return []
+
+  const related = posts.filter((post) => post.data.translationKey === key)
+  const alternates = related.flatMap((post): Alternate[] => {
+    const lang = post.data.language
+    const target = postSlug(post)
+    if ((lang !== 'en' && lang !== 'es') || !target) return []
+    return [{ lang, path: `/${lang}/post/${encodeURI(target)}${trailingSlash ? '/' : ''}` }]
+  })
+  return alternates.length > 1 ? alternates : []
+}
