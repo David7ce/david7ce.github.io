@@ -65,6 +65,14 @@ const htmlLang = lang === 'es' ? (esConfig.locale?.lang ?? 'es-ES') : config.loc
       :global(.highlight) {
         color: var(--highlightColor, hsl(var(--primary) / var(--un-text-opacity))) !important;
       }
+      /* In light mode the accent colour of a post can be too pale for text: darken it to meet WCAG AA */
+      :global(html:not(.dark) .highlight) {
+        color: color-mix(
+          in srgb,
+          var(--highlightColor, hsl(var(--primary) / var(--un-text-opacity))) 70%,
+          #000
+        ) !important;
+      }
       :global(.highlight-bg) {
         background-color: var(
           --highlightColor,

@@ -19,7 +19,7 @@ language: es
 | Tipo | Para qué sirve | ¿Reversible? | ¿Necesita clave? | Ejemplos |
 | --- | --- | --- | --- | --- |
 | **Codificación** | Representar datos en un formato | Sí | No | UTF-8, Base64, codificación de URL |
-| **Cifrado** | Mantener los datos en secreto | Sí, con la clave | Sí | AES, GPG (mira [Encripta fácil con un Gestor de Contraseñas](/es/post/encripta-facil)) |
+| **Cifrado** | Mantener los datos en secreto | Sí, con la clave | Sí | AES, GPG (mira [Gestor de contraseñas y cifrado sencillo](/es/post/encripta-facil)) |
 | **Hash** | Huella de los datos, comprobar integridad | No | No | SHA-256 |
 
 El error más común es tratar una codificación como si protegiera algo: **cualquiera puede decodificar Base64**, así que no oculta nada.

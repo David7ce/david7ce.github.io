@@ -26,6 +26,13 @@ import config from './src/site.config.ts'
 export default defineConfig({
   // Top-Level Options
   site: 'https://david7ce.github.io',
+  // Posts that were merged into another one: keep their old URLs working
+  redirects: {
+    '/en/post/setup-password-manager': '/en/post/easy-encryption',
+    '/es/post/gestor-de-contraseñas': '/es/post/encripta-facil',
+    '/en/post/linux-distros': '/en/post/linux-intro',
+    '/es/post/distros-de-linux': '/es/post/intro-a-linux'
+  },
   // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
   // base: '/astro-pure/',
   trailingSlash: 'ignore',

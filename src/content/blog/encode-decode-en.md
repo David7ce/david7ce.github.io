@@ -19,7 +19,7 @@ language: en
 | Type | Purpose | Reversible? | Needs a key? | Examples |
 | --- | --- | --- | --- | --- |
 | **Encoding** | Represent data in a format | Yes | No | UTF-8, Base64, URL encoding |
-| **Encryption** | Keep data secret | Yes, with the key | Yes | AES, GPG (see [Encrypt easy with Password Manager](/en/post/easy-encryption)) |
+| **Encryption** | Keep data secret | Yes, with the key | Yes | AES, GPG (see [Password manager and easy encryption](/en/post/easy-encryption)) |
 | **Hashing** | Fingerprint data, check integrity | No | No | SHA-256 |
 
 The most common mistake is treating an encoding as protection: **anyone can decode Base64**, so it hides nothing.
