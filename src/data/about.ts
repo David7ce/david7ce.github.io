@@ -1,3 +1,4 @@
+import { contactEmail } from './contact'
 import type { Lang } from './i18n'
 
 /** Sentence with inline links: text, link label, text, link label, ... */
@@ -128,5 +129,6 @@ export const publicProfiles = [
   { label: 'D7 - AlternativeTo', href: 'https://alternativeto.net/user/d7' },
   { label: 'David7ce - GitHub', href: 'https://github.com/david7ce' },
   { label: 'David Alonso - LinkedIn', href: 'https://www.linkedin.com/in/david-alonsodd' },
-  { label: 'Compub1t - YouTube', href: 'https://www.youtube.com/@CompuB1t' }
+  { label: 'Compub1t - YouTube', href: 'https://www.youtube.com/@CompuB1t' },
+  { label: contactEmail, href: `mailto:${contactEmail}` }
 ]

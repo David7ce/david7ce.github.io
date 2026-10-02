@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets'
 import type { CollectionEntry } from 'astro:content'
+import { contactEmail } from '@/data/contact'
 import { homeCopy } from '@/data/home'
 import { t, type Lang } from '@/data/i18n'
 import { projectSections } from '@/data/projects'
@@ -73,6 +74,9 @@ const featuredProjects = projectSections
             target='_blank'
           >
             <Icon name='link' class='size-5' slot='icon' />
+          </Label>
+          <Label title={copy.emailLabel} as='a' href={`mailto:${contactEmail}`}>
+            <Icon name='email' class='size-5' slot='icon' />
           </Label>
         </div>
       </div>

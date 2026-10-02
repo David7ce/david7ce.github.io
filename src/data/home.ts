@@ -3,6 +3,7 @@ import type { Lang } from './i18n'
 export interface HomeCopy {
   meta: { title: string; description: string }
   avatarAlt: string
+  emailLabel: string
   about: { title: string; role: string; paragraphs: string[]; button: string }
   exploring: { title: string; paragraphs: string[] }
   projects: { title: string; intro: string; button: string }
@@ -24,6 +25,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       description: "David7ce's personal site: projects and notes on Linux, computing and AI"
     },
     avatarAlt: 'Profile picture of David7ce',
+    emailLabel: 'Email',
     about: {
       title: 'About',
       role: 'Software & Web Developer',
@@ -69,6 +71,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       description: 'Sitio personal de David7ce: proyectos y notas sobre Linux, informática e IA'
     },
     avatarAlt: 'Foto de perfil de David7ce',
+    emailLabel: 'Correo',
     about: {
       title: 'Acerca de',
       role: 'Desarrollador de software y web',
