@@ -61,7 +61,6 @@ export const projectSections: ProjectSectionData[] = [
         },
         image: 'tenerife-comercio.jpg',
         links: [
-          { type: 'site', href: 'https://www.tenerifecomercio.com/' },
           {
             type: 'case-study',
             href: { en: '/en/projects/tenerife-comercio', es: '/es/proyectos/tenerife-comercio' }
