@@ -38,13 +38,13 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       publicProfile: 'Public Profile'
     },
     maintained: {
-      intro: 'Beyond small apps, these are the longer-running projects I keep working on.'
+      intro: 'The longer-running projects I keep working on.'
     },
     publicProfileIntro: 'You can find me and my work here:',
     profile: [
-      "I'm David Alonso (David7ce), a software developer. I trained with a higher-level degree in web application development and several courses, and I spent several years studying physics, which gave me a mathematical background and analytical skills. I have always approached problems with a philosophical mindset. I build apps for the web, mobile, desktop and terminal with simple, pleasant interfaces, although my main work is websites.",
-      'I like building web apps with as few dependencies as possible: I think they are the best route to cross-platform and responsive software. I work with static sites (HTML, CSS and JavaScript), with frameworks such as Astro and, on the server side, I prefer TypeScript to heavy stacks. I also work with WordPress and Joomla, and I like SQL and SQLite. For more native, optimized apps I have worked with Rust and Dart, with the help of AI.',
-      'I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto, CompuWiki and Universal Map-Time Engine, a map with an integrated calendar. I speak native Spanish and B2-level English, and I understand almost everything in English because I use it every day.'
+      "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal, always with simple, pleasant interfaces, and I like taking care of the whole product: design in Figma, code, data and deployment. I trained with a higher-level degree in web application development and several courses.",
+      'I prefer simple solutions with few dependencies: static sites, TypeScript over heavy stacks, and databases such as SQL or SQLite. My time studying physics gave me a mathematical background and analytical skills, and I have always approached problems with a philosophical mindset. I use AI as a tool, for example for Rust and Dart, and I take care of the design, the architecture and reviewing what it generates.',
+      "I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also work as a freelancer on projects where I can take part from start to finish. I speak native Spanish and B2-level English."
     ],
     interests: {
       intro: 'My interests have grown beyond web development towards:',
@@ -85,14 +85,13 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
       publicProfile: 'Perfil público'
     },
     maintained: {
-      intro:
-        'Más allá de las apps pequeñas, estos son los proyectos de más recorrido en los que sigo trabajando.'
+      intro: 'Los proyectos de más recorrido en los que sigo trabajando.'
     },
     publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
-      'Soy David Alonso (David7ce), desarrollador de software. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos, y cursé varios años de física, que me aportó base matemática y capacidad analítica. Siempre he abordado los problemas con un enfoque filosófico. Construyo aplicaciones para web, móvil, escritorio y terminal, con interfaces simples y agradables, aunque mi trabajo principal son las páginas web.',
-      'Me gusta crear aplicaciones web con el mínimo de dependencias: creo que son el mejor camino hacia el software multiplataforma y adaptable a cualquier dispositivo. Trabajo con webs estáticas (HTML, CSS y JavaScript), con frameworks como Astro y, en el lado del servidor, prefiero TypeScript a pilas pesadas. También manejo WordPress y Joomla, y me gustan SQL y SQLite. Para apps más nativas y optimizadas he trabajado con Rust y Dart, con ayuda de IA.',
-      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki y Universal Map-Time Engine, un mapa con calendario integrado. Hablo español nativo e inglés con nivel B2, y entiendo casi todo en inglés porque lo consumo a diario.'
+      'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal, siempre con interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño en Figma, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos.',
+      'Prefiero soluciones sencillas y con pocas dependencias: webs estáticas, TypeScript antes que pilas pesadas y bases de datos como SQL o SQLite. Mi paso por la física me dejó base matemática y capacidad analítica, y siempre he abordado los problemas con un enfoque filosófico. Uso la IA como herramienta, por ejemplo para Rust y Dart, y me encargo yo del diseño, la arquitectura y la revisión de lo que genera.',
+      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos en los que pueda participar de principio a fin. Hablo español nativo e inglés con nivel B2.'
     ],
     interests: {
       intro: 'Mis intereses han crecido más allá del desarrollo web hacia:',
@@ -103,7 +102,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
         'IA, herramientas de desarrollo, APIs e integraciones (MCP)'
       ],
       outside:
-        'Fuera del software me interesan la electrónica, la física, la investigación técnica y la enseñanza.',
+        'Fuera del ámbito informático me interesan la electrónica, la física, la investigación técnica y la enseñanza.',
       pointers: [
         'Esto describe hacia dónde va mi curiosidad. Lo que he construido realmente está en los ',
         'proyectos',
