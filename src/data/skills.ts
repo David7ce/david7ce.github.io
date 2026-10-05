@@ -42,7 +42,7 @@ export const skillGroups: SkillGroup[] = [
   {
     id: 'cms',
     title: { en: 'CMS', es: 'CMS' },
-    skills: ['Joomla', 'WordPress']
+    skills: ['EmDash', 'Joomla', 'WordPress']
   },
   {
     id: 'servers-cloud',

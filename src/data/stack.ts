@@ -370,6 +370,12 @@ export const stackSections: StackSection[] = [
         description: { en: 'Cross-platform UI Toolkit', es: 'Toolkit de UI multiplataforma' },
         href: 'https://flutter.dev/',
         icon: import('@/assets/software/flutter.svg?raw')
+      },
+      {
+        name: 'EmDash',
+        description: { en: 'Astro CMS', es: 'CMS de Astro' },
+        href: 'https://emdashcms.com/',
+        icon: import('@/assets/software/emdash.svg?raw')
       }
     ]
   },
