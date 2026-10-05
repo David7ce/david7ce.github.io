@@ -69,7 +69,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
         'AI, developer tooling, APIs and integrations (MCP)'
       ],
       outside:
-        'Outside of software I am interested in electronics, physics, technical investigation and teaching.',
+        'Outside of software I am interested in electronics, physics, technical investigation and teaching. I approach everything with curiosity, a philosophical mindset and a holistic, integrating vision.',
       pointers: [
         'These describe where my curiosity is heading. For what I have actually built, see the ',
         'projects',
@@ -128,7 +128,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
         'IA, herramientas de desarrollo, APIs e integraciones (MCP)'
       ],
       outside:
-        'Fuera del ámbito informático me interesan la electrónica, la física, la investigación técnica y la enseñanza.',
+        'Fuera del ámbito informático me interesan la electrónica, la física, la investigación técnica y la enseñanza. Lo abordo todo con curiosidad, un enfoque filosófico y una visión holística e integradora.',
       pointers: [
         'Esto describe hacia dónde va mi curiosidad. Lo que he construido realmente está en los ',
         'proyectos',
