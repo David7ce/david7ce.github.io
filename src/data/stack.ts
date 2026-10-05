@@ -184,6 +184,36 @@ export const stackSections: StackSection[] = [
         description: { en: 'Programming Language', es: 'Lenguaje de programación' },
         href: 'https://www.php.net/',
         icon: import('@/assets/software/php.svg?raw')
+      },
+      {
+        name: 'Python',
+        description: { en: 'Programming Language', es: 'Lenguaje de programación' },
+        href: 'https://www.python.org/',
+        icon: import('@/assets/software/python.svg?raw')
+      },
+      {
+        name: 'Java',
+        description: { en: 'Programming Language', es: 'Lenguaje de programación' },
+        href: 'https://www.java.com/',
+        icon: import('@/assets/software/java.svg?raw')
+      },
+      {
+        name: 'Rust',
+        description: { en: 'Programming Language', es: 'Lenguaje de programación' },
+        href: 'https://www.rust-lang.org/',
+        icon: import('@/assets/software/rust.svg?raw')
+      },
+      {
+        name: 'Dart',
+        description: { en: 'Programming Language', es: 'Lenguaje de programación' },
+        href: 'https://dart.dev/',
+        icon: import('@/assets/software/dart.svg?raw')
+      },
+      {
+        name: 'TypeScript',
+        description: { en: 'Programming Language', es: 'Lenguaje de programación' },
+        href: { en: 'https://www.typescriptlang.org/', es: 'https://www.typescriptlang.org/es/' },
+        icon: import('@/assets/software/typescript.svg?raw')
       }
     ]
   },
@@ -232,6 +262,24 @@ export const stackSections: StackSection[] = [
           es: 'https://developer.mozilla.org/es/docs/Web/CSS'
         },
         icon: import('@/assets/software/css.svg?raw')
+      },
+      {
+        name: 'Sass',
+        description: { en: 'Styling Language', es: 'Lenguaje de estilos' },
+        href: 'https://sass-lang.com/',
+        icon: import('@/assets/software/sass.svg?raw')
+      },
+      {
+        name: 'Tailwind CSS',
+        description: { en: 'CSS Framework', es: 'Framework CSS' },
+        href: 'https://tailwindcss.com/',
+        icon: import('@/assets/software/tailwindcss.svg?raw')
+      },
+      {
+        name: 'Bootstrap',
+        description: { en: 'CSS Framework', es: 'Framework CSS' },
+        href: 'https://getbootstrap.com/',
+        icon: import('@/assets/software/bootstrap.svg?raw')
       }
     ]
   },
@@ -259,6 +307,12 @@ export const stackSections: StackSection[] = [
           es: 'https://docs.microsoft.com/es-es/sql/t-sql/'
         },
         icon: import('@/assets/software/tsql.svg?raw')
+      },
+      {
+        name: 'SQLite',
+        description: { en: 'Embedded Database', es: 'Base de datos embebida' },
+        href: 'https://www.sqlite.org/',
+        icon: import('@/assets/software/sqlite.svg?raw')
       }
     ]
   },
@@ -304,6 +358,18 @@ export const stackSections: StackSection[] = [
         description: { en: 'CMS', es: 'CMS' },
         href: 'https://wordpress.org/',
         icon: import('@/assets/software/wordpress.svg?raw')
+      },
+      {
+        name: 'Tauri',
+        description: { en: 'Desktop App Framework', es: 'Framework de apps de escritorio' },
+        href: 'https://tauri.app/',
+        icon: import('@/assets/software/tauri.svg?raw')
+      },
+      {
+        name: 'Flutter',
+        description: { en: 'Cross-platform UI Toolkit', es: 'Toolkit de UI multiplataforma' },
+        href: 'https://flutter.dev/',
+        icon: import('@/assets/software/flutter.svg?raw')
       }
     ]
   },
