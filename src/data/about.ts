@@ -43,13 +43,12 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     vision: {
       intro: [
-        'I want to build apps that are as universal as possible, open source and backed by a good team: this is what I define as good software in ',
-        'this article',
-        '. Public code is transparent and auditable, so people can choose not to depend on closed proprietary software that is hard to inspect.'
+        'I want to build apps that are as universal as possible, open source and backed by a good team: what I define as ',
+        'good software',
+        '. Public code is transparent and auditable, and lets people avoid depending on closed proprietary software.'
       ],
       paragraphs: [
-        'I do not believe everything should be free: when the product is free, the user often becomes the product. Software should be maintained and compensated in some way, whether with money, donations, cryptocurrencies, grants or other forms of support, and I have nothing against one-time payments or subscriptions when they make sense.',
-        'I believe that, with enough development and maturity of free software, a person could live without proprietary software and have an equally satisfying experience, with some trade-offs. For that trust to make sense, it must be possible to verify that the published code is what actually runs: good practices such as reproducible builds, signatures and community review help with that.'
+        'I do not think everything should be free: when the product is free, the user often is the product. Software should be maintained and compensated in some way (payment, donations, cryptocurrencies, grants), and I have nothing against one-time payments or subscriptions. I believe that, with enough maturity of free software, a person could live without proprietary software and have an equally good experience, with some trade-offs, as long as it is possible to verify that the published code is what actually runs (reproducible builds, signatures, community review).'
       ]
     },
     maintained: {
@@ -57,9 +56,9 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'You can find me and my work here:',
     profile: [
-      "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal, always with simple, pleasant interfaces, and I like taking care of the whole product: design, code, data and deployment. I trained with a higher-level degree in web application development and several courses.",
-      'I prefer apps with no external server and few dependencies: static sites and local apps when that is enough. If a full-stack app needs a database, I use TypeScript with PostgreSQL or SQLite for their integration, performance and open-source nature. For websites that other people need to manage, I work with CMSs such as WordPress and Joomla, and with EmDash, a new open-source CMS built on Astro and TypeScript, to which I have adapted apps. For native, optimized apps I choose Rust or Dart, with Kotlin as the alternative, for their performance and cross-platform reach; Python is another language I like, from my physics courses. Physics gave me a mathematical background and analytical skills, and I have always approached problems with a philosophical mindset. I use AI as a tool, and I take care of the design, the architecture and the review.',
-      "I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also work as a freelancer on projects where I can take part from start to finish. I speak native Spanish and B2-level English."
+      "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal with simple, pleasant interfaces, and I like taking care of the whole product: design, code, data and deployment. I trained with a higher-level degree in web application development.",
+      'I prefer apps with few dependencies and no external server; when a database is needed, I use TypeScript with PostgreSQL or SQLite. For websites that other people manage, I work with WordPress, Joomla and EmDash, an open-source CMS built on Astro, to which I have adapted apps. For native apps I choose Rust or Dart (or Kotlin) for their performance and cross-platform reach, and I like Python from my physics years, which gave me a mathematical and analytical background and a philosophical way of approaching problems. I use AI as a tool, and I take care of the design, the architecture and the review.',
+      "I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also freelance on projects I can take from start to finish. I speak native Spanish and B2 English."
     ],
     interests: {
       intro: 'My interests have grown beyond web development towards:',
@@ -103,13 +102,12 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     vision: {
       intro: [
-        'Quiero crear aplicaciones lo más universales posible, de código abierto y con un buen equipo detrás: es lo que defino como buen software en ',
-        'este artículo',
-        '. Un código público es transparente y auditable, y así las personas pueden elegir no depender de software propietario cerrado y difícil de inspeccionar.'
+        'Quiero crear aplicaciones lo más universales posible, de código abierto y con un buen equipo detrás: lo que defino como ',
+        'buen software',
+        '. Un código público es transparente y auditable, y permite no depender de software propietario cerrado.'
       ],
       paragraphs: [
-        'No creo que todo deba ser gratis: cuando el producto es gratis, muchas veces el producto acaba siendo el usuario. El software debe estar mantenido y compensado de alguna forma, ya sea con dinero, donaciones, criptomonedas, ayudas u otras formas de apoyo, y no tengo nada en contra de los pagos únicos ni de las suscripciones cuando tienen sentido.',
-        'Creo que, con suficiente desarrollo y madurez del software libre, una persona podría vivir sin software propietario y tener una experiencia igual de satisfactoria, con algunos compromisos. Para que esa confianza tenga sentido, debe poder comprobarse que el código publicado es el que realmente se ejecuta: buenas prácticas como las compilaciones reproducibles, las firmas y la revisión de la comunidad ayudan a ello.'
+        'No creo que todo deba ser gratis: cuando el producto es gratis, muchas veces el producto es el usuario. El software debe estar mantenido y compensado de alguna forma (pago, donaciones, criptomonedas, ayudas), y no tengo nada en contra de los pagos únicos ni de las suscripciones. Creo que, con suficiente madurez del software libre, se podría vivir sin software propietario con una experiencia igual de buena, con algunos compromisos, siempre que se pueda verificar que el código publicado es el que realmente se ejecuta (compilaciones reproducibles, firmas, revisión de la comunidad).'
       ]
     },
     maintained: {
@@ -117,9 +115,9 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
-      'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal, primando las interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos.',
-      'Prefiero apps sin servidor externo y con pocas dependencias: webs estáticas y aplicaciones locales cuando basta. Si una aplicación full-stack necesita base de datos, uso TypeScript con PostgreSQL o SQLite por su integración, rendimiento y código abierto. Para webs que otras personas necesitan gestionar, trabajo con CMS como WordPress y Joomla, y con EmDash, un CMS nuevo de código abierto hecho con Astro y TypeScript, al que he adaptado apps. Para apps nativas y optimizadas elijo Rust o Dart, con Kotlin como alternativa, por su rendimiento y alcance multiplataforma; Python es otro lenguaje que me gusta, de mis asignaturas de física. La física me dejó base matemática y capacidad analítica, y siempre he abordado los problemas con un enfoque filosófico. Uso la IA como herramienta y me encargo del diseño, la arquitectura y la revisión.',
-      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos en los que pueda participar de principio a fin. Hablo español nativo e inglés con nivel B2.'
+      'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal con interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web.',
+      'Prefiero apps con pocas dependencias y sin servidor externo; cuando hace falta una base de datos, uso TypeScript con PostgreSQL o SQLite. Para webs que otras personas gestionan, trabajo con WordPress, Joomla y EmDash, un CMS de código abierto basado en Astro, al que he adaptado apps. Para apps nativas elijo Rust o Dart (o Kotlin) por su rendimiento y alcance multiplataforma, y me gusta Python de mis años de física, que me dejaron base matemática y analítica y un enfoque filosófico al plantear los problemas. Uso la IA como herramienta y me encargo del diseño, la arquitectura y la revisión.',
+      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos que pueda llevar de principio a fin. Hablo español nativo e inglés B2.'
     ],
     interests: {
       intro: 'Mis intereses han crecido más allá del desarrollo web hacia:',
