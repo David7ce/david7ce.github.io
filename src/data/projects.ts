@@ -88,15 +88,6 @@ export const projectSections: ProjectSectionData[] = [
     title: { en: 'Involved Projects', es: 'Proyectos Involucrados' },
     projects: [
       {
-        name: '🎬 MediaHub Org',
-        description: {
-          en: 'A GitHub organization for media apps, such as TV Multiview and PlayTorrioMov.',
-          es: 'Una organización de GitHub para aplicaciones multimedia, como TV Multiview y PlayTorrioMov.'
-        },
-        image: 'mediahub-org.jpg',
-        links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
-      },
-      {
         name: '🏛️ Arksys OS',
         description: {
           en: 'An Arch-based Linux with KDE: an ArchISO profile, a Calamares installer setup and post-install scripts.',
@@ -109,6 +100,24 @@ export const projectSections: ProjectSectionData[] = [
         },
         image: 'arksys-logo.jpg',
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
+      },
+      {
+        name: { en: '📚 CompuWiki', es: '📚 CompuWiki' },
+        description: {
+          en: 'A documentation wiki made with Obsidian and Quartz.',
+          es: 'Una wiki de documentación hecha con Obsidian y Quartz.'
+        },
+        featured: {
+          rank: 2,
+          title: 'CompuWiki',
+          kind: { en: 'Documentation wiki', es: 'Wiki de documentación' },
+          summary: {
+            en: 'A computing documentation wiki made with Obsidian and Quartz; it also hosts the OS & Distro Directory.',
+            es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
+          }
+        },
+        image: 'compuwiki.jpg',
+        links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
       },
       {
         name: { en: '🔗 Interneto Project', es: '🔗 Proyecto Interneto' },
@@ -132,6 +141,15 @@ export const projectSections: ProjectSectionData[] = [
         ]
       },
       {
+        name: '🎬 MediaHub Org',
+        description: {
+          en: 'A GitHub organization for media apps, such as TV Multiview and PlayTorrioMov.',
+          es: 'Una organización de GitHub para aplicaciones multimedia, como TV Multiview y PlayTorrioMov.'
+        },
+        image: 'mediahub-org.jpg',
+        links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
+      },
+      {
         name: {
           en: '🧠 Obsidian PKM Vault',
           es: '🧠 Obsidian PKM Vault'
@@ -144,25 +162,7 @@ export const projectSections: ProjectSectionData[] = [
         links: [{ type: 'github', href: 'https://github.com/obsidian-pkm-vault' }]
       },
       {
-        name: { en: '📚 Wiki of Computing', es: '📚 Wiki de Computación' },
-        description: {
-          en: 'A documentation wiki made with Obsidian and Quartz.',
-          es: 'Una wiki de documentación hecha con Obsidian y Quartz.'
-        },
-        featured: {
-          rank: 2,
-          title: 'CompuWiki',
-          kind: { en: 'Documentation wiki', es: 'Wiki de documentación' },
-          summary: {
-            en: 'A computing documentation wiki made with Obsidian and Quartz; it also hosts the OS & Distro Directory.',
-            es: 'Una wiki de documentación de informática hecha con Obsidian y Quartz; también aloja el directorio de sistemas operativos.'
-          }
-        },
-        image: 'compuwiki.jpg',
-        links: [{ type: 'doc', href: 'https://compuwiki.github.io/' }]
-      },
-      {
-        name: { en: '🌱 Wiki of Cosmology', es: '🌱 Wiki de Cosmología' },
+        name: { en: '🌱 WikiTerra', es: '🌱 WikiTerra' },
         description: {
           en: 'A cosmology wiki made with Obsidian and the Digital Garden plugin.',
           es: 'Una wiki de cosmología hecha con Obsidian y el plugin Digital Garden.'
@@ -243,6 +243,14 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son archivos JSON y GeoJSON.'
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
+            featured: {
+              rank: 4,
+              kind: { en: 'Web app', es: 'App web' },
+              summary: {
+                en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
+                es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
+              }
+            },
             image: 'universal-map.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
@@ -359,14 +367,6 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Un sandbox nativo para autómatas celulares tipo Life, con 21 reglas incluidas y un motor genérico de reglas de nacimiento/supervivencia.'
             },
             tech: 'Rust, egui / eframe',
-            featured: {
-              rank: 4,
-              kind: { en: 'Desktop app', es: 'App de escritorio' },
-              summary: {
-                en: 'A desktop sandbox for Life-like cellular automata, with 21 built-in rules and a generic rule engine.',
-                es: 'Un sandbox de escritorio para autómatas celulares tipo Life, con 21 reglas incluidas y un motor de reglas genérico.'
-              }
-            },
             image: 'cellular-automata.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/cellular-automata-rust' }]
           }
@@ -393,14 +393,6 @@ export const projectSections: ProjectSectionData[] = [
               es: 'Convierte audio en una partitura editable (audio → MIDI → MusicXML), con scripts de línea de comandos o como servidor MCP para agentes de IA.'
             },
             tech: 'Python, basic-pitch, music21, MCP',
-            featured: {
-              rank: 5,
-              kind: { en: 'CLI and MCP server', es: 'CLI y servidor MCP' },
-              summary: {
-                en: 'Audio to MIDI to MusicXML, as CLI scripts or as an MCP server that AI agents can call.',
-                es: 'De audio a MIDI y a MusicXML, con scripts de línea de comandos o como servidor MCP que pueden llamar agentes de IA.'
-              }
-            },
             image: 'audio2score-mcp.jpg',
             links: [{ type: 'github', href: 'https://github.com/David7ce/audio2score-mcp' }]
           },
