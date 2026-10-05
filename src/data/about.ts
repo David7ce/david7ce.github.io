@@ -8,11 +8,14 @@ export interface AboutCopy {
   title: string
   headings: {
     profile: string
+    vision: string
     maintained: string
     interests: string
     technologies: string
     publicProfile: string
   }
+  /** intro: text, "good software" link label, text */
+  vision: { intro: LinkedText; paragraphs: string[] }
   maintained: { intro: string }
   publicProfileIntro: string
   profile: string[]
@@ -24,7 +27,7 @@ export interface AboutCopy {
     pointers: LinkedText
   }
   technologies: { intro: string; stackNote: LinkedText }
-  routes: { projects: string; blog: string; stack: string }
+  routes: { projects: string; blog: string; stack: string; goodSoftware: string }
 }
 
 export const aboutCopy: Record<Lang, AboutCopy> = {
@@ -32,10 +35,22 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     title: 'About',
     headings: {
       profile: 'Profile',
+      vision: 'My Vision',
       maintained: 'Projects I Maintain',
       interests: 'Interests and Direction',
       technologies: 'Technologies',
       publicProfile: 'Public Profile'
+    },
+    vision: {
+      intro: [
+        'I want to build apps that are as universal as possible, open source and backed by a good team: this is what I define as good software in ',
+        'this article',
+        '. Public code is transparent and auditable, so people can choose not to depend on closed proprietary software that is hard to inspect.'
+      ],
+      paragraphs: [
+        'I do not believe everything should be free: when the product is free, the user often becomes the product. Software should be maintained and compensated in some way, whether with money, donations, cryptocurrencies, grants or other forms of support, and I have nothing against one-time payments or subscriptions when they make sense.',
+        'I believe that, with enough development and maturity of free software, a person could live without proprietary software and have an equally satisfying experience, with some trade-offs. For that trust to make sense, it must be possible to verify that the published code is what actually runs: good practices such as reproducible builds, signatures and community review help with that.'
+      ]
     },
     maintained: {
       intro: 'The longer-running projects I keep working on.'
@@ -72,17 +87,30 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     routes: {
       projects: '/en/projects',
       blog: '/en/blog',
-      stack: '/en/stack'
+      stack: '/en/stack',
+      goodSoftware: '/en/post/good-software'
     }
   },
   es: {
     title: 'Acerca de',
     headings: {
       profile: 'Perfil',
+      vision: 'Mi visión',
       maintained: 'Proyectos que mantengo',
       interests: 'Intereses y dirección',
       technologies: 'Tecnologías',
       publicProfile: 'Perfil público'
+    },
+    vision: {
+      intro: [
+        'Quiero crear aplicaciones lo más universales posible, de código abierto y con un buen equipo detrás: es lo que defino como buen software en ',
+        'este artículo',
+        '. Un código público es transparente y auditable, y así las personas pueden elegir no depender de software propietario cerrado y difícil de inspeccionar.'
+      ],
+      paragraphs: [
+        'No creo que todo deba ser gratis: cuando el producto es gratis, muchas veces el producto acaba siendo el usuario. El software debe estar mantenido y compensado de alguna forma, ya sea con dinero, donaciones, criptomonedas, ayudas u otras formas de apoyo, y no tengo nada en contra de los pagos únicos ni de las suscripciones cuando tienen sentido.',
+        'Creo que, con suficiente desarrollo y madurez del software libre, una persona podría vivir sin software propietario y tener una experiencia igual de satisfactoria, con algunos compromisos. Para que esa confianza tenga sentido, debe poder comprobarse que el código publicado es el que realmente se ejecuta: buenas prácticas como las compilaciones reproducibles, las firmas y la revisión de la comunidad ayudan a ello.'
+      ]
     },
     maintained: {
       intro: 'Los proyectos de más recorrido en los que sigo trabajando.'
@@ -118,7 +146,8 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     routes: {
       projects: '/es/proyectos',
       blog: '/es/blog',
-      stack: '/es/stack'
+      stack: '/es/stack',
+      goodSoftware: '/es/post/buen-software'
     }
   }
 }

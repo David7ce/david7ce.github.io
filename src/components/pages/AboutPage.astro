@@ -12,7 +12,7 @@ interface Props {
 
 const { lang } = Astro.props
 const copy = aboutCopy[lang]
-const { headings: h, interests, technologies, routes } = copy
+const { headings: h, interests, technologies, routes, vision } = copy
 
 // Maintained projects come from the "involved" section of the projects data
 const collator = new Intl.Collator(lang, { sensitivity: 'base' })
@@ -26,6 +26,7 @@ const maintained = (projectSections.find((section) => section.id === 'involved')
 
 const headings = [
   { depth: 2, slug: 'who-am-i', text: h.profile },
+  { depth: 2, slug: 'vision', text: h.vision },
   { depth: 2, slug: 'maintained', text: h.maintained },
   { depth: 2, slug: 'interests', text: h.interests },
   { depth: 2, slug: 'tools', text: h.technologies },
@@ -34,11 +35,19 @@ const headings = [
 
 const [pointerStart, pointerProjects, pointerMid, pointerBlog, pointerEnd] = interests.pointers
 const [stackBefore, stackLabel, stackAfter] = technologies.stackNote
+const [visionStart, visionLink, visionEnd] = vision.intro
 ---
 
 <PageLayout title={copy.title} {headings}>
   <h2 id='who-am-i'>{h.profile}</h2>
   {copy.profile.map((paragraph) => (
+    <p>{paragraph}</p>
+  ))}
+
+  <h2 id='vision'>{h.vision}</h2>
+  <!-- prettier-ignore -->
+  <p>{visionStart}<a href={routes.goodSoftware}>{visionLink}</a>{visionEnd}</p>
+  {vision.paragraphs.map((paragraph) => (
     <p>{paragraph}</p>
   ))}
 
