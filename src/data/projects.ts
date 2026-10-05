@@ -42,32 +42,6 @@ export const projectSections: ProjectSectionData[] = [
     title: { en: 'Professional Websites', es: 'Sitios Web Profesionales' },
     projects: [
       {
-        name: {
-          en: '🗺️ Tenerife Comercio: Institutional Website',
-          es: '🗺️ Tenerife Comercio: Web Institucional'
-        },
-        description: {
-          en: 'Website of the Cabildo de Tenerife with guidance for starting a business and a map of local businesses.',
-          es: 'Web del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
-        },
-        featured: {
-          rank: 3,
-          title: 'Tenerife Comercio',
-          kind: { en: 'Institutional website', es: 'Web institucional' },
-          summary: {
-            en: 'Institutional website of the Cabildo de Tenerife with guidance for starting a business and a map of local businesses.',
-            es: 'Web institucional del Cabildo de Tenerife con información para emprender y un mapa de los comercios de la isla.'
-          }
-        },
-        image: 'tenerife-comercio.jpg',
-        links: [
-          {
-            type: 'case-study',
-            href: { en: '/en/projects/tenerife-comercio', es: '/es/proyectos/tenerife-comercio' }
-          }
-        ]
-      },
-      {
         name: { en: '🌐 Professional Websites With WP', es: '🌐 Sitios Web Profesionales Con WP' },
         description: {
           en: 'Professional websites built with WordPress and Elementor.',

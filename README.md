@@ -33,7 +33,6 @@ Content lives in `src/data/`, so a change is made once and appears in both langu
 | `projects.ts` | Projects page sections and subsections; set `featured: { rank, summary }` on a project to show it on the home page |
 | `skills.ts` | Technology groups on the home and About pages |
 | `home.ts`, `about.ts` | Home and About texts |
-| `case-studies.ts` | Case studies (the page template is `CaseStudyPage.astro`, linked from a project with a `case-study` link) |
 | `contact.ts` | The public contact email |
 | `i18n.ts` | `Localized` type and the `t()` helper |
 

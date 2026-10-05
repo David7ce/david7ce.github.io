@@ -58,7 +58,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     profile: [
       "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal with simple, pleasant interfaces, and I like taking care of the whole product: design, code, data and deployment. I trained with a higher-level degree in web application development.",
       'I prefer apps with few dependencies and no external server; when a database is needed, I use TypeScript with PostgreSQL or SQLite. For websites that other people manage, I work with WordPress, Joomla and EmDash, an open-source CMS built on Astro, to which I have adapted apps. For native apps I choose Rust or Dart (or Kotlin) for their performance and cross-platform reach. I use AI as a tool, and I take care of the design, the architecture and the review.',
-      "I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also freelance on projects I can take from start to finish. I speak native Spanish and B2 English."
+      "I worked on developing a web data platform for the Cabildo de Tenerife, and I keep open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also freelance on projects I can take from start to finish. I speak native Spanish and B2 English."
     ],
     interests: {
       intro: 'My interests have grown beyond web development towards:',
@@ -117,7 +117,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     profile: [
       'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal con interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web.',
       'Prefiero apps con pocas dependencias y sin servidor externo; cuando hace falta una base de datos, uso TypeScript con PostgreSQL o SQLite. Para webs que otras personas gestionan, trabajo con WordPress, Joomla y EmDash, un CMS de código abierto basado en Astro, al que he adaptado apps. Para apps nativas elijo Rust o Dart (o Kotlin) por su rendimiento y alcance multiplataforma. Uso la IA como herramienta y me encargo del diseño, la arquitectura y la revisión.',
-      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos que pueda llevar de principio a fin. Hablo español nativo e inglés B2.'
+      'He trabajado en el desarrollo de una plataforma web de datos del Cabildo de Tenerife y mantengo proyectos abiertos como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos que pueda llevar de principio a fin. Hablo español nativo e inglés B2.'
     ],
     interests: {
       intro: 'Mis intereses han crecido más allá del desarrollo web hacia:',

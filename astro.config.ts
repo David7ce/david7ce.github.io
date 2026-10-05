@@ -31,7 +31,9 @@ export default defineConfig({
     '/en/post/setup-password-manager': '/en/post/easy-encryption',
     '/es/post/gestor-de-contraseñas': '/es/post/encripta-facil',
     '/en/post/linux-distros': '/en/post/linux-intro',
-    '/es/post/distros-de-linux': '/es/post/intro-a-linux'
+    '/es/post/distros-de-linux': '/es/post/intro-a-linux',
+    '/en/projects/tenerife-comercio': '/en/projects',
+    '/es/proyectos/tenerife-comercio': '/es/proyectos'
   },
   // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
   // base: '/astro-pure/',
