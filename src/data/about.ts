@@ -42,9 +42,9 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'You can find me and my work here:',
     profile: [
-      "I'm David Alonso (David7ce), a software and web developer. I build websites, web apps and command-line and desktop tools, and I design the interfaces in Figma before coding them.",
-      'I write HTML, CSS, JavaScript, C#, Python and SQL by hand. Rust, Dart and TypeScript projects are built with AI assistants, and I review what they produce. I trained with a two-year degree in web application development and have kept learning since.',
-      'I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto and CompuWiki. I write in Spanish and English, and this site, built with Astro, is available in both.'
+      "I'm David Alonso (David7ce), a software and web developer. I trained with a higher-level degree in web application development and several courses, and I also studied physics for a few years without finishing it, which left me with a philosophical way of approaching problems. I build apps for the web, mobile, desktop and terminal with simple, pleasant interfaces, although my main work is websites.",
+      'I like building web apps with as few dependencies as possible: I think they are the best route to cross-platform and responsive software. I work with static sites (HTML, CSS and JavaScript), with frameworks such as Astro and, on the server side, I prefer TypeScript to heavy stacks. I also work with WordPress and Joomla, and I like SQL and SQLite. For more native, optimized apps I have worked with Rust and Dart, with the help of AI.',
+      'I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto, CompuWiki and Universal Map-Time Engine, a map with an integrated calendar. I speak native Spanish and B2-level English, and I understand almost everything in English because I use it every day.'
     ],
     interests: {
       intro: 'My interests have grown beyond web development towards:',
@@ -90,9 +90,9 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
-      'Soy David Alonso (David7ce), desarrollador de software y web. Con formación en ciclo superior de desarrollo web y varios cursos formativos del estilo. (Además he cursado física varios años sin terminar y me gusta siempre un enfoque filosófico) Construyo aplicaciones muliplataforma para todo tipo de dispositivos desde web, móvil, escritorio a terminal, con una interfaz simple y agradable. Mi principal desarrollo son páginas web con interfaces.',
-      'Me gusta crear aplicaciones web con el mínimo uso de dependencias y considero que son el futuro para alcanzar la multiplataforma y la responsividad en múltiples dispositivos, dentro de este me gusta crear webs estatáticas (HTML, CSS, JS), web con frameworks (Astro) y como full stack me gusta tirar de TypeScript y no tanto de frameworks, WordPress y Joomla los manejo. Y luego me gusta SQlite, SQL. Y para alcanzar un nivel de apps más nativo y optimizado me ha gustado el desarrollo de apps con IA con lenguajes como Rust y Dar.',
-      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki o un mapa estándar con calendario integrado. Hablo español nativo e inglés con un nivel de B2, pero entiendo casi todo en inglés porque lo consumo a diario.'
+      'Soy David Alonso (David7ce), desarrollador de software y web. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos, y estudié física durante varios años sin terminarla; de ahí me quedó un enfoque filosófico a la hora de plantear los problemas. Construyo aplicaciones para web, móvil, escritorio y terminal, con interfaces simples y agradables, aunque mi trabajo principal son las páginas web.',
+      'Me gusta crear aplicaciones web con el mínimo de dependencias: creo que son el mejor camino hacia el software multiplataforma y adaptable a cualquier dispositivo. Trabajo con webs estáticas (HTML, CSS y JavaScript), con frameworks como Astro y, en el lado del servidor, prefiero TypeScript a pilas pesadas. También manejo WordPress y Joomla, y me gustan SQL y SQLite. Para apps más nativas y optimizadas he trabajado con Rust y Dart, con ayuda de IA.',
+      'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki y Universal Map-Time Engine, un mapa con calendario integrado. Hablo español nativo e inglés con nivel B2, y entiendo casi todo en inglés porque lo consumo a diario.'
     ],
     interests: {
       intro: 'Mis intereses han crecido más allá del desarrollo web hacia:',
