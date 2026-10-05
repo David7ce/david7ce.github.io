@@ -42,7 +42,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'You can find me and my work here:',
     profile: [
-      "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal, always with simple, pleasant interfaces, and I like taking care of the whole product: design in Figma, code, data and deployment. I trained with a higher-level degree in web application development and several courses.",
+      "I'm David Alonso (David7ce), a software developer with the web as my base. I build apps for the web, mobile, desktop and terminal, always with simple, pleasant interfaces, and I like taking care of the whole product: design, code, data and deployment. I trained with a higher-level degree in web application development and several courses.",
       'I prefer simple solutions with few dependencies: static sites, TypeScript over heavy stacks, and databases such as SQL or SQLite. My time studying physics gave me a mathematical background and analytical skills, and I have always approached problems with a philosophical mindset. I use AI as a tool, for example for Rust and Dart, and I take care of the design, the architecture and reviewing what it generates.',
       "I redesigned and extended the commercial atlas of the Cabildo de Tenerife, and I keep long-running open projects such as Interneto, CompuWiki and Universal Map-Time Engine. I'm looking for a job and I also work as a freelancer on projects where I can take part from start to finish. I speak native Spanish and B2-level English."
     ],
@@ -89,7 +89,7 @@ export const aboutCopy: Record<Lang, AboutCopy> = {
     },
     publicProfileIntro: 'Puedes encontrarme a mí y mi trabajo aquí:',
     profile: [
-      'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal, siempre con interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño en Figma, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos.',
+      'Soy David Alonso (David7ce), desarrollador de software con la web como base. Construyo aplicaciones para web, móvil, escritorio y terminal, siempre con interfaces simples y agradables, y me gusta ocuparme del producto completo: diseño, código, datos y despliegue. Me formé con un ciclo superior de desarrollo de aplicaciones web y varios cursos.',
       'Prefiero soluciones sencillas y con pocas dependencias: webs estáticas, TypeScript antes que pilas pesadas y bases de datos como SQL o SQLite. Mi paso por la física me dejó base matemática y capacidad analítica, y siempre he abordado los problemas con un enfoque filosófico. Uso la IA como herramienta, por ejemplo para Rust y Dart, y me encargo yo del diseño, la arquitectura y la revisión de lo que genera.',
       'He rediseñado y ampliado el atlas comercial del Cabildo de Tenerife y mantengo proyectos abiertos de largo recorrido como Interneto, CompuWiki y Universal Map-Time Engine. Busco empleo y también trabajo como autónomo en proyectos en los que pueda participar de principio a fin. Hablo español nativo e inglés con nivel B2.'
     ],
