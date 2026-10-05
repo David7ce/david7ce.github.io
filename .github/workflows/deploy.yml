@@ -3,6 +3,9 @@ name: Deploy Astro site to GitHub Pages using pnpm
 on:
   push:
     branches: [main]
+  # Pull requests only lint and build; they never deploy
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,6 +20,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
@@ -40,16 +44,20 @@ jobs:
         run: pnpm run build
 
       - name: Setup GitHub Pages environment
+        if: github.event_name != 'pull_request'
         uses: actions/configure-pages@v6
 
       - name: Upload build artifact
+        if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
     steps:
