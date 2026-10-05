@@ -266,6 +266,9 @@ importers:
       '@types/mdast':
         specifier: ^4.0.4
         version: 4.0.4
+      '@types/node':
+        specifier: ^24.13.2
+        version: 24.13.2
       '@unocss/reset':
         specifier: ^66.10.5
         version: 66.10.5
