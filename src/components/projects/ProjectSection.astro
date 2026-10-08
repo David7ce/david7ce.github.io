@@ -81,6 +81,11 @@ const linkIcons: Record<string, IconsType> = {
   'case-study': 'document',
   release: 'package'
 }
+// Website links show their domain, so several of them on one card can be told apart
+const linkLabel = (link: { type: string; href: string }) =>
+  link.type === 'site'
+    ? new URL(link.href).hostname.replace(/^www\./, '')
+    : (linkLabels[link.type] ?? link.type)
 const linkLabels: Record<string, string> = {
   github: 'GitHub',
   site: 'Website',
@@ -91,7 +96,7 @@ const linkLabels: Record<string, string> = {
 ---
 
 <div class={className} {...props}>
-  <div class='grid grid-cols-1 items-start gap-x-3 gap-y-3 sm:grid-cols-2'>
+  <div class='grid grid-cols-1 gap-x-3 gap-y-3 sm:grid-cols-2'>
     {project.map((project) => {
       var imagePath = null
       if (project.image) {
@@ -102,22 +107,27 @@ const linkLabels: Record<string, string> = {
           )
       }
       const tech = parseTech(project.tech)
+      // The card opens the website by default (or the first link); the icon is the repository.
+      // Without a repository, the other links stay as icons so none is lost.
+      const main = project.links.find((link) => link.type === 'site') ?? project.links[0]
+      const repo = project.links.find((link) => link.type === 'github')
+      const iconLinks = repo ? [repo] : project.links.filter((link) => link !== main)
 
       return (
-        <div class='group relative flex flex-col overflow-hidden rounded-xl border bg-background transition-colors focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'>
+        <div class='group relative flex h-[22rem] flex-col overflow-hidden rounded-xl border bg-background transition-colors focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'>
           {imagePath && (
             <Image
-              class='m-0 aspect-[5/2] w-full border-b object-cover object-top'
+              class='m-0 h-0 min-h-24 w-full flex-1 border-b object-cover object-top'
               src={images[imagePath]()}
               alt=''
               loading='lazy'
             />
           )}
-          <div class='flex flex-1 flex-col gap-y-2 px-3.5 py-3'>
+          <div class='flex shrink-0 flex-col gap-y-2 px-3.5 py-3'>
             {/* The title link covers the whole card, so the image and the text are clickable too */}
             <a
               class="line-clamp-2 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
-              href={project.links[0].href}
+              href={main.href}
               target='_blank'
               rel='noopener'
             >
@@ -148,12 +158,12 @@ const linkLabels: Record<string, string> = {
               </p>
             )}
             <div class='mt-auto flex flex-row items-center gap-x-1.5 pt-1'>
-              {project.links.map((link) => (
+              {iconLinks.map((link) => (
                 <a
                   href={link.href}
                   class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
-                  aria-label={`${linkLabels[link.type] ?? link.type}: ${project.name}`}
-                  title={linkLabels[link.type] ?? link.type}
+                  aria-label={`${linkLabel(link)}: ${project.name}`}
+                  title={linkLabel(link)}
                   target='_blank'
                   rel='noopener'
                 >

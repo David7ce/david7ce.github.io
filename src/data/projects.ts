@@ -164,6 +164,7 @@ export const projectSections: ProjectSectionData[] = [
               en: 'An e-commerce front end in vanilla HTML, CSS and JavaScript, with no frameworks.',
               es: 'Un front-end de comercio electrónico en HTML, CSS y JavaScript puros, sin frameworks.'
             },
+            tech: 'HTML, CSS, JavaScript',
             image: 'ecommerce.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.github.io/guanxe-web-interface/' },
@@ -250,7 +251,7 @@ export const projectSections: ProjectSectionData[] = [
               en: 'A web converter between multiple calendars.',
               es: 'Un conversor web entre varios calendarios.'
             },
-            tech: 'JavaScript',
+            tech: 'HTML, CSS, JavaScript',
             image: 'calendar-converter.jpg',
             links: [
               { type: 'site', href: 'https://david7ce.is-a.dev/calendar-converter/' },
