@@ -36,7 +36,7 @@ Content lives in `src/data/`, so a change is made once and appears in both langu
 | `contact.ts` | The public contact email |
 | `i18n.ts` | `Localized` type and the `t()` helper |
 
-Project thumbnails are files in `src/assets/projects/` (800×500 JPEG), referenced by the `image` field of a project: a single file name, or `{ en, es }` for a different image per language. The cards show them cropped to 2:1 from the top.
+Project thumbnails are files in `src/assets/projects/` (800×500 JPEG), referenced by the `image` field of a project: a single file name, or `{ en, es }` for a different image per language. The cards show them cropped to 5:2 from the top. The whole card links to the project's first link, and the `tech` field (comma-separated) is shown as chips with the logo of each technology when one exists in `src/assets/software/` (add the name to `logoFiles` in `ProjectSection.astro` for a new one).
 
 Stack tools and projects are sorted alphabetically at render time in each language, so new entries can be added anywhere. A project section can opt out with `manualOrder: true` in `projects.ts` (used for Professional Websites). Keep the names inside `skills.ts` groups alphabetical by hand.
 Page-to-page language links (`hreflang`) for the pages above are in `src/i18n/alternates.ts`.

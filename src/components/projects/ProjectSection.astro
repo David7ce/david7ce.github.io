@@ -4,7 +4,6 @@ import { Image } from 'astro:assets'
 
 import type { IconsType } from 'astro-pure/types'
 import { Icon } from 'astro-pure/user'
-import { cn } from 'astro-pure/utils'
 
 interface Props {
   class?: string
@@ -24,17 +23,75 @@ const { class: className, project, ...props } = Astro.props
 const images = import.meta.glob<{ default: ImageMetadata }>(
   '/src/assets/projects/*.{jpeg,jpg,png,gif}'
 )
-const projectIconSet: Record<string, IconsType> = {
+
+// Technology logos live next to the Stack icons; they are inlined so they follow the theme
+const logos = import.meta.glob<string>('/src/assets/software/*.svg', {
+  query: '?raw',
+  import: 'default',
+  eager: true
+})
+const logoFiles: Record<string, string> = {
+  python: 'python',
+  rust: 'rust',
+  typescript: 'typescript',
+  javascript: 'js',
+  html: 'html',
+  css: 'css',
+  sass: 'sass',
+  'tailwind css': 'tailwindcss',
+  bootstrap: 'bootstrap',
+  react: 'react',
+  dart: 'dart',
+  flutter: 'flutter',
+  tauri: 'tauri',
+  bash: 'bash',
+  shell: 'bash',
+  ffmpeg: 'ffmpeg',
+  json: 'json',
+  sql: 'sql',
+  sqlite: 'sqlite',
+  php: 'php',
+  java: 'java',
+  node: 'node-js',
+  astro: 'astro-js'
+}
+const logoFor = (name: string) => {
+  const file = logoFiles[name.toLowerCase()]
+  return file ? logos[`/src/assets/software/${file}.svg`] : undefined
+}
+
+// "Tauri (Rust backend), plain HTML / CSS" -> Tauri, Rust, HTML, CSS; unknown names stay as plain chips
+const parseTech = (tech?: string) => {
+  if (!tech) return []
+  const names: string[] = []
+  for (const part of tech.split(/\s*[,/·]\s*/)) {
+    const [, base, inner] = part.match(/^([^(]*?)\s*(?:\(([^)]*)\))?$/) ?? []
+    const clean = (base ?? part).replace(/^plain\s+/i, '').trim()
+    if (clean) names.push(clean)
+    const innerFirst = inner?.trim().split(/\s+/)[0]
+    if (innerFirst && logoFiles[innerFirst.toLowerCase()]) names.push(innerFirst)
+  }
+  return [...new Set(names)].map((name) => ({ name, logo: logoFor(name) }))
+}
+
+const linkIcons: Record<string, IconsType> = {
   github: 'github-circle',
   site: 'earth',
   doc: 'document',
   'case-study': 'document',
   release: 'package'
 }
+const linkLabels: Record<string, string> = {
+  github: 'GitHub',
+  site: 'Website',
+  doc: 'Docs',
+  'case-study': 'Case study',
+  release: 'Releases'
+}
 ---
 
 <div class={className} {...props}>
-  <div class='grid grid-cols-1 items-start gap-x-4 gap-y-3 sm:grid-cols-2 sm:gap-y-4'>
+  <div class='grid grid-cols-1 items-start gap-x-3 gap-y-3 sm:grid-cols-2'>
     {project.map((project) => {
       var imagePath = null
       if (project.image) {
@@ -44,51 +101,65 @@ const projectIconSet: Record<string, IconsType> = {
             `"${imagePath}" does not exist in glob: "src/assets/projects/*.{jpeg,jpg,png,gif}"`
           )
       }
+      const tech = parseTech(project.tech)
 
       return (
-        <div class='relative flex flex-col overflow-hidden rounded-xl border'>
+        <div class='group relative flex flex-col overflow-hidden rounded-xl border bg-background transition-colors focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'>
           {imagePath && (
             <Image
-              class='m-0 aspect-[2/1] w-full border-b object-cover object-top'
+              class='m-0 aspect-[5/2] w-full border-b object-cover object-top'
               src={images[imagePath]()}
-              alt={project.name}
+              alt=''
               loading='lazy'
             />
           )}
-          <div
-            class={cn(
-              'relative z-10 flex flex-1 flex-col gap-y-3 px-4 py-4 sm:px-5 sm:py-5 min-h-[140px]'
-            )}
-          >
+          <div class='flex flex-1 flex-col gap-y-2 px-3.5 py-3'>
+            {/* The title link covers the whole card, so the image and the text are clickable too */}
             <a
-              class='line-clamp-1 font-medium text-foreground no-underline transition-colors'
+              class="line-clamp-2 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
               href={project.links[0].href}
               target='_blank'
+              rel='noopener'
             >
               {project.name}
             </a>
-            <div class='flex-1 leading-relaxed text-muted-foreground'>{project.description}</div>
-            {(project.tech || project.status) && (
-              <p class='text-sm text-muted-foreground'>
-                {project.tech && <span>{project.tech}</span>}
-                {project.tech && project.status && ' · '}
-                {project.status && <span>{project.status}</span>}
+            <p class='m-0 line-clamp-3 text-[13px] leading-snug text-muted-foreground'>
+              {project.description}
+            </p>
+            {tech.length > 0 && (
+              <ul class='m-0 flex list-none flex-wrap gap-1 p-0'>
+                {tech.map(({ name, logo }) => (
+                  <li class='m-0 inline-flex items-center gap-1 rounded-md border bg-muted/50 px-1.5 py-0.5 text-[11px] leading-none text-muted-foreground'>
+                    {logo && (
+                      <span
+                        class='inline-block size-3 fill-foreground [&>svg]:h-full [&>svg]:w-full'
+                        aria-hidden='true'
+                        set:html={logo}
+                      />
+                    )}
+                    {name}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {project.status && (
+              <p class='m-0 line-clamp-2 text-xs leading-snug text-muted-foreground/80'>
+                {project.status}
               </p>
             )}
-            <div class='flex flex-row items-center gap-x-2 sm:gap-x-3'>
-              {project.links.map((link) => {
-                const icon = projectIconSet[link.type]
-                return (
-                  <a
-                    href={link.href}
-                    class='rounded-full bg-muted p-1 text-muted-foreground transition-colors sm:p-1.5'
-                    aria-label={link.type}
-                    target='_blank'
-                  >
-                    <Icon class='size-5' name={icon} />
-                  </a>
-                )
-              })}
+            <div class='mt-auto flex flex-row items-center gap-x-1.5 pt-1'>
+              {project.links.map((link) => (
+                <a
+                  href={link.href}
+                  class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
+                  aria-label={`${linkLabels[link.type] ?? link.type}: ${project.name}`}
+                  title={linkLabels[link.type] ?? link.type}
+                  target='_blank'
+                  rel='noopener'
+                >
+                  <Icon class='size-4' name={linkIcons[link.type]} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
