@@ -164,8 +164,6 @@ Linux ofrece un sistema operativo seguro, personalizable y gratuito con una sól
 - [Distribución Linux - Wikipedia](https://en.wikipedia.org/wiki/Linux_distribution)
 - [Cronología de las distribuciones Linux - Wikipedia](https://commons.wikimedia.org/wiki/File:Linux_Distribution_Timeline_21_10_2021.svg)
 - [Distribuciones Linux - ArchiveOS](https://archiveos.org/linux/)
-- [Distribuciones Linux - Interneto](https://raindrop.io/Interneto/img/linux-distros-19045213)
 - [Entorno de escritorio - Wikipedia](https://en.wikipedia.org/wiki/Desktop_environment)
 - [Entorno de escritorio - ArchLinux](https://wiki.archlinux.org/title/Desktop_environment)
-- [Entorno de escritorio - Interneto](https://raindrop.io/Interneto/de-21145177)
 - [Gestor de paquetes - Wikipedia](https://en.wikipedia.org/wiki/Package_manager)

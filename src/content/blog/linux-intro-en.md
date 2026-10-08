@@ -161,8 +161,6 @@ Linux offers a secure, customizable, and free operating system with a strong com
 - [Linux Distribution - Wikipedia](https://en.wikipedia.org/wiki/Linux_distribution)
 - [Linux Distribution Timeline - Wikipedia](https://commons.wikimedia.org/wiki/File:Linux_Distribution_Timeline_21_10_2021.svg)
 - [Linux Distros - ArchiveOS](https://archiveos.org/linux/)
-- [Linux Distros - Interneto](https://raindrop.io/Interneto/img/linux-distros-19045213)
 - [Desktop Environment - Wikipedia](https://en.wikipedia.org/wiki/Desktop_environment)
 - [Desktop Environment - ArchLinux](https://wiki.archlinux.org/title/Desktop_environment)
-- [Desktop Environment - Interneto](https://raindrop.io/Interneto/de-21145177)
 - [Package Manager - Wikipedia](https://en.wikipedia.org/wiki/Package_manager)
