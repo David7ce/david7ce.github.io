@@ -30,16 +30,14 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       title: 'About',
       role: 'Software Developer',
       paragraphs: [
-        'I write HTML, CSS and JavaScript by hand, work in C#, Python and SQL, and design interfaces in Figma. Lately I build cross-platform tools with Rust and Dart, working with AI assistants.',
-        'Most of my time goes into long-running open projects: Interneto, a web directory and blog, and CompuWiki, a computing documentation wiki. This site, built with Astro, my favorite web framework, collects them, my smaller apps and the notes I write while learning.'
+        "I'm a developer who likes to see the whole product: from design to code, data and deployment. I'm driven by curiosity and I believe in open, auditable and well-maintained software. This site collects what I have built and what I am learning."
       ],
       button: 'More about me'
     },
     exploring: {
       title: 'Exploring',
       paragraphs: [
-        'Cross-platform apps with Rust and Dart, Linux and free software, AI tooling and integrations (APIs, MCP), and systems and computer architecture. Outside of software: electronics, physics and teaching.',
-        "These are directions I'm following, not a list of expertise. The projects below show what I have actually built."
+        'Cross-platform apps, free and verifiable software, AI tools and integrations (MCP), and how systems work under the hood.'
       ]
     },
     projects: {
@@ -76,16 +74,14 @@ export const homeCopy: Record<Lang, HomeCopy> = {
       title: 'Acerca de',
       role: 'Desarrollador de software',
       paragraphs: [
-        'Escribo HTML, CSS y JavaScript a mano, trabajo con C#, Python y SQL, y diseño interfaces en Figma. Últimamente construyo herramientas multiplataforma con Rust y Dart, trabajando con asistentes de IA.',
-        'La mayor parte de mi tiempo la dedico a proyectos abiertos de largo recorrido: Interneto, un directorio web con blog, y CompuWiki, una wiki de documentación de informática. Este sitio, hecho con Astro, mi framework web favorito, los reúne junto con mis apps más pequeñas y las notas que escribo mientras aprendo.'
+        'Soy un desarrollador al que le gusta ver el producto completo: del diseño al código, los datos y el despliegue. Me mueve la curiosidad y creo en el software abierto, auditable y bien mantenido. Esta web reúne lo que he construido y lo que voy aprendiendo.'
       ],
       button: 'Más sobre mí'
     },
     exploring: {
       title: 'Explorando',
       paragraphs: [
-        'Aplicaciones multiplataforma con Rust y Dart, Linux y el software libre, herramientas de IA e integraciones (APIs, MCP), y sistemas y arquitectura de computadores. Fuera del software: electrónica, física y enseñanza.',
-        'Son direcciones que sigo, no una lista de dominio. Los proyectos de abajo muestran lo que he construido de verdad.'
+        'Apps multiplataforma, software libre y verificable, herramientas de IA e integraciones (MCP), y cómo funcionan los sistemas por dentro.'
       ]
     },
     projects: {
