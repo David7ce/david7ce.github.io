@@ -4,6 +4,7 @@ import { Image } from 'astro:assets'
 
 import type { IconsType } from 'astro-pure/types'
 import { Icon } from 'astro-pure/user'
+import { cn } from 'astro-pure/utils'
 
 interface Props {
   class?: string
@@ -53,7 +54,10 @@ const logoFiles: Record<string, string> = {
   php: 'php',
   java: 'java',
   node: 'node-js',
-  astro: 'astro-js'
+  astro: 'astro-js',
+  wordpress: 'wordpress',
+  joomla: 'joomla',
+  emdash: 'emdash'
 }
 const logoFor = (name: string) => {
   const file = logoFiles[name.toLowerCase()]
@@ -109,12 +113,17 @@ const linkLabels: Record<string, string> = {
       const tech = parseTech(project.tech)
       // The card opens the website by default (or the first link); the icon is the repository.
       // Without a repository, the other links stay as icons so none is lost.
-      const main = project.links.find((link) => link.type === 'site') ?? project.links[0]
+      const main = project.links.find((link) => link.type === 'site') ?? project.links[0] // may be undefined
       const repo = project.links.find((link) => link.type === 'github')
       const iconLinks = repo ? [repo] : project.links.filter((link) => link !== main)
 
       return (
-        <div class='group relative flex h-[22rem] flex-col overflow-hidden rounded-xl border bg-background transition-colors focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'>
+        <div
+          class={cn(
+            'group relative flex h-[22rem] flex-col overflow-hidden rounded-xl border bg-background transition-colors',
+            main && 'focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'
+          )}
+        >
           {imagePath && (
             <Image
               class='m-0 h-0 min-h-24 w-full flex-1 border-b object-cover object-top'
@@ -125,14 +134,20 @@ const linkLabels: Record<string, string> = {
           )}
           <div class='flex shrink-0 flex-col gap-y-2 px-3.5 py-3'>
             {/* The title link covers the whole card, so the image and the text are clickable too */}
-            <a
-              class="line-clamp-2 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
-              href={main.href}
-              target='_blank'
-              rel='noopener'
-            >
-              {project.name}
-            </a>
+            {main ? (
+              <a
+                class="line-clamp-2 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+                href={main.href}
+                target='_blank'
+                rel='noopener'
+              >
+                {project.name}
+              </a>
+            ) : (
+              <span class='line-clamp-2 text-sm font-semibold leading-snug text-foreground'>
+                {project.name}
+              </span>
+            )}
             <p class='m-0 line-clamp-3 text-[13px] leading-snug text-muted-foreground'>
               {project.description}
             </p>
@@ -157,20 +172,22 @@ const linkLabels: Record<string, string> = {
                 {project.status}
               </p>
             )}
-            <div class='mt-auto flex flex-row items-center gap-x-1.5 pt-1'>
-              {iconLinks.map((link) => (
-                <a
-                  href={link.href}
-                  class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
-                  aria-label={`${linkLabel(link)}: ${project.name}`}
-                  title={linkLabel(link)}
-                  target='_blank'
-                  rel='noopener'
-                >
-                  <Icon class='size-4' name={linkIcons[link.type]} />
-                </a>
-              ))}
-            </div>
+            {iconLinks.length > 0 && (
+              <div class='mt-auto flex flex-row items-center gap-x-1.5 pt-1'>
+                {iconLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
+                    aria-label={`${linkLabel(link)}: ${project.name}`}
+                    title={linkLabel(link)}
+                    target='_blank'
+                    rel='noopener'
+                  >
+                    <Icon class='size-4' name={linkIcons[link.type]} />
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       )

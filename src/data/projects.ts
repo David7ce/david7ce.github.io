@@ -44,16 +44,12 @@ export const projectSections: ProjectSectionData[] = [
       {
         name: { en: '🌐 Professional Websites With WP', es: '🌐 Sitios Web Profesionales Con WP' },
         description: {
-          en: 'Professional websites built with WordPress and Elementor.',
-          es: 'Sitios web profesionales construidos con WordPress y Elementor.'
+          en: 'Professional websites built with WordPress and Elementor, using custom templates.',
+          es: 'Sitios web profesionales construidos con WordPress y Elementor, con plantillas personalizadas.'
         },
+        tech: 'WordPress, Elementor',
         image: 'wordpress-elementor.jpg',
-        links: [
-          { type: 'site', href: 'https://alpayoga.com/' },
-          { type: 'site', href: 'https://claralozanomestudiojuridico.com/' },
-          { type: 'site', href: 'https://www.grmabogados.es/' },
-          { type: 'site', href: 'https://salondebellezanais.com/' }
-        ]
+        links: []
       }
     ]
   },
@@ -324,10 +320,6 @@ export const projectSections: ProjectSectionData[] = [
             tech: {
               en: 'Tauri (Rust backend), plain HTML / CSS / JavaScript',
               es: 'Tauri (backend en Rust), HTML / CSS / JavaScript sin frameworks'
-            },
-            status: {
-              en: 'Released on GitHub; tested on Linux and Windows, macOS untested.',
-              es: 'Publicado en GitHub; probado en Linux y Windows, macOS sin probar.'
             },
             image: 'app-launcher.jpg',
             links: [
