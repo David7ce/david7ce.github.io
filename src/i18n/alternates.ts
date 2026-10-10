@@ -4,6 +4,7 @@ const pagePairs: [string, string][] = [
   ['blog', 'blog'],
   ['stack', 'stack'],
   ['projects', 'proyectos'],
+  ['projects/tenerife-comercio', 'proyectos/tenerife-comercio'],
   ['about-me', 'sobre-mi'],
   ['archives', 'archivos'],
   ['search', 'buscador']
