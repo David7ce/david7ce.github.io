@@ -124,19 +124,22 @@ const linkLabels: Record<string, string> = {
             main && 'focus-within:ring-2 focus-within:ring-primary/50 hover:bg-muted/40'
           )}
         >
+          {/* Fixed height: every card shows the same image size, whatever the text below it */}
           {imagePath && (
             <Image
-              class='m-0 h-0 min-h-24 w-full flex-1 border-b object-cover object-top'
+              class='m-0 h-36 w-full shrink-0 border-b object-cover object-top'
               src={images[imagePath]()}
               alt=''
               loading='lazy'
             />
           )}
-          <div class='flex shrink-0 flex-col gap-y-2 px-3.5 py-3'>
+          {/* Fixed heights for the title (2 lines) and the description (3 lines) keep the
+              cut-off line at the same height on every card; the gaps are the same everywhere. */}
+          <div class='flex min-h-0 flex-1 flex-col gap-y-2 overflow-hidden px-3.5 py-3'>
             {/* The title link covers the whole card, so the image and the text are clickable too */}
             {main ? (
               <a
-                class="line-clamp-2 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+                class="line-clamp-2 h-10 shrink-0 text-sm font-semibold leading-snug text-foreground no-underline after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
                 href={main.href}
                 target='_blank'
                 rel='noopener'
@@ -144,15 +147,17 @@ const linkLabels: Record<string, string> = {
                 {project.name}
               </a>
             ) : (
-              <span class='line-clamp-2 text-sm font-semibold leading-snug text-foreground'>
+              <span class='line-clamp-2 h-10 shrink-0 text-sm font-semibold leading-snug text-foreground'>
                 {project.name}
               </span>
             )}
-            <p class='m-0 line-clamp-3 text-[13px] leading-snug text-muted-foreground'>
+            <p class='line-clamp-3 m-0 h-[3.375rem] shrink-0 text-[13px] leading-snug text-muted-foreground'>
               {project.description}
             </p>
-            {tech.length > 0 && (
-              <ul class='m-0 flex list-none flex-wrap gap-1 p-0'>
+            {/* The chips row is always rendered (empty when there are no technologies) so the
+                row below starts at the same height on every card */}
+            {tech.length > 0 ? (
+              <ul class='m-0 flex min-h-[1.3125rem] shrink-0 list-none flex-wrap gap-1 p-0'>
                 {tech.map(({ name, logo }) => (
                   <li class='m-0 inline-flex items-center gap-1 rounded-md border bg-muted/50 px-1.5 py-0.5 text-[11px] leading-none text-muted-foreground'>
                     {logo && (
@@ -166,28 +171,34 @@ const linkLabels: Record<string, string> = {
                   </li>
                 ))}
               </ul>
+            ) : (
+              <div class='min-h-[1.3125rem] shrink-0' aria-hidden='true' />
             )}
-            {project.status && (
-              <p class='m-0 line-clamp-2 text-xs leading-snug text-muted-foreground/80'>
-                {project.status}
-              </p>
-            )}
-            {iconLinks.length > 0 && (
-              <div class='mt-auto flex flex-row items-center gap-x-1.5 pt-1'>
-                {iconLinks.map((link) => (
-                  <a
-                    href={link.href}
-                    class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
-                    aria-label={`${linkLabel(link)}: ${project.name}`}
-                    title={linkLabel(link)}
-                    target='_blank'
-                    rel='noopener'
-                  >
-                    <Icon class='size-4' name={linkIcons[link.type]} />
-                  </a>
-                ))}
-              </div>
-            )}
+            {/* One row: the status (fork, licence, state) on the left, the icon links on the
+                right, so both take the height of a single line and start at the same place */}
+            <div class='flex min-h-0 flex-row items-start gap-x-2'>
+              {project.status && (
+                <p class='line-clamp-2 m-0 min-w-0 flex-1 text-xs leading-snug text-muted-foreground/80'>
+                  {project.status}
+                </p>
+              )}
+              {iconLinks.length > 0 && (
+                <div class='ms-auto flex shrink-0 flex-row items-center gap-x-1.5'>
+                  {iconLinks.map((link) => (
+                    <a
+                      href={link.href}
+                      class='relative z-10 rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-foreground'
+                      aria-label={`${linkLabel(link)}: ${project.name}`}
+                      title={linkLabel(link)}
+                      target='_blank'
+                      rel='noopener'
+                    >
+                      <Icon class='size-4' name={linkIcons[link.type]} />
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )

@@ -87,12 +87,12 @@ export const projectSections: ProjectSectionData[] = [
         name: '🏛️ Arksys OS',
         description: {
           en: 'An Arch-based Linux with KDE: an ArchISO profile, a Calamares installer setup and post-install scripts.',
-          es: 'Un Linux basado en Arch con KDE: un perfil de ArchISO, la configuración del instalador Calamares y scripts de post-instalación.'
+          es: 'Un Linux basado en Arch con KDE: perfil ArchISO, instalador Calamares y scripts de post-instalación.'
         },
         tech: 'Shell, ArchISO, Calamares',
         status: {
-          en: 'Personal project; the README recommends established Arch-based distros for stable use.',
-          es: 'Proyecto personal; el README recomienda distros basadas en Arch consolidadas para un uso estable.'
+          en: 'Personal project; the README recommends established Arch distros for stable use.',
+          es: 'Proyecto personal; el README recomienda otras distros de Arch para uso estable.'
         },
         image: 'arksys-logo.jpg',
         links: [{ type: 'github', href: 'https://github.com/arksys-os' }]
@@ -196,8 +196,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: { en: '🌐 Multi-language Translator', es: '🌐 Traductor Multilenguaje' },
             description: {
-              en: "Translates text into several languages at once, using Chrome's built-in Translator API or Google Translate as a fallback.",
-              es: 'Traduce texto a varios idiomas a la vez, con la API Translator de Chrome o Google Translate como alternativa.'
+              en: "Translates text into several languages at once with Chrome's Translator API or Google Translate.",
+              es: 'Traduce texto a varios idiomas a la vez con la API Translator de Chrome o Google Translate.'
             },
             tech: 'React, TypeScript',
             status: { en: 'Demo on GitHub Pages.', es: 'Demo en GitHub Pages.' },
@@ -210,8 +210,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '📖 Read Rapide',
             description: {
-              en: 'A speed-reading app that shows text one word at a time (RSVP) at adjustable speed, in Spanish and English.',
-              es: 'Una app de lectura rápida que muestra el texto palabra por palabra (RSVP) a velocidad ajustable, en español e inglés.'
+              en: 'Speed reading with text one word at a time (RSVP), adjustable speed, in Spanish and English.',
+              es: 'Lectura rápida con el texto palabra por palabra (RSVP), velocidad ajustable, en español e inglés.'
             },
             tech: 'React, TypeScript, Vite',
             image: { en: 'read-rapide-en.jpg', es: 'read-rapide-es.jpg' },
@@ -223,8 +223,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: { en: '🌙 Sleep Cycles Calculator', es: '🌙 Calculadora de Ciclos de Sueño' },
             description: {
-              en: 'Suggests bedtimes or wake-up times aligned to 90-minute sleep cycles. An installable PWA that works offline.',
-              es: 'Sugiere horas de acostarse o despertarse según ciclos de sueño de 90 minutos. Una PWA instalable que funciona sin conexión.'
+              en: 'Suggests bedtimes and wake-up times aligned to 90-minute sleep cycles; installable PWA, offline.',
+              es: 'Sugiere horas de acostarse y despertarse según ciclos de sueño de 90 minutos; PWA instalable sin conexión.'
             },
             tech: 'HTML, CSS, JavaScript',
             image: 'sleep-cycles.jpg',
@@ -237,7 +237,7 @@ export const projectSections: ProjectSectionData[] = [
             name: '🗺️ Universal Map-Time Engine',
             description: {
               en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
-              es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son archivos JSON y GeoJSON.'
+              es: 'Un mapa solo en el navegador que trata el calendario como una dimensión más; los mapas son JSON y GeoJSON.'
             },
             tech: 'TypeScript, Leaflet, OpenStreetMap',
             featured: {
@@ -245,7 +245,7 @@ export const projectSections: ProjectSectionData[] = [
               kind: { en: 'Web app', es: 'App web' },
               summary: {
                 en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
-                es: 'Un mapa que funciona solo en el navegador y trata el calendario como una dimensión más; los mapas nuevos son solo archivos JSON y GeoJSON.'
+                es: 'Un mapa solo en el navegador con el calendario como una dimensión más; los mapas nuevos son JSON y GeoJSON.'
               }
             },
             image: 'universal-map.jpg',
@@ -257,8 +257,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🖥️ OS & Distro Directory',
             description: {
-              en: 'A static directory of operating systems and distros: search, filter and compare up to 10 side by side, with no backend.',
-              es: 'Un directorio estático de sistemas operativos y distros: busca, filtra y compara hasta 10 a la vez, sin backend.'
+              en: 'A static directory of operating systems: search, filter and compare up to 10 side by side, no backend.',
+              es: 'Un directorio estático de sistemas operativos: busca, filtra y compara hasta 10 a la vez, sin backend.'
             },
             tech: 'HTML, JavaScript, Tailwind CSS, JSON',
             image: 'os-database.jpg',
@@ -323,8 +323,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🍿 PlayTorrioMov',
             description: {
-              en: 'A cross-platform Flutter app for movies, series, anime and live TV in one interface. A watch-only fork of PlayTorrioMod.',
-              es: 'Una app multiplataforma en Flutter para películas, series, anime y TV en directo en una sola interfaz. Un fork de solo visualización de PlayTorrioMod.'
+              en: 'A cross-platform Flutter app for movies, series, anime and live TV. A watch-only fork of PlayTorrioMod.',
+              es: 'App de Flutter para películas, series, anime y TV en directo. Fork de solo visualización de PlayTorrioMod.'
             },
             tech: 'Dart, Flutter',
             status: {
@@ -340,8 +340,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🚀 App Launcher',
             description: {
-              en: "A categorized launcher for the desktop apps installed on your machine; it builds its catalog by scanning each OS's own records.",
-              es: 'Un lanzador categorizado de las aplicaciones de escritorio instaladas en tu equipo; construye su catálogo escaneando los registros de cada sistema.'
+              en: "A categorized launcher for your desktop apps; it builds its catalog from each OS's own records.",
+              es: 'Un lanzador categorizado de tus apps de escritorio; el catálogo sale de los registros del sistema.'
             },
             tech: {
               en: 'Tauri (Rust backend), plain HTML / CSS / JavaScript',
@@ -357,7 +357,7 @@ export const projectSections: ProjectSectionData[] = [
             name: { en: '🧬 Cellular Automata', es: '🧬 Autómatas Celulares' },
             description: {
               en: 'A native sandbox for Life-like cellular automata, with 21 built-in rules and a generic birth/survive rule engine.',
-              es: 'Un sandbox nativo para autómatas celulares tipo Life, con 21 reglas incluidas y un motor genérico de reglas de nacimiento/supervivencia.'
+              es: 'Sandbox nativo para autómatas tipo Life, con 21 reglas y un motor genérico de nacimiento/supervivencia.'
             },
             tech: 'Rust, egui / eframe',
             image: 'cellular-automata.jpg',
@@ -372,8 +372,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🤖 AI Config',
             description: {
-              en: "Dotfiles for AI coding agents: one .ai/ folder generated into each tool's config format (Claude Code, Codex, opencode, Cursor and more).",
-              es: 'Dotfiles para agentes de IA de programación: una carpeta .ai/ generada en el formato de cada herramienta (Claude Code, Codex, opencode, Cursor y más).'
+              en: "Dotfiles for AI coding agents: a .ai/ folder generated in each tool's format (Claude Code, Codex, Cursor).",
+              es: 'Dotfiles para agentes de IA: carpeta .ai/ generada en el formato de cada herramienta (Claude Code, Codex, Cursor).'
             },
             tech: { en: 'JavaScript (Node CLI)', es: 'JavaScript (CLI de Node)' },
             image: 'ai-config.jpg',
@@ -382,8 +382,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🎼 Audio2Score MCP',
             description: {
-              en: 'Turns audio into an editable score (audio → MIDI → MusicXML), as CLI scripts or as an MCP server for AI agents.',
-              es: 'Convierte audio en una partitura editable (audio → MIDI → MusicXML), con scripts de línea de comandos o como servidor MCP para agentes de IA.'
+              en: 'Turns audio into an editable score (audio → MIDI → MusicXML), as CLI scripts or an MCP server.',
+              es: 'Convierte audio en una partitura editable (audio → MIDI → MusicXML), como scripts CLI o servidor MCP.'
             },
             tech: 'Python, basic-pitch, music21, MCP',
             image: 'audio2score-mcp.jpg',
@@ -393,7 +393,7 @@ export const projectSections: ProjectSectionData[] = [
             name: '🔖 Bookmarks Report',
             description: {
               en: 'Compares the bookmarks of a Chromium browser and Firefox and writes one Markdown report.',
-              es: 'Compara los marcadores de un navegador Chromium y de Firefox y escribe un informe en Markdown.'
+              es: 'Compara los marcadores de Chromium y Firefox y escribe un informe en Markdown.'
             },
             tech: { en: 'Python (standard library only)', es: 'Python (solo biblioteca estándar)' },
             image: 'bookmarks-report.jpg',
@@ -413,8 +413,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🐚 Shell Toolkit',
             description: {
-              en: 'Small shell scripts for everyday tasks on Windows, macOS and Linux: one native script per shell plus an interactive menu.',
-              es: 'Scripts de shell para tareas cotidianas en Windows, macOS y Linux: uno nativo por shell más un menú interactivo.'
+              en: 'Small shell scripts for everyday tasks on Windows, macOS and Linux: one per shell plus a menu.',
+              es: 'Scripts de shell para tareas cotidianas en Windows, macOS y Linux: uno por shell más un menú interactivo.'
             },
             tech: 'Bash, PowerShell',
             image: 'shell-toolkit.jpg',
@@ -433,8 +433,8 @@ export const projectSections: ProjectSectionData[] = [
           {
             name: '🎠 Slidr',
             description: {
-              en: 'A local-first AI carousel generator for Instagram, LinkedIn and TikTok: the AI writes JSON content, code renders the slides.',
-              es: 'Un generador local de carruseles con IA para Instagram, LinkedIn y TikTok: la IA escribe el contenido en JSON y el código renderiza las diapositivas.'
+              en: 'A local-first AI carousel generator for Instagram, LinkedIn and TikTok; AI writes the JSON, code renders the slides.',
+              es: 'Generador local de carruseles con IA para Instagram y LinkedIn: la IA escribe el JSON y el código las diapositivas.'
             },
             tech: 'TypeScript',
             image: 'slidr.jpg',

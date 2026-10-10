@@ -210,6 +210,16 @@ const rules: Rule<object>[] = [
     {
       'background-size': 'cover'
     }
+  ],
+  // presetMini has no line-clamp rule: truncate a block of text after N lines with an ellipsis
+  [
+    /^line-clamp-(\d+)$/,
+    ([, lines]: string[]) => ({
+      overflow: 'hidden',
+      display: '-webkit-box',
+      '-webkit-box-orient': 'vertical',
+      '-webkit-line-clamp': lines
+    })
   ]
 ]
 
