@@ -139,8 +139,8 @@ export const projectSections: ProjectSectionData[] = [
       {
         name: '🎬 MediaHub Org',
         description: {
-          en: 'A GitHub organization for media apps, such as TV Multiview and PlayTorrioMov.',
-          es: 'Una organización de GitHub para aplicaciones multimedia, como TV Multiview y PlayTorrioMov.'
+          en: 'A GitHub organization for media apps, such as TV Multiview or others.',
+          es: 'Una organización de GitHub para aplicaciones multimedia, como TV Multiview u otros.'
         },
         image: 'mediahub-org.jpg',
         links: [{ type: 'github', href: 'https://github.com/MediaHub-Org' }]
@@ -320,23 +320,6 @@ export const projectSections: ProjectSectionData[] = [
         id: 'desktop-apps',
         title: { en: 'Desktop & Mobile Apps', es: 'Aplicaciones de Escritorio y Móviles' },
         projects: [
-          {
-            name: '🍿 PlayTorrioMov',
-            description: {
-              en: 'A cross-platform Flutter app for movies, series, anime and live TV. A watch-only fork of PlayTorrioMod.',
-              es: 'App de Flutter para películas, series, anime y TV en directo. Fork de solo visualización de PlayTorrioMod.'
-            },
-            tech: 'Dart, Flutter',
-            status: {
-              en: 'Fork of PlayTorrioMod (GPL-3.0) with UX changes and extra features.',
-              es: 'Fork de PlayTorrioMod (GPL-3.0) con cambios de UX y funciones adicionales.'
-            },
-            image: 'playtorriomov.jpg',
-            links: [
-              { type: 'github', href: 'https://github.com/MediaHub-Org/PlayTorrioMov' },
-              { type: 'release', href: 'https://github.com/MediaHub-Org/PlayTorrioMov/releases' }
-            ]
-          },
           {
             name: '🚀 App Launcher',
             description: {
