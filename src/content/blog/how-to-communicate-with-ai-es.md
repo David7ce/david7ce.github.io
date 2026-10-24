@@ -8,7 +8,7 @@ tags:
   - 'Informática'
   - 'sistemas operativos'
   - 'IA'
-heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/how-to-communicate-with-ai.webp', color: '#4891B2' }
 language: es
 ---
 

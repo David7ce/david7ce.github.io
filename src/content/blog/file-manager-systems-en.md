@@ -6,7 +6,7 @@ publishDate: '2022-04-12'
 description: 'File manager systems for organizing and managing digital content'
 tags:
   - 'Software'
-heroImage: { src: './thumbnails/file-managers.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/file-managers.webp', color: '#4891B2' }
 language: en
 ---
 

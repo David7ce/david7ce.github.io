@@ -7,7 +7,7 @@ description: 'Gestores de paquetes y sistemas de empaquetado para una gestión e
 tags:
   - 'Informática'
   - 'sistemas operativos'
-heroImage: { src: './thumbnails/package-managent.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/package-managent.webp', color: '#4891B2' }
 language: es
 ---
 

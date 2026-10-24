@@ -6,7 +6,7 @@ description: 'What encoding and decoding are, the formats you meet every day (UT
 publishDate: 2023-10-26
 updatedDate: 2026-10-02
 tags: ['Computing', 'Software']
-heroImage: { src: './thumbnails/encode-decode.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/encode-decode.webp', color: '#4891B2' }
 language: en
 ---
 

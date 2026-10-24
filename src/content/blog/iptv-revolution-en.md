@@ -6,7 +6,7 @@ publishDate: '2025-10-06'
 description: 'The Latest Image Revolution'
 tags:
   - 'Computing'
-heroImage: { src: './thumbnails/iptv-revolution.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/iptv-revolution.webp', color: '#4891B2' }
 language: en
 ---
 

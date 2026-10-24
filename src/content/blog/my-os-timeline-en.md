@@ -7,7 +7,7 @@ description: 'This my story with OS''s'
 tags:
   - 'Computing'
   - 'Operating System'
-heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/os-timeline.webp', color: '#4891B2' }
 language: en
 ---
 

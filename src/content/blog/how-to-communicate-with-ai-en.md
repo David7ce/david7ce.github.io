@@ -8,7 +8,7 @@ tags:
   - 'Computing'
   - 'Operating System'
   - 'AI'
-heroImage: { src: './thumbnails/how-to-communicate-with-ai.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/how-to-communicate-with-ai.webp', color: '#4891B2' }
 language: en
 ---
 

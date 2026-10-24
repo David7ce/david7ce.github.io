@@ -9,7 +9,7 @@ tags:
   - 'Informática'
   - 'Software'
   - 'Productividad'
-heroImage: { src: './thumbnails/password-manager.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/password-manager.webp', color: '#4891B2' }
 language: es
 ---
 

@@ -6,7 +6,7 @@ publishDate: '2022-04-12'
 description: 'Sistemas de gestión de archivos para organizar y gestionar contenidos digitales.'
 tags:
   - 'Software'
-heroImage: { src: './thumbnails/file-managers.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/file-managers.webp', color: '#4891B2' }
 language: es
 ---
 

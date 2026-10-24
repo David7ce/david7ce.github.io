@@ -7,7 +7,7 @@ description: 'Package managers and packaging systems for efficient software mana
 tags:
   - 'Computing'
   - 'Operating System'
-heroImage: { src: './thumbnails/package-managent.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/package-managent.webp', color: '#4891B2' }
 language: en
 ---
 

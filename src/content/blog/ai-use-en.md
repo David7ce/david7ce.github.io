@@ -8,7 +8,7 @@ tags:
   - 'Computing'
   - 'AI'
   - 'Software'
-heroImage: { src: './thumbnails/how-to-choose-ais.png', color: '#4891B2' }
+heroImage: { src: './thumbnails/how-to-choose-ais.webp', color: '#4891B2' }
 language: en
 ---
 

@@ -7,7 +7,7 @@ description: 'El dilema entre Linux y Windows: lo que echo de menos y lo que me 
 tags:
   - 'Informática'
   - 'sistemas operativos'
-heroImage: { src: './thumbnails/linux-dilemma.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/linux-dilemma.webp', color: '#4891B2' }
 language: es
 ---
 

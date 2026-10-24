@@ -7,7 +7,7 @@ description: 'En búsqueda de la mejor distro que integre KDE'
 tags:
   - 'Informática'
   - 'Software'
-heroImage: { src: './thumbnails/kde-distros-comparison.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/kde-distros-comparison.webp', color: '#4891B2' }
 language: es
 ---
 

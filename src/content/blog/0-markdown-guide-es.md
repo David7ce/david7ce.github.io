@@ -7,7 +7,7 @@ updatedDate: '2500-06-03'
 description: 'Página de prueba para cualquier propósito'
 tags:
   - Test
-heroImage: { src: './thumbnails/0-markdown-guide.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/0-markdown-guide.webp', color: '#4891B2' }
 language: es
 draft: true
 ---
@@ -26,7 +26,7 @@ tags:
   - css
   - html
   - astro
-heroImage: { src: “./blog-thumbnails/markdown-guide.jpg”, color: “#4891B2” }
+heroImage: { src: './thumbnails/0-markdown-guide.webp', color: '#4891B2' }
 language: es
 draft: false
 ```

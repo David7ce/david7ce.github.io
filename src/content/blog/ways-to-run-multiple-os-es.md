@@ -7,7 +7,7 @@ description: 'Métodos para que coexistan los sistemas operativos Windows y Linu
 tags:
   - 'Informática'
   - 'sistemas operativos'
-heroImage: { src: './thumbnails/multiple-os.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/multiple-os.webp', color: '#4891B2' }
 language: es
 ---
 

@@ -7,7 +7,7 @@ description: 'Esta es mi historia con los SO'
 tags:
   - 'Informática'
   - 'sistemas operativos'
-heroImage: { src: './thumbnails/os-timeline.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/os-timeline.webp', color: '#4891B2' }
 language: es
 ---
 

@@ -7,7 +7,7 @@ description: 'The Linux vs. Windows Dilemma: What I Miss and What I Love About L
 tags:
   - 'Computing'
   - 'Operating System'
-heroImage: { src: './thumbnails/linux-dilemma.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/linux-dilemma.webp', color: '#4891B2' }
 language: en
 ---
 

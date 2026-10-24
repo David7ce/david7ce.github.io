@@ -7,7 +7,7 @@ description: 'Definiendo qué es Buen Software'
 tags:
   - 'Informática'
   - 'Software'
-heroImage: { src: './thumbnails/good-software.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/good-software.webp', color: '#4891B2' }
 language: es
 ---
 

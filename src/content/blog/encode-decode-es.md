@@ -6,7 +6,7 @@ description: 'Qué son codificar y decodificar, los formatos que usas a diario (
 publishDate: 2024-10-29
 updatedDate: 2026-10-02
 tags: ['Informática', 'Software']
-heroImage: { src: './thumbnails/encode-decode.jpg', color: '#4891B2' }
+heroImage: { src: './thumbnails/encode-decode.webp', color: '#4891B2' }
 language: es
 ---
 
