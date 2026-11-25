@@ -84,6 +84,23 @@ export const projectSections: ProjectSectionData[] = [
     title: { en: 'Involved Projects', es: 'Proyectos Involucrados' },
     projects: [
       {
+        name: '🤖 AgenticHub',
+        description: {
+          en: 'A control room for AI coding agents: Claude Code, OpenCode and Codex delegate to each other over ACP through one consent gate and an audit log, with an MCP server and a GTD-style panel of repos, AI usage and roadmap.',
+          es: 'Una sala de control para agentes de IA: Claude Code, OpenCode y Codex se delegan tareas mediante ACP con un control de consentimiento y un registro de auditoría, servidor MCP y un panel tipo GTD de repos, uso de IA y roadmap.'
+        },
+        tech: 'Node.js, JavaScript, ACP, MCP',
+        featured: {
+          rank: 1.5,
+          kind: { en: 'AI agents', es: 'Agentes de IA' },
+          summary: {
+            en: 'A local hub where Claude Code, OpenCode and Codex delegate to each other with consent, audit and an MCP server.',
+            es: 'Un hub local donde Claude Code, OpenCode y Codex se delegan tareas con consentimiento, auditoría y servidor MCP.'
+          }
+        },
+        links: [{ type: 'github', href: 'https://github.com/David7ce/AgenticHub' }]
+      },
+      {
         name: '🏛️ Arksys OS',
         description: {
           en: 'An Arch-based Linux with KDE: an ArchISO profile, a Calamares installer setup and post-install scripts.',
