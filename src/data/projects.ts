@@ -267,8 +267,8 @@ export const projectSections: ProjectSectionData[] = [
             },
             image: 'universal-map.jpg',
             links: [
-              { type: 'site', href: 'https://david7ce.is-a.dev/universal-map-app/' },
-              { type: 'github', href: 'https://github.com/David7ce/universal-map-app' }
+              { type: 'site', href: 'https://calendar-xyz.github.io/' },
+              { type: 'github', href: 'https://github.com/calendar-xyz/calendar-xyz.github.io' }
             ]
           },
           {
