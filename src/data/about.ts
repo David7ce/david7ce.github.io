@@ -155,6 +155,9 @@ export const publicProfiles = [
   { label: 'D7 - AlternativeTo', href: 'https://alternativeto.net/user/d7' },
   { label: 'David7ce - GitHub', href: 'https://github.com/david7ce' },
   { label: 'David Alonso - LinkedIn', href: 'https://www.linkedin.com/in/david-alonsodd' },
+  // Generated and published by the CV-David7ce repo (./build.ps1 -Publish)
+  { label: 'CV (PDF, español)', href: '/cv/CV-David-Alonso-de-Dios-es.pdf' },
+  { label: 'CV (PDF, English)', href: '/cv/CV-David-Alonso-de-Dios-en.pdf' },
   { label: 'Compub1t - YouTube', href: 'https://www.youtube.com/@CompuB1t' },
   { label: contactEmail, href: `mailto:${contactEmail}` }
 ]

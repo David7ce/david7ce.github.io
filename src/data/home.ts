@@ -4,6 +4,7 @@ export interface HomeCopy {
   meta: { title: string; description: string }
   avatarAlt: string
   emailLabel: string
+  cvLabel: string
   about: { title: string; role: string; paragraphs: string[]; button: string }
   exploring: { title: string; paragraphs: string[] }
   projects: { title: string; intro: string; button: string }
@@ -26,6 +27,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
     },
     avatarAlt: 'Profile picture of David7ce',
     emailLabel: 'Email',
+    cvLabel: 'CV (PDF)',
     about: {
       title: 'About',
       role: 'Software Developer',
@@ -70,6 +72,7 @@ export const homeCopy: Record<Lang, HomeCopy> = {
     },
     avatarAlt: 'Foto de perfil de David7ce',
     emailLabel: 'Correo',
+    cvLabel: 'CV (PDF)',
     about: {
       title: 'Acerca de',
       role: 'Desarrollador de software',

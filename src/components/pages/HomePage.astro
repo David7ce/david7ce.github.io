@@ -91,6 +91,15 @@ const featuredProjects = projectSections
           <Label title={copy.emailLabel} as='a' href={`mailto:${contactEmail}`}>
             <Icon name='email' class='size-5' slot='icon' />
           </Label>
+          {/* Generated and published by the CV-David7ce repo (./build.ps1 -Publish) */}
+          <Label
+            title={copy.cvLabel}
+            as='a'
+            href={`/cv/CV-David-Alonso-de-Dios-${lang}.pdf`}
+            target='_blank'
+          >
+            <Icon name='document' class='size-5' slot='icon' />
+          </Label>
         </div>
       </div>
     </section>
