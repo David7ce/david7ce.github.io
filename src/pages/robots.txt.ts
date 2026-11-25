@@ -6,6 +6,8 @@ User-agent: ClaudeBot
 User-agent: Claude-Web
 
 User-agent: *
+# CV PDFs carry the full name: reachable from the site, not indexed by search engines
+Disallow: /cv/
 Allow: /
 
 Sitemap: ${new URL('sitemap-index.xml', import.meta.env.SITE).href}

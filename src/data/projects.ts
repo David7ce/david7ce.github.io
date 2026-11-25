@@ -234,7 +234,7 @@ export const projectSections: ProjectSectionData[] = [
             ]
           },
           {
-            name: '🗺️ Universal Map-Time Engine',
+            name: '🗺️ Universal Calendar Map',
             description: {
               en: 'A browser-only map with a calendar as an equal dimension; new maps are just JSON and GeoJSON files.',
               es: 'Un mapa solo en el navegador que trata el calendario como una dimensión más; los mapas son JSON y GeoJSON.'
